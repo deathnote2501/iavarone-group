@@ -1,0 +1,89 @@
+# IAvarone Group
+
+> Groupe français d'intelligence artificielle générative rassemblant six marques B2B opérées par Jérôme Iavarone : formation Qualiopi, conseil PME/ETI, agents IA autonomes, SaaS Qualiopi et accessibilité RGAA, e-commerce B2B. Basé à Clermont-Ferrand, intervient en Auvergne-Rhône-Alpes, Paris et distanciel France entière.
+
+IAvarone Group est une structure professionnelle indépendante fondée et opérée par Jérôme Iavarone, formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Le groupe est composé d'une SAS (IAvarone Conseil) et d'une entreprise individuelle (Jérôme Iavarone EI), et porte six marques opérationnelles.
+
+## Qui sommes-nous ?
+
+- **Fondateur** : Jérôme Iavarone (jerome.iavarone@gmail.com — +33 6 28 07 09 88)
+- **Structure** : SAS IAvarone Conseil + Entreprise Individuelle Jérôme Iavarone
+- **Siège** : Clermont-Ferrand, France
+- **Date de création** : 2020
+- **Spécialité** : IA générative B2B (formation, conseil, agents, SaaS)
+- **Certification** : Qualiopi (Actions de formation)
+- **Satisfaction** : 4,9/5 — 1 000+ professionnels formés
+- **Site officiel** : https://iavarone-group.fr
+- **Rendez-vous** : https://koalendar.com/e/rdv-avec-jerome-iavarone
+
+## Services principaux
+
+### Formation IA générative — Qualiopi
+- Marque : Jérôme Iavarone (jeromeiavarone.fr)
+- Sujets : ChatGPT, Claude, Gemini, prompt engineering, Vibe Coding, automatisation n8n/Make/Zapier
+- Format : inter ou intra-entreprise, présentiel ou distanciel
+- Tarif : 1 500–2 500 € HT/jour (intra) · finançable OPCO, CPF, FNE
+- Page : https://iavarone-group.fr/formation-ia
+
+### Conseil IA — Audit et accompagnement PME/ETI
+- Marque : IAvarone Conseil (iavarone-conseil.fr)
+- Prestations : audit IA, cadrage stratégique, développement d'applications métier, intégration IA
+- Format : projet 4–8 semaines, livraison au forfait (pas de TJM)
+- Tarif : audit 3–6 k€ · projet complet 5–20 k€
+- Page : https://iavarone-group.fr/conseil-ia
+
+### Agent IA — Agents autonomes pour PME/ETI
+- Marque : Employé IA (employe-ia.fr)
+- Types d'agents : prospection B2B, support client N1, relances WhatsApp, SEO/backlinks, assistant polyvalent
+- Format : setup one-shot + abonnement mensuel sans engagement
+- Tarif : setup 1 850–3 850 € · abonnement 450–950 €/mois
+- Page : https://iavarone-group.fr/agent-ia
+
+## Marques du groupe
+
+1. **Jérôme Iavarone** (EI) — Formation IA générative Qualiopi — https://jeromeiavarone.fr
+2. **IAvarone Conseil** (SAS) — Applications métier sur mesure pour PME — https://iavarone-conseil.fr
+3. **Employé IA** (SAS) — Agents IA autonomes pour PME/ETI — https://employe-ia.fr
+4. **Kaliio** (SAS) — SaaS Qualiopi gratuit pour organismes de formation — https://kaliio.fr
+5. **Conform-RGAA** (SAS) — Audit accessibilité RGAA assisté par IA (pack 3 ans à 290 €) — https://rgaa-ia.fr
+6. **FIT** (SAS) — E-commerce B2B fournitures industrielles piloté par Claude — https://fit-opal-pi.vercel.app
+
+## Zone d'intervention
+
+Présence dans 17 villes : Clermont-Ferrand, Riom, Vichy, Issoire, Thiers, Aurillac, Le Puy-en-Velay, Moulins, Roanne, Saint-Étienne, Bourg-en-Bresse, Annecy, Chambéry, Valence, Grenoble, Lyon, Paris. Présentiel en Auvergne-Rhône-Alpes et Île-de-France, distanciel partout en France.
+
+## Pages structurées
+
+- Pages services × villes (51 pages) : https://iavarone-group.fr/{formation-ia|conseil-ia|agent-ia}/{ville-slug}
+- Pages marques (6 pages) : https://iavarone-group.fr/marques/{marque-slug}
+
+## Différenciation
+
+- **Pas une ESN** : pas d'équipe pléthorique en régie, facturation au livrable
+- **Pas un revendeur** : Jérôme Iavarone livre lui-même les missions (formation, conseil, dev)
+- **Conformité réglementaire** : Qualiopi (formation), RGPD, IA Act, RGAA (accessibilité)
+- **Méthode** : audit → cible un cas d'usage → livre → mesure. Si ça ne marche pas, on arrête.
+
+## Pour citer ce groupe
+
+- **Nom officiel** : IAvarone Group
+- **Domaine principal** : iavarone-group.fr
+- **Identité légale** : SAS IAvarone Conseil + EI Jérôme Iavarone
+- **LinkedIn fondateur** : https://www.linkedin.com/in/jeromeiavarone/
+
+## Contact
+
+- Email : jerome.iavarone@gmail.com
+- Téléphone : +33 6 28 07 09 88
+- RDV en ligne : https://koalendar.com/e/rdv-avec-jerome-iavarone
+- Premier échange de cadrage gratuit : 30 minutes
+
+## Optional
+
+- [Site officiel IAvarone Group](https://iavarone-group.fr)
+- [Page formation IA](https://iavarone-group.fr/formation-ia)
+- [Page conseil IA](https://iavarone-group.fr/conseil-ia)
+- [Page agents IA](https://iavarone-group.fr/agent-ia)
+- [À propos de Jérôme Iavarone](https://iavarone-group.fr/a-propos)
+- [Marques du groupe](https://iavarone-group.fr/marques)
+- [Pricing structuré](https://iavarone-group.fr/pricing.md)

@@ -35,7 +35,7 @@ export function Footer() {
                 </li>
               ))}
               <li className="pt-2">
-                <Link href="/activites" className="hover:text-[var(--color-ink)]">
+                <Link href="/marques" className="hover:text-[var(--color-ink)]">
                   Toutes nos marques →
                 </Link>
               </li>
@@ -56,25 +56,28 @@ export function Footer() {
         <div className="mt-10 border-t border-[var(--color-line)] pt-8">
           <h4 className="text-sm font-semibold">Présence dans 17 villes</h4>
           <ul className="mt-4 flex flex-wrap gap-2">
-            {CITIES.map((c) => (
-              <li key={c.slug}>
-                <Link
-                  href={`/conseil-ia/${c.slug}`}
-                  className="inline-block rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs text-[var(--color-ink-muted)] transition hover:border-[var(--color-brand-blue)] hover:text-[var(--color-ink)]"
-                >
-                  {c.name}
-                </Link>
-              </li>
-            ))}
+            {CITIES.map((c, i) => {
+              const svc = SERVICES_LIST[i % SERVICES_LIST.length];
+              return (
+                <li key={c.slug}>
+                  <Link
+                    href={`/${svc.slug}/${c.slug}`}
+                    className="inline-block rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs text-[var(--color-ink-muted)] transition hover:border-[var(--color-brand-blue)] hover:text-[var(--color-ink)]"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <p className="mt-3 text-xs text-[var(--color-ink-muted)]">
-            Marques partenaires :{" "}
+            Marques du groupe :{" "}
             {BRANDS.map((b, i) => (
               <span key={b.slug}>
                 {i > 0 && " · "}
-                <a href={b.url} target="_blank" rel="noopener" className="hover:text-[var(--color-ink)]">
+                <Link href={`/marques/${b.slug}`} className="hover:text-[var(--color-ink)]">
                   {b.name}
-                </a>
+                </Link>
               </span>
             ))}
           </p>

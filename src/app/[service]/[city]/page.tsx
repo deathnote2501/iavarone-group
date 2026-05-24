@@ -38,6 +38,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: service.longTitle(city.name),
       description: service.metaDescription(city.name),
     },
+    twitter: {
+      card: "summary_large_image",
+      title: service.longTitle(city.name),
+      description: service.metaDescription(city.name),
+    },
   };
 }
 
@@ -160,19 +165,19 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
       <section className="bg-[var(--color-surface-alt)] py-16">
         <div className="container-page">
-          <h2 className="text-3xl font-semibold tracking-tight">Pourquoi {city.name} ?</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Pourquoi {service.title.toLowerCase()} à {city.name} ?</h2>
           <div className="mt-6 grid items-start gap-10 md:grid-cols-[1.4fr_1fr]">
             <div className="prose prose-slate max-w-none text-[var(--color-ink-muted)]">
+              <p>{city.economicContext}</p>
               <p>
-                {city.name} ({city.region}) compte un tissu de PME et d&apos;ETI dynamiques pour qui
-                l&apos;IA générative représente un levier de productivité et de différenciation
-                concret. {city.hub ? `En tant que pôle économique majeur, ${city.name} concentre une demande forte d'accompagnement IA structuré.` : `Loin des grands centres, ${city.name} bénéficie d'un accompagnement IA souvent moins visible mais tout aussi pertinent pour la transformation des organisations locales.`}
+                <strong className="text-[var(--color-ink)]">Secteurs clés à {city.name} :</strong>{" "}
+                {city.industries.join(", ")}. {city.localExamples}
               </p>
               <p>
-                Mes interventions à {city.name} se font en présentiel pour les phases clés (cadrage,
-                ateliers, restitution) et en distanciel pour le reste du travail, afin d&apos;optimiser
-                le rapport coût / impact. Les déplacements sont inclus dans les forfaits pour toute la
-                zone {city.region}.
+                Concrètement, les missions {service.title.toLowerCase()} à {city.name} prennent souvent
+                la forme d&apos;ateliers en présentiel (cadrage, formation des équipes, restitution) sur
+                site, complétés par du travail à distance pour optimiser le rapport coût/impact. Les
+                déplacements sont inclus dans les forfaits pour toute la zone {city.region}.
               </p>
               <p>
                 Cette page est rattachée à la marque{" "}
@@ -184,23 +189,27 @@ export default async function ServiceCityPage({ params }: PageProps) {
             <aside className="rounded-2xl border border-[var(--color-line)] bg-white p-6">
               <h3 className="flex items-center gap-2 text-sm font-semibold">
                 <MapPin className="h-4 w-4 text-[var(--color-brand-blue)]" aria-hidden />
-                Informations locales
+                {city.name} en chiffres
               </h3>
               <dl className="mt-4 space-y-3 text-sm">
-                <div>
-                  <dt className="text-[var(--color-ink-muted)]">Ville</dt>
-                  <dd className="font-medium">{city.name}</dd>
-                </div>
                 <div>
                   <dt className="text-[var(--color-ink-muted)]">Région</dt>
                   <dd className="font-medium">{city.region}</dd>
                 </div>
                 <div>
-                  <dt className="text-[var(--color-ink-muted)]">Coordonnées</dt>
-                  <dd className="font-medium">{city.lat.toFixed(2)}° N, {city.lng.toFixed(2)}° E</dd>
+                  <dt className="text-[var(--color-ink-muted)]">Population</dt>
+                  <dd className="font-medium">{city.population}</dd>
                 </div>
                 <div>
-                  <dt className="text-[var(--color-ink-muted)]">Format</dt>
+                  <dt className="text-[var(--color-ink-muted)]">Filières dominantes</dt>
+                  <dd className="font-medium">{city.industries.slice(0, 3).join(", ")}</dd>
+                </div>
+                <div>
+                  <dt className="text-[var(--color-ink-muted)]">Trajet depuis Clermont-Ferrand</dt>
+                  <dd className="font-medium">{city.transportFromClermont}</dd>
+                </div>
+                <div>
+                  <dt className="text-[var(--color-ink-muted)]">Format d&apos;intervention</dt>
                   <dd className="font-medium">Présentiel + distanciel</dd>
                 </div>
               </dl>

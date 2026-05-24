@@ -9,9 +9,50 @@ export const metadata: Metadata = {
     "IAvarone Group est fondé et opéré par Jérôme Iavarone, formateur Qualiopi et consultant en IA générative basé en Auvergne.",
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${SITE.url}/#person`,
+  name: SITE.founder.name,
+  givenName: "Jérôme",
+  familyName: "Iavarone",
+  jobTitle: SITE.founder.role,
+  description:
+    "Formateur Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble six activités complémentaires en intelligence artificielle générative pour les entreprises.",
+  image: `${SITE.url}${SITE.founder.photo}`,
+  url: `${SITE.url}/a-propos`,
+  email: SITE.contact.email,
+  telephone: SITE.contact.phoneHref.replace("tel:", ""),
+  worksFor: { "@id": `${SITE.url}/#organization` },
+  founder: { "@id": `${SITE.url}/#organization` },
+  knowsAbout: [
+    "Intelligence artificielle générative",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Prompt engineering",
+    "Agents IA autonomes",
+    "Vibe Coding",
+    "Formation professionnelle Qualiopi",
+    "Conseil en transformation IA pour PME et ETI",
+  ],
+  knowsLanguage: ["French", "English"],
+  homeLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Clermont-Ferrand",
+      addressRegion: "Auvergne-Rhône-Alpes",
+      addressCountry: "FR",
+    },
+  },
+  sameAs: [SITE.social.linkedin, SITE.social.github],
+};
+
 export default function AProposPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page grid items-center gap-12 py-16 lg:grid-cols-[1fr_1.4fr]">
           <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">

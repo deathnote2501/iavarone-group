@@ -1,4 +1,5 @@
-import { ArrowUpRight, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
 import { BRANDS, type Brand } from "@/lib/site";
 
 const ICONS: Record<Brand["slug"], typeof GraduationCap> = {
@@ -43,10 +44,8 @@ export function ActivitiesGrid() {
           const c = COLOR_CLASSES[brand.color];
           return (
             <li key={brand.slug}>
-              <a
-                href={brand.url}
-                target="_blank"
-                rel="noopener"
+              <Link
+                href={`/marques/${brand.slug}`}
                 className={`group block h-full rounded-2xl border ${c.border} bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04] focus-visible:outline-none focus-visible:ring-2 ${c.ring} focus-visible:ring-offset-2`}
               >
                 <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${c.bg}`}>
@@ -54,7 +53,7 @@ export function ActivitiesGrid() {
                 </div>
                 <div className="mt-5 flex items-start justify-between gap-2">
                   <h3 className="text-lg font-semibold">{brand.name}</h3>
-                  <ArrowUpRight className="h-4 w-4 text-[var(--color-ink-muted)] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+                  <ArrowRight className="h-4 w-4 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-0.5" aria-hidden />
                 </div>
                 <p className={`mt-1 text-sm font-medium ${COLOR_TEXT[brand.color]}`}>{brand.tagline}</p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--color-ink-muted)]">
@@ -63,7 +62,7 @@ export function ActivitiesGrid() {
                 <p className="mt-5 text-xs uppercase tracking-wide text-[var(--color-ink-muted)]">
                   {brand.structure} · {new URL(brand.url).hostname.replace("www.", "")}
                 </p>
-              </a>
+              </Link>
             </li>
           );
         })}

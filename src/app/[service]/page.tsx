@@ -19,10 +19,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICES[s as ServiceSlug];
   if (!service) return {};
   const url = `${SITE.url}/${service.slug}`;
+  const title = `${service.title} en Auvergne-Rhône-Alpes & Paris`;
+  const description = `${service.short}. Présence dans 17 villes : Clermont-Ferrand, Lyon, Saint-Étienne, Paris, Vichy, Riom, Annecy, Grenoble et plus.`;
   return {
-    title: `${service.title} en Auvergne-Rhône-Alpes & Paris`,
-    description: `${service.short}. Présence dans 17 villes : Clermont-Ferrand, Lyon, Saint-Étienne, Paris, Vichy, Riom, Annecy, Grenoble et plus.`,
+    title,
+    description,
     alternates: { canonical: url },
+    openGraph: { type: "website", url, title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -48,8 +52,46 @@ export default async function ServicePage({ params }: PageProps) {
   const hubs = CITIES.filter((c) => c.hub);
   const others = CITIES.filter((c) => !c.hub);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
+          { "@type": "ListItem", position: 2, name: service.title, item: `${SITE.url}/${service.slug}` },
+        ],
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE.url}/${service.slug}/#service`,
+        name: service.title,
+        serviceType: service.title,
+        description: service.short,
+        provider: { "@id": `${SITE.url}/#organization` },
+        brand: { "@type": "Brand", name: service.brand.name, url: service.brand.url },
+        areaServed: CITIES.map((c) => ({
+          "@type": "City",
+          name: c.name,
+          address: { "@type": "PostalAddress", addressLocality: c.name, addressRegion: c.region, addressCountry: "FR" },
+        })),
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: `${service.title} — Catalogue par ville`,
+          itemListElement: CITIES.map((c) => ({
+            "@type": "Offer",
+            url: `${SITE.url}/${service.slug}/${c.slug}`,
+            name: `${service.title} à ${c.name}`,
+            areaServed: { "@type": "City", name: c.name },
+          })),
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
           <div className="flex items-center gap-3">

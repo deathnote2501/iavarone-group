@@ -1,16 +1,16 @@
 import type { MetadataRoute } from "next";
-import { SITE, CITIES } from "@/lib/site";
+import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ["", "/activites", "/a-propos", "/contact", "/mentions-legales", "/confidentialite"];
+  const staticRoutes = ["", "/marques", "/a-propos", "/contact", "/mentions-legales", "/confidentialite"];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${SITE.url}${path}`,
     lastModified: now,
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : 0.7,
+    changeFrequency: path === "" ? "monthly" : "monthly",
+    priority: path === "" ? 1 : path === "/marques" ? 0.8 : 0.7,
   }));
 
   const serviceHubs: MetadataRoute.Sitemap = Object.keys(SERVICES).map((slug) => ({
@@ -29,5 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...staticEntries, ...serviceHubs, ...serviceCities];
+  const brandPages: MetadataRoute.Sitemap = BRANDS.map((b) => ({
+    url: `${SITE.url}/marques/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...serviceHubs, ...serviceCities, ...brandPages];
 }

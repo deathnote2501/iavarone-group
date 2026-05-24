@@ -7,6 +7,7 @@ const NAV = [
   { href: "/formation-ia", label: "Formation IA" },
   { href: "/conseil-ia", label: "Conseil IA" },
   { href: "/agent-ia", label: "Agent IA" },
+  { href: "/marques", label: "Marques" },
   { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];
