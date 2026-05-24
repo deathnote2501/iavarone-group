@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "Groupe IAvarone",
+  name: "IAvarone Group",
   shortName: "IAvarone Group",
   url: "https://iavarone-group.fr",
   baseline: "L'IA générative au service des entreprises, en Auvergne-Rhône-Alpes et au-delà.",
   description:
-    "Le Groupe IAvarone rassemble six activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes et SaaS B2B.",
+    "IAvarone Group rassemble six activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes et SaaS B2B.",
   founder: {
     name: "Jérôme Iavarone",
     role: "Fondateur — Formateur & Consultant IA générative",
@@ -91,7 +91,16 @@ export const BRANDS = [
 
 export type Brand = (typeof BRANDS)[number];
 
-export const CITIES = [
+export interface City {
+  slug: string;
+  name: string;
+  region: string;
+  lat: number;
+  lng: number;
+  hub?: boolean;
+}
+
+export const CITIES: readonly City[] = [
   { slug: "clermont-ferrand", name: "Clermont-Ferrand", region: "Puy-de-Dôme", lat: 45.7797, lng: 3.0863, hub: true },
   { slug: "riom", name: "Riom", region: "Puy-de-Dôme", lat: 45.8946, lng: 3.1129 },
   { slug: "vichy", name: "Vichy", region: "Allier", lat: 46.1278, lng: 3.4253 },
@@ -109,4 +118,4 @@ export const CITIES = [
   { slug: "grenoble", name: "Grenoble", region: "Isère", lat: 45.1885, lng: 5.7245 },
   { slug: "lyon", name: "Lyon", region: "Rhône", lat: 45.7640, lng: 4.8357, hub: true },
   { slug: "paris", name: "Paris", region: "Île-de-France", lat: 48.8566, lng: 2.3522, hub: true },
-] as const;
+];

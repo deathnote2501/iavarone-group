@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/site";
 
 const NAV = [
-  { href: "/activites", label: "Activités" },
+  { href: "/formation-ia", label: "Formation IA" },
+  { href: "/conseil-ia", label: "Conseil IA" },
+  { href: "/agent-ia", label: "Agent IA" },
   { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];

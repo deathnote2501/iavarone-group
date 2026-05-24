@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site iavarone-group.fr — Groupe IAvarone.",
+  description: "Mentions légales du site iavarone-group.fr — IAvarone Group.",
   robots: { index: false, follow: true },
 };
 

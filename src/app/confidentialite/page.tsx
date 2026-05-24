@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité et traitement des données — Groupe IAvarone.",
+  description: "Politique de confidentialité et traitement des données — IAvarone Group.",
   robots: { index: false, follow: true },
 };
 

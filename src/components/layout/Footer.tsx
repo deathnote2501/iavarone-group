@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Building2 } from "lucide-react";
-import { SITE, BRANDS } from "@/lib/site";
+import { SITE, BRANDS, CITIES } from "@/lib/site";
+import { SERVICES_LIST } from "@/lib/services";
 
 export function Footer() {
   return (
@@ -24,15 +25,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold">Activités</h4>
+            <h4 className="text-sm font-semibold">Services</h4>
             <ul className="mt-3 space-y-2 text-sm text-[var(--color-ink-muted)]">
-              {BRANDS.map((b) => (
-                <li key={b.slug}>
-                  <a href={b.url} target="_blank" rel="noopener" className="hover:text-[var(--color-ink)]">
-                    {b.name}
-                  </a>
+              {SERVICES_LIST.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/${s.slug}`} className="hover:text-[var(--color-ink)]">
+                    {s.title}
+                  </Link>
                 </li>
               ))}
+              <li className="pt-2">
+                <Link href="/activites" className="hover:text-[var(--color-ink)]">
+                  Toutes nos marques →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,8 +53,35 @@ export function Footer() {
           </div>
         </div>
 
+        <div className="mt-10 border-t border-[var(--color-line)] pt-8">
+          <h4 className="text-sm font-semibold">Présence dans 17 villes</h4>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {CITIES.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  href={`/conseil-ia/${c.slug}`}
+                  className="inline-block rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs text-[var(--color-ink-muted)] transition hover:border-[var(--color-brand-blue)] hover:text-[var(--color-ink)]"
+                >
+                  {c.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs text-[var(--color-ink-muted)]">
+            Marques partenaires :{" "}
+            {BRANDS.map((b, i) => (
+              <span key={b.slug}>
+                {i > 0 && " · "}
+                <a href={b.url} target="_blank" rel="noopener" className="hover:text-[var(--color-ink)]">
+                  {b.name}
+                </a>
+              </span>
+            ))}
+          </p>
+        </div>
+
         <p className="mt-10 border-t border-[var(--color-line)] pt-6 text-xs text-[var(--color-ink-muted)]">
-          © {new Date().getFullYear()} Groupe IAvarone — {SITE.legal.sas} & {SITE.legal.ei}. Tous droits réservés.
+          © {new Date().getFullYear()} IAvarone Group — {SITE.legal.sas} & {SITE.legal.ei}. Tous droits réservés.
         </p>
       </div>
     </footer>

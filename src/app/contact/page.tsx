@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Calendar, Mail, Phone } from "lucide-react";
+import { Calendar, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { InterventionsMapLazy } from "@/components/sections/InterventionsMapLazy";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contacter le Groupe IAvarone : RDV en ligne via Koalendar, téléphone, e-mail. Interventions Auvergne-Rhône-Alpes, Paris et distanciel France entière.",
+    "Contacter IAvarone Group : RDV en ligne via Koalendar, téléphone, e-mail. Interventions Auvergne-Rhône-Alpes, Paris et distanciel France entière.",
 };
 
 export default function ContactPage() {
@@ -36,9 +38,7 @@ export default function ContactPage() {
               Réservez un créneau directement dans mon agenda Koalendar. Visio ou physique selon
               votre localisation.
             </p>
-            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue)]">
-              Koalendar →
-            </p>
+            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue)]">Koalendar →</p>
           </a>
 
           <a
@@ -65,17 +65,44 @@ export default function ContactPage() {
             <p className="mt-4 text-sm font-medium">{SITE.contact.email}</p>
           </a>
         </div>
+      </section>
 
-        <div className="mt-12 rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface-alt)] p-8">
-          <h2 className="text-xl font-semibold">Zones d&apos;intervention</h2>
-          <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
-            Présentiel dans tout l&apos;Auvergne-Rhône-Alpes (Puy-de-Dôme, Allier, Cantal, Haute-Loire,
-            Loire, Rhône, Ain, Savoie, Haute-Savoie, Isère, Drôme), à Paris, et distanciel partout en
-            France.
-          </p>
-          <p className="mt-4 text-sm text-[var(--color-ink-muted)]">
+      <section className="bg-[var(--color-surface-alt)] py-16">
+        <div className="container-page grid items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <div>
+            <h2 className="text-3xl font-semibold tracking-tight">Écrire un message</h2>
+            <p className="mt-3 text-[var(--color-ink-muted)]">
+              Décrivez votre besoin en quelques lignes — je vous réponds personnellement sous 24h
+              ouvrées. Pour un cadrage immédiat, préférez le rendez-vous Koalendar.
+            </p>
+            <div className="mt-8">
+              <ContactForm />
+            </div>
+          </div>
+
+          <div>
+            <h2 className="flex items-center gap-2 text-3xl font-semibold tracking-tight">
+              <MapPin className="h-7 w-7 text-[var(--color-brand-blue)]" aria-hidden />
+              Zones d&apos;intervention
+            </h2>
+            <p className="mt-3 text-[var(--color-ink-muted)]">
+              Présentiel dans 17 villes d&apos;Auvergne-Rhône-Alpes et à Paris, distanciel partout en
+              France. Bleu = pôles principaux (hébergement facile), jaune = villes secondaires.
+            </p>
+            <div className="mt-6">
+              <InterventionsMapLazy />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-16">
+        <div className="rounded-2xl border border-[var(--color-line)] bg-white p-8">
+          <h2 className="text-xl font-semibold">Bureaux &amp; logistique</h2>
+          <p className="mt-3 text-sm text-[var(--color-ink-muted)]">
             Bureaux à Clermont-Ferrand. Possibilité d&apos;hébergement sur Lyon et Paris pour
-            interventions de plusieurs jours.
+            interventions de plusieurs jours. Déplacements inclus dans les forfaits sur toute la
+            région Auvergne-Rhône-Alpes.
           </p>
           <div className="mt-6">
             <Button asChild>

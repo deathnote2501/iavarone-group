@@ -4,9 +4,9 @@ import { SITE } from "@/lib/site";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "À propos du Groupe IAvarone",
+  title: "À propos d'IAvarone Group",
   description:
-    "Le Groupe IAvarone est fondé et opéré par Jérôme Iavarone, formateur Qualiopi et consultant en IA générative basé en Auvergne.",
+    "IAvarone Group est fondé et opéré par Jérôme Iavarone, formateur Qualiopi et consultant en IA générative basé en Auvergne.",
 };
 
 export default function AProposPage() {

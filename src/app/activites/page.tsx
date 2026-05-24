@@ -4,7 +4,7 @@ import { ActivitiesGrid } from "@/components/sections/ActivitiesGrid";
 export const metadata: Metadata = {
   title: "Nos activités",
   description:
-    "Les six activités du Groupe IAvarone : formation, conseil, applications métier, agents IA, SaaS Qualiopi et RGAA, e-commerce B2B.",
+    "Les six activités d'IAvarone Group : formation, conseil, applications métier, agents IA, SaaS Qualiopi et RGAA, e-commerce B2B.",
 };
 
 export default function ActivitesPage() {

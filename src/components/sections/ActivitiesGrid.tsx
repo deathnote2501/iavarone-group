@@ -32,7 +32,7 @@ export function ActivitiesGrid() {
           Six activités complémentaires
         </h2>
         <p className="mt-4 text-[var(--color-ink-muted)]">
-          De la formation initiale au déploiement d&apos;agents IA en production, le Groupe IAvarone couvre
+          De la formation initiale au déploiement d&apos;agents IA en production, IAvarone Group couvre
           l&apos;ensemble de la chaîne de valeur de l&apos;IA générative pour PME, ETI et organisations.
         </p>
       </div>
