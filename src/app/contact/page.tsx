@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Calendar, Mail, Phone, MapPin } from "lucide-react";
+import { Calendar, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { ContactForm } from "@/components/sections/ContactForm";
-import { InterventionsMapLazy } from "@/components/sections/InterventionsMapLazy";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -64,35 +62,6 @@ export default function ContactPage() {
             </p>
             <p className="mt-4 text-sm font-medium">{SITE.contact.email}</p>
           </a>
-        </div>
-      </section>
-
-      <section className="bg-[var(--color-surface-alt)] py-16">
-        <div className="container-page grid items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <div>
-            <h2 className="text-3xl font-semibold tracking-tight">Écrire un message</h2>
-            <p className="mt-3 text-[var(--color-ink-muted)]">
-              Décrivez votre besoin en quelques lignes — je vous réponds personnellement sous 24h
-              ouvrées. Pour un cadrage immédiat, préférez le rendez-vous Koalendar.
-            </p>
-            <div className="mt-8">
-              <ContactForm />
-            </div>
-          </div>
-
-          <div>
-            <h2 className="flex items-center gap-2 text-3xl font-semibold tracking-tight">
-              <MapPin className="h-7 w-7 text-[var(--color-brand-blue)]" aria-hidden />
-              Zones d&apos;intervention
-            </h2>
-            <p className="mt-3 text-[var(--color-ink-muted)]">
-              Présentiel dans 17 villes d&apos;Auvergne-Rhône-Alpes et à Paris, distanciel partout en
-              France. Bleu = pôles principaux (hébergement facile), jaune = villes secondaires.
-            </p>
-            <div className="mt-6">
-              <InterventionsMapLazy />
-            </div>
-          </div>
         </div>
       </section>
 
