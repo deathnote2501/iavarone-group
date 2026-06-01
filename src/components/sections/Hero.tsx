@@ -48,6 +48,20 @@ export function Hero() {
             </a>
           </Button>
         </div>
+
+        <div className="mt-14 overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white shadow-[0_20px_60px_-20px_rgba(15,23,42,0.18)]">
+          <video
+            className="block aspect-video w-full"
+            src="/hero-video.mp4"
+            poster="/hero-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Présentation animée du Groupe IAvarone et de ses six marques"
+          />
+        </div>
       </div>
     </section>
   );
