@@ -24,6 +24,13 @@ export const SITE = {
     sas: "IAvarone Conseil — SAS",
     ei: "Jérôme Iavarone — Entreprise Individuelle",
   },
+  // Signaux de confiance E-E-A-T (expérience, expertise, autorité, fiabilité)
+  proof: [
+    { value: "Qualiopi", label: "Organisme certifié (Actions de formation)" },
+    { value: "1 000+", label: "professionnels formés depuis 2020" },
+    { value: "4,9/5", label: "satisfaction moyenne" },
+    { value: "2020", label: "année de création du groupe" },
+  ],
 } as const;
 
 export const BRANDS = [

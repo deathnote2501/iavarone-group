@@ -4,7 +4,8 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Phone, MapPin, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE, CITIES } from "@/lib/site";
-import { SERVICES, type ServiceSlug } from "@/lib/services";
+import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 interface PageProps {
   params: Promise<{ service: string; city: string }>;
@@ -66,7 +67,11 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const { service, city } = data;
   const Icon = service.icon;
 
-  const related = CITIES.filter((other) => other.slug !== city.slug).slice(0, 6);
+  // Maillage interne : on relie chaque page ville à TOUTES les autres villes du
+  // même service (graphe complet → un crawl atteignant une page indexée peut
+  // rebondir vers les 50 autres) et aux deux autres services de la même ville.
+  const related = CITIES.filter((other) => other.slug !== city.slug);
+  const otherServices = SERVICES_LIST.filter((s) => s.slug !== service.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -147,6 +152,8 @@ export default async function ServiceCityPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <TrustBar />
 
       <section className="container-page py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Trois engagements concrets</h2>
@@ -258,8 +265,27 @@ export default async function ServiceCityPage({ params }: PageProps) {
         </div>
       </section>
 
+      <section className="container-page py-12">
+        <h2 className="text-xl font-semibold">Autres services à {city.name}</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {otherServices.map((os) => (
+            <Link
+              key={os.slug}
+              href={`/${os.slug}/${city.slug}`}
+              className="group flex items-center justify-between rounded-xl border border-[var(--color-line)] bg-white px-5 py-4 transition hover:border-[var(--color-brand-blue)]"
+            >
+              <span>
+                <span className="block font-medium">{os.title} à {city.name}</span>
+                <span className="block text-xs text-[var(--color-ink-muted)]">{os.short}</span>
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="container-page pb-20">
-        <h2 className="text-xl font-semibold">{service.title} dans d&apos;autres villes</h2>
+        <h2 className="text-xl font-semibold">{service.title} dans les autres villes</h2>
         <ul className="mt-4 flex flex-wrap gap-2">
           {related.map((rc) => (
             <li key={rc.slug}>

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE, CITIES } from "@/lib/site";
-import { SERVICES, type ServiceSlug } from "@/lib/services";
+import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 interface PageProps {
   params: Promise<{ service: string }>;
@@ -51,6 +52,7 @@ export default async function ServicePage({ params }: PageProps) {
 
   const hubs = CITIES.filter((c) => c.hub);
   const others = CITIES.filter((c) => !c.hub);
+  const otherServices = SERVICES_LIST.filter((s) => s.slug !== service.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -85,6 +87,14 @@ export default async function ServicePage({ params }: PageProps) {
             areaServed: { "@type": "City", name: c.name },
           })),
         },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: service.hubFaq.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
       },
     ],
   };
@@ -124,6 +134,8 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <TrustBar />
 
       <section className="container-page py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Pôles principaux</h2>
@@ -165,6 +177,42 @@ export default async function ServicePage({ params }: PageProps) {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="container-page pb-4">
+        <h2 className="text-3xl font-semibold tracking-tight">Questions fréquentes</h2>
+        <div className="mt-8 divide-y divide-[var(--color-line)] rounded-2xl border border-[var(--color-line)] bg-white">
+          {service.hubFaq.map((item) => (
+            <details key={item.q} className="group p-6">
+              <summary className="cursor-pointer list-none text-base font-semibold marker:hidden">
+                <span className="flex items-start justify-between gap-4">
+                  {item.q}
+                  <span className="text-[var(--color-brand-blue)] transition-transform group-open:rotate-45">+</span>
+                </span>
+              </summary>
+              <p className="mt-3 text-sm text-[var(--color-ink-muted)]">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page py-16">
+        <h2 className="text-xl font-semibold">Les autres expertises d&apos;IAvarone Group</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {otherServices.map((os) => (
+            <Link
+              key={os.slug}
+              href={`/${os.slug}`}
+              className="group flex items-center justify-between rounded-xl border border-[var(--color-line)] bg-white px-5 py-4 transition hover:border-[var(--color-brand-blue)]"
+            >
+              <span>
+                <span className="block font-medium">{os.title}</span>
+                <span className="block text-xs text-[var(--color-ink-muted)]">{os.short}</span>
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </Link>
+          ))}
+        </div>
       </section>
     </>
   );

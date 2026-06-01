@@ -15,6 +15,8 @@ export interface Service {
   intro: (city: string) => string;
   pillars: { title: string; description: string }[];
   faq: (city: string) => { q: string; a: string }[];
+  /** FAQ niveau région pour la page hub (ciblant les "People Also Ask" Google). */
+  hubFaq: { q: string; a: string }[];
   cta: string;
 }
 
@@ -68,6 +70,24 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       {
         q: "Quels sujets sont couverts ?",
         a: "ChatGPT / Claude / Gemini : prompt engineering, contextes longs, agents. Automatisation : n8n, Make, Zapier. Développement : Vibe Coding avec Claude Code. Conformité : RGPD, IA Act, charte IA. Cas d'usage métier sur demande.",
+      },
+    ],
+    hubFaq: [
+      {
+        q: "Quel est le prix moyen d'une formation en IA générative ?",
+        a: "Pour une formation intra-entreprise sur mesure, comptez 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés se situent plutôt entre 800 et 2 000 € HT par personne et par jour. Toutes mes formations sont certifiées Qualiopi et donc finançables OPCO, CPF, FNE ou plan de développement des compétences.",
+      },
+      {
+        q: "Quelle est la meilleure formation à l'IA pour une entreprise ?",
+        a: "La meilleure formation IA pour une entreprise n'est pas un catalogue générique mais un programme construit sur vos cas d'usage réels : vos données, vos process, vos outils. C'est l'approche que j'applique — ChatGPT, Claude, Gemini, prompt engineering, automatisation n8n/Make et Vibe Coding — adaptée au niveau et au métier de vos équipes.",
+      },
+      {
+        q: "La formation IA est-elle finançable par mon OPCO ou le CPF ?",
+        a: "Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui rend les formations éligibles aux financements OPCO, plan de développement des compétences, FNE et CPF. La documentation administrative complète (convention, programme, attestations) est fournie pour faciliter votre demande.",
+      },
+      {
+        q: "Où se former à ChatGPT et à l'IA en Auvergne-Rhône-Alpes ?",
+        a: "J'interviens en présentiel dans 17 villes (Clermont-Ferrand, Lyon, Saint-Étienne, Grenoble, Annecy, Chambéry, Valence, Vichy, Roanne, Paris…) et en distanciel partout en France. Chaque ville dispose d'une page dédiée avec le contexte local et les modalités d'intervention.",
       },
     ],
     cta: "Demander un programme de formation",
@@ -124,6 +144,24 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         a: "Pas d'équipe pléthorique facturée en régie. Pas de proposition de chatbot ChatGPT plaqué. Méthode produit : on cible un cas d'usage, on livre, on mesure. Si ça ne marche pas, on arrête. Si ça marche, on étend.",
       },
     ],
+    hubFaq: [
+      {
+        q: "Combien coûte un consultant IA pour une PME ?",
+        a: "Mes interventions vont du forfait audit (3-6 k€) au projet complet (5-20 k€ pour 4 à 8 semaines). Pas de TJM à rallonge : je facture au livrable, pas au temps passé. Le premier rendez-vous de cadrage de 30 minutes est gratuit pour estimer votre besoin et le ROI attendu.",
+      },
+      {
+        q: "En quoi un consultant IA indépendant diffère-t-il d'une ESN ?",
+        a: "Pas d'équipe pléthorique facturée en régie, pas de chatbot ChatGPT plaqué sur un besoin mal cadré. Méthode produit : on cible un cas d'usage à fort ROI, on chiffre, on livre, on mesure. Si ça ne marche pas, on arrête ; si ça marche, on étend. Un seul interlocuteur, du cadrage à la mise en production.",
+      },
+      {
+        q: "Quels cas d'usage de l'IA générative ont le meilleur ROI en PME ?",
+        a: "Les gains les plus rapides viennent souvent de l'automatisation documentaire (devis, comptes rendus, réponses aux appels d'offres), du support client de niveau 1, de la prospection commerciale et de l'analyse de données métier. L'audit initial sert précisément à prioriser les 3 à 5 cas d'usage à plus fort impact dans votre organisation.",
+      },
+      {
+        q: "Combien de temps dure un projet d'intégration IA ?",
+        a: "Un audit/cadrage est livré en 2 semaines. Un projet complet (développement d'une application métier, intégration dans vos outils existants) se livre généralement en 4 à 8 semaines, avec des points hebdomadaires et une mise en production progressive.",
+      },
+    ],
     cta: "Demander un cadrage gratuit",
   },
 
@@ -176,6 +214,24 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       {
         q: "Comment se passe la supervision ?",
         a: "L'agent n'est jamais 100% autonome. Chaque jour, vous validez les actions sensibles (envois, rendez-vous, décisions). Au fil du temps, le niveau d'autonomie augmente selon votre confort.",
+      },
+    ],
+    hubFaq: [
+      {
+        q: "Quel est le tarif d'un agent IA pour une entreprise ?",
+        a: "Le déploiement d'un agent IA autonome supervisé se compose d'un setup one-shot entre 1 850 € et 3 850 € (selon la complexité du poste automatisé), puis d'un abonnement mensuel entre 450 € et 950 € (supervision, ajustements, montée en charge). Sans engagement, résiliable à tout moment — soit un coût environ 6× inférieur à un recrutement junior.",
+      },
+      {
+        q: "Un agent IA est-il vraiment autonome ?",
+        a: "Un agent IA bien conçu n'est jamais 100 % autonome au départ : chaque jour, vous validez les actions sensibles (envois, rendez-vous, décisions). Au fil du temps, le niveau d'autonomie augmente selon votre niveau de confiance. C'est une supervision décroissante, pas une boîte noire.",
+      },
+      {
+        q: "Quels sont les avantages d'un agent IA pour une PME ?",
+        a: "Automatiser des tâches répétitives sans recruter ni alourdir la masse salariale : prospection B2B (5-20 RDV/mois), support client niveau 1 (60-80 % de traitement automatisé), relances WhatsApp, génération de backlinks SEO. L'agent travaille 24/7 depuis vos outils existants (Gmail, Slack, CRM, WhatsApp Business).",
+      },
+      {
+        q: "Quels types d'agents IA proposez-vous ?",
+        a: "Prospection B2B (cold email + LinkedIn), support client niveau 1 (FAQ + tri des tickets), relances WhatsApp (upsell et recouvrement), agent SEO/backlinks (200-500 sites/mois) et assistant polyvalent (CRM + emails + agenda). Chaque agent est conçu sur mesure pour votre métier, vos outils et votre ton.",
       },
     ],
     cta: "Estimer mon agent IA",

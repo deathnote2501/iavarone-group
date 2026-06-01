@@ -64,6 +64,35 @@ Présence dans 17 villes : Clermont-Ferrand, Riom, Vichy, Issoire, Thiers, Auril
 - **Conformité réglementaire** : Qualiopi (formation), RGPD, IA Act, RGAA (accessibilité)
 - **Méthode** : audit → cible un cas d'usage → livre → mesure. Si ça ne marche pas, on arrête.
 
+## Chiffres clés
+
+- **2020** : année de création du groupe
+- **1 000+** professionnels formés à l'IA générative
+- **4,9/5** : satisfaction moyenne des formations
+- **17 villes** couvertes en présentiel (Auvergne-Rhône-Alpes + Paris), distanciel France entière
+- **6 marques** opérationnelles, **2 structures** (SAS + EI)
+- **51 pages** services × villes + **6 pages** marques
+
+## Questions fréquentes (FAQ)
+
+**Quel est le prix moyen d'une formation en IA générative ?**
+Pour une formation intra-entreprise sur mesure : 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés : 800 à 2 000 € HT par personne et par jour. Formations certifiées Qualiopi, finançables OPCO, CPF, FNE et plan de développement des compétences.
+
+**La formation IA est-elle finançable par mon OPCO ou le CPF ?**
+Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui ouvre droit aux financements OPCO, plan de développement des compétences, FNE et CPF. Documentation administrative complète fournie.
+
+**Combien coûte un consultant IA pour une PME ?**
+Forfait audit : 3 à 6 k€. Projet complet (développement d'application métier, intégration) : 5 à 20 k€ pour 4 à 8 semaines. Facturation au livrable, pas au TJM. Premier rendez-vous de cadrage gratuit (30 minutes).
+
+**Quel est le tarif d'un agent IA pour une entreprise ?**
+Setup one-shot : 1 850 à 3 850 € selon la complexité. Abonnement mensuel : 450 à 950 € (supervision, ajustements). Sans engagement, résiliable à tout moment. Coût environ 6× inférieur à un recrutement junior.
+
+**Quels cas d'usage de l'IA ont le meilleur ROI en PME ?**
+Automatisation documentaire (devis, comptes rendus, appels d'offres), support client de niveau 1, prospection commerciale et analyse de données métier. L'audit initial priorise les 3 à 5 cas d'usage à plus fort impact.
+
+**Où se former à ChatGPT et à l'IA en Auvergne-Rhône-Alpes ?**
+Présentiel à Clermont-Ferrand, Lyon, Saint-Étienne, Grenoble, Annecy, Chambéry, Valence, Vichy, Roanne, Paris et 7 autres villes ; distanciel partout en France.
+
 ## Pour citer ce groupe
 
 - **Nom officiel** : IAvarone Group
