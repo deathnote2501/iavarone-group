@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight, ArrowRight, Calendar, Phone, Check, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { AuthorBio } from "@/components/sections/AuthorBio";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
 interface PageProps {
@@ -221,6 +222,8 @@ export default async function BrandPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <AuthorBio context="Marque opérée par" />
 
       <section className="container-page pb-20">
         <h2 className="text-xl font-semibold">Les autres marques du groupe</h2>

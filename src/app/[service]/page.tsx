@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/Button";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { AuthorBio } from "@/components/sections/AuthorBio";
+import { ResultsPreview } from "@/components/sections/ResultsPreview";
 
 interface PageProps {
   params: Promise<{ service: string }>;
@@ -195,6 +197,10 @@ export default async function ServicePage({ params }: PageProps) {
           ))}
         </div>
       </section>
+
+      <ResultsPreview />
+
+      <AuthorBio context="Votre interlocuteur unique" />
 
       <section className="container-page py-16">
         <h2 className="text-xl font-semibold">Les autres expertises d&apos;IAvarone Group</h2>

@@ -1,16 +1,17 @@
 import type { MetadataRoute } from "next";
 import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
+import { ARTICLES } from "@/lib/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ["", "/marques", "/a-propos", "/contact", "/mentions-legales", "/confidentialite"];
+  const staticRoutes = ["", "/references", "/ressources", "/marques", "/a-propos", "/contact", "/mentions-legales", "/confidentialite"];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${SITE.url}${path}`,
     lastModified: now,
-    changeFrequency: path === "" ? "monthly" : "monthly",
-    priority: path === "" ? 1 : path === "/marques" ? 0.8 : 0.7,
+    changeFrequency: "monthly",
+    priority: path === "" ? 1 : path === "/marques" || path === "/references" ? 0.8 : 0.7,
   }));
 
   const serviceHubs: MetadataRoute.Sitemap = Object.keys(SERVICES).map((slug) => ({
@@ -36,5 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...serviceHubs, ...serviceCities, ...brandPages];
+  const articlePages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+    url: `${SITE.url}/ressources/${a.slug}`,
+    lastModified: new Date(a.dateModified),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...serviceHubs, ...serviceCities, ...brandPages, ...articlePages];
 }

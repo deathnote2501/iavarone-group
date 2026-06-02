@@ -9,6 +9,16 @@ export const SITE = {
     name: "Jérôme Iavarone",
     role: "Fondateur — Formateur & Consultant IA générative",
     photo: "/photo-jerome.jpg",
+    since: "2020",
+    location: "Clermont-Ferrand, Auvergne-Rhône-Alpes",
+    // Phrase d'autorité affichée dans l'encart auteur (signal E-E-A-T : qui livre).
+    bio: "Formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Il conçoit et livre lui-même chaque mission — formation, audit, développement d'applications et agents IA — pour les PME, ETI et organisations.",
+    // Credentials vérifiables (affichés en chips + injectés en hasCredential JSON-LD).
+    credentials: [
+      "Organisme de formation certifié Qualiopi (Actions de formation)",
+      "Consultant IA générative depuis 2020",
+      "1 000+ professionnels formés",
+    ],
   },
   contact: {
     email: "jerome.iavarone@gmail.com",
@@ -21,14 +31,40 @@ export const SITE = {
     github: "https://github.com/deathnote2501",
   },
   legal: {
-    sas: "IAvarone Conseil — SAS",
+    sas: "IAvarone Conseil — SASU",
     ei: "Jérôme Iavarone — Entreprise Individuelle",
+    // Identité légale (rendue uniquement si non vide — rien de faux n'est publié
+    // tant qu'un champ reste ""). Renforce le signal Trust E-E-A-T et la conformité.
+    sasSiren: "932 210 339",
+    sasSiret: "932 210 339 00010",
+    sasRcs: "Clermont-Ferrand 932 210 339",
+    sasCapital: "150 €",
+    sasVat: "FR70932210339",
+    sasNaf: "70.22Z — Conseil pour les affaires et autres conseils de gestion",
+    sasFoundingDate: "2024-08-26",
+    sasInsurance: "Hiscox Assurances — contrat n° HSXIN320063949",
+    sasStreet: "8 ter boulevard Léon Malfreyt",
+    sasPostalCode: "63000",
+    sasCity: "Clermont-Ferrand",
+    pappersUrl: "https://www.pappers.fr/entreprise/iac-iavarone-conseil-932210339",
+    // Entreprise individuelle Jérôme Iavarone (profession libérale, depuis 2006 —
+    // porte la formation Qualiopi). IBAN volontairement non publié (donnée bancaire).
+    eiSiren: "489 521 765",
+    eiSiret: "489 521 765 00052",
+    eiVat: "FR51489521765",
+    eiApe: "6220A — Conseil en systèmes et logiciels informatiques",
+    eiFoundingDate: "2006-04-07",
+    eiInsurance: "Hiscox Assurances — contrat n° HSXIN320040316A",
+    eiPappersUrl: "https://www.pappers.fr/entreprise/iavarone-jerome-489521765",
+    qualiopiNumber: "", // n° du certificat Qualiopi (à compléter)
+    qualiopiBody: "", // organisme certificateur (ex. "I.Cert", "Qualicert")
+    ndaNumber: "84630592763", // déclaration d'activité de formation (18/03/2024)
   },
   // Signaux de confiance E-E-A-T (expérience, expertise, autorité, fiabilité)
   proof: [
     { value: "Qualiopi", label: "Organisme certifié (Actions de formation)" },
     { value: "1 000+", label: "professionnels formés depuis 2020" },
-    { value: "4,9/5", label: "satisfaction moyenne" },
+    { value: "4,9/5", label: "satisfaction (évaluations de fin de formation)" },
     { value: "2020", label: "année de création du groupe" },
   ],
 } as const;

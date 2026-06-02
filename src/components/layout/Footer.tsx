@@ -45,6 +45,8 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold">Le groupe</h4>
             <ul className="mt-3 space-y-2 text-sm text-[var(--color-ink-muted)]">
+              <li><Link href="/references" className="hover:text-[var(--color-ink)]">Résultats clients</Link></li>
+              <li><Link href="/ressources" className="hover:text-[var(--color-ink)]">Ressources</Link></li>
               <li><Link href="/a-propos" className="hover:text-[var(--color-ink)]">À propos</Link></li>
               <li><Link href="/contact" className="hover:text-[var(--color-ink)]">Contact</Link></li>
               <li><Link href="/mentions-legales" className="hover:text-[var(--color-ink)]">Mentions légales</Link></li>

@@ -77,6 +77,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   email: SITE.contact.email,
                   telephone: SITE.contact.phoneHref.replace("tel:", ""),
                   foundingDate: "2020",
+                  ...(SITE.legal.sasVat ? { vatID: SITE.legal.sasVat } : {}),
+                  ...(SITE.legal.sasSiren
+                    ? { identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.legal.sasSiren } }
+                    : {}),
+                  hasCredential: {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "certification",
+                    name: "Qualiopi — Actions de formation",
+                    ...(SITE.legal.qualiopiBody
+                      ? { recognizedBy: { "@type": "Organization", name: SITE.legal.qualiopiBody } }
+                      : {}),
+                    ...(SITE.legal.qualiopiNumber ? { identifier: SITE.legal.qualiopiNumber } : {}),
+                  },
                   founder: {
                     "@type": "Person",
                     "@id": `${SITE.url}/#person`,
@@ -85,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   },
                   address: {
                     "@type": "PostalAddress",
+                    ...(SITE.legal.sasStreet ? { streetAddress: SITE.legal.sasStreet } : {}),
                     addressLocality: "Clermont-Ferrand",
                     addressRegion: "Auvergne-Rhône-Alpes",
                     postalCode: "63000",
@@ -110,7 +124,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     "Accessibilité RGAA",
                     "Conformité Qualiopi",
                   ],
-                  sameAs: [SITE.social.linkedin, SITE.social.github, ...BRANDS.map((b) => b.url)],
+                  sameAs: [
+                    SITE.social.linkedin,
+                    SITE.social.github,
+                    ...(SITE.legal.pappersUrl ? [SITE.legal.pappersUrl] : []),
+                    ...BRANDS.map((b) => b.url),
+                  ],
                   subOrganization: BRANDS.map((b) => ({
                     "@type": "Organization",
                     name: b.name,

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { AuthorBio } from "@/components/sections/AuthorBio";
 
 interface PageProps {
   params: Promise<{ service: string; city: string }>;
@@ -264,6 +265,8 @@ export default async function ServiceCityPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <AuthorBio context={`${service.title} à ${city.name} — assuré par`} />
 
       <section className="container-page py-12">
         <h2 className="text-xl font-semibold">Autres services à {city.name}</h2>

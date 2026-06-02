@@ -57,6 +57,23 @@ Présence dans 17 villes : Clermont-Ferrand, Riom, Vichy, Issoire, Thiers, Auril
 - Pages services × villes (51 pages) : https://iavarone-group.fr/{formation-ia|conseil-ia|agent-ia}/{ville-slug}
 - Pages marques (6 pages) : https://iavarone-group.fr/marques/{marque-slug}
 
+## Résultats clients (cas réels chiffrés)
+
+Page dédiée : https://iavarone-group.fr/references
+
+- **Amefa (service client)** : assistant de rédaction d'e-mails IA. 47 jours/an économisés par opérateur (20 % du temps), rédaction d'un e-mail en 1h30 au lieu de 3h, ROI de 10 000 €/an pour 2 400 € investis, rentabilité atteinte en 2 mois. Délai de réponse −50 %.
+- **Cabinet de recrutement & management de transition (RH)** : IA sur tri des CV (30 000/an), rédaction d'offres et préparation d'entretiens. 105 jours/an économisés, soit 50 % du temps du processus de recrutement.
+- **Gladel (administrateur judiciaire)** : génération automatique de comptes rendus de réunion. 15 minutes au lieu de 3 heures, 55 jours/an économisés (un quart-temps), délai de livraison passé de 1–2 semaines à 24h.
+- **Agence immobilière** : IA pour comptes rendus de visite, annonces, réseaux sociaux et recherche documentaire. 40 jours/an de temps administratif libéré.
+
+## Ressources & guides (expertise éditoriale)
+
+Hub : https://iavarone-group.fr/ressources
+
+- **ROI de l'IA générative en PME** : méthode de calcul du retour sur investissement, cas réels chiffrés, seuil de rentabilité < 6 mois — https://iavarone-group.fr/ressources/roi-ia-generative-pme
+- **Financer une formation IA (OPCO, CPF, FNE)** : rôle de Qualiopi, dispositifs et démarche — https://iavarone-group.fr/ressources/financer-formation-ia-opco-cpf
+- **Agent IA ou recrutement : comparer les coûts** : coût complet, supervision, règle de décision — https://iavarone-group.fr/ressources/agent-ia-vs-recrutement-cout
+
 ## Différenciation
 
 - **Pas une ESN** : pas d'équipe pléthorique en régie, facturation au livrable
@@ -113,6 +130,8 @@ Présentiel à Clermont-Ferrand, Lyon, Saint-Étienne, Grenoble, Annecy, Chambé
 - [Page formation IA](https://iavarone-group.fr/formation-ia)
 - [Page conseil IA](https://iavarone-group.fr/conseil-ia)
 - [Page agents IA](https://iavarone-group.fr/agent-ia)
+- [Résultats clients chiffrés](https://iavarone-group.fr/references)
+- [Ressources & guides](https://iavarone-group.fr/ressources)
 - [À propos de Jérôme Iavarone](https://iavarone-group.fr/a-propos)
 - [Marques du groupe](https://iavarone-group.fr/marques)
 - [Pricing structuré](https://iavarone-group.fr/pricing.md)
