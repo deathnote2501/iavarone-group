@@ -423,4 +423,356 @@ export const ARTICLES: readonly Article[] = [
       },
     ],
   },
+
+  {
+    slug: "ia-generative-definition-exemples",
+    title: "IA générative : définition, fonctionnement et exemples",
+    description:
+      "Qu'est-ce que l'IA générative ? Définition simple, différence avec l'IA classique, fonctionnement des modèles (texte, image, code) et exemples concrets d'usages en entreprise.",
+    category: "Conseil IA",
+    datePublished: "2026-06-03",
+    dateModified: "2026-06-03",
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: "p",
+        text: "L'IA générative est la technologie derrière ChatGPT, Claude, Gemini ou Midjourney. En quelques années, elle est passée du laboratoire au quotidien des entreprises. Mais derrière le terme se cache une idée simple — et des usages très concrets. Voici une définition claire, sans jargon, et des exemples qui parlent.",
+      },
+      { type: "h2", text: "Définition : qu'est-ce que l'IA générative ?" },
+      {
+        type: "p",
+        text: "L'IA générative est une famille d'intelligence artificielle capable de produire des contenus nouveaux — du texte, des images, du code, du son ou de la vidéo — à partir d'une simple consigne en langage naturel. Là où une IA classique se contente de classer ou de prédire (par exemple : « ce mail est-il un spam ? »), l'IA générative crée : elle rédige, dessine, résume, traduit ou programme.",
+      },
+      {
+        type: "p",
+        text: "Elle repose sur des « grands modèles de langage » (LLM) entraînés sur d'immenses quantités de textes, qui ont appris à prédire la suite la plus probable d'une demande. C'est ce qui leur permet de produire des réponses cohérentes et contextualisées.",
+      },
+      { type: "h2", text: "IA générative vs IA classique" },
+      {
+        type: "ul",
+        items: [
+          "IA classique (prédictive) : analyse des données existantes pour classer, prévoir ou recommander (détection de fraude, maintenance prédictive, scoring).",
+          "IA générative : produit un contenu original à partir d'une instruction (rédiger un e-mail, résumer un rapport, générer une image ou du code).",
+          "Les deux sont complémentaires : on peut prédire ET générer dans un même processus métier.",
+        ],
+      },
+      { type: "h2", text: "Exemples concrets d'IA générative en entreprise" },
+      {
+        type: "ul",
+        items: [
+          "Texte : rédaction et reformulation d'e-mails, comptes rendus de réunion, réponses clients, offres commerciales.",
+          "Synthèse : résumé de documents longs, analyse de contrats, veille.",
+          "Image : visuels marketing, illustrations, déclinaisons de supports.",
+          "Code : assistance au développement (le « Vibe Coding »), automatisation de scripts.",
+          "Conversation : assistants internes et agents capables d'agir dans vos outils.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "L'IA générative ne remplace pas le jugement humain : elle produit un premier jet à grande vitesse, que l'humain vérifie, corrige et valide.",
+      },
+      { type: "h2", text: "Quels gains pour une PME ?" },
+      {
+        type: "p",
+        text: "Les cas d'usage à plus fort retour sont presque toujours documentaires et répétitifs : tout ce qui se rédige, se résume ou se reformule en volume. Le bon réflexe n'est pas de « déployer l'IA partout », mais d'identifier une tâche chronophage précise et de l'automatiser à 70-80 %, puis de mesurer le temps gagné.",
+      },
+      { type: "h2", text: "Par où commencer" },
+      {
+        type: "p",
+        text: "Un audit court permet d'identifier les 3 à 5 cas d'usage à plus fort impact dans votre organisation, de les chiffrer et de les prioriser. C'est précisément l'approche d'accompagnement d'IAvarone Group : cibler, chiffrer, livrer, mesurer — sans fascination technologique.",
+      },
+    ],
+    faq: [
+      {
+        q: "Qu'est-ce que l'IA générative en quelques mots ?",
+        a: "L'IA générative est une intelligence artificielle capable de créer des contenus nouveaux (texte, image, code, son) à partir d'une consigne en langage naturel. C'est la technologie derrière ChatGPT, Claude, Gemini ou Midjourney.",
+      },
+      {
+        q: "Quelle est la différence entre IA générative et IA classique ?",
+        a: "L'IA classique analyse des données pour classer ou prédire (détection de fraude, scoring). L'IA générative, elle, produit un contenu original à partir d'une instruction (rédiger, résumer, dessiner, coder). Les deux approches sont complémentaires.",
+      },
+      {
+        q: "Quels sont des exemples d'IA générative en entreprise ?",
+        a: "Rédaction d'e-mails et de comptes rendus, synthèse de documents, réponses clients, visuels marketing, assistance au développement (Vibe Coding), assistants et agents internes. Les usages documentaires répétitifs offrent le meilleur retour sur investissement.",
+      },
+    ],
+  },
+
+  {
+    slug: "automatiser-taches-ia-n8n-make",
+    title: "Automatiser ses tâches avec l'IA : guide n8n, Make et agents",
+    description:
+      "Comment automatiser ses tâches répétitives avec l'IA et le no-code (n8n, Make) : principes, exemples d'automatisations utiles, place de l'IA générative et limites à connaître.",
+    category: "Agents IA",
+    datePublished: "2026-06-03",
+    dateModified: "2026-06-03",
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: "p",
+        text: "Une grande partie du temps de travail part dans des tâches répétitives : copier des données d'un outil à l'autre, relancer, trier, notifier, mettre en forme. L'automatisation no-code, dopée par l'IA générative, permet de confier ces tâches à des « robots logiciels ». Voici comment cela fonctionne, et par où commencer.",
+      },
+      { type: "h2", text: "Automatisation no-code : le principe" },
+      {
+        type: "p",
+        text: "Des outils comme n8n ou Make permettent de relier vos applications (Gmail, Slack, Notion, CRM, tableur, WhatsApp…) sans écrire de code, sous forme de « scénarios » : quand un événement se produit (un nouveau mail, un formulaire rempli), une suite d'actions s'enchaîne automatiquement. n8n a l'avantage d'être open source et auto-hébergeable ; Make est réputé pour sa simplicité visuelle.",
+      },
+      { type: "h2", text: "Ce que l'IA générative apporte à l'automatisation" },
+      {
+        type: "p",
+        text: "L'automatisation classique suit des règles fixes. En y ajoutant un modèle d'IA (ChatGPT, Claude…), le scénario devient capable de comprendre du langage et de décider : trier des messages par intention, rédiger une réponse, résumer un document, extraire des informations d'un texte libre. C'est le passage de l'automatisation « mécanique » à l'automatisation « intelligente ».",
+      },
+      { type: "h2", text: "Cinq automatisations utiles en PME" },
+      {
+        type: "ul",
+        items: [
+          "Tri et réponse de premier niveau aux e-mails ou demandes clients.",
+          "Génération automatique de comptes rendus à partir de notes ou de transcriptions.",
+          "Relances commerciales et de recouvrement (e-mail, WhatsApp).",
+          "Veille : collecte, résumé et envoi quotidien d'une synthèse.",
+          "Saisie : extraction de données de documents (factures, formulaires) vers un tableur ou un CRM.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Le bon point de départ n'est pas l'outil, mais la tâche : choisissez une action répétitive et chronophage, puis automatisez-la de bout en bout.",
+      },
+      { type: "h2", text: "Automatisation, scénario ou agent IA ?" },
+      {
+        type: "p",
+        text: "Un scénario n8n/Make suit un chemin prédéfini. Un agent IA va plus loin : il enchaîne des actions et prend des décisions pour atteindre un objectif (prospecter, gérer le support), sous supervision humaine. Pour une tâche simple et stable, un scénario suffit ; pour un « poste » à automatiser, on conçoit un agent.",
+      },
+      { type: "h2", text: "Limites et bonnes pratiques" },
+      {
+        type: "ul",
+        items: [
+          "Gardez une supervision humaine sur les actions sensibles (envois, paiements, décisions).",
+          "Attention aux données : pas de données personnelles ou sensibles sans cadre RGPD.",
+          "Commencez petit, mesurez le temps gagné, puis étendez.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Vous pouvez vous former à ces outils (formations n8n/Make d'IAvarone Group, finançables OPCO) ou faire concevoir et déployer des automatisations et agents sur mesure pour votre entreprise.",
+      },
+    ],
+    faq: [
+      {
+        q: "Comment automatiser ses tâches avec l'IA ?",
+        a: "On relie ses applications via un outil no-code (n8n, Make) sous forme de scénarios déclenchés par un événement, puis on y ajoute un modèle d'IA pour comprendre le langage et décider (trier, rédiger, résumer, extraire). Le point de départ est toujours une tâche répétitive précise.",
+      },
+      {
+        q: "Quelle différence entre n8n et Make ?",
+        a: "Make est un outil d'automatisation visuel très accessible en mode SaaS. n8n est open source et auto-hébergeable, ce qui offre plus de contrôle et un meilleur respect de la confidentialité des données. Les deux permettent d'intégrer de l'IA dans les scénarios.",
+      },
+      {
+        q: "Faut-il savoir coder pour automatiser ses tâches ?",
+        a: "Non. n8n et Make sont des outils no-code qui s'utilisent visuellement. Une formation courte ou un accompagnement suffisent pour mettre en place ses premières automatisations utiles, puis monter en autonomie.",
+      },
+    ],
+  },
+
+  {
+    slug: "quest-ce-quun-agent-ia",
+    title: "Qu'est-ce qu'un agent IA et comment en créer un ?",
+    description:
+      "Définition d'un agent IA, différence avec un chatbot, exemples d'usages en entreprise et méthode concrète pour créer et déployer un agent IA autonome supervisé.",
+    category: "Agents IA",
+    datePublished: "2026-06-03",
+    dateModified: "2026-06-03",
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: "p",
+        text: "On parle de plus en plus d'« agents IA ». Derrière le terme, une évolution majeure : l'IA ne se contente plus de répondre, elle agit. Voici ce qu'est réellement un agent IA, en quoi il diffère d'un chatbot, et comment en créer un pour votre entreprise.",
+      },
+      { type: "h2", text: "Définition : qu'est-ce qu'un agent IA ?" },
+      {
+        type: "p",
+        text: "Un agent IA est un programme autonome qui exécute des tâches de bout en bout pour atteindre un objectif donné. Il s'appuie sur un modèle d'IA (pour comprendre et décider) et sur des outils (e-mail, CRM, agenda, web) pour agir. Concrètement, on lui confie une mission — « prospecter », « gérer le support de niveau 1 », « relancer les impayés » — et il enchaîne les actions nécessaires, sous supervision humaine.",
+      },
+      { type: "h2", text: "Agent IA vs chatbot : la différence" },
+      {
+        type: "ul",
+        items: [
+          "Un chatbot répond à des questions dans une conversation. Il est passif et réactif.",
+          "Un agent IA poursuit un objectif : il planifie, enchaîne des actions, utilise des outils et s'adapte. Il est actif.",
+          "Exemple : un chatbot répond « voici nos horaires » ; un agent prend le rendez-vous, l'ajoute à l'agenda et envoie la confirmation.",
+        ],
+      },
+      { type: "h2", text: "Exemples d'agents IA en entreprise" },
+      {
+        type: "ul",
+        items: [
+          "Prospection B2B : identification de prospects, prise de contact, qualification (5 à 20 rendez-vous/mois).",
+          "Support client niveau 1 : 60 à 80 % des demandes traitées automatiquement.",
+          "Relances : upsell et recouvrement par e-mail ou WhatsApp.",
+          "Assistant polyvalent : gestion d'e-mails, d'agenda et de CRM.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Un agent IA n'est jamais une boîte noire totalement autonome : au départ, chaque action sensible est validée par un humain, et l'autonomie augmente avec la confiance.",
+      },
+      { type: "h2", text: "Comment créer un agent IA : la méthode" },
+      {
+        type: "p",
+        text: "1) Cibler un poste ou une tâche à automatiser (répétitive, à volume, à faible valeur ajoutée). 2) Concevoir l'agent sur mesure : son objectif, ses outils, son ton, ses garde-fous. 3) L'intégrer à vos outils existants (Gmail, Slack, CRM, WhatsApp Business). 4) Le déployer en supervision rapprochée, puis augmenter progressivement son autonomie. 5) Mesurer et ajuster.",
+      },
+      { type: "h2", text: "Le faire soi-même ou se faire accompagner" },
+      {
+        type: "p",
+        text: "Des outils no-code (n8n, Make) permettent de prototyper. Pour un agent fiable en production, il faut soigner la conception, l'intégration et la supervision. IAvarone Group conçoit et déploie des agents IA autonomes supervisés sur mesure (setup à partir de 1 850 €, abonnement mensuel sans engagement).",
+      },
+    ],
+    faq: [
+      {
+        q: "Qu'est-ce qu'un agent IA ?",
+        a: "Un agent IA est un programme autonome qui exécute des tâches de bout en bout pour atteindre un objectif, en s'appuyant sur un modèle d'IA pour décider et sur des outils pour agir (e-mail, CRM, agenda). Contrairement à un chatbot, il agit au lieu de simplement répondre.",
+      },
+      {
+        q: "Quelle est la différence entre un agent IA et un chatbot ?",
+        a: "Un chatbot répond à des questions dans une conversation. Un agent IA poursuit un objectif : il planifie, enchaîne des actions et utilise des outils. Exemple : le chatbot donne les horaires ; l'agent prend le rendez-vous, l'inscrit à l'agenda et envoie la confirmation.",
+      },
+      {
+        q: "Comment créer un agent IA pour son entreprise ?",
+        a: "On cible une tâche à automatiser, on conçoit l'agent sur mesure (objectif, outils, garde-fous), on l'intègre aux outils existants, on le déploie en supervision rapprochée puis on augmente son autonomie. On peut prototyper en no-code (n8n, Make) ou se faire accompagner pour une mise en production fiable.",
+      },
+    ],
+  },
+
+  {
+    slug: "charte-ia-entreprise-rgpd-ia-act",
+    title: "Charte IA en entreprise : RGPD, IA Act et bonnes pratiques",
+    description:
+      "Pourquoi et comment rédiger une charte d'usage de l'IA en entreprise : enjeux RGPD, calendrier de l'IA Act, règles à poser et modèle de structure pour encadrer l'IA générative.",
+    category: "Conseil IA",
+    datePublished: "2026-06-03",
+    dateModified: "2026-06-03",
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: "p",
+        text: "Vos équipes utilisent déjà ChatGPT, souvent sans cadre. C'est un risque — pour vos données comme pour votre conformité. Une charte d'usage de l'IA permet d'autoriser l'IA générative tout en posant des règles claires. Voici les enjeux (RGPD, IA Act) et comment structurer cette charte.",
+      },
+      { type: "h2", text: "Pourquoi une charte IA ?" },
+      {
+        type: "p",
+        text: "Sans cadre, le « shadow AI » s'installe : des collaborateurs collent des données clients, des contrats ou des informations confidentielles dans des outils grand public. Une charte ne sert pas à interdire — elle sert à autoriser intelligemment : définir ce qui est permis, avec quels outils, sur quelles données, et avec quelle vigilance.",
+      },
+      { type: "h2", text: "L'enjeu RGPD" },
+      {
+        type: "p",
+        text: "Dès qu'un usage de l'IA traite des données personnelles, le RGPD s'applique : base légale, minimisation des données, information des personnes, encadrement des transferts hors UE. La règle de prudence à inscrire dans toute charte : ne jamais saisir de données personnelles ou sensibles dans un outil d'IA grand public sans cadre adapté.",
+      },
+      { type: "h2", text: "L'IA Act : ce qu'il faut savoir" },
+      {
+        type: "p",
+        text: "Le règlement européen sur l'intelligence artificielle (IA Act) encadre les systèmes d'IA selon leur niveau de risque, avec une entrée en application progressive. Les obligations dépendent du rôle (fournisseur ou déployeur) et du niveau de risque du système. Pour la plupart des PME utilisatrices d'IA générative, l'enjeu principal est la transparence et la maîtrise des usages — ce qu'une charte aide précisément à documenter.",
+      },
+      {
+        type: "quote",
+        text: "Une charte IA n'est pas un document juridique de plus : c'est l'outil qui permet de déployer l'IA sereinement, en transformant un risque diffus en règles partagées.",
+      },
+      { type: "h2", text: "Que doit contenir une charte IA ?" },
+      {
+        type: "ul",
+        items: [
+          "Le périmètre : quels usages sont encouragés, encadrés ou interdits.",
+          "Les outils autorisés et les versions à privilégier (notamment celles qui n'entraînent pas les modèles sur vos données).",
+          "Les règles sur les données : jamais de données personnelles/sensibles/confidentielles sans cadre.",
+          "La vérification humaine : relecture obligatoire des contenus produits, surtout pour les faits, chiffres et éléments juridiques.",
+          "La transparence : mention de l'usage de l'IA quand c'est pertinent.",
+          "Les responsabilités et le point de contact en cas de doute.",
+        ],
+      },
+      { type: "h2", text: "Comment la mettre en place" },
+      {
+        type: "p",
+        text: "La charte se construit avec les équipes, à partir de leurs usages réels — pas en chambre. Une démarche efficace combine un cadrage des risques, la rédaction de la charte et une sensibilisation des équipes. IAvarone Group accompagne les PME sur ce volet (conseil et formation, finançable OPCO pour la partie formation).",
+      },
+    ],
+    faq: [
+      {
+        q: "Qu'est-ce qu'une charte IA en entreprise ?",
+        a: "C'est un document qui encadre l'usage de l'IA générative au sein de l'entreprise : usages autorisés ou interdits, outils permis, règles sur les données, obligation de vérification humaine et transparence. Elle permet d'autoriser l'IA tout en maîtrisant les risques.",
+      },
+      {
+        q: "L'IA générative est-elle compatible avec le RGPD ?",
+        a: "Oui, à condition d'encadrer les usages : ne pas saisir de données personnelles ou sensibles dans un outil grand public sans cadre adapté, respecter la base légale, la minimisation et l'information des personnes. Une charte d'usage aide à documenter cette conformité.",
+      },
+      {
+        q: "Qu'est-ce que l'IA Act change pour les PME ?",
+        a: "L'IA Act encadre les systèmes d'IA selon leur niveau de risque, avec une entrée en application progressive. Pour la plupart des PME utilisatrices d'IA générative, l'enjeu principal est la transparence et la maîtrise des usages — ce qu'une charte IA permet de documenter.",
+      },
+    ],
+  },
+
+  {
+    slug: "vibe-coding-definition",
+    title: "Vibe coding, c'est quoi ? Définition et limites",
+    description:
+      "Le vibe coding expliqué simplement : définition, comment ça marche (développer en langage naturel avec l'IA), ce que ça permet vraiment et les limites à connaître.",
+    category: "Formation IA",
+    datePublished: "2026-06-03",
+    dateModified: "2026-06-03",
+    readingMinutes: 5,
+    blocks: [
+      {
+        type: "p",
+        text: "Le « vibe coding » est l'une des expressions les plus en vogue de l'IA générative. Derrière le terme un peu flou, une réalité concrète : développer des logiciels en dialoguant avec une IA, en langage naturel. Voici une définition claire et ce que cela permet — ou non.",
+      },
+      { type: "h2", text: "Définition : le vibe coding, c'est quoi ?" },
+      {
+        type: "p",
+        text: "Le vibe coding consiste à créer une application ou un script en décrivant ce que l'on veut en langage naturel à une IA spécialisée (comme Claude Code), qui génère et modifie le code. Le développeur pilote « à l'intention » : il décrit l'objectif, teste le résultat, corrige par le dialogue, plutôt que d'écrire chaque ligne à la main. Le terme a été popularisé en 2025.",
+      },
+      { type: "h2", text: "Comment ça marche" },
+      {
+        type: "ul",
+        items: [
+          "On décrit la fonctionnalité voulue à l'IA en langage courant.",
+          "L'IA génère le code, l'exécute et propose des corrections.",
+          "On teste, on observe le comportement, on demande des ajustements.",
+          "On itère rapidement, du prototype à la fonctionnalité finie.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Le vibe coding ne supprime pas le besoin de compétence : il déplace l'effort de l'écriture du code vers la spécification claire et la relecture critique.",
+      },
+      { type: "h2", text: "Ce que ça permet" },
+      {
+        type: "p",
+        text: "Le vibe coding accélère énormément le prototypage et la production de petits outils métier, d'automatisations et d'applications internes. C'est un levier puissant pour les PME : on peut construire en quelques jours une application sur mesure qui aurait demandé des semaines, à condition de cadrer le besoin et de relire le résultat.",
+      },
+      { type: "h2", text: "Les limites à connaître" },
+      {
+        type: "ul",
+        items: [
+          "La qualité et la sécurité du code doivent être vérifiées : l'IA peut produire des erreurs ou des failles.",
+          "Sur des systèmes complexes ou critiques, une relecture humaine experte reste indispensable.",
+          "Le résultat dépend de la clarté de la demande : sans cadrage, on accumule de la dette technique.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Bien utilisé, avec relecture et tests, le vibe coding est une compétence très rentable. IAvarone Group forme à cette pratique (Claude Code) et développe lui-même ses applications selon cette méthode, avec relecture humaine systématique. Formations certifiées Qualiopi, finançables OPCO.",
+      },
+    ],
+    faq: [
+      {
+        q: "Le vibe coding, c'est quoi exactement ?",
+        a: "C'est le fait de développer un logiciel en décrivant ce que l'on veut en langage naturel à une IA (comme Claude Code), qui génère et modifie le code. Le développeur pilote par l'intention, teste et corrige par le dialogue plutôt que d'écrire chaque ligne.",
+      },
+      {
+        q: "Faut-il savoir coder pour faire du vibe coding ?",
+        a: "Des bases aident à cadrer la demande et à relire le résultat. Le vibe coding abaisse fortement la barrière d'entrée, mais la qualité, la sécurité et la maintenance du code nécessitent toujours une relecture critique — d'où l'intérêt d'une formation.",
+      },
+      {
+        q: "Le vibe coding est-il fiable pour des applications professionnelles ?",
+        a: "Pour le prototypage et les outils internes, oui, avec relecture et tests. Pour des systèmes complexes ou critiques, une expertise humaine reste indispensable pour vérifier la qualité et la sécurité du code généré.",
+      },
+    ],
+  },
 ] as const;

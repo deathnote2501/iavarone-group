@@ -67,30 +67,29 @@ Verdict par défaut pour un combo inconnu = `review` (= indexé).
 4. **Purge totale du CPF** (services, article financement, a-propos, llms.txt,
    site.ts). Article renommé `financer-formation-ia-opco-cpf` →
    `financer-formation-ia-opco` avec **redirect 301** dans `next.config.ts`.
-5. **3 articles `/ressources`** (cluster ChatGPT/prompts, ~17k rech./mois) :
-   `prompts-chatgpt-guide`, `comment-utiliser-chatgpt`, `prompt-engineering-guide`.
+5. **8 articles `/ressources`** ciblant des mots-clés à fort volume / KD bas :
+   - Cluster ChatGPT/prompts (~17k rech./mois) : `prompts-chatgpt-guide`,
+     `comment-utiliser-chatgpt`, `prompt-engineering-guide`.
+   - `ia-generative-definition-exemples` (ia générative, 8100/KD23)
+   - `automatiser-taches-ia-n8n-make` (make automatisation, automatisation ia)
+   - `quest-ce-quun-agent-ia` (qu'est-ce qu'un agent ia, comment créer)
+   - `charte-ia-entreprise-rgpd-ia-act` (charte ia, ia act, ia et rgpd)
+   - `vibe-coding-definition` (vibe coding c'est quoi)
+
+   Total /ressources : 11 articles (3 préexistants + 8 ci-dessus).
 
 ## Ce qui RESTE à faire
 
-### Vague 3 (suite) — 5 articles `/ressources` à écrire
+### Nouveaux articles (optionnel)
 
-Format à respecter (voir articles existants dans `src/lib/articles.ts`) : blocs
-typés `p` / `h2` / `ul` / `quote`, intro accrocheuse → H2 structurés → listes
-concrètes → citation → **lien naturel vers l'offre (OPCO only)** → `faq[]` ciblant
-les « People Also Ask ». `category` ∈ `"Conseil IA" | "Formation IA" | "Agents IA"`.
-Ajouter chaque article dans le tableau `ARTICLES` (l'indexation, le sitemap et le
-listing `/ressources` sont automatiques).
-
-| Article | Catégorie | Cibles (vol / KD) |
-|---|---|---|
-| IA générative : définition & exemples | Conseil IA | ia générative (8100/23), définition (880), exemple (260) |
-| Automatiser ses tâches avec l'IA (n8n, Make) | Agents IA | make automatisation (1000), automatisation ia (880), automatiser tâches (590) |
-| Qu'est-ce qu'un agent IA (+ en créer un) | Agents IA | qu'est-ce qu'un agent ia (480), comment créer un agent ia (390) |
-| Charte IA en entreprise (RGPD & IA Act) | Conseil IA | charte ia (480), ia act entrée en vigueur (320), ia et rgpd (170) |
-| Vibe coding, c'est quoi ? | Formation IA | vibe coding c'est quoi (590) |
-
-Le détail complet des 361 mots-clés ciblables est dans
-`scripts/dfs/data/keyword-opportunities.json` (trié par volume).
+Format à respecter (voir articles dans `src/lib/articles.ts`) : blocs typés
+`p` / `h2` / `ul` / `quote`, intro accrocheuse → H2 structurés → listes concrètes
+→ citation → **lien naturel vers l'offre (OPCO only)** → `faq[]` ciblant les
+« People Also Ask ». `category` ∈ `"Conseil IA" | "Formation IA" | "Agents IA"`.
+Ajouter dans le tableau `ARTICLES` (indexation, sitemap et listing automatiques).
+Les 361 mots-clés ciblables sont dans
+`scripts/dfs/data/keyword-opportunities.json` (trié par volume) — il reste de la
+matière (ex. *agent vocal ia* 320, *charte ia entreprise* 70, clusters image/vidéo).
 
 ### Usages DataForSEO non encore exploités (idées)
 
