@@ -27,7 +27,7 @@ const COLOR_BG: Record<Brand["color"], string> = {
 };
 
 export const metadata: Metadata = {
-  title: "Les six marques d'IAvarone Group",
+  title: { absolute: "Marques d'IAvarone Group — formation, conseil & agents IA" },
   description:
     "Les six marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), Kaliio (SaaS Qualiopi), Conform-RGAA (accessibilité), FIT (e-commerce B2B).",
   alternates: { canonical: `${SITE.url}/marques` },
@@ -38,7 +38,7 @@ export default function MarquesPage() {
     <>
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Les marques du groupe</h1>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Les marques d&apos;IAvarone Group</h1>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-muted)]">
             Six marques opérationnelles couvrant l&apos;ensemble du cycle de vie de l&apos;IA générative
             en entreprise : formation, conseil, agents autonomes, SaaS B2B et e-commerce.

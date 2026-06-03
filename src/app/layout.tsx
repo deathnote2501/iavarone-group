@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Conseil, formation et produits IA générative`,
+    default: `${SITE.name} — IA générative pour les entreprises`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} — Conseil, formation et produits IA générative`,
+    title: `${SITE.name} — IA générative pour les entreprises`,
     description: SITE.description,
   },
   twitter: {
