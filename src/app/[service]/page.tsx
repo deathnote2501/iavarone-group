@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICES[s as ServiceSlug];
   if (!service) return {};
   const url = `${SITE.url}/${service.slug}`;
-  const title = `${service.title} en Auvergne-Rhône-Alpes & Paris`;
-  const description = `${service.short}. Présence dans 17 villes : Clermont-Ferrand, Lyon, Saint-Étienne, Paris, Vichy, Riom, Annecy, Grenoble et plus.`;
+  const title = service.hubMetaTitle;
+  const description = service.hubMetaDescription;
   return {
     title,
     description,
@@ -115,9 +115,9 @@ export default async function ServicePage({ params }: PageProps) {
             </p>
           </div>
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-            {service.title} en Auvergne-Rhône-Alpes &amp; Paris
+            {service.hubH1}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.short}.</p>
+          <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.hubLede}</p>
           <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
             Cette activité est portée par{" "}
             <a href={service.brand.url} target="_blank" rel="noopener" className={`font-medium ${COLOR_TEXT[service.color]}`}>
@@ -140,6 +140,17 @@ export default async function ServicePage({ params }: PageProps) {
       <TrustBar />
 
       <section className="container-page py-16">
+        <div className="grid gap-8 md:grid-cols-2">
+          {service.hubSections.map((s) => (
+            <div key={s.h2}>
+              <h2 className="text-2xl font-semibold tracking-tight">{s.h2}</h2>
+              <p className="mt-3 text-[var(--color-ink-muted)]">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page pb-16">
         <h2 className="text-3xl font-semibold tracking-tight">Pôles principaux</h2>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {hubs.map((city) => (

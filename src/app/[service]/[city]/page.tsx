@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Phone, MapPin, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
+import { shouldIndexCity } from "@/lib/seo-volumes";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 
@@ -30,10 +31,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {};
   const { service, city } = data;
   const url = `${SITE.url}/${service.slug}/${city.slug}`;
+  // Pilotage DataForSEO : les combos à 0 volume de recherche mesuré passent en
+  // noindex pour éviter le profil "doorway pages" et préserver le crawl budget
+  // sur les pages à demande réelle. Voir src/lib/seo-volumes.ts.
+  const index = shouldIndexCity(service.slug, city.slug);
   return {
     title: service.longTitle(city.name),
     description: service.metaDescription(city.name),
     alternates: { canonical: url },
+    robots: { index, follow: true },
     openGraph: {
       type: "article",
       url,

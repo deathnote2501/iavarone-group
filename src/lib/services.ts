@@ -18,6 +18,15 @@ export interface Service {
   /** FAQ niveau région pour la page hub (ciblant les "People Also Ask" Google). */
   hubFaq: { q: string; a: string }[];
   cta: string;
+  // --- Champs spécifiques à la page hub /[service], optimisés SEO sur les
+  // mots-clés à volume et faible difficulté (source : DataForSEO, voir
+  // scripts/dfs/data/keyword-opportunities.json). Distincts de `title`/`short`
+  // qui restent courts pour les fils d'Ariane et les cartes.
+  hubMetaTitle: string;
+  hubMetaDescription: string;
+  hubH1: string;
+  hubLede: string;
+  hubSections: { h2: string; body: string }[];
 }
 
 export const SERVICES: Record<ServiceSlug, Service> = {
@@ -27,7 +36,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     short: "Formations Qualiopi en IA générative pour vos équipes",
     longTitle: (city) => `Formation IA générative à ${city} — Qualiopi`,
     metaDescription: (city) =>
-      `Formation IA générative à ${city} : ChatGPT, Claude, Gemini, automatisation n8n/Make, Vibe Coding. Sessions inter ou intra-entreprise, finançables Qualiopi OPCO / CPF. 4.9/5, 1000+ professionnels formés.`,
+      `Formation IA générative à ${city} : ChatGPT, Claude, Gemini, automatisation n8n/Make, Vibe Coding. Sessions inter ou intra-entreprise, certifiées Qualiopi et finançables OPCO. 4.9/5, 1000+ professionnels formés.`,
     icon: GraduationCap,
     color: "blue",
     brand: {
@@ -36,7 +45,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       tagline: "Formation IA générative — Qualiopi",
     },
     intro: (city) =>
-      `Vos équipes à ${city} ont besoin de monter en compétence sur l'IA générative ? Je conçois et anime des formations sur mesure, finançables par votre OPCO ou via le CPF, en présentiel à ${city} ou en distanciel. Mes parcours couvrent ChatGPT, Claude, Gemini, l'automatisation n8n/Make/Zapier et le Vibe Coding (développement assisté par IA).`,
+      `Vos équipes à ${city} ont besoin de monter en compétence sur l'IA générative ? Je conçois et anime des formations sur mesure, finançables par votre OPCO, en présentiel à ${city} ou en distanciel. Mes parcours couvrent ChatGPT, Claude, Gemini, l'automatisation n8n/Make/Zapier et le Vibe Coding (développement assisté par IA).`,
     pillars: [
       {
         title: "Programmes adaptés à votre métier",
@@ -46,7 +55,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       {
         title: "Certification Qualiopi",
         description:
-          "Toutes les formations sont éligibles aux dispositifs de financement : OPCO, plan de formation entreprise, CPF, FNE. Documentation administrative complète fournie.",
+          "Toutes les formations sont éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. Documentation administrative complète fournie.",
       },
       {
         title: "Formats flexibles",
@@ -57,11 +66,11 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     faq: (city) => [
       {
         q: `Quel est le tarif d'une formation IA à ${city} ?`,
-        a: `Le tarif varie selon le format (intra/inter), la durée et le nombre de participants. Comptez 1 500–2 500 € HT/jour pour une formation intra-entreprise à ${city}. Devis personnalisé sous 48h. Toutes les formations sont finançables par votre OPCO ou via le CPF.`,
+        a: `Le tarif varie selon le format (intra/inter), la durée et le nombre de participants. Comptez 1 500–2 500 € HT/jour pour une formation intra-entreprise à ${city}. Devis personnalisé sous 48h. Toutes les formations sont finançables par votre OPCO.`,
       },
       {
         q: "La formation est-elle finançable par mon OPCO ?",
-        a: "Oui. L'organisme de formation est certifié Qualiopi, ce qui rend les formations éligibles aux financements OPCO, plan de formation entreprise, FNE et CPF. La documentation administrative (convention, programme, attestations) est fournie pour faciliter votre demande.",
+        a: "Oui. L'organisme de formation est certifié Qualiopi, ce qui rend les formations éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. La documentation administrative (convention, programme, attestations) est fournie pour faciliter votre demande.",
       },
       {
         q: `Faites-vous des formations en présentiel à ${city} ?`,
@@ -75,15 +84,15 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     hubFaq: [
       {
         q: "Quel est le prix moyen d'une formation en IA générative ?",
-        a: "Pour une formation intra-entreprise sur mesure, comptez 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés se situent plutôt entre 800 et 2 000 € HT par personne et par jour. Toutes mes formations sont certifiées Qualiopi et donc finançables OPCO, CPF, FNE ou plan de développement des compétences.",
+        a: "Pour une formation intra-entreprise sur mesure, comptez 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés se situent plutôt entre 800 et 2 000 € HT par personne et par jour. Toutes mes formations sont certifiées Qualiopi et donc finançables par votre OPCO ou le plan de développement des compétences de l'entreprise.",
       },
       {
         q: "Quelle est la meilleure formation à l'IA pour une entreprise ?",
         a: "La meilleure formation IA pour une entreprise n'est pas un catalogue générique mais un programme construit sur vos cas d'usage réels : vos données, vos process, vos outils. C'est l'approche que j'applique — ChatGPT, Claude, Gemini, prompt engineering, automatisation n8n/Make et Vibe Coding — adaptée au niveau et au métier de vos équipes.",
       },
       {
-        q: "La formation IA est-elle finançable par mon OPCO ou le CPF ?",
-        a: "Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui rend les formations éligibles aux financements OPCO, plan de développement des compétences, FNE et CPF. La documentation administrative complète (convention, programme, attestations) est fournie pour faciliter votre demande.",
+        q: "La formation IA est-elle finançable par mon OPCO ?",
+        a: "Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui rend les formations éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. La documentation administrative complète (convention, programme, attestations) est fournie pour faciliter votre demande.",
       },
       {
         q: "Où se former à ChatGPT et à l'IA en Auvergne-Rhône-Alpes ?",
@@ -91,6 +100,30 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       },
     ],
     cta: "Demander un programme de formation",
+    hubMetaTitle: "Formation IA & IA générative — Qualiopi, OPCO",
+    hubMetaDescription:
+      "Formation IA et IA générative en entreprise : ChatGPT, Claude, Gemini, automatisation n8n/Make. Certifiée Qualiopi, finançable OPCO. 1 000+ pros formés, 4,9/5.",
+    hubH1: "Formation IA générative pour les entreprises et les pros",
+    hubLede:
+      "Montez en compétence sur l'IA générative : ChatGPT, Claude, Gemini, prompt engineering, automatisation n8n/Make et Vibe Coding. Formations sur mesure certifiées Qualiopi, finançables par votre OPCO, en présentiel en Auvergne-Rhône-Alpes ou en ligne partout en France.",
+    hubSections: [
+      {
+        h2: "Formation IA finançable OPCO",
+        body: "Organisme certifié Qualiopi (Actions de formation) : vos formations IA sont finançables par votre OPCO et le plan de développement des compétences de l'entreprise. Documentation administrative complète fournie (convention, programme, attestations).",
+      },
+      {
+        h2: "Formation ChatGPT, Claude & Gemini",
+        body: "Prise en main des principaux assistants IA (ChatGPT, Claude, Gemini), prompt engineering, exploitation des contextes longs et premiers agents. Des ateliers pratiques sur vos propres cas d'usage, pas des slides génériques.",
+      },
+      {
+        h2: "Formation IA certifiante (Qualiopi)",
+        body: "Toutes les sessions sont dispensées par un organisme certifié Qualiopi et donnent lieu à une attestation. Formats d'une demi-journée à 5 jours, en inter ou intra-entreprise.",
+      },
+      {
+        h2: "En présentiel (Auvergne-Rhône-Alpes) ou en ligne",
+        body: "Intervention en présentiel à Clermont-Ferrand, Lyon, Saint-Étienne, Grenoble, Annecy, Paris… et en distanciel partout en France pour les équipes multi-sites.",
+      },
+    ],
   },
 
   "conseil-ia": {
@@ -163,6 +196,26 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       },
     ],
     cta: "Demander un cadrage gratuit",
+    hubMetaTitle: "Agence IA & consultant IA — Audit IA pour PME",
+    hubMetaDescription:
+      "Agence IA & consultant IA pour PME et ETI : audit IA, stratégie, automatisation et intégration dans vos outils. Cas d'usage à fort ROI livrés en 4 à 8 semaines.",
+    hubH1: "Agence IA & consultant IA pour PME et ETI",
+    hubLede:
+      "Vous voulez tirer parti de l'IA générative sans fascination technologique ? J'identifie les cas d'usage à fort ROI dans votre organisation, je les chiffre et je les mets en œuvre — souvent en 4 à 8 semaines, pour 5 à 20 k€.",
+    hubSections: [
+      {
+        h2: "Audit IA",
+        body: "Cartographie de vos processus métier et identification des 3 à 5 cas d'usage IA à plus fort impact, avec chiffrage. Livrable sous 2 semaines, prêt à décider.",
+      },
+      {
+        h2: "Agence d'automatisation IA",
+        body: "Au-delà du conseil, je développe et déploie : applications métier, dashboards, intégration de l'IA et automatisations (n8n, Make) dans vos outils existants (Slack, Notion, Gmail, CRM).",
+      },
+      {
+        h2: "Consultant IA indépendant, pas une ESN",
+        body: "Pas d'équipe pléthorique facturée en régie, pas de chatbot plaqué. Un seul interlocuteur du cadrage à la mise en production, facturé au livrable et non au TJM.",
+      },
+    ],
   },
 
   "agent-ia": {
@@ -235,6 +288,26 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       },
     ],
     cta: "Estimer mon agent IA",
+    hubMetaTitle: "Agent IA & automatisation IA pour entreprises",
+    hubMetaDescription:
+      "Agents IA autonomes & automatisation IA pour PME : prospection B2B, support client, relances WhatsApp, SEO. Setup dès 1 850 €, sans engagement.",
+    hubH1: "Agents IA autonomes & automatisation IA pour PME",
+    hubLede:
+      "Automatisez les tâches répétitives sans recruter : je conçois et déploie des agents IA autonomes supervisés sur mesure — prospection B2B, support client niveau 1, relances WhatsApp, SEO. Setup dès 1 850 €, puis abonnement mensuel sans engagement.",
+    hubSections: [
+      {
+        h2: "Qu'est-ce qu'un agent IA ?",
+        body: "Un agent IA est un programme autonome qui exécute des tâches de bout en bout (prospecter, répondre, relancer, publier) en s'appuyant sur un modèle d'IA et sur vos outils. Contrairement à un simple chatbot, il enchaîne des actions et prend des décisions — sous supervision humaine décroissante.",
+      },
+      {
+        h2: "Automatisation IA (n8n, Make)",
+        body: "Les agents s'appuient sur des automatisations no-code/low-code (n8n, Make) connectées à Gmail, Slack, Notion, votre CRM ou WhatsApp Business, pour travailler 24/7 dans votre stack existante.",
+      },
+      {
+        h2: "Comment créer un agent IA pour votre entreprise",
+        body: "On cible un poste à automatiser, on conçoit l'agent sur mesure (métier, outils, ton), on le déploie et on supervise. Setup 1 850–3 850 € puis abonnement 450–950 €/mois, résiliable à tout moment.",
+      },
+    ],
   },
 };
 

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { ARTICLES } from "@/lib/articles";
+import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-volumes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -21,12 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Grille programmatique pilotée par DataForSEO : on n'inclut que les combos
+  // indexables (volume de recherche mesuré) et on dérive la priorité du volume.
+  // Les pages noindex restent accessibles (maillage interne) mais hors sitemap.
   const serviceCities: MetadataRoute.Sitemap = Object.keys(SERVICES).flatMap((slug) =>
-    CITIES.map((c) => ({
+    CITIES.filter((c) => shouldIndexCity(slug, c.slug)).map((c) => ({
       url: `${SITE.url}/${slug}/${c.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: c.hub ? 0.9 : 0.6,
+      priority: sitemapPriorityCity(slug, c.slug),
     })),
   );
 

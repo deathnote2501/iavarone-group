@@ -205,7 +205,7 @@ export default function AProposPage() {
             <h3 className="mt-2 text-xl font-semibold">{SITE.legal.ei}</h3>
             <p className="mt-3 text-sm text-[var(--color-ink-muted)]">
               Entreprise individuelle dédiée à l&apos;activité de formation Qualiopi, finançable
-              OPCO, CPF et plan de formation entreprise.
+              OPCO et plan de développement des compétences de l&apos;entreprise.
             </p>
             {EI_LEGAL.length > 0 && (
               <dl className="mt-4 space-y-1.5 border-t border-[var(--color-line)] pt-4 text-xs">

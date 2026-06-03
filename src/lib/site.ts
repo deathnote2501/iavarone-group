@@ -81,12 +81,12 @@ export const BRANDS = [
     structure: "EI",
     category: "Formation professionnelle",
     targetAudience: "Salariés, dirigeants de PME/ETI, OPCO, organismes de formation",
-    pricing: "1 500–2 500 € HT/jour (intra) · finançable OPCO, CPF, FNE",
+    pricing: "1 500–2 500 € HT/jour (intra) · finançable OPCO",
     longDescription:
       "Marque historique du groupe et entreprise individuelle dédiée à la formation professionnelle continue, Jérôme Iavarone est certifiée Qualiopi (Actions de formation). Plus de 1 000 professionnels formés depuis 2020 dans la prise en main de ChatGPT, Claude, Gemini, l'automatisation no-code (n8n, Make, Zapier) et le Vibe Coding (développement assisté par IA avec Claude Code). Sessions inter ou intra-entreprise, en présentiel sur toute la région Auvergne-Rhône-Alpes ou en distanciel partout en France.",
     keyPoints: [
       "Certification Qualiopi (Actions de formation)",
-      "Financements OPCO, CPF, FNE, plan de formation",
+      "Financements OPCO et plan de développement des compétences",
       "Programmes sur mesure à partir de vos cas d'usage réels",
       "1 000+ professionnels formés depuis 2020",
       "Satisfaction moyenne 4,9/5",

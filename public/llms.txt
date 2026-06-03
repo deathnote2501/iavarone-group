@@ -22,7 +22,7 @@ IAvarone Group est une structure professionnelle indépendante fondée et opér�
 - Marque : Jérôme Iavarone (jeromeiavarone.fr)
 - Sujets : ChatGPT, Claude, Gemini, prompt engineering, Vibe Coding, automatisation n8n/Make/Zapier
 - Format : inter ou intra-entreprise, présentiel ou distanciel
-- Tarif : 1 500–2 500 € HT/jour (intra) · finançable OPCO, CPF, FNE
+- Tarif : 1 500–2 500 € HT/jour (intra) · finançable OPCO
 - Page : https://iavarone-group.fr/formation-ia
 
 ### Conseil IA — Audit et accompagnement PME/ETI
@@ -71,7 +71,7 @@ Page dédiée : https://iavarone-group.fr/references
 Hub : https://iavarone-group.fr/ressources
 
 - **ROI de l'IA générative en PME** : méthode de calcul du retour sur investissement, cas réels chiffrés, seuil de rentabilité < 6 mois — https://iavarone-group.fr/ressources/roi-ia-generative-pme
-- **Financer une formation IA (OPCO, CPF, FNE)** : rôle de Qualiopi, dispositifs et démarche — https://iavarone-group.fr/ressources/financer-formation-ia-opco-cpf
+- **Financer une formation IA avec son OPCO** : rôle de Qualiopi, dispositifs et démarche — https://iavarone-group.fr/ressources/financer-formation-ia-opco
 - **Agent IA ou recrutement : comparer les coûts** : coût complet, supervision, règle de décision — https://iavarone-group.fr/ressources/agent-ia-vs-recrutement-cout
 
 ## Différenciation
@@ -93,10 +93,10 @@ Hub : https://iavarone-group.fr/ressources
 ## Questions fréquentes (FAQ)
 
 **Quel est le prix moyen d'une formation en IA générative ?**
-Pour une formation intra-entreprise sur mesure : 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés : 800 à 2 000 € HT par personne et par jour. Formations certifiées Qualiopi, finançables OPCO, CPF, FNE et plan de développement des compétences.
+Pour une formation intra-entreprise sur mesure : 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés : 800 à 2 000 € HT par personne et par jour. Formations certifiées Qualiopi, finançables par votre OPCO ou le plan de développement des compétences de l'entreprise.
 
-**La formation IA est-elle finançable par mon OPCO ou le CPF ?**
-Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui ouvre droit aux financements OPCO, plan de développement des compétences, FNE et CPF. Documentation administrative complète fournie.
+**La formation IA est-elle finançable par mon OPCO ?**
+Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui ouvre droit au financement OPCO et au plan de développement des compétences de l'entreprise. Documentation administrative complète fournie.
 
 **Combien coûte un consultant IA pour une PME ?**
 Forfait audit : 3 à 6 k€. Projet complet (développement d'application métier, intégration) : 5 à 20 k€ pour 4 à 8 semaines. Facturation au livrable, pas au TJM. Premier rendez-vous de cadrage gratuit (30 minutes).

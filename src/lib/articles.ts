@@ -94,10 +94,10 @@ export const ARTICLES: readonly Article[] = [
     ],
   },
   {
-    slug: "financer-formation-ia-opco-cpf",
-    title: "Financer une formation IA avec son OPCO, le CPF ou le FNE : le guide",
+    slug: "financer-formation-ia-opco",
+    title: "Financer une formation IA avec son OPCO : le guide",
     description:
-      "Comment faire financer une formation à l'IA générative (ChatGPT, Claude, automatisation) : rôle de la certification Qualiopi, dispositifs OPCO, CPF, FNE et plan de développement des compétences, démarche et documents.",
+      "Comment faire financer une formation à l'IA générative (ChatGPT, Claude, automatisation) par son OPCO : rôle de la certification Qualiopi, plan de développement des compétences, démarche et documents.",
     category: "Formation IA",
     datePublished: "2026-02-18",
     dateModified: "2026-05-10",
@@ -110,16 +110,14 @@ export const ARTICLES: readonly Article[] = [
       { type: "h2", text: "La condition préalable : la certification Qualiopi" },
       {
         type: "p",
-        text: "Aucun financement public ou mutualisé (OPCO, CPF, FNE) n'est mobilisable si l'organisme de formation n'est pas certifié Qualiopi au titre des « Actions de formation ». C'est le filtre d'entrée : vérifiez toujours ce point avant de vous engager. Un organisme certifié fournit la documentation administrative (convention, programme, attestations) qui conditionne le remboursement.",
+        text: "Le financement OPCO n'est mobilisable que si l'organisme de formation est certifié Qualiopi au titre des « Actions de formation ». C'est le filtre d'entrée : vérifiez toujours ce point avant de vous engager. Un organisme certifié fournit la documentation administrative (convention, programme, attestations) qui conditionne la prise en charge.",
       },
-      { type: "h2", text: "Les quatre dispositifs de financement" },
+      { type: "h2", text: "Les voies de financement employeur" },
       {
         type: "ul",
         items: [
           "OPCO : votre opérateur de compétences prend en charge tout ou partie du coût de la formation de vos salariés, selon votre branche et votre enveloppe. C'est la voie la plus courante pour une PME.",
           "Plan de développement des compétences : l'employeur finance directement la montée en compétence de ses équipes, avec un avantage fiscal et social.",
-          "CPF (Compte personnel de formation) : mobilisable par le salarié sur les formations éligibles et certifiantes.",
-          "FNE-Formation : dispositif de l'État, particulièrement utile en cas de mutation d'activité ou de transition — l'IA générative entre pleinement dans ce cadre.",
         ],
       },
       { type: "h2", text: "La démarche en pratique" },
@@ -139,8 +137,8 @@ export const ARTICLES: readonly Article[] = [
     ],
     faq: [
       {
-        q: "Une formation IA est-elle finançable par le CPF ou l'OPCO ?",
-        a: "Oui, à condition que l'organisme soit certifié Qualiopi (Actions de formation). Cette certification ouvre droit aux financements OPCO, plan de développement des compétences, FNE et CPF. La documentation administrative complète est fournie pour faciliter la prise en charge.",
+        q: "Une formation IA est-elle finançable par l'OPCO ?",
+        a: "Oui, à condition que l'organisme soit certifié Qualiopi (Actions de formation). Cette certification ouvre droit au financement OPCO et au plan de développement des compétences de l'entreprise. La documentation administrative complète est fournie pour faciliter la prise en charge.",
       },
       {
         q: "Faut-il demander l'accord de l'OPCO avant ou après la formation ?",

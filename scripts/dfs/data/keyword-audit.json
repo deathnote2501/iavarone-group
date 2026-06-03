@@ -1,0 +1,467 @@
+{
+  "generatedAt": "2026-06-03T16:22:16.480Z",
+  "location": "France",
+  "language": "fr",
+  "cost": 0.075,
+  "combos": [
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "clermont-ferrand",
+      "cityName": "Clermont-Ferrand",
+      "volume": 20,
+      "topKeyword": "formation IA Clermont-Ferrand",
+      "verdict": "index"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "riom",
+      "cityName": "Riom",
+      "volume": 0,
+      "topKeyword": "formation IA Riom",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "vichy",
+      "cityName": "Vichy",
+      "volume": 0,
+      "topKeyword": "formation IA Vichy",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "issoire",
+      "cityName": "Issoire",
+      "volume": 0,
+      "topKeyword": "formation IA Issoire",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "thiers",
+      "cityName": "Thiers",
+      "volume": 0,
+      "topKeyword": "formation IA Thiers",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "aurillac",
+      "cityName": "Aurillac",
+      "volume": 0,
+      "topKeyword": "formation IA Aurillac",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "le-puy-en-velay",
+      "cityName": "Le Puy-en-Velay",
+      "volume": 0,
+      "topKeyword": "formation IA Le Puy-en-Velay",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "moulins",
+      "cityName": "Moulins",
+      "volume": 0,
+      "topKeyword": "formation IA Moulins",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "roanne",
+      "cityName": "Roanne",
+      "volume": 0,
+      "topKeyword": "formation IA Roanne",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "saint-etienne",
+      "cityName": "Saint-Étienne",
+      "volume": 10,
+      "topKeyword": "formation IA Saint-Étienne",
+      "verdict": "index-low"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "bourg-en-bresse",
+      "cityName": "Bourg-en-Bresse",
+      "volume": 0,
+      "topKeyword": "formation IA Bourg-en-Bresse",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "annecy",
+      "cityName": "Annecy",
+      "volume": 0,
+      "topKeyword": "formation IA Annecy",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "chambery",
+      "cityName": "Chambéry",
+      "volume": 0,
+      "topKeyword": "formation IA Chambéry",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "valence",
+      "cityName": "Valence",
+      "volume": 0,
+      "topKeyword": "formation IA Valence",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "grenoble",
+      "cityName": "Grenoble",
+      "volume": 40,
+      "topKeyword": "formation IA Grenoble",
+      "verdict": "index"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "lyon",
+      "cityName": "Lyon",
+      "volume": 260,
+      "topKeyword": "formation IA Lyon",
+      "verdict": "index-priority"
+    },
+    {
+      "serviceSlug": "formation-ia",
+      "serviceLabel": "Formation IA",
+      "citySlug": "paris",
+      "cityName": "Paris",
+      "volume": 260,
+      "topKeyword": "formation IA Paris",
+      "verdict": "index-priority"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "clermont-ferrand",
+      "cityName": "Clermont-Ferrand",
+      "volume": 0,
+      "topKeyword": "consultant IA Clermont-Ferrand",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "riom",
+      "cityName": "Riom",
+      "volume": 0,
+      "topKeyword": "consultant IA Riom",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "vichy",
+      "cityName": "Vichy",
+      "volume": 0,
+      "topKeyword": "consultant IA Vichy",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "issoire",
+      "cityName": "Issoire",
+      "volume": 0,
+      "topKeyword": "consultant IA Issoire",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "thiers",
+      "cityName": "Thiers",
+      "volume": 0,
+      "topKeyword": "consultant IA Thiers",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "aurillac",
+      "cityName": "Aurillac",
+      "volume": 0,
+      "topKeyword": "consultant IA Aurillac",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "le-puy-en-velay",
+      "cityName": "Le Puy-en-Velay",
+      "volume": 0,
+      "topKeyword": "consultant IA Le Puy-en-Velay",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "moulins",
+      "cityName": "Moulins",
+      "volume": 0,
+      "topKeyword": "consultant IA Moulins",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "roanne",
+      "cityName": "Roanne",
+      "volume": 0,
+      "topKeyword": "consultant IA Roanne",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "saint-etienne",
+      "cityName": "Saint-Étienne",
+      "volume": 0,
+      "topKeyword": "consultant IA Saint-Étienne",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "bourg-en-bresse",
+      "cityName": "Bourg-en-Bresse",
+      "volume": 0,
+      "topKeyword": "consultant IA Bourg-en-Bresse",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "annecy",
+      "cityName": "Annecy",
+      "volume": 0,
+      "topKeyword": "consultant IA Annecy",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "chambery",
+      "cityName": "Chambéry",
+      "volume": 0,
+      "topKeyword": "consultant IA Chambéry",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "valence",
+      "cityName": "Valence",
+      "volume": 0,
+      "topKeyword": "consultant IA Valence",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "grenoble",
+      "cityName": "Grenoble",
+      "volume": 0,
+      "topKeyword": "consultant IA Grenoble",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "lyon",
+      "cityName": "Lyon",
+      "volume": 210,
+      "topKeyword": "agence IA Lyon",
+      "verdict": "index-priority"
+    },
+    {
+      "serviceSlug": "conseil-ia",
+      "serviceLabel": "Conseil IA",
+      "citySlug": "paris",
+      "cityName": "Paris",
+      "volume": 140,
+      "topKeyword": "agence IA Paris",
+      "verdict": "index-priority"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "clermont-ferrand",
+      "cityName": "Clermont-Ferrand",
+      "volume": 0,
+      "topKeyword": "agent IA Clermont-Ferrand",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "riom",
+      "cityName": "Riom",
+      "volume": 0,
+      "topKeyword": "agent IA Riom",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "vichy",
+      "cityName": "Vichy",
+      "volume": 0,
+      "topKeyword": "agent IA Vichy",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "issoire",
+      "cityName": "Issoire",
+      "volume": 0,
+      "topKeyword": "agent IA Issoire",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "thiers",
+      "cityName": "Thiers",
+      "volume": 0,
+      "topKeyword": "agent IA Thiers",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "aurillac",
+      "cityName": "Aurillac",
+      "volume": 0,
+      "topKeyword": "agent IA Aurillac",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "le-puy-en-velay",
+      "cityName": "Le Puy-en-Velay",
+      "volume": 0,
+      "topKeyword": "agent IA Le Puy-en-Velay",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "moulins",
+      "cityName": "Moulins",
+      "volume": 0,
+      "topKeyword": "agent IA Moulins",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "roanne",
+      "cityName": "Roanne",
+      "volume": 0,
+      "topKeyword": "agent IA Roanne",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "saint-etienne",
+      "cityName": "Saint-Étienne",
+      "volume": 0,
+      "topKeyword": "agent IA Saint-Étienne",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "bourg-en-bresse",
+      "cityName": "Bourg-en-Bresse",
+      "volume": 0,
+      "topKeyword": "agent IA Bourg-en-Bresse",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "annecy",
+      "cityName": "Annecy",
+      "volume": 0,
+      "topKeyword": "agent IA Annecy",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "chambery",
+      "cityName": "Chambéry",
+      "volume": 0,
+      "topKeyword": "agent IA Chambéry",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "valence",
+      "cityName": "Valence",
+      "volume": 0,
+      "topKeyword": "agent IA Valence",
+      "verdict": "noindex"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "grenoble",
+      "cityName": "Grenoble",
+      "volume": 0,
+      "topKeyword": "agent IA Grenoble",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "lyon",
+      "cityName": "Lyon",
+      "volume": 0,
+      "topKeyword": "agent IA Lyon",
+      "verdict": "review"
+    },
+    {
+      "serviceSlug": "agent-ia",
+      "serviceLabel": "Agent IA",
+      "citySlug": "paris",
+      "cityName": "Paris",
+      "volume": 0,
+      "topKeyword": "agent IA Paris",
+      "verdict": "review"
+    }
+  ]
+}

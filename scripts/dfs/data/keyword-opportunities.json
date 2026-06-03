@@ -1,0 +1,3260 @@
+{
+  "generatedAt": "2026-06-03T16:28:45.238Z",
+  "filters": {
+    "minVolume": 50,
+    "maxKd": 30
+  },
+  "count": 361,
+  "cost": 0.34720000000000006,
+  "keywords": [
+    {
+      "keyword": "zapier",
+      "volume": 27100,
+      "kd": 10,
+      "cpc": 0.52,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "formation ia",
+      "volume": 9900,
+      "kd": 22,
+      "cpc": 7.29,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt chatgpt",
+      "volume": 8100,
+      "kd": 0,
+      "cpc": 1.12,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "ia générative",
+      "volume": 8100,
+      "kd": 23,
+      "cpc": 2.47,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "prompt engineering",
+      "volume": 4400,
+      "kd": 13,
+      "cpc": 2.95,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "formation intelligence artificielle",
+      "volume": 2400,
+      "kd": 18,
+      "cpc": 7.83,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "comment utiliser chatgpt",
+      "volume": 2400,
+      "kd": 1,
+      "cpc": 0.56,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "agence ia",
+      "volume": 1900,
+      "kd": 8,
+      "cpc": 4.92,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "formation ia cpf",
+      "volume": 1600,
+      "kd": 0,
+      "cpc": 7.77,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle cpf",
+      "volume": 1600,
+      "kd": 0,
+      "cpc": 7.77,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt",
+      "volume": 1600,
+      "kd": 0,
+      "cpc": 7.81,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "ia générative image",
+      "volume": 1600,
+      "kd": 18,
+      "cpc": 1.46,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "n8n templates",
+      "volume": 1300,
+      "kd": 11,
+      "cpc": 2.84,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n price",
+      "volume": 1300,
+      "kd": 14,
+      "cpc": 0.37,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n template",
+      "volume": 1300,
+      "kd": 28,
+      "cpc": 2.84,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n pricing",
+      "volume": 1300,
+      "kd": 0,
+      "cpc": 0.37,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "prompt chatgpt photo",
+      "volume": 1000,
+      "kd": 0,
+      "cpc": 0.52,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "n8n #docker",
+      "volume": 1000,
+      "kd": 15,
+      "cpc": 1.92,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n logo",
+      "volume": 1000,
+      "kd": 7,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n workflow",
+      "volume": 1000,
+      "kd": 25,
+      "cpc": 2.83,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n docker",
+      "volume": 1000,
+      "kd": 15,
+      "cpc": 1.92,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "automatisation make",
+      "volume": 1000,
+      "kd": 12,
+      "cpc": 1.37,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "make automatisation",
+      "volume": 1000,
+      "kd": 4,
+      "cpc": 1.37,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "automatisation ia",
+      "volume": 880,
+      "kd": 3,
+      "cpc": 5.91,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "n8n ai agent",
+      "volume": 880,
+      "kd": 23,
+      "cpc": 3.87,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "formation n8n",
+      "volume": 880,
+      "kd": 0,
+      "cpc": 11.5,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "hostinger n8n",
+      "volume": 880,
+      "kd": 2,
+      "cpc": 8.61,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia générative def",
+      "volume": 880,
+      "kd": 27,
+      "cpc": 0.92,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative définition",
+      "volume": 880,
+      "kd": 22,
+      "cpc": 0.92,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation ia gratuite",
+      "volume": 720,
+      "kd": 2,
+      "cpc": 3.58,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "chatgpt prompt",
+      "volume": 720,
+      "kd": 0,
+      "cpc": 0.69,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "n8n ai",
+      "volume": 720,
+      "kd": 29,
+      "cpc": 2.55,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "formation ia certifiante",
+      "volume": 590,
+      "kd": 10,
+      "cpc": 8.63,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "comment utiliser chatgpt gratuitement",
+      "volume": 590,
+      "kd": 9,
+      "cpc": 0.46,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment utiliser chatgpt gratuit",
+      "volume": 590,
+      "kd": 9,
+      "cpc": 0.46,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "utiliser chatgpt",
+      "volume": 590,
+      "kd": 12,
+      "cpc": 0.52,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "ia agent directory",
+      "volume": 590,
+      "kd": 23,
+      "cpc": 5.5,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia gratuit",
+      "volume": 590,
+      "kd": 0,
+      "cpc": 4.38,
+      "competition": "HIGH",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "automatiser tâches",
+      "volume": 590,
+      "kd": 0,
+      "cpc": 5.9,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia générative gratuit",
+      "volume": 590,
+      "kd": 27,
+      "cpc": 1.24,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative gratuite",
+      "volume": 590,
+      "kd": 27,
+      "cpc": 1.24,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding c'est quoi",
+      "volume": 590,
+      "kd": 0,
+      "cpc": 1,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia formation",
+      "volume": 480,
+      "kd": 16,
+      "cpc": 6.53,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia entreprise",
+      "volume": 480,
+      "kd": 17,
+      "cpc": 14.61,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt photo chatgpt",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 0.24,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "meilleur prompt chatgpt",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 15,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt photo professionnelle",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 0.33,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt gratuit",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 0.43,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "consultant ia",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 6.21,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence automatisation ia",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 5.25,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "qu est-ce qu'un agent ia",
+      "volume": 480,
+      "kd": 1,
+      "cpc": 1.52,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "n8n self hosted",
+      "volume": 480,
+      "kd": 30,
+      "cpc": 0.68,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "logo n8n",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n self host",
+      "volume": 480,
+      "kd": 24,
+      "cpc": 0.68,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n cloud",
+      "volume": 480,
+      "kd": 30,
+      "cpc": 1.18,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "workflows n8n",
+      "volume": 480,
+      "kd": 27,
+      "cpc": 1.88,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n self-hosted",
+      "volume": 480,
+      "kd": 24,
+      "cpc": 0.68,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n gratuit",
+      "volume": 480,
+      "kd": 4,
+      "cpc": 5.86,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "workflow n8n",
+      "volume": 480,
+      "kd": 25,
+      "cpc": 1.88,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier pricing",
+      "volume": 480,
+      "kd": 12,
+      "cpc": 4.6,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier price",
+      "volume": 480,
+      "kd": 16,
+      "cpc": 4.6,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier cost",
+      "volume": 480,
+      "kd": 11,
+      "cpc": 4.6,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "pricing zapier",
+      "volume": 480,
+      "kd": 12,
+      "cpc": 4.6,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "charte ia",
+      "volume": 480,
+      "kd": 0,
+      "cpc": 2.05,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "ia entreprise",
+      "volume": 480,
+      "kd": 12,
+      "cpc": 15.25,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "entreprise ia",
+      "volume": 480,
+      "kd": 4,
+      "cpc": 7.55,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative d'image",
+      "volume": 480,
+      "kd": 17,
+      "cpc": 1.22,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation ia en ligne",
+      "volume": 390,
+      "kd": 11,
+      "cpc": 8.24,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "la capsule formation data analyse ia développement web et devops",
+      "volume": 390,
+      "kd": 9,
+      "cpc": 29.78,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia marketing",
+      "volume": 390,
+      "kd": 19,
+      "cpc": 9.2,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation en ia",
+      "volume": 390,
+      "kd": 10,
+      "cpc": 8.28,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia france travail",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 4.6,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia générative",
+      "volume": 390,
+      "kd": 7,
+      "cpc": 7.92,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle marketing",
+      "volume": 390,
+      "kd": 4,
+      "cpc": 9.2,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle débutant",
+      "volume": 390,
+      "kd": 4,
+      "cpc": 5.72,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation prompt engineering",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 8.04,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "ia #agent",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 11.85,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia c'est quoi",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 1.6,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "comment créer un agent ia",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 3.43,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "mcp n8n",
+      "volume": 390,
+      "kd": 13,
+      "cpc": 3.38,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n #hostinger",
+      "volume": 390,
+      "kd": 13,
+      "cpc": 1.62,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n doc",
+      "volume": 390,
+      "kd": 24,
+      "cpc": 5,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n docker-compose",
+      "volume": 390,
+      "kd": 3,
+      "cpc": 4.97,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n/docker-compose",
+      "volume": 390,
+      "kd": 7,
+      "cpc": 4.97,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n local",
+      "volume": 390,
+      "kd": 7,
+      "cpc": 4.38,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n docker compose",
+      "volume": 390,
+      "kd": 4,
+      "cpc": 4.97,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n free",
+      "volume": 390,
+      "kd": 21,
+      "cpc": 5.74,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n hostinger",
+      "volume": 390,
+      "kd": 15,
+      "cpc": 1.62,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier c'est quoi",
+      "volume": 390,
+      "kd": 0,
+      "cpc": 3.3,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia générative video",
+      "volume": 390,
+      "kd": 16,
+      "cpc": 1.81,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative vidéo",
+      "volume": 390,
+      "kd": 10,
+      "cpc": 1.81,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation ia comundi",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 7.66,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation agents ia",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 11.99,
+      "competition": "HIGH",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia en ligne gratuite",
+      "volume": 320,
+      "kd": 6,
+      "cpc": 3.56,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation agent ia",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 11.99,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt pour chatgpt",
+      "volume": 320,
+      "kd": 2,
+      "cpc": 1.01,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "utiliser chatgpt gratuit",
+      "volume": 320,
+      "kd": 27,
+      "cpc": 0.38,
+      "competition": "MEDIUM",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "agent ia n8n",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 2.47,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia chatgpt",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 2.8,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent vocal ia",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 9.61,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "docker n8n",
+      "volume": 320,
+      "kd": 13,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n open source",
+      "volume": 320,
+      "kd": 25,
+      "cpc": 3.19,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n install",
+      "volume": 320,
+      "kd": 19,
+      "cpc": 1.65,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n alternatives",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 4.79,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "agence n8n",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 1.62,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n alternative",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 4.79,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n vs make",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 1.69,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n c'est quoi",
+      "volume": 320,
+      "kd": 0,
+      "cpc": 1.21,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier logo",
+      "volume": 320,
+      "kd": 17,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia act entrée en vigueur",
+      "volume": 320,
+      "kd": 11,
+      "cpc": 5.23,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "l ia générative",
+      "volume": 320,
+      "kd": 28,
+      "cpc": 4.66,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation développement ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 8.32,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia paris",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 8.71,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia generative",
+      "volume": 260,
+      "kd": 1,
+      "cpc": 6.58,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia lyon",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 7.53,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation développeur ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 8.32,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia rh",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 6.83,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation cpf ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 6.51,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation developpeur ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 8.32,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation cpf intelligence artificielle",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 6.51,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt starter pack chatgpt",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment utiliser chatgpt en français",
+      "volume": 260,
+      "kd": 4,
+      "cpc": 0.74,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "conseil ia",
+      "volume": 260,
+      "kd": 5,
+      "cpc": 6.86,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence seo ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 11.63,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "audit ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 11,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "ia audit",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 11,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "creer un agent ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 3.8,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "créer un agent ia",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 3.87,
+      "competition": "HIGH",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "c'est quoi un agent ia",
+      "volume": 260,
+      "kd": 1,
+      "cpc": 1.26,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "installation n8n",
+      "volume": 260,
+      "kd": 19,
+      "cpc": 1.06,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "install n8n",
+      "volume": 260,
+      "kd": 9,
+      "cpc": 1.06,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "n8n vs zapier",
+      "volume": 260,
+      "kd": 2,
+      "cpc": 0.04,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier ai",
+      "volume": 260,
+      "kd": 9,
+      "cpc": 3.08,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "make vs zapier",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 4.12,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia en entreprise",
+      "volume": 260,
+      "kd": 18,
+      "cpc": 6.05,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative exemple",
+      "volume": 260,
+      "kd": 0,
+      "cpc": 1.19,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation automatisation ia",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 9.28,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia finance",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 9.6,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "meilleur formation ia",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 7.71,
+      "competition": "HIGH",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia communication",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 9.88,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation prompt ia",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 7.07,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "meilleure formation ia",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 7.71,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle communication",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 9.88,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt engineering formation",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 6.26,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt image",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt photo professionnelle chatgpt",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt image chatgpt",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0.49,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "chatgpt prompt generator",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 1.3,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt analyse psychologique",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment bien utiliser chatgpt",
+      "volume": 210,
+      "kd": 7,
+      "cpc": 0.3,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "agence ia lyon",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 11.03,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agent ia definition",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0.95,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "zapier vs make",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 3.86,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier mcp",
+      "volume": 210,
+      "kd": 5,
+      "cpc": 1.74,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "entreprise ia bourse",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 2.19,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "définition ia générative",
+      "volume": 210,
+      "kd": 24,
+      "cpc": 1.13,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative photo",
+      "volume": 210,
+      "kd": 12,
+      "cpc": 0.98,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding definition",
+      "volume": 210,
+      "kd": 0,
+      "cpc": 0.44,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation chef de projet ia",
+      "volume": 170,
+      "kd": 1,
+      "cpc": 6.45,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation gratuite ia",
+      "volume": 170,
+      "kd": 6,
+      "cpc": 3.19,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia google",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 3.57,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia marseille",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 7.24,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation certifiante ia",
+      "volume": 170,
+      "kd": 18,
+      "cpc": 9.74,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "cpf formation ia",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 5.5,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle marseille",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 7.24,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle nexa",
+      "volume": 170,
+      "kd": 6,
+      "cpc": 3.14,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation en intelligence artificielle",
+      "volume": 170,
+      "kd": 17,
+      "cpc": 9.86,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle gratuite",
+      "volume": 170,
+      "kd": 11,
+      "cpc": 3.52,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chef de projet intelligence artificielle",
+      "volume": 170,
+      "kd": 7,
+      "cpc": 6.45,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt chatgpt français",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt photo noir et blanc",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt honnete",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt francais",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt développement personnel",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 1.68,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment utiliser chatgpt sur iphone",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0.48,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "ia conseil",
+      "volume": 170,
+      "kd": 6,
+      "cpc": 6.56,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "meilleure agence ia",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 2.96,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agent ia claude",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 2.95,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia seo",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 6.17,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "logo zapier",
+      "volume": 170,
+      "kd": 7,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier gratuit",
+      "volume": 170,
+      "kd": 7,
+      "cpc": 3.26,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia et rgpd",
+      "volume": 170,
+      "kd": 2,
+      "cpc": 6.59,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "intelligence artificielle entreprise",
+      "volume": 170,
+      "kd": 13,
+      "cpc": 9.55,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "entreprise ia france",
+      "volume": 170,
+      "kd": 20,
+      "cpc": 3.29,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "différence entre ia et ia générative",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0.08,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative d image gratuite",
+      "volume": 170,
+      "kd": 4,
+      "cpc": 1.14,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative d'image gratuite",
+      "volume": 170,
+      "kd": 9,
+      "cpc": 1.14,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding meme",
+      "volume": 170,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation google ia",
+      "volume": 140,
+      "kd": 10,
+      "cpc": 2.72,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "mister ia formation",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 2.31,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia design",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 4.57,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia gestion de projet",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 5.02,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "générateur de prompt chatgpt",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 3.58,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt psychologie",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "meilleur prompt chatgpt photo",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 0.19,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "apprendre l anglais avec chatgpt",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.93,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "apprendre l'anglais avec chatgpt",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.93,
+      "competition": "MEDIUM",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "agence d'automatisation ia",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 6.45,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence ia paris",
+      "volume": 140,
+      "kd": 20,
+      "cpc": 6.74,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "claude agent ia",
+      "volume": 140,
+      "kd": 8,
+      "cpc": 3.14,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent conversationnel ia",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 5.58,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia google",
+      "volume": 140,
+      "kd": 1,
+      "cpc": 3.98,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "ia automatisation",
+      "volume": 140,
+      "kd": 3,
+      "cpc": 13.49,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "zapier en français",
+      "volume": 140,
+      "kd": 5,
+      "cpc": 4.16,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "make zapier",
+      "volume": 140,
+      "kd": 10,
+      "cpc": 3.86,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier en francais",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 4.16,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "entreprise intelligence artificielle bourse",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.62,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative musique",
+      "volume": 140,
+      "kd": 30,
+      "cpc": 1.07,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative de vidéo",
+      "volume": 140,
+      "kd": 15,
+      "cpc": 2.22,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative francaise",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.01,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative française",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.01,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "meilleure ia générative",
+      "volume": 140,
+      "kd": 4,
+      "cpc": 2.24,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative france",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 1.01,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative sans censure",
+      "volume": 140,
+      "kd": 0,
+      "cpc": 0.9,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative de video",
+      "volume": 140,
+      "kd": 15,
+      "cpc": 2.22,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "impact environnemental ia générative",
+      "volume": 140,
+      "kd": 2,
+      "cpc": 1.43,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation intelligence artificielle lille",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 5.01,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle en ligne",
+      "volume": 110,
+      "kd": 13,
+      "cpc": 9.1,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle montpellier",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.44,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt gratuite",
+      "volume": 110,
+      "kd": 9,
+      "cpc": 3.68,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt gratuit",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 3.68,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt engineering course",
+      "volume": 110,
+      "kd": 19,
+      "cpc": 3.92,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt engineering google",
+      "volume": 110,
+      "kd": 19,
+      "cpc": 4.28,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "gpt prompt engineering",
+      "volume": 110,
+      "kd": 29,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt engineering cours",
+      "volume": 110,
+      "kd": 19,
+      "cpc": 3.92,
+      "competition": "HIGH",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "chatgpt jailbreak prompt",
+      "volume": 110,
+      "kd": 3,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt psychologue",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment faire un prompt chatgpt",
+      "volume": 110,
+      "kd": 1,
+      "cpc": 0.82,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt analyse personnalité",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 2.9,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt pour rendre chatgpt plus intelligent",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "les meilleurs prompt chatgpt",
+      "volume": 110,
+      "kd": 2,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "agence agent ia",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 6.05,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "ia agence immobiliere",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.97,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "creer agent ia",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.84,
+      "competition": "HIGH",
+      "intent": "transactional",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia gemini",
+      "volume": 110,
+      "kd": 2,
+      "cpc": 3.95,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "créer un agent ia gratuit",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 6.5,
+      "competition": "HIGH",
+      "intent": "transactional",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia autonome",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.19,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "dust agent ia",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 1.69,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia exemple",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 2.01,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "ia agent immobilier",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.97,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent immobilier ia",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 4.97,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "chatbot entreprise",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 20,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "formation ia automatisation",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 17.5,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "automation zapier",
+      "volume": 110,
+      "kd": 13,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "transactional",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier make",
+      "volume": 110,
+      "kd": 4,
+      "cpc": 1.4,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier automation",
+      "volume": 110,
+      "kd": 13,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "automate by zapier",
+      "volume": 110,
+      "kd": 3,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier automate",
+      "volume": 110,
+      "kd": 16,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "transactional",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier automatisation",
+      "volume": 110,
+      "kd": 9,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "automate zapier",
+      "volume": 110,
+      "kd": 12,
+      "cpc": 1.55,
+      "competition": "MEDIUM",
+      "intent": "transactional",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "rgpd ia",
+      "volume": 110,
+      "kd": 1,
+      "cpc": 5.54,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "rgpd et ia",
+      "volume": 110,
+      "kd": 2,
+      "cpc": 6.73,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "ia rgpd",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 7.25,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "entreprise intelligence artificielle",
+      "volume": 110,
+      "kd": 17,
+      "cpc": 2.36,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative liste",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 2.37,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "qu'est ce qu'une ia générative",
+      "volume": 110,
+      "kd": 23,
+      "cpc": 1.64,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative vidéo gratuite",
+      "volume": 110,
+      "kd": 4,
+      "cpc": 1.59,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation vibe coding",
+      "volume": 110,
+      "kd": 0,
+      "cpc": 6.44,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "coding vibe",
+      "volume": 110,
+      "kd": 6,
+      "cpc": 3.1,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation sur l intelligence artificielle",
+      "volume": 90,
+      "kd": 11,
+      "cpc": 8.66,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt cpf",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 7.32,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt paris",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation chatgpt en ligne",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "generateur prompt chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 1.08,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt miroir de vérité chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "exemple de prompt pour chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 4.63,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "chatgpt prompt genius",
+      "volume": 90,
+      "kd": 28,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt #chatgpt pour transformer une photo en dessin",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt qi chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt qi",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment faire un bon prompt chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 1.05,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt retouche photo chatgpt",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt lettre de motivation",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 1.98,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt fiche de révision",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt chatgpt voyance",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 3.09,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "utiliser chatgpt sans compte",
+      "volume": 90,
+      "kd": 1,
+      "cpc": 0.49,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "chatgpt comment utiliser",
+      "volume": 90,
+      "kd": 8,
+      "cpc": 0.12,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "conseil en ia",
+      "volume": 90,
+      "kd": 8,
+      "cpc": 7.36,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence de développement ia",
+      "volume": 90,
+      "kd": 4,
+      "cpc": 12.48,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence ia france",
+      "volume": 90,
+      "kd": 7,
+      "cpc": 5.09,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "google agent ia",
+      "volume": 90,
+      "kd": 1,
+      "cpc": 3.71,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent téléphonique ia",
+      "volume": 90,
+      "kd": 7,
+      "cpc": 15.86,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia copilot",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 3.01,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "automatisation entreprise",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 4.52,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "zapier prix",
+      "volume": 90,
+      "kd": 6,
+      "cpc": 5.82,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier login",
+      "volume": 90,
+      "kd": 17,
+      "cpc": 0.23,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "intelligence artificielle en entreprise",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 11.67,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia pour entreprise",
+      "volume": 90,
+      "kd": 6,
+      "cpc": 10.13,
+      "competition": "HIGH",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative d'images",
+      "volume": 90,
+      "kd": 23,
+      "cpc": 1.47,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative logo",
+      "volume": 90,
+      "kd": 14,
+      "cpc": 1.14,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation intelligence artificielle paris",
+      "volume": 70,
+      "kd": 4,
+      "cpc": 9.71,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt engineering job",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 3.56,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt engineering chatgpt",
+      "volume": 70,
+      "kd": 30,
+      "cpc": 3.78,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt engineering definition",
+      "volume": 70,
+      "kd": 13,
+      "cpc": 0.06,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "prompt engineering jobs",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 3.56,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "apprendre une langue avec chatgpt",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "comment utiliser chatgpt sur android",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "conseil stratégie ia",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "cabinet conseil ia",
+      "volume": 70,
+      "kd": 6,
+      "cpc": 5.19,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "cabinet de conseil ia",
+      "volume": 70,
+      "kd": 3,
+      "cpc": 9.49,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agent d ia",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 14.92,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "créer agent ia",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 5.28,
+      "competition": "HIGH",
+      "intent": "transactional",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia vocal",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 5.47,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent autonome ia",
+      "volume": 70,
+      "kd": 5,
+      "cpc": 3.67,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia crypto",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "zapier com",
+      "volume": 70,
+      "kd": 30,
+      "cpc": 0.82,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier applications",
+      "volume": 70,
+      "kd": 18,
+      "cpc": 1.4,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier agency",
+      "volume": 70,
+      "kd": 24,
+      "cpc": 3.79,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier vs n8n",
+      "volume": 70,
+      "kd": 2,
+      "cpc": 0.35,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier ou make",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 10.07,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier app",
+      "volume": 70,
+      "kd": 18,
+      "cpc": 1.4,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier agent",
+      "volume": 70,
+      "kd": 24,
+      "cpc": 3.79,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier application",
+      "volume": 70,
+      "kd": 19,
+      "cpc": 1.4,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "formation zapier",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 10.58,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "ia act résumé",
+      "volume": 70,
+      "kd": 11,
+      "cpc": 0.72,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "charte ia entreprise",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 3.02,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — IA & conformité (RGPD / IA Act)"
+    },
+    {
+      "keyword": "intelligence artificielle entreprise exemple",
+      "volume": 70,
+      "kd": 10,
+      "cpc": 8.57,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "entreprise intelligence artificielle france",
+      "volume": 70,
+      "kd": 22,
+      "cpc": 11.65,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "utilisation ia en entreprise",
+      "volume": 70,
+      "kd": 21,
+      "cpc": 5.92,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "solution ia pour entreprise",
+      "volume": 70,
+      "kd": 19,
+      "cpc": 16.6,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia nom entreprise",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0.8,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "entreprise francaise ia",
+      "volume": 70,
+      "kd": 13,
+      "cpc": 2.14,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "utilisation de l ia en entreprise",
+      "volume": 70,
+      "kd": 19,
+      "cpc": 9.48,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "logo entreprise ia",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 1,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "comparatif ia générative",
+      "volume": 70,
+      "kd": 4,
+      "cpc": 3.59,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "liste ia générative",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 1.06,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "liste des ia générative",
+      "volume": 70,
+      "kd": 16,
+      "cpc": 3.32,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "prompt ia générative",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 1.19,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "meilleure ia générative image",
+      "volume": 70,
+      "kd": 4,
+      "cpc": 3.07,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "image ia générative",
+      "volume": 70,
+      "kd": 17,
+      "cpc": 1.38,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative chatgpt",
+      "volume": 70,
+      "kd": 18,
+      "cpc": 0.41,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "ia générative photoshop",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0.72,
+      "competition": "LOW",
+      "intent": "transactional",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "exemple ia générative",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding application",
+      "volume": 70,
+      "kd": 6,
+      "cpc": 6.2,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "best vibe coding tools",
+      "volume": 70,
+      "kd": 15,
+      "cpc": 3.23,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding google",
+      "volume": 70,
+      "kd": 23,
+      "cpc": 0.25,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding en français",
+      "volume": 70,
+      "kd": 0,
+      "cpc": 1.58,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "formation certifiante intelligence artificielle",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 7.79,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "intelligence artificielle et formation",
+      "volume": 50,
+      "kd": 14,
+      "cpc": 2.98,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle entreprise",
+      "volume": 50,
+      "kd": 16,
+      "cpc": 14.37,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation professionnelle intelligence artificielle",
+      "volume": 50,
+      "kd": 2,
+      "cpc": 13.23,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle certifiante",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 9.26,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation intelligence artificielle pôle emploi",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 4.16,
+      "competition": "HIGH",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "formation ia chatgpt",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 7.05,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/formation-ia (hub)"
+    },
+    {
+      "keyword": "prompt engineering pdf",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 4.48,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "bien utiliser chatgpt",
+      "volume": 50,
+      "kd": 21,
+      "cpc": 0.51,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — prompt engineering & usage"
+    },
+    {
+      "keyword": "consultant en ia",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 3.57,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "ia consultant",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 2.74,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agence développement ia",
+      "volume": 50,
+      "kd": 4,
+      "cpc": 33.1,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/conseil-ia (hub)"
+    },
+    {
+      "keyword": "agent ia chat gpt",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 2.92,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "définition agent ia",
+      "volume": 50,
+      "kd": 9,
+      "cpc": 1.25,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "exemple agent ia",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 1.83,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "agent ia définition",
+      "volume": 50,
+      "kd": 9,
+      "cpc": 1.03,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "entreprise automatisation",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 5.32,
+      "competition": "LOW",
+      "intent": "commercial",
+      "cluster": "/agent-ia (hub)"
+    },
+    {
+      "keyword": "zapier alternative",
+      "volume": 50,
+      "kd": 3,
+      "cpc": 11.25,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier logo png",
+      "volume": 50,
+      "kd": 13,
+      "cpc": 0,
+      "competition": "LOW",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier api",
+      "volume": 50,
+      "kd": 12,
+      "cpc": 1.28,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "zapier français",
+      "volume": 50,
+      "kd": 5,
+      "cpc": 3.31,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "integration zapier",
+      "volume": 50,
+      "kd": 24,
+      "cpc": 5.24,
+      "competition": "MEDIUM",
+      "intent": "navigational",
+      "cluster": "/ressources — automatisation no-code"
+    },
+    {
+      "keyword": "entreprise ia en bourse",
+      "volume": 50,
+      "kd": 0,
+      "cpc": 1.36,
+      "competition": "LOW",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    },
+    {
+      "keyword": "vibe coding app",
+      "volume": 50,
+      "kd": 12,
+      "cpc": 3.9,
+      "competition": "MEDIUM",
+      "intent": "informational",
+      "cluster": "/marques & home — IA générative entreprise"
+    }
+  ]
+}

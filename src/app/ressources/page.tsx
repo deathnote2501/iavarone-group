@@ -7,7 +7,7 @@ import { ARTICLES } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Ressources & guides sur l'IA générative en entreprise",
   description:
-    "Guides et analyses d'IAvarone Group sur l'IA générative en entreprise : ROI en PME, financement des formations (OPCO, CPF, FNE), agents IA vs recrutement. Par Jérôme Iavarone.",
+    "Guides et analyses d'IAvarone Group sur l'IA générative en entreprise : ROI en PME, financement des formations (OPCO), agents IA vs recrutement. Par Jérôme Iavarone.",
   alternates: { canonical: `${SITE.url}/ressources` },
 };
 
