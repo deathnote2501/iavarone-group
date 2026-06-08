@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Calendar, Phone, TrendingUp, Quote } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 import { CASE_STUDIES } from "@/lib/case-studies";
 import { TrustBar } from "@/components/sections/TrustBar";
@@ -63,10 +64,10 @@ export default function ReferencesPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="references-hero">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Estimer mon gain potentiel
-              </a>
+              </BookingLink>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <a href={SITE.contact.phoneHref}>
@@ -150,10 +151,10 @@ export default function ReferencesPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="references-bottom">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV avec Jérôme
-              </a>
+              </BookingLink>
             </Button>
           </div>
         </div>

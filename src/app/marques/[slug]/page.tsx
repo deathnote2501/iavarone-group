@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight, ArrowRight, Calendar, Phone, Check, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
@@ -137,10 +138,10 @@ export default async function BrandPage({ params }: PageProps) {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="marque-hero">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV
-              </a>
+              </BookingLink>
             </Button>
           </div>
         </div>
@@ -208,10 +209,10 @@ export default async function BrandPage({ params }: PageProps) {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="marque-bottom">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV avec Jérôme
-              </a>
+              </BookingLink>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <a href={SITE.contact.phoneHref}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Calendar, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -24,10 +25,8 @@ export default function ContactPage() {
 
       <section className="container-page py-16">
         <div className="grid gap-6 sm:grid-cols-3">
-          <a
-            href={SITE.contact.booking}
-            target="_blank"
-            rel="noopener"
+          <BookingLink
+            location="contact-card"
             className="group rounded-2xl border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
           >
             <Calendar className="h-6 w-6 text-[var(--color-brand-blue)]" aria-hidden />
@@ -37,7 +36,7 @@ export default function ContactPage() {
               votre localisation.
             </p>
             <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue)]">Koalendar →</p>
-          </a>
+          </BookingLink>
 
           <a
             href={SITE.contact.phoneHref}
@@ -75,9 +74,9 @@ export default function ContactPage() {
           </p>
           <div className="mt-6">
             <Button asChild>
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="contact-bottom">
                 Prendre RDV avec Jérôme
-              </a>
+              </BookingLink>
             </Button>
           </div>
         </div>

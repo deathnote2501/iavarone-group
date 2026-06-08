@@ -1,5 +1,6 @@
 import { Calendar, Mail, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 export function ContactCTA() {
@@ -18,11 +19,11 @@ export function ContactCTA() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
-                <a href={SITE.contact.booking} target="_blank" rel="noopener">
+                <BookingLink location="contact-cta">
                   <Calendar className="h-4 w-4" aria-hidden />
                   Prendre RDV en ligne
                   <ArrowRight className="h-4 w-4" aria-hidden />
-                </a>
+                </BookingLink>
               </Button>
               <Button asChild size="lg" variant="secondary">
                 <a href={SITE.contact.phoneHref}>
@@ -38,9 +39,9 @@ export function ContactCTA() {
               <Calendar className="mt-0.5 h-5 w-5 text-[var(--color-brand-blue)]" aria-hidden />
               <div>
                 <p className="font-medium">Rendez-vous en ligne</p>
-                <a href={SITE.contact.booking} target="_blank" rel="noopener" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
+                <BookingLink location="contact-cta-list" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
                   Réserver un créneau sur Koalendar
-                </a>
+                </BookingLink>
               </div>
             </li>
             <li className="flex items-start gap-3">

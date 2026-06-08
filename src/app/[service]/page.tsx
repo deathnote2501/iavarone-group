@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { TrustBar } from "@/components/sections/TrustBar";
@@ -127,11 +128,11 @@ export default async function ServicePage({ params }: PageProps) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="service-hub">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV avec Jérôme
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
+              </BookingLink>
             </Button>
           </div>
         </div>

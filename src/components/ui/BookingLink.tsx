@@ -1,0 +1,51 @@
+"use client";
+
+import * as React from "react";
+import { SITE } from "@/lib/site";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+export interface BookingLinkProps
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
+  /** Emplacement du CTA dans la page (hero, header, contact, etc.) — envoyé à GA4. */
+  location?: string;
+}
+
+/**
+ * Lien vers l'agenda Koalendar qui émet l'événement de conversion `booking_click`
+ * vers GA4 (G-MPZM0EYFQE) au clic. Marquer `booking_click` comme « événement clé »
+ * dans GA4 pour en faire l'objectif de conversion final du funnel.
+ *
+ * Compatible avec `<Button asChild>` (Radix Slot) : la ref et les props (className…)
+ * sont transmises à l'ancre sous-jacente.
+ */
+export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>(
+  ({ location, onClick, children, ...props }, ref) => {
+    function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
+      window.gtag?.("event", "booking_click", {
+        cta_location: location ?? "unknown",
+        link_url: SITE.contact.booking,
+      });
+      onClick?.(event);
+    }
+
+    return (
+      <a
+        ref={ref}
+        href={SITE.contact.booking}
+        target="_blank"
+        rel="noopener"
+        onClick={handleClick}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
+);
+
+BookingLink.displayName = "BookingLink";

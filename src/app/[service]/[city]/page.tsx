@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, Calendar, Phone, MapPin, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-volumes";
@@ -144,11 +145,11 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="service-city-hero">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
+              </BookingLink>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <a href={SITE.contact.phoneHref}>
@@ -257,10 +258,10 @@ export default async function ServiceCityPage({ params }: PageProps) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href={SITE.contact.booking} target="_blank" rel="noopener">
+              <BookingLink location="service-city-bottom">
                 <Calendar className="h-4 w-4" aria-hidden />
                 Prendre RDV avec Jérôme
-              </a>
+              </BookingLink>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <a href={SITE.contact.phoneHref}>

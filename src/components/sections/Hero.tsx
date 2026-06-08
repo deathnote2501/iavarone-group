@@ -1,5 +1,6 @@
 import { Calendar, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 export function Hero() {
@@ -35,11 +36,11 @@ export function Hero() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
-            <a href={SITE.contact.booking} target="_blank" rel="noopener">
+            <BookingLink location="hero">
               <Calendar className="h-4 w-4" aria-hidden />
               Prendre RDV avec Jérôme
               <ArrowRight className="h-4 w-4" aria-hidden />
-            </a>
+            </BookingLink>
           </Button>
           <Button asChild size="lg" variant="secondary">
             <a href={SITE.contact.phoneHref}>

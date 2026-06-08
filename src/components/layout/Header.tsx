@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 const NAV = [
@@ -40,9 +41,9 @@ export function Header() {
             <a href={SITE.contact.phoneHref}>{SITE.contact.phone}</a>
           </Button>
           <Button asChild size="sm">
-            <a href={SITE.contact.booking} target="_blank" rel="noopener">
+            <BookingLink location="header">
               Prendre RDV
-            </a>
+            </BookingLink>
           </Button>
         </div>
       </div>
