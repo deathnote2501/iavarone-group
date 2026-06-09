@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, Calendar, Phone, MapPin, Check } from "lucide-react";
+import { ArrowRight, Calendar, Phone, MapPin, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
@@ -176,6 +176,43 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="bg-[var(--color-surface-alt)] py-16">
+        <div className="container-page">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Cas d&apos;usage {service.title.toLowerCase()} pour les entreprises de {city.name}
+          </h2>
+          <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">{service.localAngle(city)}</p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {service.useCases.map((uc) => (
+              <div key={uc.title} className="flex gap-4 rounded-2xl border border-[var(--color-line)] bg-white p-6">
+                <div className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${COLOR_BG[service.color]}`}>
+                  <Sparkles className={`h-5 w-5 ${COLOR_TEXT[service.color]}`} aria-hidden />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold">{uc.title}</h3>
+                  <p className="mt-1.5 text-sm text-[var(--color-ink-muted)]">{uc.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-16">
+        <h2 className="text-3xl font-semibold tracking-tight">Comment se déroule une mission à {city.name}</h2>
+        <ol className="mt-10 grid gap-6 md:grid-cols-4">
+          {service.process.map((p, i) => (
+            <li key={p.step} className="rounded-2xl border border-[var(--color-line)] bg-white p-6">
+              <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold ${COLOR_BG[service.color]} ${COLOR_TEXT[service.color]}`}>
+                {i + 1}
+              </span>
+              <h3 className="mt-4 text-base font-semibold">{p.step}</h3>
+              <p className="mt-1.5 text-sm text-[var(--color-ink-muted)]">{p.detail}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="bg-[var(--color-surface-alt)] py-16">

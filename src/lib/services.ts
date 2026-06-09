@@ -14,6 +14,14 @@ export interface Service {
   brand: { name: string; url: string; tagline: string };
   intro: (city: string) => string;
   pillars: { title: string; description: string }[];
+  /** Cas d'usage concrets du service (titre + bénéfice). Affichés sur la page
+   * ville pour densifier le contenu et cibler les requêtes longue traîne. */
+  useCases: { title: string; description: string }[];
+  /** Étapes de la mission, pour rassurer et structurer (process visible). */
+  process: { step: string; detail: string }[];
+  /** Accroche locale data-driven : combine le service avec les filières et le
+   * contexte économique propres à CHAQUE ville (évite le contenu dupliqué). */
+  localAngle: (city: { name: string; region: string; industries: string[] }) => string;
   faq: (city: string) => { q: string; a: string }[];
   /** FAQ niveau région pour la page hub (ciblant les "People Also Ask" Google). */
   hubFaq: { q: string; a: string }[];
@@ -63,6 +71,36 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Sessions d'1/2 journée à 5 jours, en inter ou intra-entreprise, sur site à votre adresse ou en visio. Adaptation possible aux contraintes opérationnelles.",
       },
     ],
+    useCases: [
+      {
+        title: "Maîtriser ChatGPT, Claude & Gemini au quotidien",
+        description:
+          "Vos équipes apprennent à rédiger des prompts efficaces, exploiter les contextes longs et fiabiliser les réponses sur leurs propres documents métier.",
+      },
+      {
+        title: "Automatiser sans coder (n8n, Make, Zapier)",
+        description:
+          "Construire des workflows qui relient vos outils (Gmail, CRM, Notion) et suppriment les tâches répétitives, sur des scénarios issus de votre activité.",
+      },
+      {
+        title: "Vibe Coding : prototyper une app interne",
+        description:
+          "Développement assisté par IA (Claude Code) pour créer dashboards et petits outils internes sans équipe technique dédiée.",
+      },
+      {
+        title: "Encadrer l'usage : RGPD, IA Act & charte IA",
+        description:
+          "Cadrer un usage conforme et sécurisé de l'IA dans l'entreprise (données personnelles, IA Act, charte interne) pour éviter les dérives.",
+      },
+    ],
+    process: [
+      { step: "Cadrage", detail: "Audit des besoins, du niveau des équipes et des cas d'usage prioritaires (visio, gratuit)." },
+      { step: "Programme sur mesure", detail: "Construction d'un parcours sur vos données et vos outils, validé avant la session." },
+      { step: "Animation", detail: "Atelier en présentiel sur site ou en distanciel, 100 % pratique, supports fournis." },
+      { step: "Suivi", detail: "Attestation Qualiopi, ressources post-formation et point à 30 jours pour ancrer les acquis." },
+    ],
+    localAngle: (city) =>
+      `Les entreprises de ${city} (${city.industries.slice(0, 3).join(", ")}) font face aux mêmes enjeux : monter en compétence vite sur l'IA générative sans mobiliser des semaines de R&D. Une formation ancrée dans le tissu économique de ${city.region} — vos métiers, vos contraintes réglementaires, vos outils — produit des résultats que des slides génériques n'atteindront jamais.`,
     faq: (city) => [
       {
         q: `Quel est le tarif d'une formation IA à ${city} ?`,
@@ -159,6 +197,36 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Méthode de développement utilisant Claude Code et GPT pour accélérer les tâches répétitives, avec relecture humaine et tests systématiques.",
       },
     ],
+    useCases: [
+      {
+        title: "Automatiser la production documentaire",
+        description:
+          "Devis, comptes rendus, réponses aux appels d'offres, courriers : l'IA génère les premiers jets à partir de vos modèles, vous validez.",
+      },
+      {
+        title: "Outiller la relation client",
+        description:
+          "Tri et réponse de niveau 1 aux demandes, qualification des leads, suivi commercial — intégrés à votre messagerie et votre CRM.",
+      },
+      {
+        title: "Exploiter vos données métier",
+        description:
+          "Tableaux de bord et analyses automatisées (ventes, stocks, production) pour décider sur des chiffres à jour plutôt que sur des exports manuels.",
+      },
+      {
+        title: "Développer une application métier sur mesure",
+        description:
+          "App web légère, CRM/ERP simplifié ou intégration IA dans vos outils existants, livrés en 4 à 8 semaines.",
+      },
+    ],
+    process: [
+      { step: "Cadrage gratuit", detail: "30 min pour comprendre votre contexte et vérifier qu'il y a un vrai ROI." },
+      { step: "Audit", detail: "Cartographie des process, identification de 3 à 5 cas d'usage à fort impact, chiffrage. Livré en 2 semaines." },
+      { step: "Mise en œuvre", detail: "Développement et intégration au livrable (pas au TJM), points hebdomadaires." },
+      { step: "Mesure & extension", detail: "On mesure l'impact réel. Si ça marche, on étend ; sinon, on arrête." },
+    ],
+    localAngle: (city) =>
+      `Les PME et ETI de ${city} — ${city.industries.slice(0, 3).join(", ")} — n'ont ni le temps ni l'envie d'une transformation IA théorique. L'enjeu en ${city.region} est concret : identifier 2 ou 3 automatisations qui font gagner des heures chaque semaine, les chiffrer honnêtement, et les déployer sans usine à gaz ni dépendance à une ESN.`,
     faq: (city) => [
       {
         q: `Combien coûte un consultant IA à ${city} ?`,
@@ -251,6 +319,36 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Gmail, Slack, Notion, CRM, ERP, WhatsApp Business, Calendly. L'agent s'intègre dans votre stack actuelle sans bouleverser vos process.",
       },
     ],
+    useCases: [
+      {
+        title: "Agent de prospection B2B",
+        description:
+          "Recherche de prospects, cold email et séquences LinkedIn personnalisées : 5 à 20 rendez-vous qualifiés par mois sans recruter de SDR.",
+      },
+      {
+        title: "Agent de support client niveau 1",
+        description:
+          "Tri des tickets et réponse automatique aux questions fréquentes, 60 à 80 % du volume traité, escalade humaine sur le reste.",
+      },
+      {
+        title: "Agent de relance WhatsApp",
+        description:
+          "Relances d'upsell, prise de rendez-vous et recouvrement par messages personnalisés, 24/7, depuis WhatsApp Business.",
+      },
+      {
+        title: "Agent SEO / backlinks",
+        description:
+          "Génération et publication de contenus et de backlinks (200 à 500 sites/mois) pour faire monter votre site dans Google.",
+      },
+    ],
+    process: [
+      { step: "Cadrage", detail: "On identifie le poste ou la tâche à automatiser et l'objectif chiffré (RDV, tickets, ventes)." },
+      { step: "Conception", detail: "Agent sur mesure : métier, ton, outils, garde-fous. Connexion à votre stack existante." },
+      { step: "Déploiement supervisé", detail: "Mise en route avec validation humaine des actions sensibles au démarrage." },
+      { step: "Montée en autonomie", detail: "Le niveau d'autonomie augmente selon votre confiance ; abonnement sans engagement." },
+    ],
+    localAngle: (city) =>
+      `Recruter à ${city} coûte cher et prend du temps, surtout pour des PME des filières ${city.industries.slice(0, 3).join(", ")}. Un agent IA autonome supervisé absorbe les tâches répétitives (prospection, support, relances) pour un coût environ 6× inférieur à un junior — un levier de productivité particulièrement adapté au tissu d'entreprises de ${city.region}.`,
     faq: (city) => [
       {
         q: `Quel est le tarif d'un agent IA à ${city} ?`,
