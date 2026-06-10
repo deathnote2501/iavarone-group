@@ -26,6 +26,8 @@ export function ContactForm() {
       });
       const json = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error ?? "Envoi impossible.");
+      // `contact_form_submit` est marqué « événement clé » dans GA4 (G-MPZM0EYFQE).
+      window.gtag?.("event", "contact_form_submit", { form_location: "contact" });
       setStatus("success");
       form.reset();
     } catch (err) {
