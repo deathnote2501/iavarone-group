@@ -120,6 +120,8 @@ export const BRANDS = [
     slug: "employe-ia",
     name: "Employé IA",
     tagline: "Agents IA autonomes pour PME/ETI",
+    // Title Google dédié à la fiche de marque (évite la cannibalisation avec la home de employe-ia.fr)
+    metaTitle: "Employé IA — marque du Groupe IAvarone",
     description:
       "Prospection B2B, support N1, relances WhatsApp, SEO. Setup à partir de 1 850€ + abonnement mensuel sans engagement.",
     url: "https://employe-ia.fr",
@@ -209,7 +211,9 @@ export const BRANDS = [
   },
 ] as const;
 
-export type Brand = (typeof BRANDS)[number];
+// Intersection pour exposer `metaTitle` (optionnel) sur toutes les marques
+// tout en conservant les unions littérales de `slug` et `color`.
+export type Brand = (typeof BRANDS)[number] & { metaTitle?: string };
 
 export interface City {
   slug: string;

@@ -47,10 +47,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const brand = getBrand(slug);
   if (!brand) return {};
   const url = `${SITE.url}/marques/${brand.slug}`;
-  const title = `${brand.name} — ${brand.tagline}`;
+  const title = brand.metaTitle ?? `${brand.name} — ${brand.tagline}`;
   const description = brand.longDescription.slice(0, 160);
   return {
-    title,
+    // metaTitle is a deliberate standalone title — bypass the layout title template
+    title: brand.metaTitle ? { absolute: brand.metaTitle } : title,
     description,
     alternates: { canonical: url },
     openGraph: { type: "article", url, title, description },
@@ -64,6 +65,7 @@ export default async function BrandPage({ params }: PageProps) {
   if (!brand) notFound();
   const Icon = ICONS[brand.slug];
   const others = BRANDS.filter((b) => b.slug !== brand.slug);
+  const officialHostname = new URL(brand.url).hostname.replace("www.", "");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -133,7 +135,7 @@ export default async function BrandPage({ params }: PageProps) {
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <a href={brand.url} target="_blank" rel="noopener">
-                Visiter {brand.name}
+                Site officiel : {officialHostname}
                 <ArrowUpRight className="h-4 w-4" aria-hidden />
               </a>
             </Button>
@@ -186,7 +188,7 @@ export default async function BrandPage({ params }: PageProps) {
                 <dt className="text-[var(--color-ink-muted)]">Site officiel</dt>
                 <dd>
                   <a href={brand.url} target="_blank" rel="noopener" className={`font-medium ${COLOR_TEXT[brand.color]} hover:underline`}>
-                    {new URL(brand.url).hostname.replace("www.", "")}
+                    {officialHostname}
                   </a>
                 </dd>
               </div>
