@@ -234,7 +234,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
               <p>
                 Cette page est rattachée à la marque{" "}
                 <a href={service.brand.url} target="_blank" rel="noopener">{service.brand.name}</a>,
-                l&apos;une des six entités d&apos;IAvarone Group dédiée à {service.brand.tagline.toLowerCase()}.
+                l&apos;une des sept entités d&apos;IAvarone Group dédiée à {service.brand.tagline.toLowerCase()}.
               </p>
             </div>
 

@@ -30,8 +30,8 @@ export function Hero() {
         <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">
           <strong className="text-[var(--color-ink)]">{SITE.name}</strong> est un groupe français
           d&apos;intelligence artificielle générative fondé en 2020 par Jérôme Iavarone, formateur
-          Qualiopi et consultant indépendant. Le groupe rassemble six marques B2B complémentaires&nbsp;:
-          formation, conseil, développement d&apos;applications métier, agents IA autonomes et SaaS.
+          Qualiopi et consultant indépendant. Le groupe rassemble sept marques B2B complémentaires&nbsp;:
+          formation, conseil, développement d&apos;applications métier, agents IA autonomes, SaaS et e-commerce industriel.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -60,7 +60,7 @@ export function Hero() {
             loop
             playsInline
             preload="metadata"
-            aria-label="Présentation animée du Groupe IAvarone et de ses six marques"
+            aria-label="Présentation animée du Groupe IAvarone et de ses sept marques"
           />
         </div>
       </div>

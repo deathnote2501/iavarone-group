@@ -4,7 +4,7 @@ export const SITE = {
   url: "https://iavarone-group.fr",
   baseline: "L'IA générative au service des entreprises, en Auvergne-Rhône-Alpes et au-delà.",
   description:
-    "IAvarone Group rassemble six activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes et SaaS B2B.",
+    "IAvarone Group rassemble sept activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes, SaaS B2B et e-commerce industriel.",
   founder: {
     name: "Jérôme Iavarone",
     role: "Fondateur — Formateur & Consultant IA générative",
@@ -165,6 +165,29 @@ export const BRANDS = [
     cta: "Créer un compte Kaliio gratuit",
   },
   {
+    slug: "kaliopi",
+    name: "Kaliopi",
+    tagline: "Logiciel de conformité Qualiopi tout-en-un",
+    description:
+      "Pilotage des 32 indicateurs Qualiopi, génération automatique des justificatifs (preuves, BPF, conventions), espace auditeur et bibliothèque réglementaire. Gratuit, Premium à 22,90 €/mois.",
+    url: "https://kaliopi.io",
+    color: "yellow",
+    structure: "SAS",
+    category: "SaaS B2B — Conformité Qualiopi",
+    targetAudience: "Formateurs indépendants, petits organismes de formation, responsables qualité et gestionnaires pédagogiques",
+    pricing: "Gratuit (freemium) · Premium 22,90 €/mois ou 229 €/an",
+    longDescription:
+      "Kaliopi est un logiciel tout-en-un de pilotage de la conformité Qualiopi pour les organismes de formation. Il structure le suivi des 32 indicateurs du référentiel national, collecte les preuves et génère automatiquement les documents administratifs (justificatifs d'audit, BPF, conventions, attestations). Émargement dématérialisé à signature horodatée, portail formateur autonome, vitrine de catalogue de formations, espace auditeur dédié et bibliothèque de 180+ ressources réglementaires (guides, modèles, comparatifs). Conçu avec Christelle Charrier-Robelin, évaluatrice COFRAC, et hébergé en France (RGPD). Gratuit à vie sur les fonctions essentielles, Premium à 22,90 €/mois (stockage illimité, veille réglementaire, support prioritaire).",
+    keyPoints: [
+      "Suivi structuré des 32 indicateurs du référentiel Qualiopi",
+      "Génération automatique des justificatifs, du BPF et des conventions",
+      "Espace auditeur + bibliothèque de 180+ ressources réglementaires",
+      "Conçu avec une évaluatrice COFRAC, hébergé en France (RGPD)",
+      "Gratuit à vie · Premium 22,90 €/mois sans engagement",
+    ],
+    cta: "Essayer Kaliopi gratuitement",
+  },
+  {
     slug: "rgaa-ia",
     name: "Conform-RGAA",
     tagline: "Audit accessibilité RGAA assisté par IA",
@@ -188,26 +211,27 @@ export const BRANDS = [
     cta: "Commander un pack Conform-RGAA",
   },
   {
-    slug: "fit",
-    name: "FIT",
-    tagline: "E-commerce B2B fournitures industrielles",
+    slug: "mecaindus",
+    name: "MecaIndus",
+    tagline: "E-commerce B2B de fournitures industrielles techniques",
     description:
-      "Distribution directe par colis de visserie, boulonnerie, fixations. Piloté par Claude via API REST.",
-    url: "https://fit-opal-pi.vercel.app",
+      "268 000+ références techniques (roulements, visserie inox, transmission, pneumatique, étanchéité) en distribution directe par colis. Fiches normées DIN/ISO/EN, prix HT sans inscription.",
+    url: "https://mecaindus.com",
     color: "green",
     structure: "SAS",
     category: "E-commerce B2B industriel",
-    targetAudience: "Acheteurs industriels, ateliers de production, sous-traitants mécaniques",
-    pricing: "Vente directe par colis (B2B)",
+    targetAudience: "Ateliers de maintenance, bureaux d'études, PME mécaniques et sous-traitants industriels en France",
+    pricing: "Vente directe par colis (B2B, prix HT) · expédition 24–72 h ouvrées",
     longDescription:
-      "FIT est un e-commerce B2B de fournitures industrielles (visserie, boulonnerie, fixations) en distribution directe par colis. Particularité : la plateforme est entièrement pilotée par Claude (Anthropic) via une API REST — gestion produit, prix, recommandations, support. Démonstrateur opérationnel de la stack agent-IA-en-production d'IAvarone Group.",
+      "MecaIndus est un e-commerce B2B de fournitures industrielles techniques : roulements (SKF, FAG, NSK, INA), visserie inox, transmission, étanchéité, pneumatique, hydraulique et automatisme. Plus de 268 000 références organisées en 102 catégories, avec des fiches techniques sourcées sur les normes (DIN, ISO, EN), comparatifs de variantes et températures opérationnelles. Prix HT affiché immédiatement sans création de compte obligatoire, paiement Stripe sécurisé, expédition directe par colis en 24 à 72 h ouvrées et support technique français sous 24 h. Le catalogue et les fiches produits sont générés et maintenus par une stack d'agents IA : un démonstrateur opérationnel du savoir-faire « agents IA en production » d'IAvarone Group.",
     keyPoints: [
-      "Distribution directe sans intermédiaire",
-      "Plateforme pilotée par Claude (API REST)",
-      "Démonstrateur de la stack agents-IA-en-production",
-      "Visserie, boulonnerie, fixations",
+      "268 000+ références, 102 catégories techniques",
+      "Fiches sourcées sur les normes DIN / ISO / EN (rien d'inventé)",
+      "Prix HT immédiat, sans création de compte obligatoire",
+      "Expédition directe par colis en 24–72 h ouvrées, support FR sous 24 h",
+      "Catalogue géré par une stack d'agents IA en production",
     ],
-    cta: "Voir le catalogue FIT",
+    cta: "Voir le catalogue MecaIndus",
   },
 ] as const;
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
+import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart } from "lucide-react";
 import { BRANDS, type Brand } from "@/lib/site";
 
 const ICONS: Record<Brand["slug"], typeof GraduationCap> = {
@@ -7,8 +7,9 @@ const ICONS: Record<Brand["slug"], typeof GraduationCap> = {
   "iavarone-conseil": Briefcase,
   "employe-ia": Bot,
   kaliio: ClipboardCheck,
+  kaliopi: ShieldCheck,
   "rgaa-ia": Accessibility,
-  fit: ShoppingCart,
+  mecaindus: ShoppingCart,
 };
 
 const COLOR_CLASSES: Record<Brand["color"], { bg: string; border: string; ring: string }> = {
@@ -30,7 +31,7 @@ export function ActivitiesGrid() {
     <section className="container-page py-20">
       <div className="max-w-2xl">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Six activités complémentaires
+          Sept activités complémentaires
         </h2>
         <p className="mt-4 text-[var(--color-ink-muted)]">
           De la formation initiale au déploiement d&apos;agents IA en production, IAvarone Group couvre

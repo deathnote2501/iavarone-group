@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, Accessibility, ShoppingCart } from "lucide-react";
+import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
@@ -9,8 +9,9 @@ const ICONS: Record<Brand["slug"], LucideIcon> = {
   "iavarone-conseil": Briefcase,
   "employe-ia": Bot,
   kaliio: ClipboardCheck,
+  kaliopi: ShieldCheck,
   "rgaa-ia": Accessibility,
-  fit: ShoppingCart,
+  mecaindus: ShoppingCart,
 };
 
 const COLOR_TEXT: Record<Brand["color"], string> = {
@@ -29,7 +30,7 @@ const COLOR_BG: Record<Brand["color"], string> = {
 export const metadata: Metadata = {
   title: { absolute: "Marques d'IAvarone Group — formation, conseil & agents IA" },
   description:
-    "Les six marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), Kaliio (SaaS Qualiopi), Conform-RGAA (accessibilité), FIT (e-commerce B2B).",
+    "Les sept marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), Kaliio et Kaliopi (SaaS Qualiopi), Conform-RGAA (accessibilité), MecaIndus (e-commerce B2B industriel).",
   alternates: { canonical: `${SITE.url}/marques` },
 };
 
@@ -40,7 +41,7 @@ export default function MarquesPage() {
         <div className="container-page py-16">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Les marques d&apos;IAvarone Group</h1>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-muted)]">
-            Six marques opérationnelles couvrant l&apos;ensemble du cycle de vie de l&apos;IA générative
+            Sept marques opérationnelles couvrant l&apos;ensemble du cycle de vie de l&apos;IA générative
             en entreprise : formation, conseil, agents autonomes, SaaS B2B et e-commerce.
           </p>
         </div>

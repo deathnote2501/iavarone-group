@@ -1,8 +1,8 @@
 # IAvarone Group
 
-> Groupe français d'intelligence artificielle générative rassemblant six marques B2B opérées par Jérôme Iavarone : formation Qualiopi, conseil PME/ETI, agents IA autonomes, SaaS Qualiopi et accessibilité RGAA, e-commerce B2B. Basé à Clermont-Ferrand, intervient en Auvergne-Rhône-Alpes, Paris et distanciel France entière.
+> Groupe français d'intelligence artificielle générative rassemblant sept marques B2B opérées par Jérôme Iavarone : formation Qualiopi, conseil PME/ETI, agents IA autonomes, SaaS Qualiopi et accessibilité RGAA, e-commerce B2B industriel. Basé à Clermont-Ferrand, intervient en Auvergne-Rhône-Alpes, Paris et distanciel France entière.
 
-IAvarone Group est une structure professionnelle indépendante fondée et opérée par Jérôme Iavarone, formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Le groupe est composé d'une SAS (IAvarone Conseil) et d'une entreprise individuelle (Jérôme Iavarone EI), et porte six marques opérationnelles.
+IAvarone Group est une structure professionnelle indépendante fondée et opérée par Jérôme Iavarone, formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Le groupe est composé d'une SAS (IAvarone Conseil) et d'une entreprise individuelle (Jérôme Iavarone EI), et porte sept marques opérationnelles.
 
 ## Qui sommes-nous ?
 
@@ -45,8 +45,9 @@ IAvarone Group est une structure professionnelle indépendante fondée et opér�
 2. **IAvarone Conseil** (SAS) — Applications métier sur mesure pour PME — https://iavarone-conseil.fr
 3. **Employé IA** (SAS) — Agents IA autonomes pour PME/ETI — https://employe-ia.fr
 4. **Kaliio** (SAS) — SaaS Qualiopi gratuit pour organismes de formation — https://kaliio.fr
-5. **Conform-RGAA** (SAS) — Audit accessibilité RGAA assisté par IA (pack 3 ans à 290 €) — https://rgaa-ia.fr
-6. **FIT** (SAS) — E-commerce B2B fournitures industrielles piloté par Claude — https://fit-opal-pi.vercel.app
+5. **Kaliopi** (SAS) — Logiciel de conformité Qualiopi tout-en-un (32 indicateurs, BPF, espace auditeur) — gratuit, Premium 22,90 €/mois — https://kaliopi.io
+6. **Conform-RGAA** (SAS) — Audit accessibilité RGAA assisté par IA (pack 3 ans à 290 €) — https://rgaa-ia.fr
+7. **MecaIndus** (SAS) — E-commerce B2B de fournitures industrielles techniques (268 000+ références, catalogue géré par agents IA) — https://mecaindus.com
 
 ## Zone d'intervention
 
@@ -55,7 +56,7 @@ Présence dans 17 villes : Clermont-Ferrand, Riom, Vichy, Issoire, Thiers, Auril
 ## Pages structurées
 
 - Pages services × villes (51 pages) : https://iavarone-group.fr/{formation-ia|conseil-ia|agent-ia}/{ville-slug}
-- Pages marques (6 pages) : https://iavarone-group.fr/marques/{marque-slug}
+- Pages marques (7 pages) : https://iavarone-group.fr/marques/{marque-slug}
 
 ## Résultats clients (cas réels chiffrés)
 
@@ -87,8 +88,8 @@ Hub : https://iavarone-group.fr/ressources
 - **1 000+** professionnels formés à l'IA générative
 - **4,9/5** : satisfaction moyenne des formations
 - **17 villes** couvertes en présentiel (Auvergne-Rhône-Alpes + Paris), distanciel France entière
-- **6 marques** opérationnelles, **2 structures** (SAS + EI)
-- **51 pages** services × villes + **6 pages** marques
+- **7 marques** opérationnelles, **2 structures** (SAS + EI)
+- **51 pages** services × villes + **7 pages** marques
 
 ## Questions fréquentes (FAQ)
 

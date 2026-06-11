@@ -60,8 +60,8 @@ export default async function OpengraphImage() {
             <span style={{ color: "#B8860B" }}>indépendants</span>.
           </div>
           <div style={{ fontSize: 24, color: "#475569", maxWidth: 900, lineHeight: 1.35 }}>
-            Six activités complémentaires : formation Qualiopi, conseil, agents IA autonomes,
-            applications métier et SaaS B2B.
+            Sept activités complémentaires : formation Qualiopi, conseil, agents IA autonomes,
+            applications métier, SaaS B2B et e-commerce industriel.
           </div>
         </div>
 

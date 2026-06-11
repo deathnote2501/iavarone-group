@@ -1,6 +1,6 @@
 # Pricing — IAvarone Group
 
-> Tarifs et formats commerciaux des six marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://koalendar.com/e/rdv-avec-jerome-iavarone
+> Tarifs et formats commerciaux des sept marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://koalendar.com/e/rdv-avec-jerome-iavarone
 
 Mise à jour : 2026-05-24
 
@@ -85,6 +85,17 @@ Mise à jour : 2026-05-24
 
 ---
 
+## Kaliopi — Logiciel de conformité Qualiopi tout-en-un
+
+- Tarif : gratuit (freemium) · Premium 22,90 € HT/mois ou 229 € HT/an
+- Cible : formateurs indépendants, petits organismes de formation, responsables qualité
+- Fonctions : suivi des 32 indicateurs Qualiopi, génération automatique des justificatifs (preuves, BPF, conventions), émargement dématérialisé, portail formateur, vitrine catalogue, espace auditeur, bibliothèque de 180+ ressources réglementaires
+- Premium : stockage illimité, veille réglementaire, support prioritaire
+- Conçu avec Christelle Charrier-Robelin, évaluatrice COFRAC · hébergé en France (RGPD)
+- Site : https://kaliopi.io
+
+---
+
 ## Conform-RGAA — Audit accessibilité numérique
 
 - Tarif : 290 € HT pour 3 ans
@@ -96,13 +107,14 @@ Mise à jour : 2026-05-24
 
 ---
 
-## FIT — E-commerce B2B fournitures industrielles
+## MecaIndus — E-commerce B2B de fournitures industrielles techniques
 
-- Modèle : vente directe par colis (B2B)
-- Catalogue : visserie, boulonnerie, fixations
-- Particularité : plateforme entièrement pilotée par Claude (Anthropic) via API REST
-- Démonstrateur de la stack agent-IA-en-production
-- Site : https://fit-opal-pi.vercel.app
+- Modèle : vente directe par colis (B2B, prix HT) · expédition 24–72 h ouvrées
+- Catalogue : 268 000+ références en 102 catégories (roulements, visserie inox, transmission, étanchéité, pneumatique, hydraulique, automatisme)
+- Fiches techniques sourcées sur les normes DIN / ISO / EN, prix HT immédiat sans création de compte, paiement Stripe, support technique français sous 24 h
+- Particularité : catalogue et fiches produits générés et maintenus par une stack d'agents IA
+- Démonstrateur de la stack agents-IA-en-production
+- Site : https://mecaindus.com
 
 ---
 
@@ -116,7 +128,7 @@ Mise à jour : 2026-05-24
 
 ## Conditions générales
 
-- Tarifs HT, TVA 20 % en sus pour la SAS (IAvarone Conseil, Employé IA, Kaliio, Conform-RGAA, FIT)
+- Tarifs HT, TVA 20 % en sus pour la SAS (IAvarone Conseil, Employé IA, Kaliio, Kaliopi, Conform-RGAA, MecaIndus)
 - L'EI Jérôme Iavarone (formation Qualiopi) est non assujettie à la TVA
 - Acompte 30 % à la commande, solde à la livraison sauf convention spécifique
 - Déplacements inclus pour toute la région Auvergne-Rhône-Alpes

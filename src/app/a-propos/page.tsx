@@ -19,7 +19,7 @@ const personJsonLd = {
   familyName: "Iavarone",
   jobTitle: SITE.founder.role,
   description:
-    "Formateur Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble six activités complémentaires en intelligence artificielle générative pour les entreprises.",
+    "Formateur Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble sept activités complémentaires en intelligence artificielle générative pour les entreprises.",
   image: `${SITE.url}${SITE.founder.photo}`,
   url: `${SITE.url}/a-propos`,
   email: SITE.contact.email,
@@ -114,9 +114,9 @@ export default function AProposPage() {
             <p className="mt-2 text-lg text-[var(--color-brand-blue-ink)]">{SITE.founder.role}</p>
             <p className="mt-6 text-[var(--color-ink-muted)]">
               Formateur certifié Qualiopi et consultant en IA générative depuis 2020, j&apos;ai
-              progressivement structuré mon activité en un groupe de six entités complémentaires&nbsp;:
+              progressivement structuré mon activité en un groupe de sept entités complémentaires&nbsp;:
               une SAS de conseil et de développement, une entreprise individuelle de formation, et
-              quatre produits B2B en production.
+              cinq produits B2B en production.
             </p>
             <p className="mt-3 text-[var(--color-ink-muted)]">
               Je ne suis ni une ESN ni un revendeur&nbsp;: je conçois et je livre moi-même chaque
@@ -185,7 +185,7 @@ export default function AProposPage() {
             <h3 className="mt-2 text-xl font-semibold">{SITE.legal.sas}</h3>
             <p className="mt-3 text-sm text-[var(--color-ink-muted)]">
               Société par actions simplifiée portant les activités de conseil, de développement
-              d&apos;applications métier, les agents IA autonomes et les SaaS B2B.
+              d&apos;applications métier, les agents IA autonomes, les SaaS B2B et l&apos;e-commerce industriel.
             </p>
             {SAS_LEGAL.length > 0 && (
               <dl className="mt-4 space-y-1.5 border-t border-[var(--color-line)] pt-4 text-xs">

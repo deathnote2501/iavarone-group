@@ -5,7 +5,7 @@ import { AboutPreview } from "@/components/sections/AboutPreview";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SITE, BRANDS } from "@/lib/site";
 
-// Service schema for each of the six activities shown in ActivitiesGrid,
+// Service schema for each of the seven activities shown in ActivitiesGrid,
 // linked to the Organization declared in the root layout (#organization)
 const servicesJsonLd = {
   "@context": "https://schema.org",

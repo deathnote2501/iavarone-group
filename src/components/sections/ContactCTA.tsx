@@ -13,9 +13,9 @@ export function ContactCTA() {
               Discutons de votre projet IA
             </h2>
             <p className="mt-4 max-w-xl text-[var(--color-ink-muted)]">
-              Premier échange de cadrage gratuit de 30 minutes. Identifions ensemble laquelle des six
+              Premier échange de cadrage gratuit de 30 minutes. Identifions ensemble laquelle des sept
               activités du groupe correspond à votre besoin&nbsp;: formation, conseil, application
-              métier, agent IA, conformité ou outil B2B.
+              métier, agent IA, conformité, SaaS ou e-commerce B2B.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">

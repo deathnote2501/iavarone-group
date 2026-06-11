@@ -380,8 +380,8 @@ const BRANDS: BrandCard[] = [
     color: BRAND.red,
   },
   {
-    name: "FIT",
-    tagline: "E-commerce B2B piloté par Claude",
+    name: "MecaIndus",
+    tagline: "E-commerce B2B industriel · 268 000+ références",
     category: "E-commerce",
     color: BRAND.green,
   },
