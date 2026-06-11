@@ -36,7 +36,7 @@ export function ContactCTA() {
 
           <ul className="grid gap-4 rounded-2xl bg-[var(--color-surface-alt)] p-6">
             <li className="flex items-start gap-3">
-              <Calendar className="mt-0.5 h-5 w-5 text-[var(--color-brand-blue)]" aria-hidden />
+              <Calendar className="mt-0.5 h-5 w-5 text-[var(--color-brand-blue-ink)]" aria-hidden />
               <div>
                 <p className="font-medium">Rendez-vous en ligne</p>
                 <BookingLink location="contact-cta-list" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
@@ -45,7 +45,7 @@ export function ContactCTA() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-5 w-5 text-[var(--color-brand-green)]" aria-hidden />
+              <Phone className="mt-0.5 h-5 w-5 text-[var(--color-brand-green-ink)]" aria-hidden />
               <div>
                 <p className="font-medium">Téléphone</p>
                 <a href={SITE.contact.phoneHref} className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
@@ -54,7 +54,7 @@ export function ContactCTA() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-5 w-5 text-[var(--color-brand-yellow)]" aria-hidden />
+              <Mail className="mt-0.5 h-5 w-5 text-[var(--color-brand-yellow-ink)]" aria-hidden />
               <div>
                 <p className="font-medium">E-mail</p>
                 <a href={`mailto:${SITE.contact.email}`} className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">

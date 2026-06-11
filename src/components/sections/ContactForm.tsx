@@ -39,7 +39,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-[var(--color-brand-green)]/30 bg-[var(--color-brand-green)]/5 p-8 text-center">
-        <CheckCircle2 className="mx-auto h-10 w-10 text-[var(--color-brand-green)]" aria-hidden />
+        <CheckCircle2 className="mx-auto h-10 w-10 text-[var(--color-brand-green-ink)]" aria-hidden />
         <h3 className="mt-4 text-lg font-semibold">Message envoyé</h3>
         <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
           Merci, je vous réponds sous 24h ouvrées. Pour un échange plus rapide, n&apos;hésitez pas à
@@ -110,7 +110,7 @@ export function ContactForm() {
       </label>
 
       {status === "error" && (
-        <p className="flex items-start gap-2 rounded-lg border border-[var(--color-brand-red)]/30 bg-[var(--color-brand-red)]/5 p-3 text-sm text-[var(--color-brand-red)]">
+        <p className="flex items-start gap-2 rounded-lg border border-[var(--color-brand-red)]/30 bg-[var(--color-brand-red)]/5 p-3 text-sm text-[var(--color-brand-red-ink)]">
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
           {errorMsg || "Impossible d'envoyer le message. Essayez l'e-mail ou le téléphone."}
         </p>

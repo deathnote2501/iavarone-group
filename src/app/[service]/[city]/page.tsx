@@ -56,10 +56,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const COLOR_TEXT = {
-  blue: "text-[var(--color-brand-blue)]",
-  green: "text-[var(--color-brand-green)]",
-  yellow: "text-[#B8860B]",
-  red: "text-[var(--color-brand-red)]",
+  blue: "text-[var(--color-brand-blue-ink)]",
+  green: "text-[var(--color-brand-green-ink)]",
+  yellow: "text-[var(--color-brand-yellow-ink)]",
+  red: "text-[var(--color-brand-red-ink)]",
 };
 const COLOR_BG = {
   blue: "bg-[var(--color-brand-blue)]/8",
@@ -240,7 +240,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
             <aside className="rounded-2xl border border-[var(--color-line)] bg-white p-6">
               <h3 className="flex items-center gap-2 text-sm font-semibold">
-                <MapPin className="h-4 w-4 text-[var(--color-brand-blue)]" aria-hidden />
+                <MapPin className="h-4 w-4 text-[var(--color-brand-blue-ink)]" aria-hidden />
                 {city.name} en chiffres
               </h3>
               <dl className="mt-4 space-y-3 text-sm">
@@ -278,7 +278,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
               <summary className="cursor-pointer list-none text-base font-semibold marker:hidden">
                 <span className="flex items-start justify-between gap-4">
                   {item.q}
-                  <span className="text-[var(--color-brand-blue)] transition-transform group-open:rotate-45">+</span>
+                  <span className="text-[var(--color-brand-blue-ink)] transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
               <p className="mt-3 text-sm text-[var(--color-ink-muted)]">{item.a}</p>

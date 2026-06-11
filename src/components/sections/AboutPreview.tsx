@@ -26,7 +26,7 @@ export function AboutPreview() {
           />
         </div>
         <div>
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
             À propos
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">

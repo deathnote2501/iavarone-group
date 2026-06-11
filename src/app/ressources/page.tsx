@@ -46,7 +46,7 @@ export default function RessourcesPage() {
 
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
             Ressources
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
@@ -67,7 +67,7 @@ export default function RessourcesPage() {
                 href={`/ressources/${a.slug}`}
                 className="group flex h-full flex-col rounded-2xl border border-[var(--color-line)] bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
               >
-                <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+                <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
                   {a.category}
                 </p>
                 <h2 className="mt-3 text-lg font-semibold leading-snug">{a.title}</h2>

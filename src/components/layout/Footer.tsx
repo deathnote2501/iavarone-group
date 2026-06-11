@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 font-semibold">
-              <Building2 className="h-5 w-5 text-[var(--color-brand-blue)]" aria-hidden />
+              <Building2 className="h-5 w-5 text-[var(--color-brand-blue-ink)]" aria-hidden />
               <span>{SITE.name}</span>
             </div>
             <p className="mt-3 max-w-md text-sm text-[var(--color-ink-muted)]">{SITE.baseline}</p>
@@ -25,7 +25,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold">Services</h4>
+            <h2 className="text-sm font-semibold">Services</h2>
             <ul className="mt-3 space-y-2 text-sm text-[var(--color-ink-muted)]">
               {SERVICES_LIST.map((s) => (
                 <li key={s.slug}>
@@ -43,7 +43,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold">Le groupe</h4>
+            <h2 className="text-sm font-semibold">Le groupe</h2>
             <ul className="mt-3 space-y-2 text-sm text-[var(--color-ink-muted)]">
               <li><Link href="/references" className="hover:text-[var(--color-ink)]">Résultats clients</Link></li>
               <li><Link href="/ressources" className="hover:text-[var(--color-ink)]">Ressources</Link></li>
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-[var(--color-line)] pt-8">
-          <h4 className="text-sm font-semibold">Présence dans 17 villes</h4>
+          <h2 className="text-sm font-semibold">Présence dans 17 villes</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {CITIES.map((c, i) => {
               const svc = SERVICES_LIST[i % SERVICES_LIST.length];

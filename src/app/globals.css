@@ -3,11 +3,18 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* Palette Google IAvarone */
+  /* Palette Google IAvarone (couleurs vives : fonds, bordures, larges titres) */
   --color-brand-blue: #4285F4;
   --color-brand-yellow: #FBBC05;
   --color-brand-green: #34A853;
   --color-brand-red: #EA4335;
+
+  /* Variantes accessibles pour TEXTE/ICÔNES sur fond clair — WCAG AA ≥ 4.5:1
+     (les couleurs vives ci-dessus échouent en petit texte : 3.05–3.92:1). */
+  --color-brand-blue-ink: #1A66D9;
+  --color-brand-green-ink: #15803D;
+  --color-brand-red-ink: #C5221F;
+  --color-brand-yellow-ink: #8A6100;
 
   /* Neutrals (light theme only) */
   --color-ink: #0F172A;

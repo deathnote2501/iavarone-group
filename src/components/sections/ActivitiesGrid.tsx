@@ -19,10 +19,10 @@ const COLOR_CLASSES: Record<Brand["color"], { bg: string; border: string; ring: 
 };
 
 const COLOR_TEXT: Record<Brand["color"], string> = {
-  blue: "text-[var(--color-brand-blue)]",
-  green: "text-[var(--color-brand-green)]",
-  yellow: "text-[#B8860B]",
-  red: "text-[var(--color-brand-red)]",
+  blue: "text-[var(--color-brand-blue-ink)]",
+  green: "text-[var(--color-brand-green-ink)]",
+  yellow: "text-[var(--color-brand-yellow-ink)]",
+  red: "text-[var(--color-brand-red-ink)]",
 };
 
 export function ActivitiesGrid() {

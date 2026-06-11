@@ -14,7 +14,7 @@ export function TrustBar() {
           {SITE.proof.map((item) => (
             <div key={item.label} className="flex flex-col">
               <dt className="flex items-center gap-1.5 text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
-                <BadgeCheck className="h-5 w-5 text-[var(--color-brand-green)]" aria-hidden />
+                <BadgeCheck className="h-5 w-5 text-[var(--color-brand-green-ink)]" aria-hidden />
                 {item.value}
               </dt>
               <dd className="mt-1 text-xs leading-snug text-[var(--color-ink-muted)]">{item.label}</dd>

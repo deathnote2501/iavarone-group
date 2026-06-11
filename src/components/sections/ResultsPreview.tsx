@@ -12,7 +12,7 @@ export function ResultsPreview() {
     <section className="container-page py-20">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-green)]">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-green-ink)]">
             Résultats clients
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -37,7 +37,7 @@ export function ResultsPreview() {
               href={`/references#${c.slug}`}
               className="group flex h-full flex-col rounded-2xl border border-[var(--color-line)] bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
             >
-              <TrendingUp className="h-5 w-5 text-[var(--color-brand-green)]" aria-hidden />
+              <TrendingUp className="h-5 w-5 text-[var(--color-brand-green-ink)]" aria-hidden />
               <p className="mt-4 text-2xl font-semibold tracking-tight">{c.headline.value}</p>
               <p className="mt-1 text-xs leading-snug text-[var(--color-ink-muted)]">{c.headline.label}</p>
               <p className="mt-auto pt-5 text-sm font-medium text-[var(--color-ink)]">{c.client}</p>

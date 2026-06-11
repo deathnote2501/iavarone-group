@@ -111,7 +111,7 @@ export default function AProposPage() {
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
               {SITE.founder.name}
             </h1>
-            <p className="mt-2 text-lg text-[var(--color-brand-blue)]">{SITE.founder.role}</p>
+            <p className="mt-2 text-lg text-[var(--color-brand-blue-ink)]">{SITE.founder.role}</p>
             <p className="mt-6 text-[var(--color-ink-muted)]">
               Formateur certifié Qualiopi et consultant en IA générative depuis 2020, j&apos;ai
               progressivement structuré mon activité en un groupe de six entités complémentaires&nbsp;:
@@ -141,7 +141,7 @@ export default function AProposPage() {
                   key={c}
                   className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line)] bg-[var(--color-surface-alt)] px-3 py-1 text-xs text-[var(--color-ink)]"
                 >
-                  <BadgeCheck className="h-3.5 w-3.5 text-[var(--color-brand-green)]" aria-hidden />
+                  <BadgeCheck className="h-3.5 w-3.5 text-[var(--color-brand-green-ink)]" aria-hidden />
                   {c}
                 </li>
               ))}
@@ -179,7 +179,7 @@ export default function AProposPage() {
         <h2 className="text-3xl font-semibold tracking-tight">Structure juridique</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="rounded-2xl border border-[var(--color-line)] bg-white p-6">
-            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
               SAS
             </p>
             <h3 className="mt-2 text-xl font-semibold">{SITE.legal.sas}</h3>
@@ -199,7 +199,7 @@ export default function AProposPage() {
             )}
           </div>
           <div className="rounded-2xl border border-[var(--color-line)] bg-white p-6">
-            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-green)]">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-brand-green-ink)]">
               EI
             </p>
             <h3 className="mt-2 text-xl font-semibold">{SITE.legal.ei}</h3>

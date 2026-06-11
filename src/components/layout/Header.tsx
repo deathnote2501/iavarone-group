@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-[var(--color-line)] bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/75">
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <Building2 className="h-5 w-5 text-[var(--color-brand-blue)]" aria-hidden />
+          <Building2 className="h-5 w-5 text-[var(--color-brand-blue-ink)]" aria-hidden />
           <span>{SITE.name}</span>
         </Link>
 

@@ -24,7 +24,7 @@ export function Hero() {
           L&apos;IA générative au service des{" "}
           <span className="text-[var(--color-brand-blue)]">entreprises</span>,{" "}
           <span className="text-[var(--color-brand-green)]">organisations</span> et{" "}
-          <span className="text-[var(--color-brand-yellow)]">indépendants</span>.
+          <span className="text-[var(--color-brand-yellow-ink)]">indépendants</span>.
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">

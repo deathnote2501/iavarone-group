@@ -14,10 +14,10 @@ const ICONS: Record<Brand["slug"], LucideIcon> = {
 };
 
 const COLOR_TEXT: Record<Brand["color"], string> = {
-  blue: "text-[var(--color-brand-blue)]",
-  green: "text-[var(--color-brand-green)]",
-  yellow: "text-[#B8860B]",
-  red: "text-[var(--color-brand-red)]",
+  blue: "text-[var(--color-brand-blue-ink)]",
+  green: "text-[var(--color-brand-green-ink)]",
+  yellow: "text-[var(--color-brand-yellow-ink)]",
+  red: "text-[var(--color-brand-red-ink)]",
 };
 const COLOR_BG: Record<Brand["color"], string> = {
   blue: "bg-[var(--color-brand-blue)]/8",

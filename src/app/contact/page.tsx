@@ -29,20 +29,20 @@ export default function ContactPage() {
             location="contact-card"
             className="group rounded-2xl border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
           >
-            <Calendar className="h-6 w-6 text-[var(--color-brand-blue)]" aria-hidden />
+            <Calendar className="h-6 w-6 text-[var(--color-brand-blue-ink)]" aria-hidden />
             <h2 className="mt-4 text-xl font-semibold">Prendre RDV</h2>
             <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
               Réservez un créneau directement dans mon agenda Koalendar. Visio ou physique selon
               votre localisation.
             </p>
-            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue)]">Koalendar →</p>
+            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue-ink)]">Koalendar →</p>
           </BookingLink>
 
           <a
             href={SITE.contact.phoneHref}
             className="group rounded-2xl border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
           >
-            <Phone className="h-6 w-6 text-[var(--color-brand-green)]" aria-hidden />
+            <Phone className="h-6 w-6 text-[var(--color-brand-green-ink)]" aria-hidden />
             <h2 className="mt-4 text-xl font-semibold">Téléphone</h2>
             <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
               Du lundi au vendredi, 9h–18h. Réponse rapide pour les questions urgentes.
@@ -54,7 +54,7 @@ export default function ContactPage() {
             href={`mailto:${SITE.contact.email}`}
             className="group rounded-2xl border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
           >
-            <Mail className="h-6 w-6 text-[var(--color-brand-yellow)]" aria-hidden />
+            <Mail className="h-6 w-6 text-[var(--color-brand-yellow-ink)]" aria-hidden />
             <h2 className="mt-4 text-xl font-semibold">E-mail</h2>
             <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
               Pour un brief détaillé, une demande de devis ou un partenariat. Réponse sous 24h ouvrées.

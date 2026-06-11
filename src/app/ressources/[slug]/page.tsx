@@ -141,7 +141,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
       <article className="container-page py-16">
         <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
             {article.category}
           </p>
           <h1 className="mt-3 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">
@@ -172,7 +172,7 @@ export default async function ArticlePage({ params }: PageProps) {
                     <summary className="cursor-pointer list-none text-base font-semibold marker:hidden">
                       <span className="flex items-start justify-between gap-4">
                         {item.q}
-                        <span className="text-[var(--color-brand-blue)] transition-transform group-open:rotate-45">+</span>
+                        <span className="text-[var(--color-brand-blue-ink)] transition-transform group-open:rotate-45">+</span>
                       </span>
                     </summary>
                     <p className="mt-3 text-sm text-[var(--color-ink-muted)]">{item.a}</p>

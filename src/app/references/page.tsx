@@ -50,7 +50,7 @@ export default function ReferencesPage() {
 
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue)]">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-brand-blue-ink)]">
             Résultats clients
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
@@ -95,7 +95,7 @@ export default function ReferencesPage() {
                 </p>
                 <h2 className="mt-1 text-2xl font-semibold tracking-tight">{c.client}</h2>
               </div>
-              <p className="flex items-center gap-2 text-[var(--color-brand-green)]">
+              <p className="flex items-center gap-2 text-[var(--color-brand-green-ink)]">
                 <TrendingUp className="h-5 w-5" aria-hidden />
                 <span className="text-2xl font-semibold tracking-tight">{c.headline.value}</span>
               </p>
@@ -130,7 +130,7 @@ export default function ReferencesPage() {
                   <ul className="mt-4 space-y-2">
                     {c.qualityGains.map((g) => (
                       <li key={g} className="flex items-start gap-2 text-sm text-[var(--color-ink-muted)]">
-                        <Quote className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--color-brand-blue)]" aria-hidden />
+                        <Quote className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--color-brand-blue-ink)]" aria-hidden />
                         {g}
                       </li>
                     ))}
