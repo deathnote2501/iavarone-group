@@ -374,6 +374,12 @@ const BRANDS: BrandCard[] = [
     color: BRAND.blue,
   },
   {
+    name: "Kaliopi",
+    tagline: "Conformité Qualiopi tout-en-un · 32 indicateurs",
+    category: "SaaS B2B",
+    color: BRAND.yellow,
+  },
+  {
     name: "Conform-RGAA",
     tagline: "Conformité accessibilité · pack 3 ans 290€",
     category: "Conformité",
@@ -437,7 +443,7 @@ const SceneBrands: React.FC = () => {
             letterSpacing: -1,
           }}
         >
-          Six marques. Un seul interlocuteur.
+          Sept marques. Un seul interlocuteur.
         </div>
         <div
           style={{
@@ -453,9 +459,9 @@ const SceneBrands: React.FC = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(4, 1fr)",
           gridTemplateRows: "repeat(2, 1fr)",
-          gap: 28,
+          gap: 24,
           flex: 1,
         }}
       >
@@ -483,6 +489,22 @@ const SceneBrands: React.FC = () => {
             />
           );
         })}
+        {(() => {
+          const i = BRANDS.length;
+          const start = enterStart + i * stagger;
+          const progress = interpolate(
+            frame,
+            [start, start + enterDuration],
+            [0, 1],
+            {
+              easing: easeOut,
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            },
+          );
+          const y = interpolate(progress, [0, 1], [40, 0]);
+          return <SummaryTile key="summary" opacity={progress} translateY={y} />;
+        })()}
       </div>
     </AbsoluteFill>
   );
@@ -514,7 +536,7 @@ const BrandTile: React.FC<{
         background: "white",
         border: `1px solid ${BRAND.line}`,
         borderRadius: 20,
-        padding: "32px 36px",
+        padding: "26px 28px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -536,37 +558,100 @@ const BrandTile: React.FC<{
       <div>
         <div
           style={{
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: 600,
             color: brand.color,
-            letterSpacing: 1.5,
+            letterSpacing: 1.4,
             textTransform: "uppercase",
-            marginBottom: 14,
+            marginBottom: 12,
           }}
         >
           {brand.category}
         </div>
         <div
           style={{
-            fontSize: 38,
+            fontSize: 32,
             fontWeight: 700,
             letterSpacing: -0.5,
             lineHeight: 1.1,
-            marginBottom: 12,
+            marginBottom: 10,
           }}
         >
           {brand.name}
         </div>
         <div
           style={{
-            fontSize: 22,
+            fontSize: 19,
             color: BRAND.muted,
             fontWeight: 500,
-            lineHeight: 1.4,
+            lineHeight: 1.35,
           }}
         >
           {brand.tagline}
         </div>
+      </div>
+    </div>
+  );
+};
+
+const SummaryTile: React.FC<{
+  opacity: number;
+  translateY: number;
+}> = ({ opacity, translateY }) => {
+  return (
+    <div
+      style={{
+        opacity,
+        transform: `translateY(${translateY}px)`,
+        background: BRAND.blue,
+        borderRadius: 20,
+        padding: "26px 28px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        boxShadow: "0 12px 32px -12px rgba(66, 133, 244, 0.4)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div>
+        <div
+          style={{
+            fontSize: 16,
+            fontWeight: 600,
+            color: "rgba(255, 255, 255, 0.8)",
+            letterSpacing: 1.4,
+            textTransform: "uppercase",
+            marginBottom: 12,
+          }}
+        >
+          IAvarone Group
+        </div>
+        <div
+          style={{
+            fontSize: 32,
+            fontWeight: 700,
+            letterSpacing: -0.5,
+            lineHeight: 1.1,
+            marginBottom: 10,
+            color: "white",
+          }}
+        >
+          Un seul interlocuteur
+        </div>
+        <div
+          style={{
+            fontSize: 19,
+            color: "rgba(255, 255, 255, 0.85)",
+            fontWeight: 500,
+            lineHeight: 1.35,
+          }}
+        >
+          Formation · Conseil · Agents IA · SaaS · E-commerce
+        </div>
+      </div>
+      <div style={{ fontSize: 19, fontWeight: 600, color: "white" }}>
+        iavarone-group.fr →
       </div>
     </div>
   );
