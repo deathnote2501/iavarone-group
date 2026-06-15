@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Building2 } from "lucide-react";
 import { SITE, BRANDS, CITIES } from "@/lib/site";
 import { SERVICES_LIST } from "@/lib/services";
+import { shouldIndexCity } from "@/lib/seo-volumes";
 
 export function Footer() {
   return (
@@ -56,23 +57,40 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-[var(--color-line)] pt-8">
-          <h2 className="text-sm font-semibold">Présence dans 17 villes</h2>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {CITIES.map((c, i) => {
-              const svc = SERVICES_LIST[i % SERVICES_LIST.length];
+          <h2 className="text-sm font-semibold">Nos services par ville</h2>
+          {/* Maillage interne sitewide : on ne lie QUE les combos indexables
+              (shouldIndexCity) avec une ancre descriptive par service, pour que
+              chaque page du site fasse découvrir à Google toutes les pages
+              [service]/[ville] à demande réelle. */}
+          <div className="mt-4 grid gap-x-8 gap-y-6 sm:grid-cols-3">
+            {SERVICES_LIST.map((svc) => {
+              const cities = CITIES.filter((c) => shouldIndexCity(svc.slug, c.slug));
+              if (cities.length === 0) return null;
               return (
-                <li key={c.slug}>
-                  <Link
-                    href={`/${svc.slug}/${c.slug}`}
-                    className="inline-block rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs text-[var(--color-ink-muted)] transition hover:border-[var(--color-brand-blue)] hover:text-[var(--color-ink)]"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
+                <div key={svc.slug}>
+                  <h3 className="text-xs font-semibold">
+                    <Link href={`/${svc.slug}`} className="hover:text-[var(--color-brand-blue-ink)]">
+                      {svc.title}
+                    </Link>
+                  </h3>
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {cities.map((c) => (
+                      <li key={c.slug}>
+                        <Link
+                          href={`/${svc.slug}/${c.slug}`}
+                          title={`${svc.title} à ${c.name}`}
+                          className="inline-block rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs text-[var(--color-ink-muted)] transition hover:border-[var(--color-brand-blue)] hover:text-[var(--color-ink)]"
+                        >
+                          {c.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               );
             })}
-          </ul>
-          <p className="mt-3 text-xs text-[var(--color-ink-muted)]">
+          </div>
+          <p className="mt-6 text-xs text-[var(--color-ink-muted)]">
             Marques du groupe :{" "}
             {BRANDS.map((b, i) => (
               <span key={b.slug}>

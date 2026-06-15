@@ -75,11 +75,17 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const { service, city } = data;
   const Icon = service.icon;
 
-  // Maillage interne : on relie chaque page ville à TOUTES les autres villes du
-  // même service (graphe complet → un crawl atteignant une page indexée peut
-  // rebondir vers les 50 autres) et aux deux autres services de la même ville.
-  const related = CITIES.filter((other) => other.slug !== city.slug);
-  const otherServices = SERVICES_LIST.filter((s) => s.slug !== service.slug);
+  // Maillage interne : on relie chaque page ville aux autres villes INDEXABLES
+  // du même service (graphe complet entre pages utiles → un crawl atteignant une
+  // page indexée rebondit vers les autres) et aux autres services indexables de
+  // la même ville. On exclut les combos noindex pour ne pas diluer le crawl
+  // budget ni le link equity vers des pages volontairement non indexées.
+  const related = CITIES.filter(
+    (other) => other.slug !== city.slug && shouldIndexCity(service.slug, other.slug),
+  );
+  const otherServices = SERVICES_LIST.filter(
+    (s) => s.slug !== service.slug && shouldIndexCity(s.slug, city.slug),
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -312,6 +318,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
       <AuthorBio context={`${service.title} à ${city.name} — assuré par`} />
 
+      {otherServices.length > 0 && (
       <section className="container-page py-12">
         <h2 className="text-xl font-semibold">Autres services à {city.name}</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -330,7 +337,9 @@ export default async function ServiceCityPage({ params }: PageProps) {
           ))}
         </div>
       </section>
+      )}
 
+      {related.length > 0 && (
       <section className="container-page pb-20">
         <h2 className="text-xl font-semibold">{service.title} dans les autres villes</h2>
         <ul className="mt-4 flex flex-wrap gap-2">
@@ -346,6 +355,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
           ))}
         </ul>
       </section>
+      )}
     </>
   );
 }

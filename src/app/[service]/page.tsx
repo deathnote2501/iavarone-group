@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
+import { shouldIndexCity } from "@/lib/seo-volumes";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 import { ResultsPreview } from "@/components/sections/ResultsPreview";
@@ -53,8 +54,11 @@ export default async function ServicePage({ params }: PageProps) {
   if (!service) notFound();
   const Icon = service.icon;
 
-  const hubs = CITIES.filter((c) => c.hub);
-  const others = CITIES.filter((c) => !c.hub);
+  // On ne liste/lie que les villes indexables pour ce service : les combos
+  // noindex (0 volume mesuré) restent hors maillage pour concentrer le crawl
+  // budget sur les pages à demande réelle.
+  const hubs = CITIES.filter((c) => c.hub && shouldIndexCity(service.slug, c.slug));
+  const others = CITIES.filter((c) => !c.hub && shouldIndexCity(service.slug, c.slug));
   const otherServices = SERVICES_LIST.filter((s) => s.slug !== service.slug);
 
   const jsonLd = {
