@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -159,6 +160,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <Analytics />
+        {/* Chatbot mutualisé (service iac_chatbot) */}
+        <Script
+          src="https://chat.iavarone-group.fr/widget.js"
+          data-site="iavarone-group"
+          data-accent="#FBBC05"
+          strategy="afterInteractive"
+        />
       </body>
       <GoogleAnalytics gaId="G-MPZM0EYFQE" />
     </html>
