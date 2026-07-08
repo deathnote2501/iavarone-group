@@ -54,7 +54,7 @@ export default async function OpengraphImage() {
               maxWidth: 1000,
             }}
           >
-            L'IA générative au service des{" "}
+            L&apos;IA générative au service des{" "}
             <span style={{ color: "#4285F4" }}>entreprises</span>,{" "}
             <span style={{ color: "#34A853" }}>organisations</span> et{" "}
             <span style={{ color: "#B8860B" }}>indépendants</span>.
