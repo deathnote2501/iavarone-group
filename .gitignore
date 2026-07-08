@@ -46,3 +46,9 @@ mes-docs/
 /remotion-video/node_modules
 /remotion-video/out
 /remotion-video/.cache
+
+# Playwright (gate smoke)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
