@@ -7,6 +7,7 @@ import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-volumes";
+import { overrideFor } from "@/lib/city-service-overrides";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 
@@ -36,22 +37,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // noindex pour éviter le profil "doorway pages" et préserver le crawl budget
   // sur les pages à demande réelle. Voir src/lib/seo-volumes.ts.
   const index = shouldIndexCity(service.slug, city.slug);
+  const override = overrideFor(service.slug, city.slug);
+  const title = override?.metaTitle ?? service.longTitle(city.name);
+  const description = override?.metaDescription ?? service.metaDescription(city.name);
   return {
-    title: service.longTitle(city.name),
-    description: service.metaDescription(city.name),
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index, follow: true },
-    openGraph: {
-      type: "article",
-      url,
-      title: service.longTitle(city.name),
-      description: service.metaDescription(city.name),
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: service.longTitle(city.name),
-      description: service.metaDescription(city.name),
-    },
+    openGraph: { type: "article", url, title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -74,6 +69,12 @@ export default async function ServiceCityPage({ params }: PageProps) {
   if (!data) notFound();
   const { service, city } = data;
   const Icon = service.icon;
+
+  // Enrichissement éditorial du combo (cf. src/lib/city-service-overrides.ts).
+  // La FAQ fusionnée sert à la fois au rendu et au JSON-LD : le schema ne doit
+  // jamais annoncer une question absente de la page.
+  const override = overrideFor(service.slug, city.slug);
+  const faq = [...service.faq(city.name), ...(override?.extraFaq ?? [])];
 
   // Maillage interne : on relie chaque page ville aux autres villes INDEXABLES
   // du même service (graphe complet entre pages utiles → un crawl atteignant une
@@ -102,7 +103,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
         "@type": "LocalBusiness",
         name: `${service.title} — ${city.name} (IAvarone Group)`,
         url: `${SITE.url}/${service.slug}/${city.slug}`,
-        description: service.metaDescription(city.name),
+        description: override?.metaDescription ?? service.metaDescription(city.name),
         telephone: SITE.contact.phoneHref,
         email: SITE.contact.email,
         areaServed: { "@type": "City", name: city.name },
@@ -111,7 +112,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
       },
       {
         "@type": "FAQPage",
-        mainEntity: service.faq(city.name).map((item) => ({
+        mainEntity: faq.map((item) => ({
           "@type": "Question",
           name: item.q,
           acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -168,6 +169,19 @@ export default async function ServiceCityPage({ params }: PageProps) {
       </section>
 
       <TrustBar />
+
+      {override?.answerFirst && (
+        <section className="container-page py-16">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-semibold tracking-tight">{override.answerFirst.h2}</h2>
+            <div className="mt-6 space-y-4 text-[var(--color-ink-muted)]">
+              {override.answerFirst.body.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="container-page py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Trois engagements concrets</h2>
@@ -279,7 +293,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
       <section className="container-page py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Questions fréquentes</h2>
         <div className="mt-8 divide-y divide-[var(--color-line)] rounded-2xl border border-[var(--color-line)] bg-white">
-          {service.faq(city.name).map((item) => (
+          {faq.map((item) => (
             <details key={item.q} className="group p-6">
               <summary className="cursor-pointer list-none text-base font-semibold marker:hidden">
                 <span className="flex items-start justify-between gap-4">
@@ -317,6 +331,30 @@ export default async function ServiceCityPage({ params }: PageProps) {
       </section>
 
       <AuthorBio context={`${service.title} à ${city.name} — assuré par`} />
+
+      {override?.relatedLinks && override.relatedLinks.length > 0 && (
+        <section className="container-page py-12">
+          <h2 className="text-xl font-semibold">Pour aller plus loin</h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {override.relatedLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between gap-4 rounded-xl border border-[var(--color-line)] bg-white px-5 py-4 transition hover:border-[var(--color-brand-blue)]"
+              >
+                <span>
+                  <span className="block font-medium">{link.label}</span>
+                  <span className="block text-xs text-[var(--color-ink-muted)]">{link.hint}</span>
+                </span>
+                <ArrowRight
+                  className="h-4 w-4 shrink-0 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {otherServices.length > 0 && (
       <section className="container-page py-12">
