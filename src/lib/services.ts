@@ -34,7 +34,13 @@ export interface Service {
   hubMetaDescription: string;
   hubH1: string;
   hubLede: string;
-  hubSections: { h2: string; body: string }[];
+  /** `link` ajoute une phrase complémentaire terminant la section, avec un lien
+   * contextuel vers la marque du groupe qui porte le sujet (maillage inter-domaines). */
+  hubSections: {
+    h2: string;
+    body: string;
+    link?: { before: string; anchor: string; href: string; after: string };
+  }[];
 }
 
 export const SERVICES: Record<ServiceSlug, Service> = {
@@ -152,6 +158,12 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       {
         h2: "Formation ChatGPT, Claude & Gemini",
         body: "Prise en main des principaux assistants IA (ChatGPT, Claude, Gemini), prompt engineering, exploitation des contextes longs et premiers agents. Des ateliers pratiques sur vos propres cas d'usage, pas des slides génériques.",
+        link: {
+          before: "Les équipes déjà à l'aise avec Claude peuvent aller plus loin avec la",
+          anchor: "formation Claude Cowork",
+          href: "https://jeromeiavarone.fr/formation-claude-cowork",
+          after: ", consacrée à l'agent IA de bureau d'Anthropic qui travaille directement dans vos fichiers.",
+        },
       },
       {
         h2: "Formation IA certifiante (Qualiopi)",

@@ -149,7 +149,24 @@ export default async function ServicePage({ params }: PageProps) {
           {service.hubSections.map((s) => (
             <div key={s.h2}>
               <h2 className="text-2xl font-semibold tracking-tight">{s.h2}</h2>
-              <p className="mt-3 text-[var(--color-ink-muted)]">{s.body}</p>
+              <p className="mt-3 text-[var(--color-ink-muted)]">
+                {s.body}
+                {s.link ? (
+                  <>
+                    {" "}
+                    {s.link.before}{" "}
+                    <a
+                      href={s.link.href}
+                      target="_blank"
+                      rel="noopener"
+                      className={`font-medium ${COLOR_TEXT[service.color]} hover:underline`}
+                    >
+                      {s.link.anchor}
+                    </a>
+                    {s.link.after}
+                  </>
+                ) : null}
+              </p>
             </div>
           ))}
         </div>
