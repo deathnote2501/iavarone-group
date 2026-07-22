@@ -89,6 +89,72 @@ export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverrid
       },
     ],
   },
+
+  // Deuxième combo index-priority du site (volume 140/mois, DataForSEO), déjà
+  // 47 impressions et 1 clic sur 28 j (Search Console, 2026-06-22 → 2026-07-19)
+  // mais la page plafonne en position 26,6. Les requêtes réelles qui la
+  // touchent sont "consultant ia generative paris" (9 imp, pos 9,3, en lisière
+  // du top 10) et "consultant ia paris" (9 imp, pos 19,9) : la page ne couvrait
+  // pas explicitement le lexique "consultant IA générative" / "expert IA" que
+  // Google lui associe. Sujet non cannibalisé : aucun autre site du groupe ne
+  // ranke top 20 sur les SERP parisiennes (tracker iac_seo, 2026-07-19).
+  "conseil-ia/paris": {
+    metaTitle: "Consultant IA à Paris : audit, expert et conseil en IA générative",
+    metaDescription:
+      "Consultant IA générative indépendant à Paris : audit IA livré en 2 semaines (3 à 6 k€), cas d'usage chiffrés, mise en œuvre en 4 à 8 semaines. Facturé au livrable, pas en régie. Premier cadrage gratuit de 30 minutes.",
+    answerFirst: {
+      h2: "Consultant, expert ou conseil en IA générative à Paris : par où commencer ?",
+      body: [
+        "Pour une PME, une ETI ou une scale-up parisienne, la réponse courte : commencez par un audit court et chiffré, pas par un outil. Un audit IA est livré en 2 semaines pour 3 à 6 k€, et se conclut par 3 à 5 cas d'usage priorisés avec leur gain estimé. La mise en œuvre suit en 4 à 8 semaines, pour 5 à 20 k€. Le premier cadrage de 30 minutes est gratuit, et sert d'abord à vérifier qu'il existe un vrai retour sur investissement : s'il n'y en a pas, autant le savoir avant de dépenser.",
+        "À Paris, les termes « consultant IA », « consultant IA générative », « expert IA » et « cabinet de conseil IA » recouvrent des réalités très différentes. Un grand cabinet facture des jours de conseil en régie et repart avec un rapport ; ici, l'intervention est cadrée, réalisée et livrée par une seule personne, Jérôme Iavarone, consultant en IA générative depuis 2020, facturée au livrable et non au temps passé. Vous parlez directement à celui qui exécute la mission, du cadrage jusqu'à la mise en production, sans strate intermédiaire.",
+        "Concrètement pour une entreprise parisienne : le cadrage et la restitution se font sur site (Paris est à 3h30 de Clermont-Ferrand en train direct), le développement en distanciel pour contenir le coût. Les déplacements sont inclus dans le forfait. Cette organisation convient autant à un siège du CAC 40 qui teste un premier cas d'usage qu'à une scale-up SaaS qui veut industrialiser une automatisation.",
+      ],
+    },
+    // Questions calquées sur les requêtes réelles qui rapportent des impressions
+    // à cette page (Search Console, 28 j) : "consultant ia generative paris"
+    // (9 imp, pos 9,3) et "consultant ia paris" (9 imp, pos 19,9). Aucune ne
+    // duplique la FAQ générique du service conseil-ia.
+    extraFaq: [
+      {
+        q: "Comment choisir un consultant IA générative à Paris ?",
+        a: "Trois critères tranchent vite. D'abord, demandez qui exécutera réellement la mission : dans les grandes structures parisiennes, la personne qui vend en rendez-vous n'est presque jamais celle qui livre. Ensuite, regardez le mode de facturation : au livrable, le prestataire porte le risque ; en régie, c'est vous qui payez les dérapages. Enfin, exigez un chiffrage du gain attendu avant de démarrer. Un consultant qui ne sait pas estimer le retour sur investissement d'un cas d'usage ne l'a probablement jamais mis en production.",
+      },
+      {
+        q: "Un consultant IA basé en région peut-il accompagner une entreprise parisienne ?",
+        a: "Oui, et c'est même souvent un avantage de coût sans perte de proximité. Les phases qui exigent une présence physique (cadrage, ateliers d'équipe, restitution) se tiennent sur site à Paris ; le développement et le suivi se font à distance, ce qui évite de facturer des journées de régie sur place. Paris est à 3h30 de Clermont-Ferrand en train direct, et les déplacements sont inclus dans le forfait : le tarif ne varie pas selon votre arrondissement.",
+      },
+      {
+        q: "Consultant IA indépendant ou grand cabinet parisien : lequel pour une PME ou une ETI ?",
+        a: "Un grand cabinet apporte une marque et des effectifs, mais facture en jours-homme, mobilise souvent des profils juniors sur le terrain et cadre le besoin sans porter la mise en production. Un indépendant expérimenté engage un seul interlocuteur du diagnostic à la livraison, facture au résultat et reste joignable après la mission. Pour une PME ou une ETI qui veut un premier cas d'usage réellement déployé plutôt qu'un rapport, le second modèle limite le risque et le délai.",
+      },
+      {
+        q: "Combien coûte un audit IA à Paris ?",
+        a: "L'audit IA est facturé entre 3 et 6 k€ selon la taille de l'organisation et le nombre de processus à cartographier, quel que soit le lieu : le tarif parisien est le même qu'ailleurs. Il est livré en 2 semaines et contient la cartographie des processus, 3 à 5 cas d'usage priorisés, leur chiffrage et un calendrier de mise en œuvre. Il est autoportant : rien ne vous oblige à poursuivre ensuite. Le rendez-vous de cadrage préalable de 30 minutes, lui, est gratuit.",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/ressources/ia-generative-definition-exemples",
+        label: "Comprendre l'IA générative et ses cas d'usage en entreprise",
+        hint: "La définition, les exemples concrets et les limites, avant de lancer un projet.",
+      },
+      {
+        href: "/ressources/roi-ia-generative-pme",
+        label: "Estimer le retour sur investissement d'un projet IA",
+        hint: "Combien de temps une PME gagne-t-elle réellement avec l'IA générative ?",
+      },
+      {
+        href: "/ressources/charte-ia-entreprise-rgpd-ia-act",
+        label: "Cadrer l'usage de l'IA : RGPD et IA Act",
+        hint: "Ce qu'une charte IA doit couvrir avant d'ouvrir les outils aux équipes.",
+      },
+      {
+        href: "/conseil-ia",
+        label: "La méthode d'audit IA en quatre étapes",
+        hint: "Du cadrage gratuit à la mesure d'impact, le déroulé complet d'une mission.",
+      },
+    ],
+  },
 };
 
 /** Override éditorial d'un couple (service, ville), ou undefined si le combo n'en a pas. */
