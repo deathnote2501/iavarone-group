@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, Calendar, Phone, Check, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Calendar, Phone, Check, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart, ContactRound } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
@@ -20,6 +20,7 @@ const ICONS: Record<Brand["slug"], LucideIcon> = {
   kaliopi: ShieldCheck,
   "rgaa-ia": Accessibility,
   mecaindus: ShoppingCart,
+  "crm-ia": ContactRound,
 };
 
 const COLOR_TEXT: Record<Brand["color"], string> = {

@@ -233,6 +233,29 @@ export const BRANDS = [
     ],
     cta: "Voir le catalogue MecaIndus",
   },
+  {
+    slug: "crm-ia",
+    name: "CRM IA",
+    tagline: "CRM sur mesure avec agents IA intégrés",
+    description:
+      "Le CRM d'une PME développé from scratch, avec les agents IA branchés nativement sur le pipeline. Propriété du code et de la donnée, hébergement en France, pas d'abonnement par siège.",
+    url: "https://crm-ia.fr",
+    color: "blue",
+    structure: "SAS",
+    category: "CRM sur mesure",
+    targetAudience: "PME dont le CRM du marché ne colle pas au métier : BTP, immobilier, e-commerce, cabinets",
+    pricing: "Développement 6 000–15 000 € one-shot · 250–750 €/mois (hébergement, supervision, évolutions)",
+    longDescription:
+      "CRM IA développe le CRM d'une PME sur mesure, avec ses vrais objets métier et son pipeline réel, plutôt que de plier l'entreprise au modèle de données d'un éditeur. Les agents IA y sont un composant du CRM, pas un module vendu à part : qualification et enrichissement des fiches, scoring des leads, relances rédigées en contexte, comptes rendus de RDV depuis la visio, devis et factures liés au pipeline. Trois différences avec un abonnement du marché : le code et la donnée appartiennent au client, l'hébergement est en France, et la facturation ne dépend pas du nombre d'utilisateurs. Mise en service en 6 à 12 semaines.",
+    keyPoints: [
+      "Modèle de données calqué sur le métier, pas l'inverse",
+      "Agents IA branchés sur le pipeline, pas un chatbot plaqué",
+      "Propriété du code et de la donnée, hébergement en France",
+      "Pas d'abonnement par siège : le coût ne suit pas les effectifs",
+      "Mise en service en 6 à 12 semaines",
+    ],
+    cta: "Cadrer votre CRM sur mesure",
+  },
 ] as const;
 
 // Intersection pour exposer `metaTitle` (optionnel) sur toutes les marques

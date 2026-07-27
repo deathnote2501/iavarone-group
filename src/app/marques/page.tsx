@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart } from "lucide-react";
+import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart, ContactRound } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
@@ -12,6 +12,7 @@ const ICONS: Record<Brand["slug"], LucideIcon> = {
   kaliopi: ShieldCheck,
   "rgaa-ia": Accessibility,
   mecaindus: ShoppingCart,
+  "crm-ia": ContactRound,
 };
 
 const COLOR_TEXT: Record<Brand["color"], string> = {
