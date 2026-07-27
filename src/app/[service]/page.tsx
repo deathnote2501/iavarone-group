@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
-import { shouldIndexCity } from "@/lib/seo-volumes";
+import { shouldIndexCity } from "@/lib/seo-index";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 import { ResultsPreview } from "@/components/sections/ResultsPreview";

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { ARTICLES } from "@/lib/articles";
-import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-volumes";
+import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
