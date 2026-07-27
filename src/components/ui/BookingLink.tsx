@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import { SITE } from "@/lib/site";
 
 declare global {
@@ -25,9 +26,15 @@ export interface BookingLinkProps
  */
 export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>(
   ({ location, onClick, children, ...props }, ref) => {
+    const pathname = usePathname();
+
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {
         cta_location: location ?? "unknown",
+        // page_path : sans lui on sait qu'il y a eu un clic, pas depuis quelle page.
+        // C'est la page qui sert de cle de rapprochement avec le RDV reellement pris
+        // (jointure GA4 x Google Calendar, cf. skill rdv-briefing).
+        page_path: pathname ?? "",
         link_url: SITE.contact.booking,
       });
       onClick?.(event);
