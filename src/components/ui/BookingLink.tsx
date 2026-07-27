@@ -31,10 +31,12 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {
         cta_location: location ?? "unknown",
-        // page_path : sans lui on sait qu'il y a eu un clic, pas depuis quelle page.
+        // cta_page (et non page_path : gtag.js consomme ce nom, herite d Universal
+        // Analytics, et ne le transmet jamais comme parametre custom : verifie en prod
+        // le 2026-07-27, il etait absent du beacon). Sans lui on sait qu'il y a eu un clic, pas depuis quelle page.
         // C'est la page qui sert de cle de rapprochement avec le RDV reellement pris
         // (jointure GA4 x Google Calendar, cf. skill rdv-briefing).
-        page_path: pathname ?? "",
+        cta_page: pathname ?? "",
         link_url: SITE.contact.booking,
       });
       onClick?.(event);
