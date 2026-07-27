@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Building2 } from "lucide-react";
 import { SITE, BRANDS, CITIES } from "@/lib/site";
 import { SERVICES_LIST } from "@/lib/services";
-import { shouldIndexCity } from "@/lib/seo-volumes";
+import { shouldIndexCity } from "@/lib/seo-index";
 
 export function Footer() {
   return (

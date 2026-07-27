@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
-import { shouldIndexCity } from "@/lib/seo-volumes";
+import { shouldIndexCity } from "@/lib/seo-index";
 import { overrideFor } from "@/lib/city-service-overrides";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
@@ -33,9 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {};
   const { service, city } = data;
   const url = `${SITE.url}/${service.slug}/${city.slug}`;
-  // Pilotage DataForSEO : les combos à 0 volume de recherche mesuré passent en
-  // noindex pour éviter le profil "doorway pages" et préserver le crawl budget
-  // sur les pages à demande réelle. Voir src/lib/seo-volumes.ts.
+  // Deux filtres cumulés (src/lib/seo-index.ts) :
+  //  - volume DataForSEO : les combos à 0 volume mesuré passent en noindex pour éviter
+  //    le profil "doorway pages" et préserver le crawl budget ;
+  //  - cannibalisation : les combos rendus à un autre site du groupe, conformément à
+  //    l'objectif du site (« thématiques NON couvertes par les autres sites », CLAUDE.md).
   const index = shouldIndexCity(service.slug, city.slug);
   const override = overrideFor(service.slug, city.slug);
   const title = override?.metaTitle ?? service.longTitle(city.name);
