@@ -155,6 +155,67 @@ export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverrid
       },
     ],
   },
+
+  // Combo du territoire propre (conseil IA local) NON cannibalisé : aucun autre site
+  // du groupe ne ranke sur les SERP roannaises (tracker iac_seo, 2026-07-22, "conseil
+  // ia roanne" = position 1). Déjà en quasi-top mais 0 clic sur 28 j (Search Console,
+  // 2026-06-29 → 2026-07-26) : "conseil ia roanne" (5 imp, pos 3,2), "accompagnement
+  // ia roanne" (4 imp, pos 2,5), "veille ia roanne" (7 imp, pos 18,9), "solution ia
+  // roanne" (2 imp, pos 12,0). La page templatisée ne couvrait pas explicitement le
+  // lexique "accompagnement" / "veille" / "solution IA" : cet override le fait, sans
+  // toucher aux autres villes.
+  "conseil-ia/roanne": {
+    metaTitle: "Conseil IA à Roanne : audit et accompagnement des PME",
+    metaDescription:
+      "Conseil IA à Roanne pour PME et ETI industrielles : audit livré en 2 semaines (3 à 6 k€), cas d'usage chiffrés, accompagnement et veille IA. Facturé au livrable, pas en régie. Premier cadrage gratuit de 30 minutes.",
+    answerFirst: {
+      h2: "Conseil, accompagnement ou veille IA à Roanne : par où commencer ?",
+      body: [
+        "Pour une PME industrielle du Roannais, la réponse courte : commencez par un audit court et chiffré, pas par un outil. Un audit IA est livré en 2 semaines pour 3 à 6 k€, et se conclut par 3 à 5 cas d'usage priorisés avec leur gain estimé. La mise en œuvre suit en 4 à 8 semaines, pour 5 à 20 k€. Le premier cadrage de 30 minutes est gratuit, et sert d'abord à vérifier qu'il existe un vrai retour sur investissement : s'il n'y en a pas, autant le savoir avant de dépenser.",
+        "« Conseil IA », « accompagnement IA » et « veille IA » recouvrent à Roanne trois besoins différents. Le conseil cadre et priorise ; l'accompagnement met en œuvre et forme les équipes ; la veille garde l'entreprise au courant des outils qui comptent pour son métier, sans la noyer sous le bruit. Ici les trois sont assurés par une seule personne, Jérôme Iavarone, consultant en IA générative depuis 2020, facturée au livrable et non au temps passé. Vous parlez à celui qui réalise la mission, du cadrage jusqu'à la mise en production.",
+        "Concrètement dans le Roannais : le tissu de PME textiles Made in France, de sous-traitants de l'armement (Nexter, programme Scorpion) et de l'agroalimentaire a surtout besoin d'automatiser la production documentaire, la relation client et le suivi des données de production. Les phases de cadrage et de restitution se font sur site (2h depuis Clermont-Ferrand), le développement en distanciel pour contenir le coût. Les déplacements sont inclus dans le forfait.",
+        "Pour situer l'enjeu sans se raconter d'histoire : l'État a mis en place France Num, le service public d'accompagnement à la transformation numérique des TPE et PME, dont les guides rappellent qu'un projet réussit d'abord parce qu'il part d'un besoin métier précis, pas d'un effet de mode. C'est exactement l'ordre suivi ici : le besoin, puis le chiffrage, puis l'outil.",
+      ],
+    },
+    // Questions calquées sur les requêtes réelles de la page (Search Console, 28 j),
+    // distinctes de la FAQ générique du service conseil-ia pour ne pas dupliquer.
+    extraFaq: [
+      {
+        q: "Quelle différence entre conseil IA et accompagnement IA à Roanne ?",
+        a: "Le conseil s'arrête au cadrage : cartographie des processus, choix des 3 à 5 cas d'usage à plus fort ROI, chiffrage, et un plan de mise en œuvre. L'accompagnement va jusqu'au bout : développement, intégration dans vos outils existants (Gmail, Slack, CRM, ERP), formation des équipes et mesure de l'impact réel. À Roanne, les deux sont assurés par le même interlocuteur, ce qui évite de payer une étude d'un côté et une réalisation de l'autre sans que personne ne réponde du résultat.",
+      },
+      {
+        q: "À quoi sert une veille IA pour une PME du Roannais ?",
+        a: "La veille IA trie pour vous un flux d'outils et d'annonces qui change chaque semaine, et ne remonte que ce qui a un usage concret pour votre métier : un nouvel outil d'automatisation documentaire pour un sous-traitant industriel, une brique de contrôle qualité par la vision pour un textile, un assistant de réponse aux appels d'offres. L'objectif n'est pas de tout suivre, mais d'éviter à la fois le retard et l'achat impulsif d'un outil qui ne servira pas.",
+      },
+      {
+        q: "Quelles solutions IA sont adaptées à une PME industrielle roannaise ?",
+        a: "Les gains les plus rapides viennent de l'automatisation de la production documentaire (devis, comptes rendus, réponses aux appels d'offres du programme Scorpion ou de donneurs d'ordres), du suivi des données de production (qualité, stocks, cadences) et de la relation client de niveau 1. L'audit initial sert précisément à prioriser, parmi ces pistes, les deux ou trois qui font gagner des heures chaque semaine sans refondre votre système d'information.",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/ressources/roi-ia-generative-pme",
+        label: "Chiffrer le retour sur investissement avant de lancer un projet",
+        hint: "Combien de temps une PME gagne-t-elle réellement avec l'IA générative ?",
+      },
+      {
+        href: "/ressources/automatiser-taches-ia-n8n-make",
+        label: "Automatiser vos tâches répétitives (n8n, Make)",
+        hint: "Le guide des automatisations qui se déploient sans refondre votre stack.",
+      },
+      {
+        href: "/conseil-ia/lyon",
+        label: "Le conseil IA à Lyon, en détail",
+        hint: "Audit, expert ou cabinet de conseil : la comparaison pour une PME lyonnaise.",
+      },
+      {
+        href: "/conseil-ia",
+        label: "Voir la méthode d'audit IA complète",
+        hint: "Le détail des quatre étapes, du cadrage gratuit à la mesure d'impact.",
+      },
+    ],
+  },
 };
 
 /** Override éditorial d'un couple (service, ville), ou undefined si le combo n'en a pas. */
