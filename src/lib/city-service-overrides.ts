@@ -216,6 +216,70 @@ export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverrid
       },
     ],
   },
+  // Grenoble : territoire propre (conseil IA local), NON cannibalisé (ni statique
+  // dans CANNIBALIZED, ni dans le tracker iac_seo live du 2026-07-29 : seuls
+  // "agent ia grenoble" et "formation ia grenoble" le sont, pas "conseil ia
+  // grenoble"). Cible fraîche : Lyon (07-15), Paris (07-22) et Roanne (07-29)
+  // déjà overridés, Grenoble est la métropole Rhône-Alpes suivante du cluster.
+  // Signal SERP : "conseil ia grenoble" à la position 91 (tracker iac_seo,
+  // Run #26, 2026-07-29), en top 100 mais sans contenu éditorial dédié. La page
+  // templatisée ne servait pas le lexique "expert / cabinet de conseil / audit
+  // IA" ni le contexte deeptech grenoblois : cet override le fait, sans toucher
+  // aux autres villes.
+  "conseil-ia/grenoble": {
+    metaTitle: "Conseil IA à Grenoble : audit, expert et cabinet de conseil",
+    metaDescription:
+      "Conseil IA à Grenoble pour PME, ETI et startups deeptech : audit livré en 2 semaines (3 à 6 k€), cas d'usage chiffrés, mise en œuvre en 4 à 8 semaines. Facturé au livrable, pas en régie. Premier cadrage gratuit de 30 minutes.",
+    answerFirst: {
+      h2: "Consultant, expert ou cabinet de conseil IA à Grenoble : par où commencer ?",
+      body: [
+        "Pour une PME, une ETI ou une startup grenobloise, la réponse courte : commencez par un audit court et chiffré, pas par un outil. Un audit IA est livré en 2 semaines pour 3 à 6 k€, et se conclut par 3 à 5 cas d'usage priorisés avec leur gain estimé. La mise en œuvre suit en 4 à 8 semaines, pour 5 à 20 k€. Le premier cadrage de 30 minutes est gratuit, et sert d'abord à vérifier qu'il existe un vrai retour sur investissement : s'il n'y en a pas, autant le savoir avant de dépenser.",
+        "Les termes « consultant IA », « expert IA », « cabinet de conseil IA » et « agence IA » désignent à Grenoble des réalités différentes. Une agence vend le plus souvent une prestation de production ; un cabinet facture des jours de conseil en régie et repart avec un rapport ; ici, l'intervention est faite et livrée par une seule personne, Jérôme Iavarone, consultant en IA générative depuis 2020, facturée au livrable et non au temps passé. Vous parlez à celui qui réalise la mission, du cadrage jusqu'à la mise en production.",
+        "Concrètement à Grenoble : l'écosystème deeptech (microélectronique, CEA-Leti, hardware, startups R&D) a moins besoin d'un énième modèle que d'automatiser sa production documentaire de haute technicité, ses réponses à appels d'offres et son suivi de projets de recherche. Grenoble étant à 5 h de train de Clermont-Ferrand, le cadrage se tient en visio ou sur site selon l'enjeu, et le développement en distanciel : les déplacements éventuels sont inclus dans le forfait, le tarif ne varie pas selon la distance.",
+        "Pour situer l'enjeu sans se raconter d'histoire : l'État a mis en place France Num, le service public d'accompagnement à la transformation numérique des TPE et PME, dont les guides rappellent qu'un projet réussit d'abord parce qu'il part d'un besoin métier précis, pas d'un effet de mode. C'est exactement l'ordre suivi ici : le besoin, puis le chiffrage, puis l'outil.",
+      ],
+    },
+    // Questions distinctes de la FAQ générique du service conseil-ia (coût,
+    // secteurs, intervention sur site, différence ESN) pour ne pas dupliquer :
+    // elles couvrent le lexique "expert / cabinet / agence" et le contexte
+    // deeptech grenoblois, rendues ET injectées en FAQPage.
+    extraFaq: [
+      {
+        q: "Quelle différence entre un cabinet de conseil IA et une agence IA à Grenoble ?",
+        a: "Un cabinet de conseil vend de l'analyse : il cadre, recommande et livre un rapport, généralement facturé en jours-homme. Une agence vend de la production : elle exécute un périmètre défini à l'avance, mais cadre rarement le besoin en amont. Le risque classique est de payer les deux : une étude d'un côté, une réalisation de l'autre, sans que personne ne réponde du résultat. Ici les deux sont assurés par le même interlocuteur : audit puis mise en œuvre, avec une mesure d'impact à la fin.",
+      },
+      {
+        q: "Un consultant IA en région peut-il accompagner l'écosystème deeptech grenoblois ?",
+        a: "Oui, à condition d'organiser la mission autour de la distance plutôt que de la nier. Grenoble est à 5 h de train de Clermont-Ferrand : les phases qui gagnent à être en présentiel (cadrage, ateliers d'équipe, restitution) se planifient sur site, groupées sur une journée ; le développement, le suivi et la veille se font à distance. L'avantage pour une startup ou une PME grenobloise est un coût de conseil inférieur à celui d'un cabinet local facturé en régie, sans perte de disponibilité : un seul interlocuteur du diagnostic à la livraison.",
+      },
+      {
+        q: "Quelles solutions IA sont adaptées à une PME ou une startup grenobloise ?",
+        a: "Dans un tissu à forte densité d'ingénieurs et de docteurs (microélectronique, CEA-Leti, hardware, outdoor), les gains les plus rapides viennent de l'automatisation de la production documentaire technique (spécifications, rapports de R&D, réponses aux appels d'offres et aux dossiers de financement), de la synthèse de veille scientifique et de la relation client de niveau 1. L'audit initial sert précisément à prioriser, parmi ces pistes, les deux ou trois qui font gagner des heures chaque semaine sans refondre le système d'information.",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/ressources/roi-ia-generative-pme",
+        label: "Chiffrer le retour sur investissement avant de lancer un projet",
+        hint: "Combien de temps une PME gagne-t-elle réellement avec l'IA générative ?",
+      },
+      {
+        href: "/ressources/ia-generative-definition-exemples",
+        label: "Comprendre l'IA générative et ses cas d'usage en entreprise",
+        hint: "La définition, les exemples concrets et les limites, avant de lancer un projet.",
+      },
+      {
+        href: "/conseil-ia/lyon",
+        label: "Le conseil IA à Lyon, en détail",
+        hint: "Audit, expert ou cabinet de conseil : la comparaison pour une PME lyonnaise.",
+      },
+      {
+        href: "/conseil-ia",
+        label: "Voir la méthode d'audit IA complète",
+        hint: "Le détail des quatre étapes, du cadrage gratuit à la mesure d'impact.",
+      },
+    ],
+  },
 };
 
 /** Override éditorial d'un couple (service, ville), ou undefined si le combo n'en a pas. */
