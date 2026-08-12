@@ -106,7 +106,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       { step: "Suivi", detail: "Attestation Qualiopi, ressources post-formation et point à 30 jours pour ancrer les acquis." },
     ],
     localAngle: (city) =>
-      `Les entreprises de ${city} (${city.industries.slice(0, 3).join(", ")}) font face aux mêmes enjeux : monter en compétence vite sur l'IA générative sans mobiliser des semaines de R&D. Une formation ancrée dans le tissu économique de ${city.region} — vos métiers, vos contraintes réglementaires, vos outils — produit des résultats que des slides génériques n'atteindront jamais.`,
+      `Les entreprises de ${city.name} (${city.industries.slice(0, 3).join(", ")}) font face aux mêmes enjeux : monter en compétence vite sur l'IA générative sans mobiliser des semaines de R&D. Une formation ancrée dans le tissu économique de ${city.region} — vos métiers, vos contraintes réglementaires, vos outils — produit des résultats que des slides génériques n'atteindront jamais.`,
     faq: (city) => [
       {
         q: `Quel est le tarif d'une formation IA à ${city} ?`,
@@ -238,7 +238,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       { step: "Mesure & extension", detail: "On mesure l'impact réel. Si ça marche, on étend ; sinon, on arrête." },
     ],
     localAngle: (city) =>
-      `Les PME et ETI de ${city} — ${city.industries.slice(0, 3).join(", ")} — n'ont ni le temps ni l'envie d'une transformation IA théorique. L'enjeu en ${city.region} est concret : identifier 2 ou 3 automatisations qui font gagner des heures chaque semaine, les chiffrer honnêtement, et les déployer sans usine à gaz ni dépendance à une ESN.`,
+      `Les PME et ETI de ${city.name} — ${city.industries.slice(0, 3).join(", ")} — n'ont ni le temps ni l'envie d'une transformation IA théorique. L'enjeu en ${city.region} est concret : identifier 2 ou 3 automatisations qui font gagner des heures chaque semaine, les chiffrer honnêtement, et les déployer sans usine à gaz ni dépendance à une ESN.`,
     faq: (city) => [
       {
         q: `Combien coûte un consultant IA à ${city} ?`,
@@ -360,7 +360,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       { step: "Montée en autonomie", detail: "Le niveau d'autonomie augmente selon votre confiance ; abonnement sans engagement." },
     ],
     localAngle: (city) =>
-      `Recruter à ${city} coûte cher et prend du temps, surtout pour des PME des filières ${city.industries.slice(0, 3).join(", ")}. Un agent IA autonome supervisé absorbe les tâches répétitives (prospection, support, relances) pour un coût environ 6× inférieur à un junior — un levier de productivité particulièrement adapté au tissu d'entreprises de ${city.region}.`,
+      `Recruter à ${city.name} coûte cher et prend du temps, surtout pour des PME des filières ${city.industries.slice(0, 3).join(", ")}. Un agent IA autonome supervisé absorbe les tâches répétitives (prospection, support, relances) pour un coût environ 6× inférieur à un junior — un levier de productivité particulièrement adapté au tissu d'entreprises de ${city.region}.`,
     faq: (city) => [
       {
         q: `Quel est le tarif d'un agent IA à ${city} ?`,
