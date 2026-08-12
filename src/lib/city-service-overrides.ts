@@ -280,6 +280,68 @@ export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverrid
       },
     ],
   },
+
+  // Saint-Étienne entre au top 100 sur « conseil ia saint-etienne » (absent au
+  // Run #36 du 2026-08-05, position 74 au Run #45 du 2026-08-12) sans aucun
+  // contenu dédié, et le combo n'est pas cannibalisé : sur cette ville, seuls
+  // agent-ia et formation-ia sont rendus aux sites frères (cf. CANNIBALIZED).
+  // Le lexique retenu reprend celui qui a produit le seul effet mesuré du
+  // cluster : à Roanne, « accompagnement ia roanne » est passé d'absent à la
+  // position 6 puis 4 sur deux relevés consécutifs après l'override du 07-29.
+  "conseil-ia/saint-etienne": {
+    metaTitle: "Conseil IA à Saint-Étienne : audit, accompagnement et cabinet",
+    metaDescription:
+      "Conseil et accompagnement IA à Saint-Étienne pour PME, ETI industrielles et studios design : audit livré en 2 semaines (3 à 6 k€), cas d'usage chiffrés, mise en œuvre en 4 à 8 semaines. Facturé au livrable. Premier cadrage gratuit de 30 minutes.",
+    answerFirst: {
+      h2: "Conseil, audit ou accompagnement IA à Saint-Étienne : par quoi commencer ?",
+      body: [
+        "Pour une PME, une ETI industrielle ou un studio stéphanois, la réponse courte : commencez par un audit court et chiffré, pas par un outil. Un audit IA est livré en 2 semaines pour 3 à 6 k€, et se conclut par 3 à 5 cas d'usage priorisés avec leur gain estimé. L'accompagnement de mise en œuvre suit en 4 à 8 semaines, pour 5 à 20 k€. Le premier cadrage de 30 minutes est gratuit, et sert d'abord à vérifier qu'il existe un vrai retour sur investissement : s'il n'y en a pas, autant le savoir avant de dépenser.",
+        "Les termes « conseil IA », « cabinet de conseil IA », « audit IA » et « accompagnement IA » recouvrent à Saint-Étienne des offres très différentes. Un cabinet facture des jours de conseil en régie et repart avec un rapport ; une agence exécute un périmètre défini d'avance sans cadrer le besoin. Ici, l'intervention est faite et livrée par une seule personne, Jérôme Iavarone, consultant en IA générative depuis 2020, facturée au livrable et non au temps passé. Vous parlez à celui qui réalise la mission, du cadrage jusqu'à la mise en production.",
+        "Concrètement à Saint-Étienne : le tissu local mêle design (la ville est membre du Réseau des villes créatives de l'UNESCO au titre du design depuis 2010, autour de la Cité du design et de Mines Saint-Étienne), mécanique et optique de précision, santé et numérique. Ces métiers ont moins besoin d'un modèle supplémentaire que d'automatiser leurs devis et chiffrages, leurs réponses aux appels d'offres et leur documentation technique. Saint-Étienne est à 2h15 de route de Clermont-Ferrand : le cadrage et la restitution se tiennent sur site, le développement en distanciel pour contenir le coût. Les déplacements sont inclus dans le forfait, le tarif ne varie pas selon la distance.",
+        "Pour situer l'enjeu sans se raconter d'histoire : France Num, le service public d'accompagnement à la transformation numérique des TPE et PME, rappelle dans ses guides qu'un projet réussit d'abord parce qu'il part d'un besoin métier précis, pas d'un effet de mode. C'est exactement l'ordre suivi ici : le besoin, puis le chiffrage, puis l'outil.",
+      ],
+    },
+    // Questions distinctes de la FAQ générique du service conseil-ia (secteurs,
+    // différence ESN, coût, ROI, durée) : elles couvrent le lexique
+    // « accompagnement / cabinet / audit » et le contexte design et industrie
+    // de la Loire, rendues ET injectées en FAQPage.
+    extraFaq: [
+      {
+        q: "En quoi consiste un accompagnement IA pour une entreprise stéphanoise ?",
+        a: "Il tient en quatre temps, sur deux à trois mois. Un cadrage gratuit de 30 minutes vérifie qu'il y a matière. Un audit de 2 semaines passe en revue les tâches réellement chronophages de vos équipes et en ressort 3 à 5 cas d'usage classés par gain estimé et par difficulté. La mise en œuvre traite les deux ou trois premiers, en 4 à 8 semaines. Une mesure d'impact clôt la mission : temps gagné par semaine, volumes traités, points de friction restants. Vous gardez la main sur les outils et les accès à chaque étape.",
+      },
+      {
+        q: "Faut-il choisir un cabinet de conseil IA à Saint-Étienne ou une intervention à distance ?",
+        a: "La question est moins l'adresse du prestataire que la répartition des phases. Les moments qui gagnent à être en présentiel sont le cadrage, les ateliers avec les équipes et la restitution : ils se planifient sur site, groupés sur une journée, Saint-Étienne étant à 2h15 de Clermont-Ferrand. Le développement, le suivi et la veille se font à distance, ce qui évite de facturer des trajets. Le résultat pour une PME de la Loire est un coût de conseil inférieur à celui d'une structure facturée en régie, avec un seul interlocuteur du diagnostic à la livraison.",
+      },
+      {
+        q: "Quels cas d'usage de l'IA générative marchent dans l'industrie et le design à Saint-Étienne ?",
+        a: "Dans la mécanique, l'optique de précision et la sous-traitance industrielle, les gains les plus rapides viennent du chiffrage et de la production de devis à partir de cahiers des charges clients, de la réponse aux appels d'offres et de la mise à jour de la documentation technique. Dans le design et les studios créatifs, ce sont plutôt les notes d'intention, les dossiers de candidature et la veille de tendances. Dans la santé et le numérique, la synthèse documentaire et le support de niveau 1. L'audit initial sert précisément à trancher entre ces pistes celles qui font gagner des heures chaque semaine sans refondre votre système d'information.",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/conseil-ia/roanne",
+        label: "Le conseil IA à Roanne, à une heure de Saint-Étienne",
+        hint: "Le même accompagnement, appliqué au tissu industriel roannais.",
+      },
+      {
+        href: "/ressources/automatiser-taches-ia-n8n-make",
+        label: "Automatiser des tâches répétitives sans développer d'usine à gaz",
+        hint: "Ce qu'on peut automatiser en quelques jours, et ce qui n'en vaut pas la peine.",
+      },
+      {
+        href: "/ressources/roi-ia-generative-pme",
+        label: "Chiffrer le retour sur investissement avant de lancer un projet",
+        hint: "Combien de temps une PME gagne-t-elle réellement avec l'IA générative ?",
+      },
+      {
+        href: "/conseil-ia",
+        label: "Voir la méthode d'audit IA complète",
+        hint: "Le détail des quatre étapes, du cadrage gratuit à la mesure d'impact.",
+      },
+    ],
+  },
 };
 
 /** Override éditorial d'un couple (service, ville), ou undefined si le combo n'en a pas. */
