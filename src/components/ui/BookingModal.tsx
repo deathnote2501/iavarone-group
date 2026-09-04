@@ -4,6 +4,16 @@ import { useEffect, useState } from "react";
 
 const BOOKING_HOST = "rdv.jeromeiavarone.fr";
 
+/** Seule la page maison, en HTTPS, s'ouvre dans la modale : comparaison stricte du nom d'hôte, pas de sous-chaîne. */
+function isBookingUrl(href: string): boolean {
+  try {
+    const u = new URL(href, window.location.href);
+    return u.protocol === "https:" && u.hostname === BOOKING_HOST;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Ouvre la page de réservation rdv.jeromeiavarone.fr dans une modale au lieu de quitter le site :
  * tout lien vers ce domaine (clic gauche simple) est intercepté en phase de bouillonnement, donc
@@ -18,7 +28,7 @@ export default function BookingModal() {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const target = e.target as Element | null;
       const a = target?.closest("a[href]") as HTMLAnchorElement | null;
-      if (!a || !a.href.includes(BOOKING_HOST) || a.dataset.bookingModal === "off") return;
+      if (!a || !isBookingUrl(a.href) || a.dataset.bookingModal === "off") return;
       e.preventDefault();
       setUrl(a.href);
     }
