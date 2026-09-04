@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contacter IAvarone Group : RDV en ligne via Koalendar, téléphone, e-mail. Interventions Auvergne-Rhône-Alpes, Paris et distanciel France entière.",
+    "Contacter IAvarone Group : RDV en ligne, téléphone, e-mail. Interventions Auvergne-Rhône-Alpes, Paris et distanciel France entière.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Nous contacter</h1>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-muted)]">
             Trois canaux pour échanger avec Jérôme Iavarone&nbsp;: un rendez-vous en ligne via
-            Koalendar, le téléphone ou l&apos;e-mail. Premier échange de cadrage gratuit, 30 minutes.
+            la réservation en ligne, le téléphone ou l&apos;e-mail. Premier échange de cadrage gratuit, 30 minutes.
           </p>
         </div>
       </section>
@@ -32,10 +32,9 @@ export default function ContactPage() {
             <Calendar className="h-6 w-6 text-[var(--color-brand-blue-ink)]" aria-hidden />
             <h2 className="mt-4 text-xl font-semibold">Prendre RDV</h2>
             <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
-              Réservez un créneau directement dans mon agenda Koalendar. Visio ou physique selon
-              votre localisation.
+              Réservez un créneau de 30 minutes en visio directement dans mon agenda.
             </p>
-            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue-ink)]">Koalendar →</p>
+            <p className="mt-4 text-sm font-medium text-[var(--color-brand-blue-ink)]">Réserver →</p>
           </BookingLink>
 
           <a

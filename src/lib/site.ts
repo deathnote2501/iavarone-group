@@ -24,7 +24,9 @@ export const SITE = {
     email: "jerome.iavarone@gmail.com",
     phone: "06 28 07 09 88",
     phoneHref: "tel:+33628070988",
-    booking: "https://koalendar.com/e/rdv-avec-jerome-iavarone",
+    // Page de réservation maison (iac_rdv, 2026-09-04) ; `page` est ajoutée par BookingLink.
+    // Koalendar reste ouvert en parallèle jusqu'au 2026-09-18.
+    booking: "https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr",
   },
   social: {
     linkedin: "https://www.linkedin.com/in/jeromeiavarone/",
