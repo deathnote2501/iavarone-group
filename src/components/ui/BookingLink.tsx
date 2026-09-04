@@ -17,7 +17,7 @@ export interface BookingLinkProps
 }
 
 /**
- * Lien vers l'agenda Koalendar qui émet l'événement de conversion `booking_click`
+ * Lien vers la page de réservation rdv.jeromeiavarone.fr qui émet l'événement de conversion `booking_click`
  * vers GA4 (G-MPZM0EYFQE) au clic. Marquer `booking_click` comme « événement clé »
  * dans GA4 pour en faire l'objectif de conversion final du funnel.
  *
@@ -27,6 +27,9 @@ export interface BookingLinkProps
 export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>(
   ({ location, onClick, children, ...props }, ref) => {
     const pathname = usePathname();
+    // `page=<chemin courant>` : la page de réservation l'écrit dans l'ERP comme origine du RDV
+    // (le referrer cross-origin ne porte que l'origine, jamais le chemin).
+    const href = withPage(SITE.contact.booking, pathname);
 
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {
@@ -37,7 +40,7 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
         // C'est la page qui sert de cle de rapprochement avec le RDV reellement pris
         // (jointure GA4 x Google Calendar, cf. skill rdv-briefing).
         cta_page: pathname ?? "",
-        link_url: SITE.contact.booking,
+        link_url: href,
       });
       onClick?.(event);
     }
@@ -45,7 +48,7 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
     return (
       <a
         ref={ref}
-        href={SITE.contact.booking}
+        href={href}
         target="_blank"
         rel="noopener"
         onClick={handleClick}
@@ -58,3 +61,13 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
 );
 
 BookingLink.displayName = "BookingLink";
+
+function withPage(url: string, pathname: string | null): string {
+  try {
+    const u = new URL(url);
+    if (!u.searchParams.has("page")) u.searchParams.set("page", pathname || "/");
+    return u.toString();
+  } catch {
+    return url;
+  }
+}

@@ -40,7 +40,7 @@ export function ContactCTA() {
               <div>
                 <p className="font-medium">Rendez-vous en ligne</p>
                 <BookingLink location="contact-cta-list" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
-                  Réserver un créneau sur Koalendar
+                  Réserver un créneau en ligne
                 </BookingLink>
               </div>
             </li>

@@ -43,7 +43,7 @@ export function ContactForm() {
         <h3 className="mt-4 text-lg font-semibold">Message envoyé</h3>
         <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
           Merci, je vous réponds sous 24h ouvrées. Pour un échange plus rapide, n&apos;hésitez pas à
-          réserver directement un créneau via Koalendar ou à m&apos;appeler.
+          réserver directement un créneau en ligne ou à m&apos;appeler.
         </p>
       </div>
     );
