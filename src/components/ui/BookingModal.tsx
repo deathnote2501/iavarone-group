@@ -52,7 +52,8 @@ export default function BookingModal() {
       role="dialog"
       aria-modal="true"
       aria-label="Prendre rendez-vous avec Jérôme Iavarone"
-      className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 p-0 sm:p-6"
+      // Au-dessus du widget chatbot mutualisé (iac_chatbot, z-index 2147483000).
+      className="fixed inset-0 z-[2147483001] flex items-center justify-center bg-black/60 p-0 sm:p-6"
       onClick={() => setUrl(null)}
     >
       <div
