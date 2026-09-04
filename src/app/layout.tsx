@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import BookingModal from "@/components/ui/BookingModal";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -160,6 +161,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <Analytics />
+        <BookingModal />
         {/* Chatbot mutualisé (service iac_chatbot) */}
         <Script
           src="https://chat.iavarone-group.fr/widget.js"
