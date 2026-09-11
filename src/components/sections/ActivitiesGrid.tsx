@@ -1,6 +1,17 @@
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart, ContactRound } from "lucide-react";
+import {
+  ArrowUpRight,
+  GraduationCap,
+  Briefcase,
+  Bot,
+  ClipboardCheck,
+  ShieldCheck,
+  Accessibility,
+  ShoppingCart,
+  ContactRound,
+} from "lucide-react";
 import { BRANDS, type Brand } from "@/lib/site";
+import { brandColor } from "@/components/ui/brand-color";
 
 const ICONS: Record<Brand["slug"], typeof GraduationCap> = {
   jeromeiavarone: GraduationCap,
@@ -12,63 +23,117 @@ const ICONS: Record<Brand["slug"], typeof GraduationCap> = {
   mecaindus: ShoppingCart,
   "crm-ia": ContactRound,
 };
-
-const COLOR_CLASSES: Record<Brand["color"], { bg: string; border: string; ring: string }> = {
-  blue: { bg: "bg-[var(--color-brand-blue)]/8", border: "border-[var(--color-brand-blue)]/20", ring: "ring-[var(--color-brand-blue)]" },
-  green: { bg: "bg-[var(--color-brand-green)]/8", border: "border-[var(--color-brand-green)]/20", ring: "ring-[var(--color-brand-green)]" },
-  yellow: { bg: "bg-[var(--color-brand-yellow)]/10", border: "border-[var(--color-brand-yellow)]/30", ring: "ring-[var(--color-brand-yellow)]" },
-  red: { bg: "bg-[var(--color-brand-red)]/8", border: "border-[var(--color-brand-red)]/20", ring: "ring-[var(--color-brand-red)]" },
+const SERVICE_SLUGS = [
+  "jeromeiavarone",
+  "iavarone-conseil",
+  "employe-ia",
+  "crm-ia",
+];
+const DIRECTIONS: Record<string, string> = {
+  jeromeiavarone: "Apprendre & adopter",
+  "iavarone-conseil": "Construire & connecter",
+  "employe-ia": "Déléguer & superviser",
+  "crm-ia": "Organiser & vendre",
 };
 
-const COLOR_TEXT: Record<Brand["color"], string> = {
-  blue: "text-[var(--color-brand-blue-ink)]",
-  green: "text-[var(--color-brand-green-ink)]",
-  yellow: "text-[var(--color-brand-yellow-ink)]",
-  red: "text-[var(--color-brand-red-ink)]",
-};
-
-export function ActivitiesGrid() {
+export function BrandDirectory() {
+  const services = SERVICE_SLUGS.map(
+    (slug) => BRANDS.find((brand) => brand.slug === slug)!,
+  );
+  const products = BRANDS.filter(
+    (brand) => !SERVICE_SLUGS.includes(brand.slug),
+  );
   return (
-    <section className="container-page py-20">
-      <div className="max-w-2xl">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Sept activités complémentaires
-        </h2>
-        <p className="mt-4 text-[var(--color-ink-muted)]">
-          De la formation initiale au déploiement d&apos;agents IA en production, IAvarone Group couvre
-          l&apos;ensemble de la chaîne de valeur de l&apos;IA générative pour PME, ETI et organisations.
-        </p>
-      </div>
-
-      <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {BRANDS.map((brand) => {
+    <>
+      <ul className="group-directory" aria-label="Les expertises de service">
+        {services.map((brand, index) => {
           const Icon = ICONS[brand.slug];
-          const c = COLOR_CLASSES[brand.color];
           return (
             <li key={brand.slug}>
               <Link
                 href={`/marques/${brand.slug}`}
-                className={`group block h-full rounded-2xl border ${c.border} bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04] focus-visible:outline-none focus-visible:ring-2 ${c.ring} focus-visible:ring-offset-2`}
+                className={`group-directory-row group-color-${brandColor(brand)}`}
               >
-                <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${c.bg}`}>
-                  <Icon className={`h-5 w-5 ${COLOR_TEXT[brand.color]}`} aria-hidden />
+                <span className="group-directory-number">0{index + 1}</span>
+                <div className="group-directory-name">
+                  <span className="group-direction">
+                    {DIRECTIONS[brand.slug]}
+                  </span>
+                  <h3>{brand.name}</h3>
+                  <span className="group-brand-tagline">{brand.tagline}</span>
                 </div>
-                <div className="mt-5 flex items-start justify-between gap-2">
-                  <h3 className="text-lg font-semibold">{brand.name}</h3>
-                  <ArrowRight className="h-4 w-4 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-0.5" aria-hidden />
+                <div className="group-directory-copy">
+                  <p>{brand.description}</p>
+                  <span>
+                    {brand.structure} ·{" "}
+                    {new URL(brand.url).hostname.replace("www.", "")}
+                  </span>
                 </div>
-                <p className={`mt-1 text-sm font-medium ${COLOR_TEXT[brand.color]}`}>{brand.tagline}</p>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--color-ink-muted)]">
-                  {brand.description}
-                </p>
-                <p className="mt-5 text-xs uppercase tracking-wide text-[var(--color-ink-muted)]">
-                  {brand.structure} · {new URL(brand.url).hostname.replace("www.", "")}
-                </p>
+                <span className="group-directory-icon">
+                  <Icon aria-hidden />
+                </span>
+                <ArrowUpRight className="group-directory-arrow" aria-hidden />
               </Link>
             </li>
           );
         })}
       </ul>
+      <div className="group-products-heading">
+        <p className="group-eyebrow">Les produits de l’écosystème</p>
+        <h2>
+          Des solutions pour
+          <br />
+          des besoins concrets.
+        </h2>
+      </div>
+      <ul className="group-products" aria-label="Les produits du groupe">
+        {products.map((brand) => {
+          const Icon = ICONS[brand.slug];
+          return (
+            <li key={brand.slug}>
+              <Link
+                href={`/marques/${brand.slug}`}
+                className={`group-product group-color-${brandColor(brand)}`}
+              >
+                <div className="group-product-top">
+                  <span className="group-directory-icon">
+                    <Icon aria-hidden />
+                  </span>
+                  <ArrowUpRight className="size-5" aria-hidden />
+                </div>
+                <h3>{brand.name}</h3>
+                <p className="group-brand-tagline">{brand.tagline}</p>
+                <p>{brand.description}</p>
+                <span className="group-product-meta">
+                  {brand.structure} ·{" "}
+                  {new URL(brand.url).hostname.replace("www.", "")}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+}
+
+export function ActivitiesGrid() {
+  return (
+    <section className="container-page py-20" id="activites">
+      <div className="group-section-heading">
+        <div>
+          <p className="group-eyebrow">Les expertises</p>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Sept activités complémentaires
+          </h2>
+        </div>
+        <p>
+          De la formation initiale au déploiement d&apos;agents IA en
+          production, IAvarone Group couvre l&apos;ensemble de la chaîne de
+          valeur de l&apos;IA générative pour PME, ETI et organisations.
+        </p>
+      </div>
+      <BrandDirectory />
     </section>
   );
 }

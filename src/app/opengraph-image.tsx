@@ -19,8 +19,7 @@ export default async function OpengraphImage() {
           padding: "72px 80px",
           background: "white",
           fontFamily: "Inter, sans-serif",
-          backgroundImage:
-            "radial-gradient(circle at 18% 22%, rgba(66,133,244,0.18) 0, transparent 38%), radial-gradient(circle at 82% 28%, rgba(52,168,83,0.16) 0, transparent 38%), radial-gradient(circle at 50% 92%, rgba(251,188,5,0.18) 0, transparent 38%)",
+          borderTop: "12px solid #FBBC05",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
@@ -29,18 +28,18 @@ export default async function OpengraphImage() {
               width: 56,
               height: 56,
               borderRadius: 12,
-              background: "#4285F4",
+              background: "#FBBC05",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "white",
+              color: "#111111",
               fontSize: 32,
               fontWeight: 700,
             }}
           >
             IG
           </div>
-          <div style={{ fontSize: 28, fontWeight: 600, color: "#0F172A" }}>{SITE.name}</div>
+          <div style={{ fontSize: 28, fontWeight: 600, color: "#111111" }}>{SITE.name}</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -48,18 +47,15 @@ export default async function OpengraphImage() {
             style={{
               fontSize: 64,
               fontWeight: 600,
-              color: "#0F172A",
+              color: "#111111",
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
               maxWidth: 1000,
             }}
           >
-            L&apos;IA générative au service des{" "}
-            <span style={{ color: "#4285F4" }}>entreprises</span>,{" "}
-            <span style={{ color: "#34A853" }}>organisations</span> et{" "}
-            <span style={{ color: "#B8860B" }}>indépendants</span>.
+            L&apos;IA générative au service des entreprises, organisations et indépendants.
           </div>
-          <div style={{ fontSize: 24, color: "#475569", maxWidth: 900, lineHeight: 1.35 }}>
+          <div style={{ fontSize: 24, color: "#545454", maxWidth: 900, lineHeight: 1.35 }}>
             Sept activités complémentaires : formation Qualiopi, conseil, agents IA autonomes,
             applications métier, SaaS B2B et e-commerce industriel.
           </div>
@@ -71,17 +67,17 @@ export default async function OpengraphImage() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 20,
-            color: "#475569",
+            color: "#545454",
           }}
         >
           <div style={{ display: "flex", gap: 24 }}>
             <span>Auvergne-Rhône-Alpes</span>
-            <span style={{ color: "#CBD5E1" }}>·</span>
+            <span style={{ color: "#dedede" }}>·</span>
             <span>Paris</span>
-            <span style={{ color: "#CBD5E1" }}>·</span>
+            <span style={{ color: "#dedede" }}>·</span>
             <span>Distanciel France</span>
           </div>
-          <div style={{ color: "#4285F4", fontWeight: 600 }}>iavarone-group.fr</div>
+          <div style={{ color: "#111111", fontWeight: 600 }}>iavarone-group.fr</div>
         </div>
       </div>
     ),

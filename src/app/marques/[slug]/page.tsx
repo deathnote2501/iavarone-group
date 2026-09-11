@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, Calendar, Phone, Check, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart, ContactRound } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { brandColor } from "@/components/ui/brand-color";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { AuthorBio } from "@/components/sections/AuthorBio";
@@ -66,6 +67,7 @@ export default async function BrandPage({ params }: PageProps) {
   const brand = getBrand(slug);
   if (!brand) notFound();
   const Icon = ICONS[brand.slug];
+  const color = brandColor(brand);
   const others = BRANDS.filter((b) => b.slug !== brand.slug);
   const officialHostname = new URL(brand.url).hostname.replace("www.", "");
 
@@ -121,8 +123,8 @@ export default async function BrandPage({ params }: PageProps) {
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
           <div className="flex items-center gap-3">
-            <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${COLOR_BG[brand.color]}`}>
-              <Icon className={`h-5 w-5 ${COLOR_TEXT[brand.color]}`} aria-hidden />
+            <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${COLOR_BG[color]}`}>
+              <Icon className={`h-5 w-5 ${COLOR_TEXT[color]}`} aria-hidden />
             </div>
             <p className="text-sm font-medium uppercase tracking-wide text-[var(--color-ink-muted)]">
               {brand.category}
@@ -131,7 +133,7 @@ export default async function BrandPage({ params }: PageProps) {
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
             {brand.name}
           </h1>
-          <p className={`mt-3 text-xl font-medium ${COLOR_TEXT[brand.color]}`}>{brand.tagline}</p>
+          <p className={`mt-3 text-xl font-medium ${COLOR_TEXT[color]}`}>{brand.tagline}</p>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{brand.longDescription}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -158,8 +160,8 @@ export default async function BrandPage({ params }: PageProps) {
             <ul className="mt-8 space-y-4">
               {brand.keyPoints.map((point) => (
                 <li key={point} className="flex items-start gap-3">
-                  <div className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${COLOR_BG[brand.color]}`}>
-                    <Check className={`h-3.5 w-3.5 ${COLOR_TEXT[brand.color]}`} aria-hidden />
+                  <div className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${COLOR_BG[color]}`}>
+                    <Check className={`h-3.5 w-3.5 ${COLOR_TEXT[color]}`} aria-hidden />
                   </div>
                   <span className="text-[var(--color-ink)]">{point}</span>
                 </li>
@@ -189,7 +191,7 @@ export default async function BrandPage({ params }: PageProps) {
               <div>
                 <dt className="text-[var(--color-ink-muted)]">Site officiel</dt>
                 <dd>
-                  <a href={brand.url} target="_blank" rel="noopener" className={`font-medium ${COLOR_TEXT[brand.color]} hover:underline`}>
+                  <a href={brand.url} target="_blank" rel="noopener" className={`font-medium ${COLOR_TEXT[color]} hover:underline`}>
                     {officialHostname}
                   </a>
                 </dd>
@@ -200,7 +202,7 @@ export default async function BrandPage({ params }: PageProps) {
       </section>
 
       <section className="container-page py-16">
-        <div className="rounded-3xl border border-[var(--color-line)] bg-white p-10 sm:p-14">
+        <div className="group-closing rounded-3xl border border-[var(--color-line)] bg-white p-10 sm:p-14">
           <h2 className="text-3xl font-semibold tracking-tight">{brand.cta}</h2>
           <p className="mt-4 max-w-xl text-[var(--color-ink-muted)]">
             Premier échange de cadrage gratuit, 30 minutes, pour estimer si {brand.name} correspond à votre besoin.

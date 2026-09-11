@@ -1,68 +1,83 @@
-import { Calendar, Phone, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Calendar, Phone, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--color-line)]">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, var(--color-brand-blue) 0, transparent 40%), radial-gradient(circle at 80% 30%, var(--color-brand-green) 0, transparent 40%), radial-gradient(circle at 50% 90%, var(--color-brand-yellow) 0, transparent 40%)",
-        }}
-        aria-hidden
-      />
-      <div className="container-page py-20 sm:py-28">
-        <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs font-medium text-[var(--color-ink-muted)]">
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-green)]" />
-          Auvergne-Rhône-Alpes · Paris · Distanciel France entière
-        </p>
-
-        <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-          L&apos;IA générative au service des{" "}
-          <span className="text-[var(--color-brand-blue)]">entreprises</span>,{" "}
-          <span className="text-[var(--color-brand-green)]">organisations</span> et{" "}
-          <span className="text-[var(--color-brand-yellow-ink)]">indépendants</span>.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">
-          <strong className="text-[var(--color-ink)]">{SITE.name}</strong> est un groupe français
-          d&apos;intelligence artificielle générative fondé en 2020 par Jérôme Iavarone, formateur
-          Qualiopi et consultant indépendant. Le groupe rassemble sept marques B2B complémentaires&nbsp;:
-          formation, conseil, développement d&apos;applications métier, agents IA autonomes, SaaS et e-commerce industriel.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild size="lg">
-            <BookingLink location="hero">
-              <Calendar className="h-4 w-4" aria-hidden />
-              Prendre RDV avec Jérôme
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </BookingLink>
-          </Button>
-          <Button asChild size="lg" variant="secondary">
-            <a href={SITE.contact.phoneHref}>
-              <Phone className="h-4 w-4" aria-hidden />
-              {SITE.contact.phone}
-            </a>
-          </Button>
+    <section className="group-home-hero border-b border-[var(--color-line)]">
+      <div className="container-page">
+        <div className="group-hero-intro">
+          <div>
+            <p className="group-eyebrow">
+              Auvergne-Rhône-Alpes · Paris · Distanciel France entière
+            </p>
+            <h1 className="group-home-title">
+              L&apos;IA générative au service des <span>entreprises</span>,{" "}
+              <span>organisations</span> et <span>indépendants</span>.
+            </h1>
+          </div>
+          <div className="group-hero-copy">
+            <p>
+              <strong>{SITE.name}</strong> est un groupe français
+              d&apos;intelligence artificielle générative fondé en 2020 par
+              Jérôme Iavarone, formateur Qualiopi et consultant indépendant. Le
+              groupe rassemble sept marques B2B complémentaires&nbsp;:
+              formation, conseil, développement d&apos;applications métier,
+              agents IA autonomes, SaaS et e-commerce industriel.
+            </p>
+            <div className="group-hero-actions">
+              <Button asChild size="lg">
+                <Link href="/marques#choisir">
+                  Trouver le bon point de départ
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </Button>
+            </div>
+            <div className="group-hero-contact">
+              <BookingLink location="hero">
+                <Calendar className="size-4" aria-hidden />
+                Prendre RDV avec Jérôme
+              </BookingLink>
+              <a href={SITE.contact.phoneHref}>
+                <Phone className="size-4" aria-hidden />
+                {SITE.contact.phone}
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div className="mt-14 overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white shadow-[0_20px_60px_-20px_rgba(15,23,42,0.18)]">
+        <figure className="group-panorama">
+          <Image
+            src="/brand-v2/group-auvergne.png"
+            alt="Architecture contemporaine imaginaire ouverte sur des reliefs volcaniques"
+            width={1536}
+            height={1024}
+            sizes="(min-width: 1440px) 1280px, 100vw"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <figcaption>
+            <span>Ancré en Auvergne. Ouvert sur vos projets.</span>
+            <span>Illustration architecturale générée par IA</span>
+          </figcaption>
+        </figure>
+        <details className="group-video">
+          <summary>
+            <Play className="size-4" aria-hidden />
+            Voir la présentation animée du groupe
+          </summary>
           <video
-            className="block aspect-video w-full"
+            className="aspect-video w-full rounded-xl"
             src="/hero-video.mp4"
             poster="/hero-poster.jpg"
-            autoPlay
-            muted
-            loop
+            controls
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label="Présentation animée du Groupe IAvarone et de ses sept marques"
           />
-        </div>
+        </details>
       </div>
     </section>
   );

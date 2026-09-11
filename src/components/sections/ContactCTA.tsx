@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 export function ContactCTA() {
   return (
     <section className="container-page py-20">
-      <div className="overflow-hidden rounded-3xl border border-[var(--color-line)] bg-white p-10 sm:p-14">
+      <div className="group-closing overflow-hidden rounded-3xl border border-[var(--color-line)] bg-white p-10 sm:p-14">
         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

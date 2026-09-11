@@ -24,7 +24,7 @@ export default function ContactPage() {
       </section>
 
       <section className="container-page py-16">
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           <BookingLink
             location="contact-card"
             className="group rounded-2xl border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
@@ -58,7 +58,7 @@ export default function ContactPage() {
             <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
               Pour un brief détaillé, une demande de devis ou un partenariat. Réponse sous 24h ouvrées.
             </p>
-            <p className="mt-4 text-sm font-medium">{SITE.contact.email}</p>
+            <p className="mt-4 break-all text-sm font-medium">{SITE.contact.email}</p>
           </a>
         </div>
       </section>

@@ -51,9 +51,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={inter.variable}>
-      <body className="min-h-dvh flex flex-col antialiased">
+      <body className="group-v2 min-h-dvh flex flex-col antialiased">
+        <a className="group-skip" href="#main-content">Aller au contenu</a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="group-content flex-1">{children}</main>
         <Footer />
         <script
           type="application/ld+json"

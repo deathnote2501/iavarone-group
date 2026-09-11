@@ -104,7 +104,7 @@ export default function AProposPage() {
               fill
               sizes="(min-width: 1024px) 384px, 100vw"
               className="object-cover"
-              priority
+              loading="eager"
             />
           </div>
           <div>

@@ -1,35 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, GraduationCap, Briefcase, Bot, ClipboardCheck, ShieldCheck, Accessibility, ShoppingCart, ContactRound } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import { SITE, BRANDS, type Brand } from "@/lib/site";
-
-const ICONS: Record<Brand["slug"], LucideIcon> = {
-  jeromeiavarone: GraduationCap,
-  "iavarone-conseil": Briefcase,
-  "employe-ia": Bot,
-  kaliio: ClipboardCheck,
-  kaliopi: ShieldCheck,
-  "rgaa-ia": Accessibility,
-  mecaindus: ShoppingCart,
-  "crm-ia": ContactRound,
-};
-
-const COLOR_TEXT: Record<Brand["color"], string> = {
-  blue: "text-[var(--color-brand-blue-ink)]",
-  green: "text-[var(--color-brand-green-ink)]",
-  yellow: "text-[var(--color-brand-yellow-ink)]",
-  red: "text-[var(--color-brand-red-ink)]",
-};
-const COLOR_BG: Record<Brand["color"], string> = {
-  blue: "bg-[var(--color-brand-blue)]/8",
-  green: "bg-[var(--color-brand-green)]/8",
-  yellow: "bg-[var(--color-brand-yellow)]/10",
-  red: "bg-[var(--color-brand-red)]/8",
-};
+import { SITE } from "@/lib/site";
+import Image from "next/image";
+import { BrandDirectory } from "@/components/sections/ActivitiesGrid";
+import { ProjectPath } from "@/components/sections/ProjectPath";
 
 export const metadata: Metadata = {
-  title: { absolute: "Marques d'IAvarone Group — formation, conseil & agents IA" },
+  title: {
+    absolute: "Marques d'IAvarone Group — formation, conseil & agents IA",
+  },
   description:
     "Les sept marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), Kaliio et Kaliopi (SaaS Qualiopi), Conform-RGAA (accessibilité), MecaIndus (e-commerce B2B industriel).",
   alternates: { canonical: `${SITE.url}/marques` },
@@ -40,44 +18,55 @@ export default function MarquesPage() {
     <>
       <section className="border-b border-[var(--color-line)]">
         <div className="container-page py-16">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Les marques d&apos;IAvarone Group</h1>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            Les marques d&apos;IAvarone Group
+          </h1>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-muted)]">
-            Sept marques opérationnelles couvrant l&apos;ensemble du cycle de vie de l&apos;IA générative
-            en entreprise : formation, conseil, agents autonomes, SaaS B2B et e-commerce.
+            Sept marques opérationnelles couvrant l&apos;ensemble du cycle de
+            vie de l&apos;IA générative en entreprise : formation, conseil,
+            agents autonomes, SaaS B2B et e-commerce.
           </p>
         </div>
       </section>
 
-      <section className="container-page py-16">
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {BRANDS.map((brand) => {
-            const Icon = ICONS[brand.slug];
-            return (
-              <li key={brand.slug}>
-                <Link
-                  href={`/marques/${brand.slug}`}
-                  className="group block h-full rounded-2xl border border-[var(--color-line)] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.04]"
-                >
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${COLOR_BG[brand.color]}`}>
-                    <Icon className={`h-5 w-5 ${COLOR_TEXT[brand.color]}`} aria-hidden />
-                  </div>
-                  <h2 className="mt-5 text-lg font-semibold">{brand.name}</h2>
-                  <p className={`mt-1 text-sm font-medium ${COLOR_TEXT[brand.color]}`}>{brand.tagline}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-[var(--color-ink-muted)]">
-                    {brand.description}
-                  </p>
-                  <p className="mt-5 inline-flex items-center gap-1 text-sm font-medium">
-                    En savoir plus
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
-                  </p>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-[var(--color-ink-muted)]">
-                    {brand.structure} · {new URL(brand.url).hostname.replace("www.", "")}
-                  </p>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <ProjectPath />
+      <section className="group-complementarity">
+        <div className="container-page group-complementarity-grid">
+          <figure>
+            <Image
+              src="/brand-v2/group-auvergne.png"
+              alt="Illustration architecturale imaginaire ouverte sur un paysage volcanique"
+              width={1536}
+              height={1024}
+              sizes="(min-width: 1024px) 600px, 100vw"
+            />
+            <figcaption>Illustration architecturale générée par IA.</figcaption>
+          </figure>
+          <div>
+            <p className="group-eyebrow">Des expertises complémentaires</p>
+            <h2>
+              Votre parcours
+              <br />
+              peut évoluer.
+            </h2>
+            <p>
+              Une formation peut faire émerger le besoin d’un outil métier. Un
+              logiciel peut accueillir des tâches automatisées. Un premier
+              échange permet de choisir l’étape la plus utile maintenant.
+            </p>
+            <p>
+              Les propositions sont cadrées selon leur nature. La formation et
+              le conseil sont portés par l’EI ; le développement par la SAS
+              IAvarone Conseil.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        className="container-page py-16"
+        aria-label="Toutes les marques du groupe"
+      >
+        <BrandDirectory />
       </section>
     </>
   );

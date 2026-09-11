@@ -11,7 +11,7 @@ interface Props {
 const COLORS: Record<ServiceSlug, { accent: string; soft: string }> = {
   "formation-ia": { accent: "#4285F4", soft: "rgba(66,133,244,0.12)" },
   "conseil-ia": { accent: "#34A853", soft: "rgba(52,168,83,0.12)" },
-  "agent-ia": { accent: "#B8860B", soft: "rgba(251,188,5,0.14)" },
+  "agent-ia": { accent: "#8A6100", soft: "rgba(251,188,5,0.14)" },
 };
 
 export async function generateImageMetadata({ params }: Props) {
@@ -20,7 +20,8 @@ export async function generateImageMetadata({ params }: Props) {
   return [{ id: "default", alt: `${service.title} en Auvergne-Rhône-Alpes & Paris`, size, contentType }];
 }
 
-export default async function OpengraphImage({ params }: Props) {
+export default async function OpengraphImage({ params: pendingParams }: { params: Promise<Props["params"]> }) {
+  const params = await pendingParams;
   const service = SERVICES[params.service as ServiceSlug];
   if (!service) {
     return new ImageResponse((<div>IAvarone Group</div>), size);
@@ -39,7 +40,7 @@ export default async function OpengraphImage({ params }: Props) {
           padding: "72px 80px",
           background: "white",
           fontFamily: "Inter, sans-serif",
-          backgroundImage: `radial-gradient(circle at 85% 12%, ${c.soft} 0, transparent 50%)`,
+          borderTop: "12px solid #FBBC05",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
@@ -48,18 +49,18 @@ export default async function OpengraphImage({ params }: Props) {
               width: 48,
               height: 48,
               borderRadius: 10,
-              background: c.accent,
+              background: "#FBBC05",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "white",
+              color: "#111111",
               fontSize: 22,
               fontWeight: 700,
             }}
           >
             IG
           </div>
-          <div style={{ fontSize: 24, fontWeight: 600, color: "#0F172A" }}>IAvarone Group</div>
+          <div style={{ fontSize: 24, fontWeight: 600, color: "#111111" }}>IAvarone Group</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -67,16 +68,16 @@ export default async function OpengraphImage({ params }: Props) {
             style={{
               fontSize: 64,
               fontWeight: 600,
-              color: "#0F172A",
+              color: "#111111",
               lineHeight: 1.08,
               letterSpacing: "-0.02em",
               maxWidth: 1000,
             }}
           >
-            {service.title} en <span style={{ color: c.accent }}>Auvergne-Rhône-Alpes</span> &amp; Paris
+            {`${service.title} en Auvergne-Rhône-Alpes & Paris`}
           </div>
-          <div style={{ fontSize: 24, color: "#475569", maxWidth: 900, lineHeight: 1.35 }}>
-            {service.short}.
+          <div style={{ fontSize: 24, color: "#545454", maxWidth: 900, lineHeight: 1.35 }}>
+            {`${service.short}.`}
           </div>
         </div>
 
@@ -86,7 +87,7 @@ export default async function OpengraphImage({ params }: Props) {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 20,
-            color: "#475569",
+            color: "#545454",
           }}
         >
           <div>17 villes · Présentiel + distanciel</div>

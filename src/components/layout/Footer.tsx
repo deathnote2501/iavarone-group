@@ -6,12 +6,12 @@ import { shouldIndexCity } from "@/lib/seo-index";
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-[var(--color-line)] bg-[var(--color-surface-alt)]">
+    <footer className="group-site-footer mt-24 border-t border-[var(--color-line)] bg-[var(--color-surface-alt)]">
       <div className="container-page py-12">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-2">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="xl:col-span-2">
             <div className="flex items-center gap-2 font-semibold">
-              <Building2 className="h-5 w-5 text-[var(--color-brand-blue-ink)]" aria-hidden />
+              <Building2 className="h-5 w-5 text-[var(--color-ink)]" aria-hidden />
               <span>{SITE.name}</span>
             </div>
             <p className="mt-3 max-w-md text-sm text-[var(--color-ink-muted)]">{SITE.baseline}</p>
@@ -69,7 +69,7 @@ export function Footer() {
               return (
                 <div key={svc.slug}>
                   <h3 className="text-xs font-semibold">
-                    <Link href={`/${svc.slug}`} className="hover:text-[var(--color-brand-blue-ink)]">
+                    <Link href={`/${svc.slug}`} className="hover:text-[var(--color-ink)]">
                       {svc.title}
                     </Link>
                   </h3>

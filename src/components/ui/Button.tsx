@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-[var(--color-brand-blue-ink)] text-white hover:bg-[#1557BD] shadow-sm",
+          "bg-[var(--color-brand-yellow)] text-[var(--color-ink)] hover:brightness-95 shadow-sm",
         secondary:
           "bg-white text-[var(--color-ink)] border border-[var(--color-line)] hover:bg-[var(--color-surface-alt)]",
         ghost:
@@ -39,6 +39,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         ref={ref}
+        data-group-button={variant ?? "primary"}
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       />
