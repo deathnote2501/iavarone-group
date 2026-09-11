@@ -90,7 +90,7 @@ export function ProjectPath() {
       <div className="group-path-foundation">
         <Check aria-hidden />
         <p>
-          <strong>Un même interlocuteur pour cadrer la suite.</strong> Une
+          <strong>Un même interlocuteur pour cadrer la suite.</strong>{" "}Une
           formation peut faire émerger un outil métier ; un logiciel peut
           ensuite accueillir des tâches automatisées.
         </p>

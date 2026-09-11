@@ -21,7 +21,7 @@ export function Hero() {
           </div>
           <div className="group-hero-copy">
             <p>
-              <strong>{SITE.name}</strong> est un groupe français
+              <strong>{SITE.name}</strong>{" "}est un groupe français
               d&apos;intelligence artificielle générative fondé en 2020 par
               Jérôme Iavarone, formateur Qualiopi et consultant indépendant. Le
               groupe rassemble sept marques B2B complémentaires&nbsp;:

@@ -40,6 +40,7 @@ test("the approved panorama loads and the original video remains available on re
   page,
 }) => {
   await page.goto("/");
+  await expect(page.locator(".group-hero-copy > p")).toContainText("IAvarone Group est un groupe français");
   const photo = page.locator(".group-panorama img");
   await expect(photo).toBeVisible();
   await expect
