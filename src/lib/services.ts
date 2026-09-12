@@ -50,7 +50,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     short: "Formations Qualiopi en IA générative pour vos équipes",
     longTitle: (city) => `Formation IA générative à ${city} — Qualiopi`,
     metaDescription: (city) =>
-      `Formation IA générative à ${city} : ChatGPT, Claude, Gemini, automatisation n8n/Make, Vibe Coding. Sessions inter ou intra-entreprise, certifiées Qualiopi et finançables OPCO. 4.9/5, 1000+ professionnels formés.`,
+      `Formation IA générative à ${city} : ChatGPT, Claude, Gemini, automatisation n8n/Make, Vibe Coding. Sessions inter ou intra-entreprise, réalisées avec des partenaires certifiés Qualiopi et finançables OPCO. 4.9/5, 1000+ professionnels formés.`,
     icon: GraduationCap,
     color: "blue",
     brand: {
@@ -59,7 +59,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       tagline: "Formation IA générative — Qualiopi",
     },
     intro: (city) =>
-      `Vos équipes à ${city} ont besoin de monter en compétence sur l'IA générative ? Je conçois et anime des formations sur mesure, finançables par votre OPCO, en présentiel à ${city} ou en distanciel. Mes parcours couvrent ChatGPT, Claude, Gemini, l'automatisation n8n/Make/Zapier et le Vibe Coding (développement assisté par IA).`,
+      `Vos équipes à ${city} ont besoin de monter en compétence sur l'IA générative ? Je conçois et anime des formations sur mesure, finançables selon votre dossier et l’accord de votre OPCO, en présentiel à ${city} ou en distanciel. Mes parcours couvrent ChatGPT, Claude, Gemini, l'automatisation n8n/Make/Zapier et le Vibe Coding (développement assisté par IA).`,
     pillars: [
       {
         title: "Programmes adaptés à votre métier",
@@ -67,9 +67,9 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Chaque formation est construite à partir de vos cas d'usage réels. Pas de slides génériques : on travaille sur vos données, vos process et vos outils existants.",
       },
       {
-        title: "Certification Qualiopi",
+        title: "Partenaires certifiés Qualiopi",
         description:
-          "Toutes les formations sont éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. Documentation administrative complète fournie.",
+          "Les formations prises en charge sont organisées avec des partenaires certifiés Qualiopi. Le financement dépend de votre dossier et de l'accord du financeur. Documentation administrative complète fournie.",
       },
       {
         title: "Formats flexibles",
@@ -103,18 +103,18 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       { step: "Cadrage", detail: "Audit des besoins, du niveau des équipes et des cas d'usage prioritaires (visio, gratuit)." },
       { step: "Programme sur mesure", detail: "Construction d'un parcours sur vos données et vos outils, validé avant la session." },
       { step: "Animation", detail: "Atelier en présentiel sur site ou en distanciel, 100 % pratique, supports fournis." },
-      { step: "Suivi", detail: "Attestation Qualiopi, ressources post-formation et point à 30 jours pour ancrer les acquis." },
+      { step: "Suivi", detail: "Attestation de formation, ressources post-formation et point à 30 jours pour ancrer les acquis." },
     ],
     localAngle: (city) =>
       `Les entreprises de ${city.name} (${city.industries.slice(0, 3).join(", ")}) font face aux mêmes enjeux : monter en compétence vite sur l'IA générative sans mobiliser des semaines de R&D. Une formation ancrée dans le tissu économique de ${city.region} — vos métiers, vos contraintes réglementaires, vos outils — produit des résultats que des slides génériques n'atteindront jamais.`,
     faq: (city) => [
       {
         q: `Quel est le tarif d'une formation IA à ${city} ?`,
-        a: `Le tarif varie selon le format (intra/inter), la durée et le nombre de participants. Comptez 1 500–2 500 € HT/jour pour une formation intra-entreprise à ${city}. Devis personnalisé sous 48h. Toutes les formations sont finançables par votre OPCO.`,
+        a: `Le tarif varie selon le format (intra/inter), la durée et le nombre de participants. Comptez 1 500–2 500 € HT/jour pour une formation intra-entreprise à ${city}. Devis personnalisé sous 48h. Toutes les formations sont finançables selon votre dossier et l’accord de votre OPCO.`,
       },
       {
         q: "La formation est-elle finançable par mon OPCO ?",
-        a: "Oui. L'organisme de formation est certifié Qualiopi, ce qui rend les formations éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. La documentation administrative (convention, programme, attestations) est fournie pour faciliter votre demande.",
+        a: "Oui, via nos organismes partenaires certifiés Qualiopi, avec une prise en charge possible selon votre dossier et l'accord du financeur. La documentation administrative (convention, programme, attestations) est fournie pour faciliter votre demande.",
       },
       {
         q: `Faites-vous des formations en présentiel à ${city} ?`,
@@ -128,7 +128,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     hubFaq: [
       {
         q: "Quel est le prix moyen d'une formation en IA générative ?",
-        a: "Pour une formation intra-entreprise sur mesure, comptez 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés se situent plutôt entre 800 et 2 000 € HT par personne et par jour. Toutes mes formations sont certifiées Qualiopi et donc finançables par votre OPCO ou le plan de développement des compétences de l'entreprise.",
+        a: "Pour une formation intra-entreprise sur mesure, comptez 1 500 à 2 500 € HT par jour (groupe complet, pas par participant). Les catalogues inter-entreprises standardisés se situent plutôt entre 800 et 2 000 € HT par personne et par jour. Les formations prises en charge sont organisées avec des partenaires certifiés Qualiopi et peuvent être financées par votre OPCO ou le plan de développement des compétences de l'entreprise.",
       },
       {
         q: "Quelle est la meilleure formation à l'IA pour une entreprise ?",
@@ -136,7 +136,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       },
       {
         q: "La formation IA est-elle finançable par mon OPCO ?",
-        a: "Oui. L'organisme de formation est certifié Qualiopi (Actions de formation), ce qui rend les formations éligibles au financement OPCO et au plan de développement des compétences de l'entreprise. La documentation administrative complète (convention, programme, attestations) est fournie pour faciliter votre demande.",
+        a: "Oui, via nos organismes partenaires certifiés Qualiopi (Actions de formation), avec une prise en charge possible selon votre dossier et l'accord du financeur. La documentation administrative complète (convention, programme, attestations) est fournie pour faciliter votre demande.",
       },
       {
         q: "Où se former à ChatGPT et à l'IA en Auvergne-Rhône-Alpes ?",
@@ -146,14 +146,14 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     cta: "Demander un programme de formation",
     hubMetaTitle: "Formation IA & IA générative — Qualiopi, OPCO",
     hubMetaDescription:
-      "Formation IA et IA générative en entreprise : ChatGPT, Claude, Gemini, automatisation n8n/Make. Certifiée Qualiopi, finançable OPCO. 1 000+ pros formés, 4,9/5.",
+      "Formation IA et IA générative en entreprise : ChatGPT, Claude, Gemini, automatisation n8n/Make. Avec des partenaires certifiés Qualiopi, financement OPCO selon dossier. 1 000+ pros formés, 4,9/5.",
     hubH1: "Formation IA générative pour les entreprises et les pros",
     hubLede:
-      "Montez en compétence sur l'IA générative : ChatGPT, Claude, Gemini, prompt engineering, automatisation n8n/Make et Vibe Coding. Formations sur mesure certifiées Qualiopi, finançables par votre OPCO, en présentiel en Auvergne-Rhône-Alpes ou en ligne partout en France.",
+      "Montez en compétence sur l'IA générative : ChatGPT, Claude, Gemini, prompt engineering, automatisation n8n/Make et Vibe Coding. Formations sur mesure avec des partenaires certifiés Qualiopi, finançables selon votre dossier et l’accord de votre OPCO, en présentiel en Auvergne-Rhône-Alpes ou en ligne partout en France.",
     hubSections: [
       {
         h2: "Formation IA finançable OPCO",
-        body: "Organisme certifié Qualiopi (Actions de formation) : vos formations IA sont finançables par votre OPCO et le plan de développement des compétences de l'entreprise. Documentation administrative complète fournie (convention, programme, attestations).",
+        body: "Partenaires certifiés Qualiopi (Actions de formation) : vos formations IA peuvent être financées par votre OPCO et le plan de développement des compétences de l'entreprise. Documentation administrative complète fournie (convention, programme, attestations).",
       },
       {
         h2: "Formation ChatGPT, Claude & Gemini",
@@ -166,8 +166,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         },
       },
       {
-        h2: "Formation IA certifiante (Qualiopi)",
-        body: "Toutes les sessions sont dispensées par un organisme certifié Qualiopi et donnent lieu à une attestation. Formats d'une demi-journée à 5 jours, en inter ou intra-entreprise.",
+        h2: "Formation IA via un partenaire Qualiopi",
+        body: "Les sessions prises en charge sont organisées avec un organisme partenaire certifié Qualiopi et donnent lieu à une attestation. Formats d'une demi-journée à 5 jours, en inter ou intra-entreprise.",
       },
       {
         h2: "En présentiel (Auvergne-Rhône-Alpes) ou en ligne",

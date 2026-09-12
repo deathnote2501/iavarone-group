@@ -5,6 +5,7 @@ import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description:
     "Contacter IAvarone Group : RDV en ligne, téléphone, e-mail. Interventions Auvergne-Rhône-Alpes, Paris et distanciel France entière.",

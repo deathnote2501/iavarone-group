@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/mentions-legales" },
   title: "Mentions légales",
   description: "Mentions légales du site iavarone-group.fr — IAvarone Group.",
   robots: { index: false, follow: true },

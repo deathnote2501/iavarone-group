@@ -44,3 +44,9 @@ python3 scripts/design-seo-snapshot.py \
 Le script compare aussi `robots.txt`, `llms.txt`, `llms-full.txt` et `pricing.md`. Il mesure la conservation technique, pas les positions dans les moteurs de recherche.
 
 [Compte rendu de refonte](docs/2-sprints/refonte-v2.md). Les maquettes V1 et V2 restent conservées dans le dépôt Brand Studio.
+
+## Audit SEO et GEO du 12 septembre 2026
+
+Canonical contact/à propos/légal, sitemap nettoyé, attribution Qualiopi corrigée vers les partenaires dans le contenu et le JSON-LD.
+
+Contrôles : lint, types, build, smoke et tests SEO ciblés. Rapport : [.seo-boost-logs/rapport-2026-09-12-audit.md](.seo-boost-logs/rapport-2026-09-12-audit.md). Audit transversal et refonte proposée des routines dans le dépôt frère `iac_seo`.
