@@ -10,4 +10,12 @@ Sources : crawl HTTP/HTML du 12/09, API GSC et GA4 13/08–09/09, URL Inspection
 
 ## Vérification et mesure
 
-Baseline lint/types/build verte. Tests finaux et CI à consigner après exécution. Déploiement à confirmer par URL Vercel et contrôle du domaine public. Aucun gain SEO encore mesurable. Première fenêtre complète : 13/09–10/10, lecture à partir du 13/10.
+Baseline et contrôles finaux lint/types/build validés ; smoke local et CI GitHub `quality` / `smoke` passés. Aucun gain SEO encore mesurable. Première fenêtre complète : 13/09–10/10, lecture à partir du 13/10.
+
+## Livraison
+
+- PR fusionnée : https://github.com/deathnote2501/iavarone-group/pull/16
+- Commit du code déployé : `ce138648327b973126ac981ce70f82e631788ffd`.
+- Déploiement Vercel READY : https://iavarone-group-4osx0p0pj-deathnote2501s-projects.vercel.app.
+- Résultats du crawl après déploiement : dépôt `iac_seo`, `reports/audit-2026-09-12/production-checks.json`.
+- La présente clôture documentaire est postérieure au déploiement du code ; elle ne modifie pas le site.
