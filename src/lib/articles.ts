@@ -335,7 +335,7 @@ export const ARTICLES: readonly Article[] = [
       { type: "h2", text: "Passer du test à l'usage maîtrisé" },
       {
         type: "p",
-        text: "L'écart de productivité entre un utilisateur débutant et un utilisateur formé est considérable. Pour des équipes, une formation courte sur vos cas d'usage réels (ChatGPT, Claude, Gemini) rentabilise très vite l'investissement. Les formations d'IAvarone Group sont certifiées Qualiopi et finançables par votre OPCO.",
+        text: "L'écart de productivité entre un utilisateur débutant et un utilisateur formé est considérable. Pour des équipes, une formation courte sur vos cas d'usage réels (ChatGPT, Claude, Gemini) rentabilise très vite l'investissement. Les formations d'IAvarone Group sont réalisées avec des partenaires certifiés Qualiopi et finançables par votre OPCO.",
       },
     ],
     faq: [
@@ -405,7 +405,7 @@ export const ARTICLES: readonly Article[] = [
       { type: "h2", text: "Se former au prompt engineering" },
       {
         type: "p",
-        text: "Le prompt engineering s'apprend vite et se perfectionne avec la pratique sur ses propres cas d'usage. Pour une équipe, une formation dédiée (prompts, automatisation, agents) accélère fortement la montée en compétence. Les parcours d'IAvarone Group couvrent ces techniques sur ChatGPT, Claude et Gemini, sont certifiés Qualiopi et finançables par votre OPCO.",
+        text: "Le prompt engineering s'apprend vite et se perfectionne avec la pratique sur ses propres cas d'usage. Pour une équipe, une formation dédiée (prompts, automatisation, agents) accélère fortement la montée en compétence. Les parcours d'IAvarone Group couvrent ces techniques sur ChatGPT, Claude et Gemini, sont réalisés avec des partenaires certifiés Qualiopi et finançables par votre OPCO.",
       },
     ],
     faq: [
@@ -419,7 +419,7 @@ export const ARTICLES: readonly Article[] = [
       },
       {
         q: "Existe-t-il une formation au prompt engineering ?",
-        a: "Oui. IAvarone Group propose des formations IA générative couvrant le prompt engineering sur ChatGPT, Claude et Gemini, construites sur vos cas d'usage réels, certifiées Qualiopi et finançables par votre OPCO.",
+        a: "Oui. IAvarone Group propose des formations IA générative couvrant le prompt engineering sur ChatGPT, Claude et Gemini, construites sur vos cas d'usage réels, réalisées avec des partenaires certifiés Qualiopi et finançables par votre OPCO.",
       },
     ],
   },
@@ -757,7 +757,7 @@ export const ARTICLES: readonly Article[] = [
       },
       {
         type: "p",
-        text: "Bien utilisé, avec relecture et tests, le vibe coding est une compétence très rentable. IAvarone Group forme à cette pratique (Claude Code) et développe lui-même ses applications selon cette méthode, avec relecture humaine systématique. Formations certifiées Qualiopi, finançables OPCO.",
+        text: "Bien utilisé, avec relecture et tests, le vibe coding est une compétence très rentable. IAvarone Group forme à cette pratique (Claude Code) et développe lui-même ses applications selon cette méthode, avec relecture humaine systématique. Formations avec des partenaires certifiés Qualiopi, finançables OPCO.",
       },
     ],
     faq: [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/confidentialite" },
   title: "Politique de confidentialité",
   description: "Politique de confidentialité et traitement des données — IAvarone Group.",
   robots: { index: false, follow: true },

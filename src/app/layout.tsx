@@ -84,15 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ...(SITE.legal.sasSiren
                     ? { identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.legal.sasSiren } }
                     : {}),
-                  hasCredential: {
-                    "@type": "EducationalOccupationalCredential",
-                    credentialCategory: "certification",
-                    name: "Qualiopi — Actions de formation",
-                    ...(SITE.legal.qualiopiBody
-                      ? { recognizedBy: { "@type": "Organization", name: SITE.legal.qualiopiBody } }
-                      : {}),
-                    ...(SITE.legal.qualiopiNumber ? { identifier: SITE.legal.qualiopiNumber } : {}),
-                  },
                   founder: {
                     "@type": "Person",
                     "@id": `${SITE.url}/#person`,

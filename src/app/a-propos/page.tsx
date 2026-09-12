@@ -5,9 +5,10 @@ import { SITE } from "@/lib/site";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/a-propos" },
   title: "À propos d'IAvarone Group",
   description:
-    "IAvarone Group est fondé et opéré par Jérôme Iavarone, formateur Qualiopi et consultant en IA générative basé en Auvergne.",
+    "IAvarone Group est fondé et opéré par Jérôme Iavarone, formateur en partenariat avec des organismes certifiés Qualiopi et consultant en IA générative basé en Auvergne.",
 };
 
 const personJsonLd = {
@@ -19,7 +20,7 @@ const personJsonLd = {
   familyName: "Iavarone",
   jobTitle: SITE.founder.role,
   description:
-    "Formateur Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble sept activités complémentaires en intelligence artificielle générative pour les entreprises.",
+    "Formateur en partenariat avec des organismes certifiés Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble sept activités complémentaires en intelligence artificielle générative pour les entreprises.",
   image: `${SITE.url}${SITE.founder.photo}`,
   url: `${SITE.url}/a-propos`,
   email: SITE.contact.email,
@@ -42,15 +43,6 @@ const personJsonLd = {
     "@type": "Occupation",
     name: "Formateur & Consultant en IA générative",
     occupationLocation: { "@type": "AdministrativeArea", name: "Auvergne-Rhône-Alpes" },
-  },
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    credentialCategory: "certification",
-    name: "Qualiopi — Actions de formation",
-    ...(SITE.legal.qualiopiBody
-      ? { recognizedBy: { "@type": "Organization", name: SITE.legal.qualiopiBody } }
-      : {}),
-    ...(SITE.legal.qualiopiNumber ? { identifier: SITE.legal.qualiopiNumber } : {}),
   },
   homeLocation: {
     "@type": "Place",
@@ -113,7 +105,7 @@ export default function AProposPage() {
             </h1>
             <p className="mt-2 text-lg text-[var(--color-brand-blue-ink)]">{SITE.founder.role}</p>
             <p className="mt-6 text-[var(--color-ink-muted)]">
-              Formateur certifié Qualiopi et consultant en IA générative depuis 2020, j&apos;ai
+              Formateur intervenant avec des partenaires certifiés Qualiopi et consultant en IA générative depuis 2020, j&apos;ai
               progressivement structuré mon activité en un groupe de sept entités complémentaires&nbsp;:
               une SAS de conseil et de développement, une entreprise individuelle de formation, et
               cinq produits B2B en production.
@@ -204,7 +196,7 @@ export default function AProposPage() {
             </p>
             <h3 className="mt-2 text-xl font-semibold">{SITE.legal.ei}</h3>
             <p className="mt-3 text-sm text-[var(--color-ink-muted)]">
-              Entreprise individuelle dédiée à l&apos;activité de formation Qualiopi, finançable
+              Entreprise individuelle dédiée à l&apos;activité de formation, avec des partenaires certifiés Qualiopi pour les financements
               OPCO et plan de développement des compétences de l&apos;entreprise.
             </p>
             {EI_LEGAL.length > 0 && (

@@ -10,9 +10,9 @@
  * duplication of the route list). Brand-new pages added in a deploy are picked
  * up on the following deploy, which is fine for this low-churn vitrine site.
  *
- * Runs automatically at the tail of `next build` (see package.json). It NEVER
- * fails the build: any error is logged and the process exits 0. It is skipped
- * on Vercel preview/development deployments. Run manually with `npm run indexnow`.
+ * Run `npm run indexnow` after verifying the live production deployment.
+ * Never run during build: the public sitemap still describes the previous deployment.
+ * It is skipped on Vercel preview/development deployments.
  */
 
 const KEY = "2e0a81d35785c6d273c5dddbb5f40650";

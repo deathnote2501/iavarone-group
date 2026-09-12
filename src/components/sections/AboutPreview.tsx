@@ -33,7 +33,7 @@ export function AboutPreview() {
             Un groupe fondé et opéré par {SITE.founder.name}
           </h2>
           <p className="mt-5 text-[var(--color-ink-muted)]">
-            Formateur certifié Qualiopi et consultant en IA générative depuis 2020, Jérôme Iavarone
+            Formateur intervenant avec des partenaires certifiés Qualiopi et consultant en IA générative depuis 2020, Jérôme Iavarone
             a structuré son activité en un groupe de sept entités complémentaires&nbsp;: une SAS de
             conseil et de développement, une entreprise individuelle de formation, et cinq produits
             B2B en production.

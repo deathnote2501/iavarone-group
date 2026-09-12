@@ -12,10 +12,10 @@ export const SITE = {
     since: "2020",
     location: "Clermont-Ferrand, Auvergne-Rhône-Alpes",
     // Phrase d'autorité affichée dans l'encart auteur (signal E-E-A-T : qui livre).
-    bio: "Formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Il conçoit et livre lui-même chaque mission — formation, audit, développement d'applications et agents IA — pour les PME, ETI et organisations.",
+    bio: "Formateur intervenant avec des partenaires certifiés Qualiopi et consultant indépendant en IA générative depuis 2020. Il conçoit et livre lui-même chaque mission — formation, audit, développement d'applications et agents IA — pour les PME, ETI et organisations.",
     // Credentials vérifiables (affichés en chips + injectés en hasCredential JSON-LD).
     credentials: [
-      "Organisme de formation certifié Qualiopi (Actions de formation)",
+      "Formations via des partenaires certifiés Qualiopi",
       "Consultant IA générative depuis 2020",
       "1 000+ professionnels formés",
     ],
@@ -64,7 +64,7 @@ export const SITE = {
   },
   // Signaux de confiance E-E-A-T (expérience, expertise, autorité, fiabilité)
   proof: [
-    { value: "Qualiopi", label: "Organisme certifié (Actions de formation)" },
+    { value: "Qualiopi", label: "Partenaires certifiés" },
     { value: "1 000+", label: "professionnels formés depuis 2020" },
     { value: "4,9/5", label: "satisfaction (évaluations de fin de formation)" },
     { value: "2020", label: "année de création du groupe" },
@@ -85,9 +85,9 @@ export const BRANDS = [
     targetAudience: "Salariés, dirigeants de PME/ETI, OPCO, organismes de formation",
     pricing: "1 500–2 500 € HT/jour (intra) · finançable OPCO",
     longDescription:
-      "Marque historique du groupe et entreprise individuelle dédiée à la formation professionnelle continue, Jérôme Iavarone est certifiée Qualiopi (Actions de formation). Plus de 1 000 professionnels formés depuis 2020 dans la prise en main de ChatGPT, Claude, Gemini, l'automatisation no-code (n8n, Make, Zapier) et le Vibe Coding (développement assisté par IA avec Claude Code). Sessions inter ou intra-entreprise, en présentiel sur toute la région Auvergne-Rhône-Alpes ou en distanciel partout en France.",
+      "Marque historique du groupe et entreprise individuelle dédiée à la formation professionnelle continue, Jérôme Iavarone réalise les formations financées avec des organismes partenaires certifiés Qualiopi, notamment Keepschool et Evolve. Plus de 1 000 professionnels formés depuis 2020 dans la prise en main de ChatGPT, Claude, Gemini, l'automatisation no-code (n8n, Make, Zapier) et le Vibe Coding (développement assisté par IA avec Claude Code). Sessions inter ou intra-entreprise, en présentiel sur toute la région Auvergne-Rhône-Alpes ou en distanciel partout en France.",
     keyPoints: [
-      "Certification Qualiopi (Actions de formation)",
+      "Partenariat avec des organismes certifiés Qualiopi",
       "Financements OPCO et plan de développement des compétences",
       "Programmes sur mesure à partir de vos cas d'usage réels",
       "1 000+ professionnels formés depuis 2020",
