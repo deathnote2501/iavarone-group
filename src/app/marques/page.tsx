@@ -34,13 +34,13 @@ export default function MarquesPage() {
         <div className="container-page group-complementarity-grid">
           <figure>
             <Image
-              src="/brand-v2/group-auvergne.png"
-              alt="Illustration architecturale imaginaire ouverte sur un paysage volcanique"
-              width={1536}
-              height={1024}
+              src="/photos/openai-v3/cadrage-projet.webp"
+              alt="Illustration : trois professionnels définissent les étapes d’un projet autour d’une table"
+              width={1260}
+              height={840}
               sizes="(min-width: 1024px) 600px, 100vw"
             />
-            <figcaption>Illustration architecturale générée par IA.</figcaption>
+            <figcaption>Scène de cadrage illustrative, générée par IA.</figcaption>
           </figure>
           <div>
             <p className="group-eyebrow">Des expertises complémentaires</p>

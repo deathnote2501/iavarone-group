@@ -50,7 +50,7 @@ export function Hero() {
         </div>
         <figure className="group-panorama">
           <Image
-            src="/brand-v2/group-auvergne.png"
+            src="/brand-v2/group-auvergne.webp"
             alt="Architecture contemporaine imaginaire ouverte sur des reliefs volcaniques"
             width={1536}
             height={1024}

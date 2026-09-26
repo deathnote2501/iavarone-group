@@ -50,3 +50,7 @@ Le script compare aussi `robots.txt`, `llms.txt`, `llms-full.txt` et `pricing.md
 Canonical contact/à propos/légal, sitemap nettoyé, attribution Qualiopi corrigée vers les partenaires dans le contenu et le JSON-LD.
 
 Contrôles : lint, types, build, smoke et tests SEO ciblés. Rapport : [.seo-boost-logs/rapport-2026-09-12-audit.md](.seo-boost-logs/rapport-2026-09-12-audit.md). Audit transversal et refonte proposée des routines dans le dépôt frère `iac_seo`.
+
+## Images — septembre 2026
+
+La page Marques possède une nouvelle illustration de cadrage de projet, à la place du panorama répété. Le panorama d’accueil est conservé en WebP (168 Ko contre 2,4 Mo). Portrait et vidéo conservés. [Audit et provenance](docs/5-sources/images-2026-09/README.md).
