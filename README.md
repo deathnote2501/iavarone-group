@@ -54,3 +54,7 @@ Contrôles : lint, types, build, smoke et tests SEO ciblés. Rapport : [.seo-boo
 ## Images — septembre 2026
 
 La page Marques possède une nouvelle illustration de cadrage de projet, à la place du panorama répété. Le panorama d’accueil est conservé en WebP (168 Ko contre 2,4 Mo). Portrait et vidéo conservés. [Audit et provenance](docs/5-sources/images-2026-09/README.md).
+
+## Bandeau cookies (CNIL) — septembre 2026
+
+GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/lib/cookie-consent.ts`, en tête du `<head>`, pose `dataLayer`, un `gtag` en file d'attente et le Consent Mode v2 refusé par défaut ; `ad_*` restent refusés même après acceptation. Vercel Analytics, sans cookie, reste hors consentement. Bandeau `src/components/cookie-consent/`, bouton « Gérer les cookies » dans le pied de page, choix mémorisé 6 mois (cookie `cookie_consent` + localStorage). Contrôle : `e2e/cookie-consent.spec.ts`.

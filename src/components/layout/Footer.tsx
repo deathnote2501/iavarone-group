@@ -3,6 +3,7 @@ import { Building2 } from "lucide-react";
 import { SITE, BRANDS, CITIES } from "@/lib/site";
 import { SERVICES_LIST } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
+import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettingsButton";
 
 export function Footer() {
   return (
@@ -52,6 +53,9 @@ export function Footer() {
               <li><Link href="/contact" className="hover:text-[var(--color-ink)]">Contact</Link></li>
               <li><Link href="/mentions-legales" className="hover:text-[var(--color-ink)]">Mentions légales</Link></li>
               <li><Link href="/confidentialite" className="hover:text-[var(--color-ink)]">Confidentialité</Link></li>
+              <li>
+                <CookieSettingsButton className="cursor-pointer text-left hover:text-[var(--color-ink)]" />
+              </li>
             </ul>
           </div>
         </div>

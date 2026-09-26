@@ -3,13 +3,18 @@ import Script from "next/script";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import BookingModal from "@/components/ui/BookingModal";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { ConsentedGoogleAnalytics } from "@/components/cookie-consent/ConsentedGoogleAnalytics";
+import { CookieConsent } from "@/components/cookie-consent/CookieConsent";
+import { CONSENT_BOOTSTRAP_SCRIPT } from "@/lib/cookie-consent";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SITE, BRANDS } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans-loaded", display: "swap" });
+
+/** Mesure GA4 d'iavarone-group.fr, chargée seulement après consentement. */
+const GA_ID = "G-MPZM0EYFQE";
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
@@ -50,9 +55,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang="fr" className={inter.variable} suppressHydrationWarning>
+      <head>
+        {/* Consentement cookies : dataLayer, gtag en file d'attente et refus par défaut, avant tout autre script */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_BOOTSTRAP_SCRIPT }} />
+      </head>
       <body className="group-v2 min-h-dvh flex flex-col antialiased">
         <a className="group-skip" href="#main-content">Aller au contenu</a>
+        <CookieConsent gaId={GA_ID} privacyHref="/confidentialite" />
         <Header />
         <main id="main-content" className="group-content flex-1">{children}</main>
         <Footer />
@@ -153,6 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <Analytics />
+        <ConsentedGoogleAnalytics gaId={GA_ID} />
         <BookingModal />
         {/* Chatbot mutualisé (service iac_chatbot) */}
         <Script
@@ -162,7 +173,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="afterInteractive"
         />
       </body>
-      <GoogleAnalytics gaId="G-MPZM0EYFQE" />
     </html>
   );
 }
