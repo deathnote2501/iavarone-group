@@ -30,8 +30,13 @@ export default function ConfidentialitePage() {
         <h2 className="mt-8 text-xl font-semibold text-[var(--color-ink)]">Mesure d&apos;audience</h2>
         <p>
           Le site utilise Vercel Analytics, un outil de mesure respectueux de la vie privée qui ne
-          dépose pas de cookie et ne suit pas les utilisateurs individuellement. Google Search Console
-          peut être utilisé pour mesurer le référencement.
+          dépose pas de cookie et ne suit pas les utilisateurs individuellement, ainsi que Google
+          Analytics 4, qui ne dépose ses cookies que si vous cliquez sur « Accepter » dans le bandeau
+          affiché lors de votre première visite. Sans votre accord, aucun script Google n&apos;est
+          chargé. Votre choix est mémorisé 6 mois (cookie « cookie_consent ») ; vous pouvez le
+          modifier à tout moment via « Gérer les cookies » en bas de page : retirer votre accord
+          supprime les cookies Google Analytics. Google Search Console peut être utilisé pour
+          mesurer le référencement.
         </p>
 
         <h2 className="mt-8 text-xl font-semibold text-[var(--color-ink)]">Vos droits RGPD</h2>
