@@ -25,7 +25,7 @@ export const SITE = {
     phone: "06 28 07 09 88",
     phoneHref: "tel:+33628070988",
     // Page de réservation maison (iac_rdv, 2026-09-04) ; `page` est ajoutée par BookingLink.
-    // Koalendar reste ouvert en parallèle jusqu'au 2026-09-18.
+    // Koalendar, ouvert en parallèle, a été désactivé le 2026-09-18.
     booking: "https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr",
   },
   social: {

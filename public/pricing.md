@@ -1,6 +1,6 @@
 # Pricing — IAvarone Group
 
-> Tarifs et formats commerciaux des sept marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://koalendar.com/e/rdv-avec-jerome-iavarone
+> Tarifs et formats commerciaux des sept marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr&page=/pricing.md
 
 Mise à jour : 2026-05-24
 
@@ -122,7 +122,7 @@ Mise à jour : 2026-05-24
 
 - Email : jerome.iavarone@gmail.com
 - Téléphone : +33 6 28 07 09 88
-- RDV : https://koalendar.com/e/rdv-avec-jerome-iavarone
+- RDV : https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr&page=/pricing.md
 - Premier échange de cadrage gratuit : 30 minutes
 - Devis personnalisé sous 48h
 
