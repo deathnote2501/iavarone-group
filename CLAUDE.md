@@ -8,17 +8,14 @@ On va crééer un site internet vitrine sur le nom de domaine iavarone-group.fr 
 - https://github.com/deathnote2501/fit (site web à venir)
 
 # Objectif de iavarone-group.fr
-- Acquérir du trafic organique sur la région et en dehors sur des thématiques non couvertes par les sites web listés plus haut dans le but d'être contacté viahttps://jeromeiavarone.fr/rdv, email ou telephone par des prospects qui souhaiteraint bénéficier de mes services.
+- Acquérir du trafic organique sur la région et en dehors sur des thématiques non couvertes par les sites web listés plus haut dans le but d'être contacté via https://jeromeiavarone.fr/rdv, email ou telephone par des prospects qui souhaiteraint bénéficier de mes services.
 
-# Référentiel de marque (palette Google)
-- Icon : lucide.dev
+# Référentiel de marque
 - Logo : building-2
-- Font: Inter (ou font moderne)
-- Blue: #4285F4
-- Yellow: #FBBC05
-- Green: #34A853
-- Red: #EA4335
+- La charte V2 reprend la direction jaune de `../iac_brand-studio/v2/group.html` et le parcours de `ecosysteme.html`.
 
-# Outils et ressources disponibles
-- Tu peux utiliser tous les outils, skills, plugins, CLI, SDK, API, etc. listés dans  https://coda.io/d/Claude_d3b-aetJytv/Claude_su3xhuXS#_lu9PA4co (clé CODA_API_KEY du hub Doppler jeffrey/dev)
-- Les secrets sont dans : https://dashboard.doppler.com/workplace/ed7f97c05a49e6809784/projects/jeffrey/configs/dev 
+# Pièges
+- 43 URL dans le sitemap et 81 pages publiques, dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
+- `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale.
+
+Commandes, repères du code, contrôle SEO de non-régression, cookies : `README.md`.
