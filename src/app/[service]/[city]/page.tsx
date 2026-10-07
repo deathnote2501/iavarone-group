@@ -151,6 +151,15 @@ export default async function ServiceCityPage({ params }: PageProps) {
             {service.longTitle(city.name)}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.intro(city.name)}</p>
+          {override?.trainerLink && (
+            <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
+              {override.trainerLink.before}
+              <a href={override.trainerLink.href} className="font-medium text-[var(--color-brand-blue-ink)] underline">
+                {override.trainerLink.anchor}
+              </a>
+              {override.trainerLink.after}
+            </p>
+          )}
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
