@@ -34,6 +34,13 @@ Lecture seule de `iac_routines` (`routines/orch-*/routine.env`, consignes des or
 - Éditorial : « demandes de fusion » remplacé par « correctifs mis en ligne après les tests automatiques », « Les limites, assumées » devient « Des garde-fous ».
 - Lint, types, build, Playwright 46/46 relancés après ces changements.
 
+## Livraison
+
+- PR #20 fusionnée le 7 octobre 2026 (`5875e93`), CI verte sur la PR et sur `main`, déploiement Vercel de production du SHA de fusion réussi.
+- Production vérifiée : `/`, `/notre-organisation`, `/a-propos`, `/marques/iavarone-conseil`, `/marques/employe-ia`, `/agent-ia` et `/sitemap.xml` en 200 ; canonical et titre de `/notre-organisation` corrects, page au sitemap ; lien vers `/notre-organisation` présent sur À propos, IAvarone Conseil, Employé IA et Agent IA ; section d'accueil en place ; CTA `src=iavarone-group-cas-agence` (passerelle en 200) ; aucun lien vers l'ERP privé.
+- Playwright sur la production : aucun débordement horizontal à 390 et 1440 px (accueil, organigramme cartes ouvertes), 41 liens de ces pages en 200 (dont les trois études Conseil et Employé IA).
+- Surveillance : ni Sentry ni Axiom configurés sur ce site, sans objet.
+
 ## Limites et points ouverts
 
 - Les trois études liées (lots Conseil et Employé IA) répondent 200 en production depuis la passe de fusion.
