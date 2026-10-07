@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/site";
 import {
   ORG_AGENT_COUNT,
-  ORG_AS_OF,
   ORG_FOUNDATION,
   ORG_PATH,
   ORG_POLES,
@@ -106,8 +105,7 @@ export function OrgChart() {
         ))}
       </ol>
       <p className="org-asof">
-        Organisation documentée au {ORG_AS_OF}&nbsp;: {ORG_AGENT_COUNT} orchestrateurs
-        organisés en quatre pôles. Elle évolue avec les activités.
+        {ORG_AGENT_COUNT} agents répartis en quatre pôles.
       </p>
     </div>
   );

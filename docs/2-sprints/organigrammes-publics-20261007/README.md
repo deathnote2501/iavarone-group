@@ -6,7 +6,7 @@ Lot L1 du chantier `org-public-groupe-20261007`, branche `fix/organigramme-publi
 
 - **Statut de pause retiré partout** : champ `pausedSince`, badge « En pause depuis le… », attribut `data-status`, décompte « 12 planifiés, 2 en pause », note du pôle Produits SaaS (« une pause concerne l'agent, pas l'application ») et style `.org-agent-pause`.
 - **Agent-Kaliio et Agent-Kaliopi** : leur déclenchement ne décrivait que l'arrêt de la planification ; le champ `trigger` devient optionnel et la ligne « Déclenchement » est omise pour ces deux fiches. Mission, livrable et autonomie inchangés.
-- **Mention datée** : « Organisation documentée au 7 octobre 2026 : 14 orchestrateurs organisés en quatre pôles. Elle évolue avec les activités. » Aucune affirmation d'activité, de temps réel ou de 24/7.
+- **Mention simple** : « 14 agents répartis en quatre pôles. » La note « documentée au… » et `ORG_AS_OF` sont retirés (passe de fusion, précision « présentation simple »). Aucune affirmation d'activité, de temps réel ou de 24/7.
 - **Accueil** : `OrganisationPreview` affiche le même `OrgChart` détaillé que `/notre-organisation` (portrait de direction en haut, 4 pôles, 14 cartes `details[data-agent]`) ; contexte, socle et CTA « Découvrir notre organisation » conservés. `OrgChartCompact` et son CSS (`.is-compact`, `.org-pole-link`, `.org-pole-roles`, `.org-pole-name`) supprimés.
 - Inchangés : routes, canonical, sitemap, tracking, `llms.txt` (ne mentionnait aucun statut). Aucune vue ERP fictive de ce site ne mentionnait d'agent inactif.
 

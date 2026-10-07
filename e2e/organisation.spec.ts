@@ -49,13 +49,12 @@ test.describe("server-rendered HTML", () => {
   });
 
   for (const path of [PATH, "/"]) {
-    test(`${path}: no agent status, dated documentation, no live claim`, async ({ page }) => {
+    test(`${path}: no agent status, no live claim`, async ({ page }) => {
       await page.goto(path);
       await openAllDetails(page);
-      const chart = page.locator("[data-org-chart]");
-      await expect(chart).toContainText("7 octobre 2026");
+      await expect(page.locator("[data-org-chart]")).toContainText("14 agents répartis en quatre pôles");
       await expect(page.locator("[data-status]")).toHaveCount(0);
-      await expect(page.locator("main")).not.toContainText(/en pause|planification arrêtée|en direct|24\s*h?\s*\/\s*24|24\/7/i);
+      await expect(page.locator("main")).not.toContainText(/en pause|planification arrêtée|en direct|temps réel|relevé daté|documentée au|24\s*h?\s*\/\s*24|24\/7/i);
     });
   }
 

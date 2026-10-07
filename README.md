@@ -62,7 +62,7 @@ GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/li
 
 ## Notre organisation (preuves agence IA et ERP) — octobre 2026
 
-`/notre-organisation` présente l'organisation augmentée par l'IA : Jérôme au sommet, quatre pôles (Prestations, Produits SaaS, Gestion, Système et qualité), 14 orchestrateurs documentés au 7 octobre 2026, sans statut de fonctionnement, le socle Slack / ERP / outils, la différence entre marque, structure juridique et agent, un exemple ERP illustratif et les deux études publiques (agence et ERP) hébergées sur iavarone-conseil.fr et employe-ia.fr. L'accueil reprend le même organigramme détaillé (`OrgChart`, 14 cartes) entre les expertises et les produits (`OrganisationPreview`).
+`/notre-organisation` présente l'organisation augmentée par l'IA : Jérôme au sommet, quatre pôles (Prestations, Produits SaaS, Gestion, Système et qualité), 14 agents répartis en quatre pôles, sans statut de fonctionnement ni date de relevé publiés, le socle Slack / ERP / outils, la différence entre marque, structure juridique et agent, un exemple ERP illustratif et les deux études publiques (agence et ERP) hébergées sur iavarone-conseil.fr et employe-ia.fr. L'accueil reprend le même organigramme détaillé (`OrgChart`, 14 cartes) entre les expertises et les produits (`OrganisationPreview`).
 
 - Données : `src/lib/organisation.ts`, tirées en lecture seule des consignes des orchestrateurs (`iac_routines`) et des écrans de l'ERP. Un relevé daté, pas un statut en direct : à remettre à jour quand un agent est ajouté ou retiré. Aucun statut d'agent (pause, actif) n'est publié.
 - Organigramme : `details`/`summary` natifs, lisible et utilisable sans JavaScript ; connecteurs dessinés en CSS à partir de 1280 px seulement.

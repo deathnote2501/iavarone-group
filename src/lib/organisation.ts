@@ -5,8 +5,6 @@
 
 export const ORG_PATH = "/notre-organisation";
 
-export const ORG_AS_OF = "7 octobre 2026";
-
 export const ORG_BOOKING_SOURCE = "iavarone-group-cas-agence";
 
 export const ORG_STUDIES = {
