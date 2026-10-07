@@ -151,7 +151,7 @@ export default function NotreOrganisationPage() {
               </ul>
             </div>
             <div>
-              <h3>Les limites, assumées</h3>
+              <h3>Des garde-fous</h3>
               <ul className="org-limits">
                 {LIMITS.map((l) => (
                   <li key={l}>{l}</li>

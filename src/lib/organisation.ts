@@ -85,7 +85,7 @@ export const ORG_POLES: OrgPole[] = [
         role: "Croissance de Conform-RGAA",
         mission: "Faire progresser le logiciel d'accessibilité rgaa-ia.fr : qualité, correctifs et référencement.",
         trigger: "Chaque nuit.",
-        deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
+        deliverable: "Correctifs et améliorations mis en ligne après les tests automatiques.",
         autonomy: SAAS_AUTONOMY,
       },
       {
@@ -93,7 +93,7 @@ export const ORG_POLES: OrgPole[] = [
         role: "Croissance de Ficheck",
         mission: "Faire progresser le logiciel ficheck.fr : qualité, correctifs et référencement.",
         trigger: "Chaque nuit.",
-        deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
+        deliverable: "Correctifs et améliorations mis en ligne après les tests automatiques.",
         autonomy: SAAS_AUTONOMY,
       },
       {
@@ -126,7 +126,7 @@ export const ORG_POLES: OrgPole[] = [
         role: "Croissance de Kaliopi",
         mission: "Faire progresser kaliopi.io, le logiciel de conformité Qualiopi.",
         trigger: "Planification arrêtée ; Jérôme peut encore le solliciter.",
-        deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
+        deliverable: "Correctifs et améliorations mis en ligne après les tests automatiques.",
         autonomy: SAAS_AUTONOMY,
         pausedSince: "5 octobre 2026",
       },
@@ -177,7 +177,7 @@ export const ORG_POLES: OrgPole[] = [
         mission: "Revue de code tournante des projets qui n'ont pas d'agent attitré.",
         trigger: "Deux fois par semaine.",
         deliverable: "Un projet revu par passage : trois à cinq constats et leurs correctifs.",
-        autonomy: "Projets internes : correctif fusionné si tous les contrôles automatiques passent. Projets clients : correctif proposé, jamais fusionné sans la recette de Jérôme.",
+        autonomy: "Projets internes : correctif appliqué si tous les contrôles automatiques passent. Projets clients : correctif proposé, jamais appliqué sans la recette de Jérôme.",
       },
       {
         name: "Agent-Routines",

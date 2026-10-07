@@ -28,10 +28,16 @@ Lecture seule de `iac_routines` (`routines/orch-*/routine.env`, consignes des or
 - Revues : /code-review (9 constats appliqués), revue de sécurité explicite sur le diff (aucune vulnérabilité ni donnée sensible), /simplify (données des encarts centralisées dans `ORG_PROOFS`, `pausedSince` unique, CSS dédoublonné).
 - Captures 390 / 1280 / 1440 px vérifiées (organigramme fermé et cartes ouvertes).
 
+## Passe de fusion
+
+- Relecture du diff : aucune donnée privée (emails, montants, chemins, identifiants Slack, lien vers l'ERP privé).
+- Éditorial : « demandes de fusion » remplacé par « correctifs mis en ligne après les tests automatiques », « Les limites, assumées » devient « Des garde-fous ».
+- Lint, types, build, Playwright 46/46 relancés après ces changements.
+
 ## Limites et points ouverts
 
-- Les trois études liées dépendent des lots Conseil et Employé IA : 404 en production au moment du lot, à revérifier après leur fusion.
+- Les trois études liées (lots Conseil et Employé IA) répondent 200 en production depuis la passe de fusion.
 - La passerelle `jeromeiavarone.fr/rdv` réécrit `page=/rdv` : l'origine du CTA est portée par `src`.
 - `public/llms.txt` attribue encore la certification Qualiopi à la personne (« formateur certifié Qualiopi »), contrairement au reste du site : hors périmètre, non modifié.
 - Le relevé des agents est daté : à mettre à jour dans `src/lib/organisation.ts` quand un orchestrateur change.
-- `npm audit --omit=dev --audit-level=high` signale `source-map-js` (high, transitif) et `baseline-browser-mapping` (moderate), déjà présents sur `main` (lockfile inchangé par ce lot) ; la CI ne lance pas d'audit. Correctif `npm audit fix` à faire dans une PR dédiée.
+- Audit de production : `source-map-js` (high, via `next` → `postcss`) et `baseline-browser-mapping` (moderate), déjà présents sur `main`, corrigés pendant la passe par `npm audit fix` (lockfile seul, `next` inchangé) : `npm audit --omit=dev` à 0. Restent des alertes high sur des dépendances de développement non livrées, qui exigent `--force` (montées majeures) : hors périmètre. La CI ne lance pas d'audit.
