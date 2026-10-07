@@ -62,9 +62,9 @@ GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/li
 
 ## Notre organisation (preuves agence IA et ERP) — octobre 2026
 
-`/notre-organisation` présente l'organisation augmentée par l'IA : Jérôme au sommet, quatre pôles (Prestations, Produits SaaS, Gestion, Système et qualité), 14 agents documentés au 7 octobre 2026 (12 planifiés, 2 en pause), le socle Slack / ERP / outils, la différence entre marque, structure juridique et agent, un exemple ERP illustratif et les deux études publiques (agence et ERP) hébergées sur iavarone-conseil.fr et employe-ia.fr. L'accueil en montre une version compacte entre les expertises et les produits (`OrganisationPreview`).
+`/notre-organisation` présente l'organisation augmentée par l'IA : Jérôme au sommet, quatre pôles (Prestations, Produits SaaS, Gestion, Système et qualité), 14 orchestrateurs documentés au 7 octobre 2026, sans statut de fonctionnement, le socle Slack / ERP / outils, la différence entre marque, structure juridique et agent, un exemple ERP illustratif et les deux études publiques (agence et ERP) hébergées sur iavarone-conseil.fr et employe-ia.fr. L'accueil reprend le même organigramme détaillé (`OrgChart`, 14 cartes) entre les expertises et les produits (`OrganisationPreview`).
 
-- Données : `src/lib/organisation.ts`, tirées en lecture seule des consignes des orchestrateurs (`iac_routines`) et des écrans de l'ERP. Un relevé daté, pas un statut en direct : à remettre à jour quand un agent est ajouté, retiré ou mis en pause.
+- Données : `src/lib/organisation.ts`, tirées en lecture seule des consignes des orchestrateurs (`iac_routines`) et des écrans de l'ERP. Un relevé daté, pas un statut en direct : à remettre à jour quand un agent est ajouté ou retiré. Aucun statut d'agent (pause, actif) n'est publié.
 - Organigramme : `details`/`summary` natifs, lisible et utilisable sans JavaScript ; connecteurs dessinés en CSS à partir de 1280 px seulement.
 - CTA : `BookingLink source="iavarone-group-cas-agence"` passe par la passerelle `jeromeiavarone.fr/rdv` (qui réécrit `page`) ; aucun lien vers l'ERP privé.
 - Les décomptes de marques n'affichent plus « sept » : le répertoire en montre huit, portées par deux structures juridiques.

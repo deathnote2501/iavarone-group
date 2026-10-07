@@ -4,8 +4,8 @@ import { ArrowRight, ChevronDown, MessagesSquare, LayoutDashboard, Wrench, type 
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/site";
 import {
+  ORG_AGENT_COUNT,
   ORG_AS_OF,
-  ORG_COUNTS,
   ORG_FOUNDATION,
   ORG_PATH,
   ORG_POLES,
@@ -19,16 +19,15 @@ const FOUNDATION_ICONS: Record<(typeof ORG_FOUNDATION)[number]["name"], LucideIc
   "Outils métier": Wrench,
 };
 
-function Founder({ compact = false }: { compact?: boolean }) {
-  const size = compact ? 64 : 88;
+function Founder() {
   return (
     <div className="org-founder">
       <Image
         src={SITE.founder.photo}
         alt={`Portrait de ${SITE.founder.name}`}
-        width={size}
-        height={size}
-        sizes={`${size}px`}
+        width={88}
+        height={88}
+        sizes="88px"
       />
       <div>
         <p className="group-eyebrow">Direction</p>
@@ -43,14 +42,11 @@ function Founder({ compact = false }: { compact?: boolean }) {
 
 function AgentCard({ agent }: { agent: OrgAgent }) {
   return (
-    <details className="org-agent" data-agent data-status={agent.pausedSince ? "pause" : "actif"}>
+    <details className="org-agent" data-agent>
       <summary>
         <span className="org-agent-title">
           <span className="org-agent-name">{agent.name}</span>
           <span className="org-agent-role">{agent.role}</span>
-          {agent.pausedSince && (
-            <span className="org-agent-pause">En pause depuis le {agent.pausedSince}</span>
-          )}
         </span>
         <ChevronDown className="org-agent-chevron" aria-hidden />
       </summary>
@@ -59,10 +55,12 @@ function AgentCard({ agent }: { agent: OrgAgent }) {
           <dt>Mission</dt>
           <dd>{agent.mission}</dd>
         </div>
-        <div>
-          <dt>Déclenchement</dt>
-          <dd>{agent.trigger}</dd>
-        </div>
+        {agent.trigger && (
+          <div>
+            <dt>Déclenchement</dt>
+            <dd>{agent.trigger}</dd>
+          </div>
+        )}
         <div>
           <dt>Exemple de livrable</dt>
           <dd>{agent.deliverable}</dd>
@@ -108,38 +106,9 @@ export function OrgChart() {
         ))}
       </ol>
       <p className="org-asof">
-        Configuration documentée au {ORG_AS_OF}&nbsp;: {ORG_COUNTS.configured} agents
-        configurés, dont {ORG_COUNTS.active} planifiés et{" "}
-        {ORG_COUNTS.configured - ORG_COUNTS.active} en pause. Un relevé daté, pas un état en
-        temps réel&nbsp;: l&apos;organisation évolue avec les activités.
+        Organisation documentée au {ORG_AS_OF}&nbsp;: {ORG_AGENT_COUNT} orchestrateurs
+        organisés en quatre pôles. Elle évolue avec les activités.
       </p>
-    </div>
-  );
-}
-
-/** Home version: founder and the four poles, linking to the detailed page. */
-export function OrgChartCompact() {
-  return (
-    <div className="org-chart is-compact">
-      <div className="org-top">
-        <Founder compact />
-      </div>
-      <ol className="org-poles" aria-label="Les quatre pôles">
-        {ORG_POLES.map((pole) => (
-          <li key={pole.id} className={`org-pole group-color-${pole.color}`} data-org-pole>
-            <Link href={`${ORG_PATH}#pole-${pole.id}`} className="org-pole-link">
-              <span className="org-pole-head">
-                <span className="org-pole-name">{pole.name}</span>
-                <ArrowRight className="size-4" aria-hidden />
-              </span>
-              <span className="org-pole-summary">{pole.summary}</span>
-              <span className="org-pole-roles">
-                {pole.agents.map((a) => a.role).join(" · ")}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ol>
     </div>
   );
 }
@@ -186,7 +155,7 @@ export function OrganisationPreview() {
             comment nous travaillons, et ce que nous pouvons adapter à votre entreprise.
           </p>
         </div>
-        <OrgChartCompact />
+        <OrgChart />
         <OrgFoundation />
         <div className="org-preview-actions">
           <Button asChild size="lg">

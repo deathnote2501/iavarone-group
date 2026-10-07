@@ -1,7 +1,7 @@
 // Organisation augmentée par l'IA, telle que documentée au 7 octobre 2026.
 // Sources (lecture seule) : configuration et consignes des orchestrateurs du dépôt iac_routines,
 // écrans de l'ERP interne. Ce sont des preuves de conception et de périmètre, pas un état
-// en temps réel : le statut « pause » est celui de la configuration à cette date.
+// en temps réel.
 
 export const ORG_PATH = "/notre-organisation";
 
@@ -20,11 +20,10 @@ export interface OrgAgent {
   /** Short role shown on the closed card. */
   role: string;
   mission: string;
-  trigger: string;
+  /** Omitted when no schedule or activation rule is documented. */
+  trigger?: string;
   deliverable: string;
   autonomy: string;
-  /** Date the agent's schedule was paused; absent for a scheduled agent. */
-  pausedSince?: string;
 }
 
 export interface OrgPole {
@@ -78,7 +77,6 @@ export const ORG_POLES: OrgPole[] = [
     name: "Produits SaaS",
     color: "green",
     summary: "Faire grandir les logiciels en ligne et tester de nouveaux produits de niche.",
-    note: "Une pause concerne l'agent, pas l'application : le logiciel reste en service.",
     agents: [
       {
         name: "Agent-RGAA",
@@ -116,19 +114,15 @@ export const ORG_POLES: OrgPole[] = [
         name: "Agent-Kaliio",
         role: "Croissance de Kaliio",
         mission: "Faire progresser kaliio.fr, le logiciel des organismes de formation.",
-        trigger: "Planification arrêtée ; Jérôme peut encore le solliciter.",
         deliverable: "Correctifs de bugs, propositions d'évolutions issues des retours utilisateurs.",
         autonomy: "Corrige seul les bugs ; les évolutions sont soumises à Jérôme.",
-        pausedSince: "7 octobre 2026",
       },
       {
         name: "Agent-Kaliopi",
         role: "Croissance de Kaliopi",
         mission: "Faire progresser kaliopi.io, le logiciel de conformité Qualiopi.",
-        trigger: "Planification arrêtée ; Jérôme peut encore le solliciter.",
         deliverable: "Correctifs et améliorations mis en ligne après les tests automatiques.",
         autonomy: SAAS_AUTONOMY,
-        pausedSince: "5 octobre 2026",
       },
     ],
   },
@@ -191,10 +185,7 @@ export const ORG_POLES: OrgPole[] = [
   },
 ];
 
-export const ORG_COUNTS = {
-  configured: ORG_POLES.reduce((n, p) => n + p.agents.length, 0),
-  active: ORG_POLES.reduce((n, p) => n + p.agents.filter((a) => !a.pausedSince).length, 0),
-};
+export const ORG_AGENT_COUNT = ORG_POLES.reduce((n, p) => n + p.agents.length, 0);
 
 /** Shared foundation: where work is exchanged, tracked and done. */
 export const ORG_FOUNDATION = [
