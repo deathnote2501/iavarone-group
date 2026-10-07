@@ -561,8 +561,7 @@
   justify-content: space-between;
   gap: 10px;
 }
-.org-pole-head h3,
-.org-pole-name {
+.org-pole-head h3 {
   font-size: 22px;
   font-weight: 650;
   letter-spacing: -0.03em;
@@ -631,17 +630,6 @@
   font-size: 12px;
   color: #545454;
 }
-.org-agent-pause {
-  align-self: flex-start;
-  margin-top: 4px;
-  padding: 1px 8px;
-  font-size: 11px;
-  font-weight: 600;
-  color: #6b4a00;
-  background: #fff3cd;
-  border: 1px solid #e8c766;
-  border-radius: 999px;
-}
 .org-agent-chevron {
   width: 16px;
   height: 16px;
@@ -671,28 +659,6 @@
   margin-top: 18px;
   font-size: 12px;
   color: #545454;
-}
-.org-chart.is-compact .org-pole {
-  padding: 0;
-}
-.org-pole-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 20px;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
-.org-pole-link:hover {
-  background: var(--group-soft);
-}
-.org-pole-roles {
-  display: block;
-  margin-top: auto;
-  padding-top: 14px;
-  font-size: 12px;
-  font-weight: 550;
-  line-height: 1.6;
 }
 .org-foundation {
   margin-top: 28px;

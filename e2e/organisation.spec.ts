@@ -1,7 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 
 // Lot « preuves agence IA et ERP » (2026-10-07) : page /notre-organisation,
-// organigramme compact sur l'accueil et maillage interne.
+// organigramme détaillé sur l'accueil et maillage interne.
 const PATH = "/notre-organisation";
 const CONSEIL_AGENCE = "https://iavarone-conseil.fr/realisations/agence-ia";
 const CONSEIL_ERP = "https://iavarone-conseil.fr/realisations/erp-iavarone-conseil";
@@ -48,14 +48,15 @@ test.describe("server-rendered HTML", () => {
       await expect(first.locator("dt", { hasText: label })).toBeVisible();
   });
 
-  test("paused agents are dated configuration, not a live status", async ({ page }) => {
-    await page.goto(PATH);
-    const paused = page.locator('details[data-agent][data-status="pause"]');
-    await expect(paused).toHaveCount(2);
-    await expect(page.locator('details[data-agent][data-status="actif"]')).toHaveCount(12);
-    await expect(page.locator("[data-org-chart]")).toContainText("7 octobre 2026");
-    await expect(page.locator("main")).not.toContainText(/en direct|24\s*h?\s*\/\s*24|24\/7/i);
-  });
+  for (const path of [PATH, "/"]) {
+    test(`${path}: no agent status, no live claim`, async ({ page }) => {
+      await page.goto(path);
+      await openAllDetails(page);
+      await expect(page.locator("[data-org-chart]")).toContainText("14 agents répartis en quatre pôles");
+      await expect(page.locator("[data-status]")).toHaveCount(0);
+      await expect(page.locator("main")).not.toContainText(/en pause|planification arrêtée|en direct|temps réel|relevé daté|documentée au|24\s*h?\s*\/\s*24|24\/7/i);
+    });
+  }
 
   test("illustrative ERP scenario is captioned as such", async ({ page }) => {
     await page.goto(PATH);
@@ -79,7 +80,7 @@ test.describe("server-rendered HTML", () => {
     expect(href.searchParams.get("src")).toBe("iavarone-group-cas-agence");
   });
 
-  test("home: compact org chart between expertises and products", async ({ page }) => {
+  test("home: detailed org chart between expertises and products", async ({ page }) => {
     await page.goto("/");
     const order = await page.evaluate(() => {
       const pos = (sel: string) => {
@@ -92,7 +93,9 @@ test.describe("server-rendered HTML", () => {
     expect(order[1]).toBeGreaterThan(order[0]);
     expect(order[2]).toBeGreaterThan(order[1]);
     const section = page.locator("#organisation");
-    await expect(section.locator("[data-org-pole]")).toHaveCount(4);
+    for (const pole of POLES) await expect(section.locator(`#pole-${pole}`)).toBeVisible();
+    await expect(section.getByRole("img", { name: /Jérôme Iavarone/ })).toBeVisible();
+    await expect(section.locator("[data-org-chart] details[data-agent]")).toHaveCount(14);
     await expect(section.locator(`a[href="${PATH}"]`).first()).toBeVisible();
   });
 
@@ -118,13 +121,15 @@ test.describe("server-rendered HTML", () => {
   }
 });
 
-test("keyboard opens an agent card", async ({ page }) => {
-  await page.goto(PATH);
-  const summary = page.locator("details[data-agent] summary").first();
-  await summary.focus();
-  await page.keyboard.press("Enter");
-  await expect(page.locator("details[data-agent]").first()).toHaveAttribute("open", "");
-});
+for (const path of [PATH, "/"]) {
+  test(`${path}: keyboard opens an agent card`, async ({ page }) => {
+    await page.goto(path);
+    const summary = page.locator("details[data-agent] summary").first();
+    await summary.focus();
+    await page.keyboard.press("Enter");
+    await expect(page.locator("details[data-agent]").first()).toHaveAttribute("open", "");
+  });
+}
 
 for (const path of [PATH, "/"]) {
   test(`${path}: no horizontal overflow at 390, 1280 and 1440px, every card open`, async ({ page }) => {
