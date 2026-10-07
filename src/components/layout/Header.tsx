@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { MobileMenu } from "./MobileMenu";
 import { SITE } from "@/lib/site";
+import { ORG_PATH } from "@/lib/organisation";
 
 const NAV = [
   { href: "/formation-ia", label: "Formation IA" },
@@ -12,7 +13,7 @@ const NAV = [
   { href: "/references", label: "Résultats" },
   { href: "/ressources", label: "Ressources" },
   { href: "/marques", label: "Marques" },
-  { href: "/notre-organisation", label: "Organisation" },
+  { href: ORG_PATH, label: "Organisation" },
   { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];

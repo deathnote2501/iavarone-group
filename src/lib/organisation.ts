@@ -3,6 +3,8 @@
 // écrans de l'ERP interne. Ce sont des preuves de conception et de périmètre, pas un état
 // en temps réel : le statut « pause » est celui de la configuration à cette date.
 
+export const ORG_PATH = "/notre-organisation";
+
 export const ORG_AS_OF = "7 octobre 2026";
 
 export const ORG_BOOKING_SOURCE = "iavarone-group-cas-agence";

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Calendar, Brain, Share2, ClipboardList, Target } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
-import { OrgChart, OrgFoundation, ORG_PATH } from "@/components/sections/OrgChart";
+import { OrgChart, OrgFoundation } from "@/components/sections/OrgChart";
 import { SITE, BRANDS } from "@/lib/site";
-import { ORG_BOOKING_SOURCE, ORG_SHARED_SERVICES, ORG_STUDIES } from "@/lib/organisation";
+import { ORG_BOOKING_SOURCE, ORG_PATH, ORG_SHARED_SERVICES, ORG_STUDIES } from "@/lib/organisation";
 
 export const metadata: Metadata = {
   alternates: { canonical: ORG_PATH },
@@ -19,8 +19,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
-    { "@type": "ListItem", position: 2, name: "À propos", item: `${SITE.url}/a-propos` },
-    { "@type": "ListItem", position: 3, name: "Notre organisation", item: `${SITE.url}${ORG_PATH}` },
+    { "@type": "ListItem", position: 2, name: "Notre organisation", item: `${SITE.url}${ORG_PATH}` },
   ],
 };
 

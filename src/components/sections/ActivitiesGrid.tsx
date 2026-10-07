@@ -36,18 +36,17 @@ const DIRECTIONS: Record<string, string> = {
   "crm-ia": "Organiser & vendre",
 };
 
-function services() {
-  return SERVICE_SLUGS.map((slug) => BRANDS.find((brand) => brand.slug === slug)!);
-}
-
-function products() {
-  return BRANDS.filter((brand) => !SERVICE_SLUGS.includes(brand.slug));
-}
+const SERVICE_BRANDS = SERVICE_SLUGS.map(
+  (slug) => BRANDS.find((brand) => brand.slug === slug)!,
+);
+const PRODUCT_BRANDS = BRANDS.filter(
+  (brand) => !SERVICE_SLUGS.includes(brand.slug),
+);
 
 function ServiceDirectory() {
   return (
     <ul className="group-directory" aria-label="Les expertises de service">
-      {services().map((brand, index) => {
+      {SERVICE_BRANDS.map((brand, index) => {
         const Icon = ICONS[brand.slug];
         return (
           <li key={brand.slug}>
@@ -94,7 +93,7 @@ function ProductDirectory() {
         </h2>
       </div>
       <ul className="group-products" aria-label="Les produits du groupe">
-        {products().map((brand) => {
+        {PRODUCT_BRANDS.map((brand) => {
           const Icon = ICONS[brand.slug];
           return (
             <li key={brand.slug}>

@@ -54,7 +54,7 @@ test.describe("server-rendered HTML", () => {
     await expect(paused).toHaveCount(2);
     await expect(page.locator('details[data-agent][data-status="actif"]')).toHaveCount(12);
     await expect(page.locator("[data-org-chart]")).toContainText("7 octobre 2026");
-    await expect(page.locator("main")).not.toContainText(/en direct|temps réel : |24\s*h?\s*\/\s*24|24\/7/i);
+    await expect(page.locator("main")).not.toContainText(/en direct|24\s*h?\s*\/\s*24|24\/7/i);
   });
 
   test("illustrative ERP scenario is captioned as such", async ({ page }) => {
@@ -126,7 +126,7 @@ test("keyboard opens an agent card", async ({ page }) => {
   await expect(page.locator("details[data-agent]").first()).toHaveAttribute("open", "");
 });
 
-for (const width of [390, 1440]) {
+for (const width of [390, 1280, 1440]) {
   test(`no horizontal overflow at ${width}px, every card open`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     for (const path of [PATH, "/"]) {

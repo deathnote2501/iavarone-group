@@ -1,13 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronDown, MessagesSquare, LayoutDashboard, Wrench } from "lucide-react";
+import { ArrowRight, ChevronDown, MessagesSquare, LayoutDashboard, Wrench, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/site";
-import { ORG_AS_OF, ORG_COUNTS, ORG_FOUNDATION, ORG_POLES, type OrgAgent } from "@/lib/organisation";
+import {
+  ORG_AS_OF,
+  ORG_COUNTS,
+  ORG_FOUNDATION,
+  ORG_PATH,
+  ORG_POLES,
+  type OrgAgent,
+} from "@/lib/organisation";
 
-export const ORG_PATH = "/notre-organisation";
-
-const FOUNDATION_ICONS = [MessagesSquare, LayoutDashboard, Wrench];
+const FOUNDATION_ICONS: Record<(typeof ORG_FOUNDATION)[number]["name"], LucideIcon> = {
+  Slack: MessagesSquare,
+  ERP: LayoutDashboard,
+  "Outils métier": Wrench,
+};
 
 function Founder({ compact = false }: { compact?: boolean }) {
   return (
@@ -136,8 +145,8 @@ export function OrgFoundation() {
     <div className="org-foundation">
       <p className="group-eyebrow">Le socle commun</p>
       <ul>
-        {ORG_FOUNDATION.map((item, index) => {
-          const Icon = FOUNDATION_ICONS[index];
+        {ORG_FOUNDATION.map((item) => {
+          const Icon = FOUNDATION_ICONS[item.name];
           return (
             <li key={item.name}>
               <Icon className="size-5" aria-hidden />

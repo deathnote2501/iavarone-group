@@ -94,7 +94,7 @@ Hub : https://iavarone-group.fr/ressources
 - **4,9/5** : satisfaction moyenne des formations
 - **17 villes** couvertes en présentiel (Auvergne-Rhône-Alpes + Paris), distanciel France entière
 - **2 structures** juridiques (SAS + EI) portant les marques du groupe
-- **51 pages** services × villes + **7 pages** marques
+- **51 pages** services × villes + une page par marque
 
 ## Questions fréquentes (FAQ)
 

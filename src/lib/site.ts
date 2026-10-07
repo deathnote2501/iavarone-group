@@ -27,7 +27,8 @@ export const SITE = {
     // Page de réservation maison (iac_rdv, 2026-09-04) ; `page` est ajoutée par BookingLink.
     // Koalendar, ouvert en parallèle, a été désactivé le 2026-09-18.
     booking: "https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr",
-    // Passerelle tracée de jeromeiavarone.fr : `src` nomme le CTA d'une étude de cas.
+    // Passerelle tracée de jeromeiavarone.fr : `src` nomme le CTA d'une étude de cas
+    // (elle transmet `src` à la page de réservation et réécrit `page`).
     bookingGateway: "https://jeromeiavarone.fr/rdv",
   },
   social: {

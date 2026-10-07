@@ -25,11 +25,12 @@ PORT=3102 npm run test:smoke -- --workers=2
 - `src/components/ui/brand-color.ts` : couleurs de présentation des marques, indépendantes de leurs données éditoriales.
 - `src/lib/site.ts`, `services.ts`, `seo-index.ts` : contenus et règles de référencement existantes.
 - `public/brand-v2/group-auvergne.png` : illustration architecturale approuvée, reprise du Brand Studio ; elle ne représente pas les bureaux du groupe. Portrait et vidéo d’origine conservés.
-- `e2e/design-v2.spec.ts` : affichage des 81 pages à 360, 768 et 1440 px, navigation mobile, liens de contact, modale de RDV simulée, redirections et images de partage.
+- `src/lib/organisation.ts`, `src/components/sections/OrgChart.tsx`, `src/app/notre-organisation/` : organisation augmentée par l'IA (voir plus bas).
+- `e2e/design-v2.spec.ts` : affichage des 81 pages de référence à 360, 768 et 1440 px, navigation mobile, liens de contact, modale de RDV simulée, redirections et images de partage.
 
 ## SEO / GEO
 
-43 URL dans le sitemap et 81 pages publiques, dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
+44 URL dans le sitemap et 82 pages publiques (dont `/notre-organisation`, ajoutée le 7 octobre 2026), dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
 
 La refonte conserve les textes indexables, H1, titres, descriptions, canoniques, JSON-LD et anciens liens internes. Contrôle reproductible :
 
@@ -58,3 +59,13 @@ La page Marques possède une nouvelle illustration de cadrage de projet, à la p
 ## Bandeau cookies (CNIL) — septembre 2026
 
 GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/lib/cookie-consent.ts`, en tête du `<head>`, pose `dataLayer`, un `gtag` en file d'attente et le Consent Mode v2 refusé par défaut ; `ad_*` restent refusés même après acceptation. Vercel Analytics, sans cookie, reste hors consentement. Bandeau `src/components/cookie-consent/`, bouton « Gérer les cookies » dans le pied de page, choix mémorisé 6 mois (cookie `cookie_consent` + localStorage). Contrôle : `e2e/cookie-consent.spec.ts`.
+
+## Notre organisation (preuves agence IA et ERP) — octobre 2026
+
+`/notre-organisation` présente l'organisation augmentée par l'IA : Jérôme au sommet, quatre pôles (Prestations, Produits SaaS, Gestion, Système et qualité), 14 agents documentés au 7 octobre 2026 (12 planifiés, 2 en pause), le socle Slack / ERP / outils, la différence entre marque, structure juridique et agent, un exemple ERP illustratif et les deux études publiques (agence et ERP) hébergées sur iavarone-conseil.fr et employe-ia.fr. L'accueil en montre une version compacte entre les expertises et les produits (`OrganisationPreview`).
+
+- Données : `src/lib/organisation.ts`, tirées en lecture seule des consignes des orchestrateurs (`iac_routines`) et des écrans de l'ERP. Un relevé daté, pas un statut en direct : à remettre à jour quand un agent est ajouté, retiré ou mis en pause.
+- Organigramme : `details`/`summary` natifs, lisible et utilisable sans JavaScript ; connecteurs dessinés en CSS à partir de 1280 px seulement.
+- CTA : `BookingLink source="iavarone-group-cas-agence"` passe par la passerelle `jeromeiavarone.fr/rdv` (qui réécrit `page`) ; aucun lien vers l'ERP privé.
+- Les décomptes de marques n'affichent plus « sept » : le répertoire en montre huit, portées par deux structures juridiques.
+- Contrôle : `e2e/organisation.spec.ts`. Bilan : [docs/2-sprints/preuves-vitrines-20261007/README.md](docs/2-sprints/preuves-vitrines-20261007/README.md).

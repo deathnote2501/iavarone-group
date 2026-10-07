@@ -2,11 +2,12 @@ import type { MetadataRoute } from "next";
 import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { ARTICLES } from "@/lib/articles";
+import { ORG_PATH } from "@/lib/organisation";
 import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Omettre lastmod sans date éditoriale fiable ; une date de build est trompeuse.
-  const staticRoutes = ["", "/references", "/ressources", "/marques", "/a-propos", "/notre-organisation", "/contact"];
+  const staticRoutes = ["", "/references", "/ressources", "/marques", "/a-propos", ORG_PATH, "/contact"];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${SITE.url}${path}`,

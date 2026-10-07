@@ -31,10 +31,10 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
     const pathname = usePathname();
     // `page=<chemin courant>` : la page de réservation l'écrit dans l'ERP comme origine du RDV
     // (le referrer cross-origin ne porte que l'origine, jamais le chemin).
-    const base = source
+    // La passerelle réécrit `page` : avec une origine dédiée, c'est `src` qui porte la page.
+    const href = source
       ? `${SITE.contact.bookingGateway}?src=${encodeURIComponent(source)}`
-      : SITE.contact.booking;
-    const href = withPage(base, pathname);
+      : withPage(SITE.contact.booking, pathname);
 
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {
