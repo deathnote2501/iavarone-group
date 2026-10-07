@@ -30,7 +30,7 @@ PORT=3102 npm run test:smoke -- --workers=2
 
 ## SEO / GEO
 
-44 URL dans le sitemap et 82 pages publiques (dont `/notre-organisation`, ajoutée le 7 octobre 2026), dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
+42 URL dans le sitemap (relevé du 7 octobre 2026, `/notre-organisation` comprise ; le README en annonçait 43 avant cet ajout) et 82 pages publiques, dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
 
 La refonte conserve les textes indexables, H1, titres, descriptions, canoniques, JSON-LD et anciens liens internes. Contrôle reproductible :
 

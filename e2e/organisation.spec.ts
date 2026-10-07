@@ -126,13 +126,13 @@ test("keyboard opens an agent card", async ({ page }) => {
   await expect(page.locator("details[data-agent]").first()).toHaveAttribute("open", "");
 });
 
-for (const width of [390, 1280, 1440]) {
-  test(`no horizontal overflow at ${width}px, every card open`, async ({ page }) => {
-    await page.setViewportSize({ width, height: 900 });
-    for (const path of [PATH, "/"]) {
-      await page.goto(path);
-      await openAllDetails(page);
-      await page.evaluate(() => document.fonts.ready);
+for (const path of [PATH, "/"]) {
+  test(`${path}: no horizontal overflow at 390, 1280 and 1440px, every card open`, async ({ page }) => {
+    await page.goto(path);
+    await openAllDetails(page);
+    await page.evaluate(() => document.fonts.ready);
+    for (const width of [390, 1280, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
       expect(overflow, `${path} at ${width}px`).toBe(false);
     }

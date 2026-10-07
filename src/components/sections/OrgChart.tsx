@@ -9,6 +9,7 @@ import {
   ORG_FOUNDATION,
   ORG_PATH,
   ORG_POLES,
+  ORG_PROOFS,
   type OrgAgent,
 } from "@/lib/organisation";
 
@@ -19,14 +20,15 @@ const FOUNDATION_ICONS: Record<(typeof ORG_FOUNDATION)[number]["name"], LucideIc
 };
 
 function Founder({ compact = false }: { compact?: boolean }) {
+  const size = compact ? 64 : 88;
   return (
     <div className="org-founder">
       <Image
         src={SITE.founder.photo}
         alt={`Portrait de ${SITE.founder.name}`}
-        width={compact ? 64 : 88}
-        height={compact ? 64 : 88}
-        sizes={compact ? "64px" : "88px"}
+        width={size}
+        height={size}
+        sizes={`${size}px`}
       />
       <div>
         <p className="group-eyebrow">Direction</p>
@@ -41,12 +43,14 @@ function Founder({ compact = false }: { compact?: boolean }) {
 
 function AgentCard({ agent }: { agent: OrgAgent }) {
   return (
-    <details className="org-agent" data-agent data-status={agent.status}>
+    <details className="org-agent" data-agent data-status={agent.pausedSince ? "pause" : "actif"}>
       <summary>
         <span className="org-agent-title">
           <span className="org-agent-name">{agent.name}</span>
           <span className="org-agent-role">{agent.role}</span>
-          {agent.statusNote && <span className="org-agent-pause">{agent.statusNote}</span>}
+          {agent.pausedSince && (
+            <span className="org-agent-pause">En pause depuis le {agent.pausedSince}</span>
+          )}
         </span>
         <ChevronDown className="org-agent-chevron" aria-hidden />
       </summary>
@@ -89,7 +93,7 @@ export function OrgChart() {
           >
             <div className="org-pole-head">
               <h3 id={`pole-${pole.id}-title`}>{pole.name}</h3>
-              <span>{pole.agents.length} agents</span>
+              <span className="org-pole-count">{pole.agents.length} agents</span>
             </div>
             <p className="org-pole-summary">{pole.summary}</p>
             <ul className="org-agents">
@@ -198,7 +202,7 @@ export function OrganisationPreview() {
 }
 
 /** Contextual link to the organisation page, for related pages (about, brand, service). */
-export function OrgProofLink({ text, study }: { text: string; study?: { href: string; label: string } }) {
+export function OrgProofLink({ text, study }: (typeof ORG_PROOFS)[string]) {
   return (
     <section className="container-page pb-16">
       <div className="org-proof group-color-yellow">

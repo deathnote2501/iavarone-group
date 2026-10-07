@@ -10,7 +10,7 @@ import { shouldIndexCity } from "@/lib/seo-index";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 import { OrgProofLink } from "@/components/sections/OrgChart";
-import { ORG_STUDIES } from "@/lib/organisation";
+import { ORG_PROOFS } from "@/lib/organisation";
 import { ResultsPreview } from "@/components/sections/ResultsPreview";
 
 interface PageProps {
@@ -235,12 +235,7 @@ export default async function ServicePage({ params }: PageProps) {
 
       <ResultsPreview />
 
-      {service.slug === "agent-ia" && (
-        <OrgProofLink
-          text="Avant de déployer des agents chez nos clients, nous les faisons travailler chez nous : quatre pôles d'agents aux missions écrites, qui rendent compte dans Slack et laissent les décisions engageantes au dirigeant."
-          study={{ href: ORG_STUDIES.agents, label: "Les agents au travail, sur employe-ia.fr" }}
-        />
-      )}
+      {ORG_PROOFS[service.slug] && <OrgProofLink {...ORG_PROOFS[service.slug]} />}
 
       <AuthorBio context="Votre interlocuteur unique" />
 

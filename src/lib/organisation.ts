@@ -15,8 +15,6 @@ export const ORG_STUDIES = {
   agents: "https://employe-ia.fr/cas/agence-ia-iavarone-conseil",
 } as const;
 
-export type AgentStatus = "actif" | "pause";
-
 export interface OrgAgent {
   name: string;
   /** Short role shown on the closed card. */
@@ -25,9 +23,8 @@ export interface OrgAgent {
   trigger: string;
   deliverable: string;
   autonomy: string;
-  status: AgentStatus;
-  /** Dated note shown for paused agents. */
-  statusNote?: string;
+  /** Date the agent's schedule was paused; absent for a scheduled agent. */
+  pausedSince?: string;
 }
 
 export interface OrgPole {
@@ -57,7 +54,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque nuit, et à la demande de Jérôme.",
         deliverable: "Actions de référencement et contenus sur les sites vitrines, suivi de la prospection.",
         autonomy: "Agit seul sur les sites de son périmètre ; tout message à un prospect ou à un client attend la validation de Jérôme.",
-        status: "actif",
       },
       {
         name: "Agent-Dev-IA",
@@ -66,7 +62,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque nuit, et à la demande de Jérôme.",
         deliverable: "Une action de référencement par passage sur un site vitrine, des prises de contact ciblées proposées.",
         autonomy: "Agit seul sur les sites de son périmètre ; tout message à un prospect ou à un client attend la validation de Jérôme.",
-        status: "actif",
       },
       {
         name: "Agent-Prospective",
@@ -75,7 +70,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Une fois par mois.",
         deliverable: "Rapport mensuel : au plus deux pistes de prestations et trois pistes d'acquisition, chacune avec un test de 2 à 4 semaines.",
         autonomy: "Cherche et évalue, n'exécute rien. Une piste retenue par Jérôme est confiée à Agent-Formation-IA ou à Agent-Dev-IA.",
-        status: "actif",
       },
     ],
   },
@@ -93,7 +87,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque nuit.",
         deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
         autonomy: SAAS_AUTONOMY,
-        status: "actif",
       },
       {
         name: "Agent-Ficheck",
@@ -102,7 +95,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque nuit.",
         deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
         autonomy: SAAS_AUTONOMY,
-        status: "actif",
       },
       {
         name: "Agent-Radar",
@@ -111,7 +103,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Plusieurs passages chaque nuit.",
         deliverable: "Une vitrine de test sur un domaine, puis l'application après spécification.",
         autonomy: "Construit et publie seul ; l'achat d'un domaine, un service payant ou un remboursement attendent la validation de Jérôme.",
-        status: "actif",
       },
       {
         name: "Agent-Radar (second moteur)",
@@ -120,7 +111,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Trois passages l'après-midi.",
         deliverable: "Une vitrine de test sur un domaine, puis l'application après spécification.",
         autonomy: "Mêmes règles qu'Agent-Radar : les dépenses attendent la validation de Jérôme.",
-        status: "actif",
       },
       {
         name: "Agent-Kaliio",
@@ -129,8 +119,7 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Planification arrêtée ; Jérôme peut encore le solliciter.",
         deliverable: "Correctifs de bugs, propositions d'évolutions issues des retours utilisateurs.",
         autonomy: "Corrige seul les bugs ; les évolutions sont soumises à Jérôme.",
-        status: "pause",
-        statusNote: "En pause depuis le 7 octobre 2026",
+        pausedSince: "7 octobre 2026",
       },
       {
         name: "Agent-Kaliopi",
@@ -139,8 +128,7 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Planification arrêtée ; Jérôme peut encore le solliciter.",
         deliverable: "Correctifs et améliorations publiés sous forme de demandes de fusion testées.",
         autonomy: SAAS_AUTONOMY,
-        status: "pause",
-        statusNote: "En pause depuis le 5 octobre 2026",
+        pausedSince: "5 octobre 2026",
       },
     ],
   },
@@ -157,7 +145,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque lundi, avant le point de la semaine.",
         deliverable: "Au plus douze actions de la semaine, chacune avec sa preuve.",
         autonomy: "Lecture seule : il ne modifie rien dans l'ERP et n'envoie rien sans validation.",
-        status: "actif",
       },
       {
         name: "Agent-Finances",
@@ -166,7 +153,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Une fois par mois.",
         deliverable: "Rapport mensuel et au plus trois recommandations, chacune avec son gain, son effort et son risque.",
         autonomy: "Ne touche jamais à l'argent ; signale quand l'avis d'un expert-comptable est nécessaire.",
-        status: "actif",
       },
     ],
   },
@@ -184,7 +170,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Chaque dimanche.",
         deliverable: "Trois à cinq constats classés par impact.",
         autonomy: "Seul pour la documentation et le nettoyage ; le reste sur validation.",
-        status: "actif",
       },
       {
         name: "Agent-0_dev",
@@ -193,7 +178,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Deux fois par semaine.",
         deliverable: "Un projet revu par passage : trois à cinq constats et leurs correctifs.",
         autonomy: "Projets internes : correctif fusionné si tous les contrôles automatiques passent. Projets clients : correctif proposé, jamais fusionné sans la recette de Jérôme.",
-        status: "actif",
       },
       {
         name: "Agent-Routines",
@@ -202,7 +186,6 @@ export const ORG_POLES: OrgPole[] = [
         trigger: "Matin et soir, seulement si une anomalie nouvelle est signalée.",
         deliverable: "Pour chaque anomalie : la cause, la correction et ce qui reste à décider.",
         autonomy: "Répare seul l'infrastructure des automatisations ; code d'application, données, secrets et dépenses sur validation. Il ne peut pas couper le contrôle indépendant.",
-        status: "actif",
       },
     ],
   },
@@ -210,7 +193,7 @@ export const ORG_POLES: OrgPole[] = [
 
 export const ORG_COUNTS = {
   configured: ORG_POLES.reduce((n, p) => n + p.agents.length, 0),
-  active: ORG_POLES.reduce((n, p) => n + p.agents.filter((a) => a.status === "actif").length, 0),
+  active: ORG_POLES.reduce((n, p) => n + p.agents.filter((a) => !a.pausedSince).length, 0),
 };
 
 /** Shared foundation: where work is exchanged, tracked and done. */
@@ -239,3 +222,19 @@ export const ORG_SHARED_SERVICES = [
   "Suivi du référencement",
   "Veille Qualiopi",
 ] as const;
+
+/** Contextual proof block on related brand and service pages, keyed by their slug. */
+export const ORG_PROOFS: Record<string, { text: string; study?: { href: string; label: string } }> = {
+  "iavarone-conseil": {
+    text: "IAvarone Conseil applique d'abord sa méthode à sa propre entreprise : des agents spécialisés organisés en pôles et un ERP développé en interne pour suivre clients, devis, factures et automatisations.",
+    study: { href: ORG_STUDIES.erp, label: "L'étude de cas de l'ERP, sur iavarone-conseil.fr" },
+  },
+  "employe-ia": {
+    text: "Les agents d'Employé IA s'appuient sur l'organisation qui fait tourner le groupe : des agents aux rôles écrits, qui rendent compte et demandent une validation pour les décisions engageantes.",
+    study: { href: ORG_STUDIES.agents, label: "Les agents au travail, sur employe-ia.fr" },
+  },
+  "agent-ia": {
+    text: "Avant de déployer des agents chez nos clients, nous les faisons travailler chez nous : quatre pôles d'agents aux missions écrites, qui rendent compte dans Slack et laissent les décisions engageantes au dirigeant.",
+    study: { href: ORG_STUDIES.agents, label: "Les agents au travail, sur employe-ia.fr" },
+  },
+};
