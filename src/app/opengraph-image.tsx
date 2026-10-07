@@ -56,7 +56,7 @@ export default async function OpengraphImage() {
             L&apos;IA générative au service des entreprises, organisations et indépendants.
           </div>
           <div style={{ fontSize: 24, color: "#545454", maxWidth: 900, lineHeight: 1.35 }}>
-            Sept activités complémentaires : formation Qualiopi, conseil, agents IA autonomes,
+            Des activités complémentaires : formation Qualiopi, conseil, agents IA autonomes,
             applications métier, SaaS B2B et e-commerce industriel.
           </div>
         </div>

@@ -7,6 +7,8 @@ import { brandColor } from "@/components/ui/brand-color";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { AuthorBio } from "@/components/sections/AuthorBio";
+import { OrgProofLink } from "@/components/sections/OrgChart";
+import { ORG_STUDIES } from "@/lib/organisation";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
 interface PageProps {
@@ -229,6 +231,19 @@ export default async function BrandPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {brand.slug === "iavarone-conseil" && (
+        <OrgProofLink
+          text="IAvarone Conseil applique d'abord sa méthode à sa propre entreprise : des agents spécialisés organisés en pôles et un ERP développé en interne pour suivre clients, devis, factures et automatisations."
+          study={{ href: ORG_STUDIES.erp, label: "L'étude de cas de l'ERP, sur iavarone-conseil.fr" }}
+        />
+      )}
+      {brand.slug === "employe-ia" && (
+        <OrgProofLink
+          text="Les agents d'Employé IA s'appuient sur l'organisation qui fait tourner le groupe : des agents aux rôles écrits, qui rendent compte et demandent une validation pour les décisions engageantes."
+          study={{ href: ORG_STUDIES.agents, label: "Les agents au travail, sur employe-ia.fr" }}
+        />
+      )}
 
       <AuthorBio context="Marque opérée par" />
 

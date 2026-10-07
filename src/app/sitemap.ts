@@ -6,7 +6,7 @@ import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Omettre lastmod sans date éditoriale fiable ; une date de build est trompeuse.
-  const staticRoutes = ["", "/references", "/ressources", "/marques", "/a-propos", "/contact"];
+  const staticRoutes = ["", "/references", "/ressources", "/marques", "/a-propos", "/notre-organisation", "/contact"];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${SITE.url}${path}`,

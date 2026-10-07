@@ -4,7 +4,7 @@ export const SITE = {
   url: "https://iavarone-group.fr",
   baseline: "L'IA générative au service des entreprises, en Auvergne-Rhône-Alpes et au-delà.",
   description:
-    "IAvarone Group rassemble sept activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes, SaaS B2B et e-commerce industriel.",
+    "IAvarone Group rassemble des activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes, SaaS B2B et e-commerce industriel.",
   founder: {
     name: "Jérôme Iavarone",
     role: "Fondateur — Formateur & Consultant IA générative",
@@ -27,6 +27,8 @@ export const SITE = {
     // Page de réservation maison (iac_rdv, 2026-09-04) ; `page` est ajoutée par BookingLink.
     // Koalendar, ouvert en parallèle, a été désactivé le 2026-09-18.
     booking: "https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr",
+    // Passerelle tracée de jeromeiavarone.fr : `src` nomme le CTA d'une étude de cas.
+    bookingGateway: "https://jeromeiavarone.fr/rdv",
   },
   social: {
     linkedin: "https://www.linkedin.com/in/jeromeiavarone/",
