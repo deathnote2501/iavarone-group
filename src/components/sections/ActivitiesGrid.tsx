@@ -36,48 +36,54 @@ const DIRECTIONS: Record<string, string> = {
   "crm-ia": "Organiser & vendre",
 };
 
-export function BrandDirectory() {
-  const services = SERVICE_SLUGS.map(
-    (slug) => BRANDS.find((brand) => brand.slug === slug)!,
+const SERVICE_BRANDS = SERVICE_SLUGS.map(
+  (slug) => BRANDS.find((brand) => brand.slug === slug)!,
+);
+const PRODUCT_BRANDS = BRANDS.filter(
+  (brand) => !SERVICE_SLUGS.includes(brand.slug),
+);
+
+function ServiceDirectory() {
+  return (
+    <ul className="group-directory" aria-label="Les expertises de service">
+      {SERVICE_BRANDS.map((brand, index) => {
+        const Icon = ICONS[brand.slug];
+        return (
+          <li key={brand.slug}>
+            <Link
+              href={`/marques/${brand.slug}`}
+              className={`group-directory-row group-color-${brandColor(brand)}`}
+            >
+              <span className="group-directory-number">0{index + 1}</span>
+              <div className="group-directory-name">
+                <span className="group-direction">
+                  {DIRECTIONS[brand.slug]}
+                </span>
+                <h3>{brand.name}</h3>
+                <span className="group-brand-tagline">{brand.tagline}</span>
+              </div>
+              <div className="group-directory-copy">
+                <p>{brand.description}</p>
+                <span>
+                  {brand.structure} ·{" "}
+                  {new URL(brand.url).hostname.replace("www.", "")}
+                </span>
+              </div>
+              <span className="group-directory-icon">
+                <Icon aria-hidden />
+              </span>
+              <ArrowUpRight className="group-directory-arrow" aria-hidden />
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
-  const products = BRANDS.filter(
-    (brand) => !SERVICE_SLUGS.includes(brand.slug),
-  );
+}
+
+function ProductDirectory() {
   return (
     <>
-      <ul className="group-directory" aria-label="Les expertises de service">
-        {services.map((brand, index) => {
-          const Icon = ICONS[brand.slug];
-          return (
-            <li key={brand.slug}>
-              <Link
-                href={`/marques/${brand.slug}`}
-                className={`group-directory-row group-color-${brandColor(brand)}`}
-              >
-                <span className="group-directory-number">0{index + 1}</span>
-                <div className="group-directory-name">
-                  <span className="group-direction">
-                    {DIRECTIONS[brand.slug]}
-                  </span>
-                  <h3>{brand.name}</h3>
-                  <span className="group-brand-tagline">{brand.tagline}</span>
-                </div>
-                <div className="group-directory-copy">
-                  <p>{brand.description}</p>
-                  <span>
-                    {brand.structure} ·{" "}
-                    {new URL(brand.url).hostname.replace("www.", "")}
-                  </span>
-                </div>
-                <span className="group-directory-icon">
-                  <Icon aria-hidden />
-                </span>
-                <ArrowUpRight className="group-directory-arrow" aria-hidden />
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
       <div className="group-products-heading">
         <p className="group-eyebrow">Les produits de l’écosystème</p>
         <h2>
@@ -87,7 +93,7 @@ export function BrandDirectory() {
         </h2>
       </div>
       <ul className="group-products" aria-label="Les produits du groupe">
-        {products.map((brand) => {
+        {PRODUCT_BRANDS.map((brand) => {
           const Icon = ICONS[brand.slug];
           return (
             <li key={brand.slug}>
@@ -117,6 +123,16 @@ export function BrandDirectory() {
   );
 }
 
+export function BrandDirectory() {
+  return (
+    <>
+      <ServiceDirectory />
+      <ProductDirectory />
+    </>
+  );
+}
+
+/** Home: service expertises. The products follow in ProductsGrid, after the organisation. */
 export function ActivitiesGrid() {
   return (
     <section className="container-page py-20" id="activites">
@@ -124,7 +140,7 @@ export function ActivitiesGrid() {
         <div>
           <p className="group-eyebrow">Les expertises</p>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Sept activités complémentaires
+            Des activités complémentaires
           </h2>
         </div>
         <p>
@@ -133,7 +149,15 @@ export function ActivitiesGrid() {
           valeur de l&apos;IA générative pour PME, ETI et organisations.
         </p>
       </div>
-      <BrandDirectory />
+      <ServiceDirectory />
+    </section>
+  );
+}
+
+export function ProductsGrid() {
+  return (
+    <section className="container-page pb-20" id="produits">
+      <ProductDirectory />
     </section>
   );
 }

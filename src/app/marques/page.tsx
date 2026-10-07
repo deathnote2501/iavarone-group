@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Marques d'IAvarone Group — formation, conseil & agents IA",
   },
   description:
-    "Les sept marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), Kaliio et Kaliopi (SaaS Qualiopi), Conform-RGAA (accessibilité), MecaIndus (e-commerce B2B industriel).",
+    "Les marques d'IAvarone Group : Jérôme Iavarone (formation Qualiopi), IAvarone Conseil (apps métier), Employé IA (agents autonomes), CRM IA (CRM sur mesure), Kaliio et Kaliopi (SaaS Qualiopi), Conform-RGAA (accessibilité), MecaIndus (e-commerce B2B industriel).",
   alternates: { canonical: `${SITE.url}/marques` },
 };
 
@@ -22,7 +22,7 @@ export default function MarquesPage() {
             Les marques d&apos;IAvarone Group
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-muted)]">
-            Sept marques opérationnelles couvrant l&apos;ensemble du cycle de
+            Des marques opérationnelles couvrant l&apos;ensemble du cycle de
             vie de l&apos;IA générative en entreprise : formation, conseil,
             agents autonomes, SaaS B2B et e-commerce.
           </p>

@@ -1,8 +1,8 @@
 # IAvarone Group
 
-> Groupe français d'intelligence artificielle générative rassemblant sept marques B2B opérées par Jérôme Iavarone : formation Qualiopi, conseil PME/ETI, agents IA autonomes, SaaS Qualiopi et accessibilité RGAA, e-commerce B2B industriel. Basé à Clermont-Ferrand, intervient en Auvergne-Rhône-Alpes, Paris et distanciel France entière.
+> Groupe français d'intelligence artificielle générative rassemblant des marques B2B opérées par Jérôme Iavarone : formation Qualiopi, conseil PME/ETI, agents IA autonomes, SaaS Qualiopi et accessibilité RGAA, e-commerce B2B industriel. Basé à Clermont-Ferrand, intervient en Auvergne-Rhône-Alpes, Paris et distanciel France entière.
 
-IAvarone Group est une structure professionnelle indépendante fondée et opérée par Jérôme Iavarone, formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Le groupe est composé d'une SAS (IAvarone Conseil) et d'une entreprise individuelle (Jérôme Iavarone EI), et porte sept marques opérationnelles.
+IAvarone Group est une structure professionnelle indépendante fondée et opérée par Jérôme Iavarone, formateur certifié Qualiopi et consultant indépendant en IA générative depuis 2020. Le groupe est composé d'une SAS (IAvarone Conseil) et d'une entreprise individuelle (Jérôme Iavarone EI), et porte les marques listées ci-dessous.
 
 ## Qui sommes-nous ?
 
@@ -48,6 +48,11 @@ IAvarone Group est une structure professionnelle indépendante fondée et opér�
 5. **Kaliopi** (SAS) — Logiciel de conformité Qualiopi tout-en-un (32 indicateurs, BPF, espace auditeur) — gratuit, Premium 22,90 €/mois — https://kaliopi.io
 6. **Conform-RGAA** (SAS) — Audit accessibilité RGAA assisté par IA (pack 3 ans à 290 €) — https://rgaa-ia.fr
 7. **MecaIndus** (SAS) — E-commerce B2B de fournitures industrielles techniques (268 000+ références, catalogue géré par agents IA) — https://mecaindus.com
+8. **CRM IA** (SAS) — CRM sur mesure avec agents IA intégrés — https://crm-ia.fr
+
+## Organisation augmentée par l'IA
+
+Jérôme Iavarone fixe les priorités et garde les décisions engageantes ; des agents IA spécialisés, regroupés en quatre pôles (prestations, produits SaaS, gestion, système et qualité), préparent, exécutent et rendent compte. Un ERP interne réunit clients, devis, factures et le suivi des automatisations. Organigramme détaillé, rôles et règles de validation : https://iavarone-group.fr/notre-organisation
 
 ## Zone d'intervention
 
@@ -56,7 +61,7 @@ Présence dans 17 villes : Clermont-Ferrand, Riom, Vichy, Issoire, Thiers, Auril
 ## Pages structurées
 
 - Pages services × villes (51 pages) : https://iavarone-group.fr/{formation-ia|conseil-ia|agent-ia}/{ville-slug}
-- Pages marques (7 pages) : https://iavarone-group.fr/marques/{marque-slug}
+- Pages marques (une par marque) : https://iavarone-group.fr/marques/{marque-slug}
 
 ## Résultats clients (cas réels chiffrés)
 
@@ -88,8 +93,8 @@ Hub : https://iavarone-group.fr/ressources
 - **1 000+** professionnels formés à l'IA générative
 - **4,9/5** : satisfaction moyenne des formations
 - **17 villes** couvertes en présentiel (Auvergne-Rhône-Alpes + Paris), distanciel France entière
-- **7 marques** opérationnelles, **2 structures** (SAS + EI)
-- **51 pages** services × villes + **7 pages** marques
+- **2 structures** juridiques (SAS + EI) portant les marques du groupe
+- **51 pages** services × villes + une page par marque
 
 ## Questions fréquentes (FAQ)
 
@@ -134,5 +139,6 @@ Présentiel à Clermont-Ferrand, Lyon, Saint-Étienne, Grenoble, Annecy, Chambé
 - [Résultats clients chiffrés](https://iavarone-group.fr/references)
 - [Ressources & guides](https://iavarone-group.fr/ressources)
 - [À propos de Jérôme Iavarone](https://iavarone-group.fr/a-propos)
+- [Notre organisation augmentée par l'IA](https://iavarone-group.fr/notre-organisation)
 - [Marques du groupe](https://iavarone-group.fr/marques)
 - [Pricing structuré](https://iavarone-group.fr/pricing.md)

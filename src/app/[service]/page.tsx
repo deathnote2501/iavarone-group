@@ -9,6 +9,8 @@ import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { AuthorBio } from "@/components/sections/AuthorBio";
+import { OrgProofLink } from "@/components/sections/OrgChart";
+import { ORG_PROOFS } from "@/lib/organisation";
 import { ResultsPreview } from "@/components/sections/ResultsPreview";
 
 interface PageProps {
@@ -232,6 +234,8 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       <ResultsPreview />
+
+      {ORG_PROOFS[service.slug] && <OrgProofLink {...ORG_PROOFS[service.slug]} />}
 
       <AuthorBio context="Votre interlocuteur unique" />
 

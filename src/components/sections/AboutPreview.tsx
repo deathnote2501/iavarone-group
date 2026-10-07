@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 const STATS = [
   { value: "1 000+", label: "Professionnels formés" },
   { value: "4,9 / 5", label: "Satisfaction moyenne" },
-  { value: "7", label: "Activités opérationnelles" },
+  { value: "2", label: "Structures juridiques" },
   { value: "2020", label: "Depuis" },
 ];
 
@@ -34,9 +34,9 @@ export function AboutPreview() {
           </h2>
           <p className="mt-5 text-[var(--color-ink-muted)]">
             Formateur intervenant avec des partenaires certifiés Qualiopi et consultant en IA générative depuis 2020, Jérôme Iavarone
-            a structuré son activité en un groupe de sept entités complémentaires&nbsp;: une SAS de
-            conseil et de développement, une entreprise individuelle de formation, et cinq produits
-            B2B en production.
+            a structuré son activité en un groupe de marques complémentaires, portées par deux
+            structures juridiques&nbsp;: une SAS de conseil, de développement et de produits B2B, et
+            une entreprise individuelle de formation.
           </p>
           <p className="mt-3 text-[var(--color-ink-muted)]">
             Basé en Auvergne, intervient en présentiel dans le Puy-de-Dôme, à Lyon, Saint-Étienne et

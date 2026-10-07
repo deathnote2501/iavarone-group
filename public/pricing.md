@@ -1,6 +1,6 @@
 # Pricing — IAvarone Group
 
-> Tarifs et formats commerciaux des sept marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr&page=/pricing.md
+> Tarifs et formats commerciaux des marques d'IAvarone Group. Données conçues pour être lues par humains et agents IA (parseable, structurée, à jour). Premier échange de cadrage gratuit de 30 minutes pour toute prestation : https://rdv.jeromeiavarone.fr/?src=iavarone-group.fr&page=/pricing.md
 
 Mise à jour : 2026-05-24
 

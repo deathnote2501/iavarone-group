@@ -7,6 +7,8 @@ import { brandColor } from "@/components/ui/brand-color";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { AuthorBio } from "@/components/sections/AuthorBio";
+import { OrgProofLink } from "@/components/sections/OrgChart";
+import { ORG_PROOFS } from "@/lib/organisation";
 import { SITE, BRANDS, type Brand } from "@/lib/site";
 
 interface PageProps {
@@ -229,6 +231,8 @@ export default async function BrandPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {ORG_PROOFS[brand.slug] && <OrgProofLink {...ORG_PROOFS[brand.slug]} />}
 
       <AuthorBio context="Marque opérée par" />
 

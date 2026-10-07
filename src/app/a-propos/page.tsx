@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { OrgProofLink } from "@/components/sections/OrgChart";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/a-propos" },
@@ -20,7 +21,7 @@ const personJsonLd = {
   familyName: "Iavarone",
   jobTitle: SITE.founder.role,
   description:
-    "Formateur en partenariat avec des organismes certifiés Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble sept activités complémentaires en intelligence artificielle générative pour les entreprises.",
+    "Formateur en partenariat avec des organismes certifiés Qualiopi et consultant indépendant en IA générative depuis 2020. Fondateur d'IAvarone Group, qui rassemble des activités complémentaires en intelligence artificielle générative pour les entreprises.",
   image: `${SITE.url}${SITE.founder.photo}`,
   url: `${SITE.url}/a-propos`,
   email: SITE.contact.email,
@@ -106,9 +107,9 @@ export default function AProposPage() {
             <p className="mt-2 text-lg text-[var(--color-brand-blue-ink)]">{SITE.founder.role}</p>
             <p className="mt-6 text-[var(--color-ink-muted)]">
               Formateur intervenant avec des partenaires certifiés Qualiopi et consultant en IA générative depuis 2020, j&apos;ai
-              progressivement structuré mon activité en un groupe de sept entités complémentaires&nbsp;:
-              une SAS de conseil et de développement, une entreprise individuelle de formation, et
-              cinq produits B2B en production.
+              progressivement structuré mon activité en un groupe de marques complémentaires, portées
+              par deux structures juridiques&nbsp;: une SAS de conseil, de développement et de produits
+              B2B, et une entreprise individuelle de formation.
             </p>
             <p className="mt-3 text-[var(--color-ink-muted)]">
               Je ne suis ni une ESN ni un revendeur&nbsp;: je conçois et je livre moi-même chaque
@@ -212,6 +213,8 @@ export default function AProposPage() {
           </div>
         </div>
       </section>
+
+      <OrgProofLink text="Je pilote le groupe avec des agents IA spécialisés, regroupés en quatre pôles, et un ERP qui réunit clients, devis, factures et suivi des automatisations. L'organigramme détaille chaque rôle et ce qui reste soumis à ma validation." />
 
       <ContactCTA />
     </>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Building2 } from "lucide-react";
 import { SITE, BRANDS, CITIES } from "@/lib/site";
+import { ORG_PATH } from "@/lib/organisation";
 import { SERVICES_LIST } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
 import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettingsButton";
@@ -50,6 +51,7 @@ export function Footer() {
               <li><Link href="/references" className="hover:text-[var(--color-ink)]">Résultats clients</Link></li>
               <li><Link href="/ressources" className="hover:text-[var(--color-ink)]">Ressources</Link></li>
               <li><Link href="/a-propos" className="hover:text-[var(--color-ink)]">À propos</Link></li>
+              <li><Link href={ORG_PATH} className="hover:text-[var(--color-ink)]">Notre organisation</Link></li>
               <li><Link href="/contact" className="hover:text-[var(--color-ink)]">Contact</Link></li>
               <li><Link href="/mentions-legales" className="hover:text-[var(--color-ink)]">Mentions légales</Link></li>
               <li><Link href="/confidentialite" className="hover:text-[var(--color-ink)]">Confidentialité</Link></li>

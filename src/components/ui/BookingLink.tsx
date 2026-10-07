@@ -14,6 +14,8 @@ export interface BookingLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   /** Emplacement du CTA dans la page (hero, header, contact, etc.) — envoyé à GA4. */
   location?: string;
+  /** Origine dédiée (`src`) : passe par la passerelle tracée au lieu du lien générique. */
+  source?: string;
 }
 
 /**
@@ -25,11 +27,14 @@ export interface BookingLinkProps
  * sont transmises à l'ancre sous-jacente.
  */
 export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>(
-  ({ location, onClick, children, ...props }, ref) => {
+  ({ location, source, onClick, children, ...props }, ref) => {
     const pathname = usePathname();
     // `page=<chemin courant>` : la page de réservation l'écrit dans l'ERP comme origine du RDV
     // (le referrer cross-origin ne porte que l'origine, jamais le chemin).
-    const href = withPage(SITE.contact.booking, pathname);
+    // La passerelle réécrit `page` : avec une origine dédiée, c'est `src` qui porte la page.
+    const href = source
+      ? `${SITE.contact.bookingGateway}?src=${encodeURIComponent(source)}`
+      : withPage(SITE.contact.booking, pathname);
 
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {

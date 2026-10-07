@@ -24,7 +24,7 @@ export function Hero() {
               <strong>{SITE.name}</strong>{" "}est un groupe français
               d&apos;intelligence artificielle générative fondé en 2020 par
               Jérôme Iavarone, formateur Qualiopi et consultant indépendant. Le
-              groupe rassemble sept marques B2B complémentaires&nbsp;:
+              groupe rassemble des marques B2B complémentaires&nbsp;:
               formation, conseil, développement d&apos;applications métier,
               agents IA autonomes, SaaS et e-commerce industriel.
             </p>
@@ -75,7 +75,7 @@ export function Hero() {
             controls
             playsInline
             preload="none"
-            aria-label="Présentation animée du Groupe IAvarone et de ses sept marques"
+            aria-label="Présentation animée du Groupe IAvarone et de ses marques"
           />
         </details>
       </div>
