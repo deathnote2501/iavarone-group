@@ -23,11 +23,22 @@ export interface CityServiceOverride {
   extraFaq?: { q: string; a: string }[];
   /** Liens internes contextuels, ancres variées (le template gère déjà villes et services). */
   relatedLinks?: { href: string; label: string; hint: string }[];
+  /** Phrase de corps de texte portant un lien dofollow vers le site du formateur (maillage groupe). */
+  trainerLink?: { before: string; anchor: string; href: string; after: string };
 }
 
 type ComboKey = `${ServiceSlug}/${string}`;
 
 export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverride>> = {
+  // Action B-05 (iac_seo) : renvoie la page vers le site du formateur, qui porte la requête formation à Clermont-Ferrand.
+  "formation-ia/clermont-ferrand": {
+    trainerLink: {
+      before: "Cette formation est animée par Jérôme Iavarone : retrouvez le détail de la ",
+      anchor: "formation IA générative à Clermont-Ferrand avec Jérôme Iavarone",
+      href: "https://jeromeiavarone.fr/formation-ia-clermont-ferrand",
+      after: ", ses programmes et ses modalités.",
+    },
+  },
   // Seul combo classé index-priority avec le volume le plus disputé (210/mois,
   // DataForSEO) et déjà 158 impressions/28 j en position 15.7 (Search Console,
   // 2026-06-15 → 2026-07-12) : la page plafonne en page 2 faute de couvrir les
