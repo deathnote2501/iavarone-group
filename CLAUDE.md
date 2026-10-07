@@ -1,11 +1,11 @@
 # Projet iavarone-group.fr
 On va crééer un site internet vitrine sur le nom de domaine iavarone-group.fr pour présenter le Groupe IAvarone qui est composé des activités décrites dans les sites web ci-dessous : 
-- https://github.com/deathnote2501/jeromeiavarone : https://jeromeiavarone.fr/
-- https://github.com/deathnote2501/iavarone-conseil/ : https://iavarone-conseil.fr/
-- https://github.com/deathnote2501/employe-ia : https://employe-ia.fr/
-- https://github.com/deathnote2501/kaliio : https://kaliio.fr/
-- https://github.com/deathnote2501/rgaa : https://rgaa-ia.fr/
-- https://github.com/deathnote2501/fit (site web à venir)
+- https://jeromeiavarone.fr/
+- https://iavarone-conseil.fr/
+- https://employe-ia.fr/
+- https://kaliio.fr/
+- https://rgaa-ia.fr/
+- https://crm-ia.fr/
 
 # Objectif de iavarone-group.fr
 - Acquérir du trafic organique sur la région et en dehors sur des thématiques non couvertes par les sites web listés plus haut dans le but d'être contacté via https://jeromeiavarone.fr/rdv, email ou telephone par des prospects qui souhaiteraint bénéficier de mes services.
