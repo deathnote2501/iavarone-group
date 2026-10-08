@@ -1,12 +1,57 @@
 name: CI
+# Pas de CI quand un changement ne touche que des fichiers sans code (règle 0_dev,
+# 2026-10-08) : docs/, Markdown, CSV, PDF, bureautique (Word, Excel, PowerPoint,
+# OpenDocument) et rapports des routines. Un seul fichier hors de cette liste, et la
+# suite joue en entier. Les dossiers réintégrés en fin de liste sont lus par l'app ou
+# ses tests : un .md ou un .csv y lance la CI. Une PR purement documentaire n'a donc
+# aucun check : c'est normal.
+# `paths` et non `paths-ignore`, qui ne sait pas réintégrer un dossier. Même liste
+# pour push et pull_request.
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
+    paths:
+      - "**"
+      - "!docs/**"
+      - "!**.md"
+      - "!**.csv"
+      - "!**.pdf"
+      - "!**.doc"
+      - "!**.docx"
+      - "!**.xls"
+      - "!**.xlsx"
+      - "!**.ppt"
+      - "!**.pptx"
+      - "!**.odt"
+      - "!**.ods"
+      - "!**.odp"
+      - "!.*-logs/**"
+      # Lus par l'app ou ses tests : un changement y lance la CI.
+      - "src/**"
+      - "public/**"
   push:
-    branches:
-      - main
+    branches: [main]
+    paths:
+      - "**"
+      - "!docs/**"
+      - "!**.md"
+      - "!**.csv"
+      - "!**.pdf"
+      - "!**.doc"
+      - "!**.docx"
+      - "!**.xls"
+      - "!**.xlsx"
+      - "!**.ppt"
+      - "!**.pptx"
+      - "!**.odt"
+      - "!**.ods"
+      - "!**.odp"
+      - "!.*-logs/**"
+      # Lus par l'app ou ses tests : un changement y lance la CI.
+      - "src/**"
+      - "public/**"
   workflow_dispatch:
+
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
