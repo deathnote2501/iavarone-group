@@ -4,10 +4,10 @@ on:
     branches:
       - main
     # Pas de CI sur un changement sans code : documentation, bureautique et
-    # rapports des routines (.seo-boost-logs/, commités sur main par seo-boost
+    # rapports des routines (.*-logs/, dont .seo-boost-logs/, commités sur main par seo-boost
     # et conformite-vitrines). Même liste sur push et pull_request ; le dernier
     # motif qui correspond l'emporte.
-    # Réintégrés : docs/5-sources/design-v2-before-all.json (importé par
+    # Réintégrés : src/** (le code de l'app), docs/5-sources/design-v2-before-all.json (importé par
     # e2e/design-v2.spec.ts), public/** (servi tel quel, dont public/pricing.md)
     # et .github/**.
     paths:
@@ -20,10 +20,13 @@ on:
       - "!**.doc"
       - "!**.xlsx"
       - "!**.xls"
+      - "!**.ppt"
       - "!**.pptx"
       - "!**.odt"
       - "!**.ods"
-      - "!.seo-boost-logs/**"
+      - "!**.odp"
+      - "!.*-logs/**"
+      - "src/**"
       - "docs/5-sources/design-v2-before-all.json"
       - "public/**"
       - ".github/**"
@@ -31,10 +34,10 @@ on:
     branches:
       - main
     # Pas de CI sur un changement sans code : documentation, bureautique et
-    # rapports des routines (.seo-boost-logs/, commités sur main par seo-boost
+    # rapports des routines (.*-logs/, dont .seo-boost-logs/, commités sur main par seo-boost
     # et conformite-vitrines). Même liste sur push et pull_request ; le dernier
     # motif qui correspond l'emporte.
-    # Réintégrés : docs/5-sources/design-v2-before-all.json (importé par
+    # Réintégrés : src/** (le code de l'app), docs/5-sources/design-v2-before-all.json (importé par
     # e2e/design-v2.spec.ts), public/** (servi tel quel, dont public/pricing.md)
     # et .github/**.
     paths:
@@ -47,10 +50,13 @@ on:
       - "!**.doc"
       - "!**.xlsx"
       - "!**.xls"
+      - "!**.ppt"
       - "!**.pptx"
       - "!**.odt"
       - "!**.ods"
-      - "!.seo-boost-logs/**"
+      - "!**.odp"
+      - "!.*-logs/**"
+      - "src/**"
       - "docs/5-sources/design-v2-before-all.json"
       - "public/**"
       - ".github/**"
