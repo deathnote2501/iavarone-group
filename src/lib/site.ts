@@ -7,7 +7,7 @@ export const SITE = {
     "IAvarone Group rassemble des activités complémentaires en intelligence artificielle générative : conseil, formation, développement, agents IA autonomes, SaaS B2B et e-commerce industriel.",
   founder: {
     name: "Jérôme Iavarone",
-    role: "Fondateur — Formateur & Consultant IA générative",
+    role: "Fondateur, formateur et consultant IA générative",
     photo: "/photo-jerome.jpg",
     since: "2020",
     location: "Clermont-Ferrand, Auvergne-Rhône-Alpes",
@@ -36,8 +36,8 @@ export const SITE = {
     github: "https://github.com/deathnote2501",
   },
   legal: {
-    sas: "IAvarone Conseil — SASU",
-    ei: "Jérôme Iavarone — Entreprise Individuelle",
+    sas: "IAvarone Conseil (SASU)",
+    ei: "Jérôme Iavarone (entreprise individuelle)",
     // Identité légale (rendue uniquement si non vide — rien de faux n'est publié
     // tant qu'un champ reste ""). Renforce le signal Trust E-E-A-T et la conformité.
     sasSiren: "932 210 339",
@@ -45,9 +45,9 @@ export const SITE = {
     sasRcs: "Clermont-Ferrand 932 210 339",
     sasCapital: "150 €",
     sasVat: "FR70932210339",
-    sasNaf: "70.22Z — Conseil pour les affaires et autres conseils de gestion",
+    sasNaf: "70.22Z (Conseil pour les affaires et autres conseils de gestion)",
     sasFoundingDate: "2024-08-26",
-    sasInsurance: "Hiscox Assurances — contrat n° HSXIN320063949",
+    sasInsurance: "Hiscox Assurances, contrat n° HSXIN320063949",
     sasStreet: "8 ter boulevard Léon Malfreyt",
     sasPostalCode: "63000",
     sasCity: "Clermont-Ferrand",
@@ -57,9 +57,9 @@ export const SITE = {
     eiSiren: "489 521 765",
     eiSiret: "489 521 765 00052",
     eiVat: "FR51489521765",
-    eiApe: "6220A — Conseil en systèmes et logiciels informatiques",
+    eiApe: "6220A (Conseil en systèmes et logiciels informatiques)",
     eiFoundingDate: "2006-04-07",
-    eiInsurance: "Hiscox Assurances — contrat n° HSXIN320040316A",
+    eiInsurance: "Hiscox Assurances, contrat n° HSXIN320040316A",
     eiPappersUrl: "https://www.pappers.fr/entreprise/iavarone-jerome-489521765",
     qualiopiNumber: "", // n° du certificat Qualiopi (à compléter)
     qualiopiBody: "", // organisme certificateur (ex. "I.Cert", "Qualicert")
@@ -79,6 +79,8 @@ export const BRANDS = [
     slug: "jeromeiavarone",
     name: "Jérôme Iavarone",
     tagline: "Formation IA générative — Qualiopi",
+    // JSON-LD wording: the displayed tagline also builds the /marques title, which stays as is.
+    schemaTagline: "Formation IA générative (organismes partenaires certifiés Qualiopi)",
     description:
       "Formations Claude, ChatGPT, Gemini, Vibe Coding, automatisation n8n/Make. 1 000+ professionnels formés depuis 2020.",
     url: "https://jeromeiavarone.fr",
@@ -155,7 +157,7 @@ export const BRANDS = [
     url: "https://kaliio.fr",
     color: "blue",
     structure: "SAS",
-    category: "SaaS B2B — Organismes de formation",
+    category: "SaaS B2B pour organismes de formation",
     targetAudience: "Organismes de formation, indépendants formateurs, OF en démarche Qualiopi",
     pricing: "Gratuit (modèle freemium)",
     longDescription:
@@ -178,7 +180,7 @@ export const BRANDS = [
     url: "https://kaliopi.io",
     color: "yellow",
     structure: "SAS",
-    category: "SaaS B2B — Conformité Qualiopi",
+    category: "SaaS B2B de conformité Qualiopi",
     targetAudience: "Formateurs indépendants, petits organismes de formation, responsables qualité et gestionnaires pédagogiques",
     pricing: "Gratuit (freemium) · Premium 22,90 €/mois ou 229 €/an",
     longDescription:
@@ -263,9 +265,9 @@ export const BRANDS = [
   },
 ] as const;
 
-// Intersection pour exposer `metaTitle` (optionnel) sur toutes les marques
+// Intersection pour exposer `metaTitle` et `schemaTagline` (optionnels) sur toutes les marques
 // tout en conservant les unions littérales de `slug` et `color`.
-export type Brand = (typeof BRANDS)[number] & { metaTitle?: string };
+export type Brand = (typeof BRANDS)[number] & { metaTitle?: string; schemaTagline?: string };
 
 export interface City {
   slug: string;

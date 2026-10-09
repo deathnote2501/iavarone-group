@@ -103,7 +103,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
       },
       {
         "@type": "LocalBusiness",
-        name: `${service.title} — ${city.name} (IAvarone Group)`,
+        name: `${service.title} à ${city.name} (IAvarone Group)`,
         url: `${SITE.url}/${service.slug}/${city.slug}`,
         description: override?.metaDescription ?? service.metaDescription(city.name),
         telephone: SITE.contact.phoneHref,

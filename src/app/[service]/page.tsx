@@ -88,7 +88,7 @@ export default async function ServicePage({ params }: PageProps) {
         })),
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: `${service.title} — Catalogue par ville`,
+          name: `${service.title} : catalogue par ville`,
           itemListElement: CITIES.map((c) => ({
             "@type": "Offer",
             url: `${SITE.url}/${service.slug}/${c.slug}`,

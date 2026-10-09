@@ -25,7 +25,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
   {
     slug: "amefa-service-client",
     client: "Amefa",
-    sector: "Industrie — service client",
+    sector: "Industrie, service client",
     service: "conseil-ia",
     headline: { value: "ROI ×4", label: "10 000 € de gains/an pour 2 400 € investis" },
     challenge:
