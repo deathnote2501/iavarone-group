@@ -3,12 +3,62 @@ on:
   pull_request:
     branches:
       - main
+    # Pas de CI sur un changement sans code : documentation, bureautique et
+    # rapports des routines (.seo-boost-logs/, commités sur main par seo-boost
+    # et conformite-vitrines). Même liste sur push et pull_request ; le dernier
+    # motif qui correspond l'emporte.
+    # Réintégrés : docs/5-sources/design-v2-before-all.json (importé par
+    # e2e/design-v2.spec.ts), public/** (servi tel quel, dont public/pricing.md)
+    # et .github/**.
+    paths:
+      - "**"
+      - "!docs/**"
+      - "!**.md"
+      - "!**.csv"
+      - "!**.pdf"
+      - "!**.docx"
+      - "!**.doc"
+      - "!**.xlsx"
+      - "!**.xls"
+      - "!**.pptx"
+      - "!**.odt"
+      - "!**.ods"
+      - "!.seo-boost-logs/**"
+      - "docs/5-sources/design-v2-before-all.json"
+      - "public/**"
+      - ".github/**"
   push:
     branches:
       - main
+    # Pas de CI sur un changement sans code : documentation, bureautique et
+    # rapports des routines (.seo-boost-logs/, commités sur main par seo-boost
+    # et conformite-vitrines). Même liste sur push et pull_request ; le dernier
+    # motif qui correspond l'emporte.
+    # Réintégrés : docs/5-sources/design-v2-before-all.json (importé par
+    # e2e/design-v2.spec.ts), public/** (servi tel quel, dont public/pricing.md)
+    # et .github/**.
+    paths:
+      - "**"
+      - "!docs/**"
+      - "!**.md"
+      - "!**.csv"
+      - "!**.pdf"
+      - "!**.docx"
+      - "!**.doc"
+      - "!**.xlsx"
+      - "!**.xls"
+      - "!**.pptx"
+      - "!**.odt"
+      - "!**.ods"
+      - "!.seo-boost-logs/**"
+      - "docs/5-sources/design-v2-before-all.json"
+      - "public/**"
+      - ".github/**"
   workflow_dispatch:
+# Un run de main n'est jamais annulé (groupe propre à chaque commit) ;
+# sur une PR, un nouveau push annule le run précédent.
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.ref }}-${{ github.ref == 'refs/heads/main' && github.sha || 'pr' }}
   cancel-in-progress: true
 jobs:
   quality:
