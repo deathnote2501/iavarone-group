@@ -87,7 +87,7 @@ export default async function BrandPage({ params }: PageProps) {
       {
         "@type": "Brand",
         name: brand.name,
-        description: brand.tagline,
+        description: brand.schemaTagline ?? brand.tagline,
         url: brand.url,
         parentOrganization: { "@id": `${SITE.url}/#organization` },
       },

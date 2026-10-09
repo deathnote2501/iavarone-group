@@ -80,7 +80,7 @@ const EI_LEGAL: { label: string; value: string }[] = [
   { label: "N° déclaration d'activité (formation)", value: SITE.legal.ndaNumber },
   {
     label: "Certification Qualiopi",
-    value: [SITE.legal.qualiopiNumber, SITE.legal.qualiopiBody].filter(Boolean).join(" — "),
+    value: [SITE.legal.qualiopiNumber, SITE.legal.qualiopiBody].filter(Boolean).join(" · "),
   },
 ].filter((r) => r.value);
 

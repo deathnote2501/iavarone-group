@@ -32,7 +32,7 @@ const jsonLd = {
         position: i + 1,
         item: {
           "@type": "CreativeWork",
-          name: `${c.client} — ${c.headline.value}`,
+          name: `${c.client} : ${c.headline.value}`,
           about: c.sector,
           abstract: c.challenge,
           creator: { "@id": `${SITE.url}/#person` },

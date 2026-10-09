@@ -27,3 +27,27 @@ test("certification is attributed to partners, not the person", async ({ page })
     for (const node of nodes) expect(JSON.stringify(node.hasCredential || {})).not.toContain("Qualiopi");
   }
 });
+for (const path of ["/", "/a-propos", "/ressources/quest-ce-quun-agent-ia"]) {
+  test(`JSON-LD on ${path} parses and has no em dash`, async ({ page }) => {
+    await page.goto(path);
+    const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
+    expect(schemas.length).toBeGreaterThan(0);
+    const legalNames: string[] = [];
+    for (const raw of schemas) {
+      const value = JSON.parse(raw);
+      expect(JSON.stringify(value)).not.toContain("—");
+      const nodes = value["@graph"] || [value];
+      for (const node of nodes) {
+        if (node.legalName) legalNames.push(node.legalName);
+      }
+    }
+    expect(legalNames.length).toBeGreaterThan(0);
+    for (const name of legalNames) expect(name).not.toContain("—");
+  });
+}
+test("shared footer legal line has no em dash", async ({ page }) => {
+  await page.goto("/");
+  const footer = page.locator("footer");
+  await expect(footer).toContainText("IAvarone Group · IAvarone Conseil, SASU");
+  await expect(footer).not.toContainText("—");
+});
