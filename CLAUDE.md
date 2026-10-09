@@ -16,6 +16,6 @@ On va crééer un site internet vitrine sur le nom de domaine iavarone-group.fr 
 
 # Pièges
 - 43 URL dans le sitemap et 81 pages publiques, dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
-- `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale.
+- `VERCEL_ENV=preview` empêche la notification - IndexNow ne part qu'avec `npm run indexnow` (et le workflow après chaque prod) ; `VERCEL_ENV` autre que `production` l'ignore.
 
 Commandes, repères du code, contrôle SEO de non-régression, cookies : `README.md`.
