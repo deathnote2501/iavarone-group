@@ -36,8 +36,8 @@ export const SITE = {
     github: "https://github.com/deathnote2501",
   },
   legal: {
-    sas: "IAvarone Conseil (SASU)",
-    ei: "Jérôme Iavarone (entreprise individuelle)",
+    sas: "IAvarone Conseil, SASU",
+    ei: "Jérôme Iavarone, entreprise individuelle",
     // Identité légale (rendue uniquement si non vide — rien de faux n'est publié
     // tant qu'un champ reste ""). Renforce le signal Trust E-E-A-T et la conformité.
     sasSiren: "932 210 339",

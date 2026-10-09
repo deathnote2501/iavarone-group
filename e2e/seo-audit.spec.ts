@@ -45,3 +45,9 @@ for (const path of ["/", "/a-propos", "/ressources/quest-ce-quun-agent-ia"]) {
     for (const name of legalNames) expect(name).not.toContain("—");
   });
 }
+test("shared footer legal line has no em dash", async ({ page }) => {
+  await page.goto("/");
+  const footer = page.locator("footer");
+  await expect(footer).toContainText("IAvarone Group · IAvarone Conseil, SASU");
+  await expect(footer).not.toContainText("—");
+});

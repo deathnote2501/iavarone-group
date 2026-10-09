@@ -110,7 +110,7 @@ export function Footer() {
         </div>
 
         <p className="mt-10 border-t border-[var(--color-line)] pt-6 text-xs text-[var(--color-ink-muted)]">
-          © {new Date().getFullYear()} IAvarone Group — {SITE.legal.sas} & {SITE.legal.ei}. Tous droits réservés.
+          © {new Date().getFullYear()} IAvarone Group · {SITE.legal.sas} & {SITE.legal.ei}. Tous droits réservés.
         </p>
       </div>
     </footer>
