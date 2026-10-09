@@ -11,6 +11,7 @@ npm ci
 npm run dev
 npm run lint
 npm run type-check
+npm audit --omit=dev --audit-level=high   # failles des dépendances de prod, bloquant en CI
 VERCEL_ENV=preview npm run build
 PORT=3102 npm run test:smoke -- --workers=2
 ```
