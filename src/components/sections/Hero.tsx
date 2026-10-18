@@ -9,6 +9,7 @@ export function Hero() {
   return (
     <section className="group-home-hero border-b border-[var(--color-line)]">
       <div className="container-page">
+        <ImmersivePanorama />
         <div className="group-hero-intro">
           <div>
             <p className="group-eyebrow">
@@ -48,7 +49,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <ImmersivePanorama />
         <details className="group-video">
           <summary>
             <Play className="size-4" aria-hidden />

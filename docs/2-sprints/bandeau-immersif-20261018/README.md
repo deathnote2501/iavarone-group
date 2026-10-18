@@ -37,3 +37,8 @@ Vérification du correctif : `PORT=3119 npm run verify` vert, 58 E2E, audit prod
 À la demande du propriétaire, travail local uniquement sur `design/hero-full-width`. Bandeau étendu aux deux bords du viewport, hauteur augmentée, masque dégradé et arrondis supprimés. Légendes alignées au contenu ; commande pause et règles d'accessibilité conservées. Serveur de développement : http://localhost:32571/.
 
 Test indépendant rouge d33255e : marges de 16 px à 390 et 320 px à 1920, masque actif. Après changement CSS : huit tests dédiés verts (géométrie sans overflow, absence de filtre et masque, lecture/pause, chatbot, reduced-motion). Captures desktop/mobile contrôlées. Aucun déploiement de cette variante.
+
+
+### Variante locale : vidéo avant le titre
+
+Sur demande, le bandeau plein écran est placé immédiatement sous le menu, avant le titre et sa présentation. Même serveur http://localhost:32571/. Ordre DOM et ordre mobile cohérents, espace supérieur supprimé. Contrôle visuel à 1440 × 900 et 390 × 844 : vidéo au-dessus du H1 et sur toute la largeur. Production inchangée.
