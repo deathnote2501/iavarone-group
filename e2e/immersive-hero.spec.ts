@@ -72,6 +72,27 @@ test("leaving the viewport pauses playback and returning resumes automatic playb
   await expectPlayback(video);
 });
 
+test("the pause control remains usable beside the open desktop chatbot", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/");
+  const video = page.locator(videoSelector);
+  await expectPlayback(video);
+  // Reproduce the actual chatbot panel's occupied area without contacting its service.
+  await page.evaluate(() => {
+    const panel = document.createElement("aside");
+    panel.setAttribute("aria-label", "Panneau de conversation ouvert — fixture");
+    Object.assign(panel.style, {
+      position: "fixed", bottom: "88px", right: "20px", width: "380px",
+      height: "560px", zIndex: "2147483000", background: "white",
+    });
+    document.body.append(panel);
+  });
+  await expect(page.getByRole("complementary", { name: "Panneau de conversation ouvert — fixture" })).toBeVisible();
+  await page.getByRole("button", { name: /mettre en pause/i }).click({ timeout: 3000 });
+  await expect(video).toHaveJSProperty("paused", true);
+  await expect(page.getByRole("button", { name: /reprendre|lancer/i })).toBeVisible();
+});
+
 test("reduced motion shows the loaded poster until explicit playback", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1440, height: 900 });
