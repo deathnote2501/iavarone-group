@@ -1,0 +1,27 @@
+{
+  "nom": "identites-groupe-20261018",
+  "depot": "0_dev/iac_iavarone-group.fr",
+  "canal": "#acq-dev",
+  "paralleles": 1,
+  "timeout_lot": 180,
+  "timeout_passe": 90,
+  "lots": [
+    {
+      "id": "L1",
+      "branche": "fix/identites-legales-20261018",
+      "consigne": "L1.md",
+      "apres": []
+    }
+  ],
+  "prod": {
+    "url": "https://iavarone-group.fr",
+    "health": "",
+    "pages": [
+      "/",
+      "/mentions-legales",
+      "/confidentialite",
+      "/contact"
+    ],
+    "minutes": 30
+  }
+}

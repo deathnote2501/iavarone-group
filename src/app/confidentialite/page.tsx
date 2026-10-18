@@ -12,10 +12,18 @@ export default function ConfidentialitePage() {
   return (
     <section className="container-page py-16">
       <h1 className="text-4xl font-semibold tracking-tight">Politique de confidentialité</h1>
+      <p className="mt-4 text-sm text-[var(--color-ink-muted)]">Dernière mise à jour : 18 octobre 2026.</p>
       <div className="prose prose-slate mt-8 max-w-3xl text-[var(--color-ink-muted)]">
         <p>
           Le présent site limite au strict nécessaire la collecte de données personnelles. Aucun cookie
           de traçage publicitaire n&apos;est déposé.
+        </p>
+
+        <h2 className="mt-8 text-xl font-semibold text-[var(--color-ink)]">Responsable du traitement</h2>
+        <p>
+          Le responsable du traitement est <strong>{SITE.legal.sas}</strong>, dont le siège social
+          est situé {SITE.legal.sasStreet}, {SITE.legal.sasPostalCode} {SITE.legal.sasCity}.
+          Contact&nbsp;: {SITE.contact.email}.
         </p>
 
         <h2 className="mt-8 text-xl font-semibold text-[var(--color-ink)]">

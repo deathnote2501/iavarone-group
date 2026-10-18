@@ -76,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": `${SITE.url}/#organization`,
                   name: SITE.name,
-                  legalName: `${SITE.legal.sas} & ${SITE.legal.ei}`,
+                  legalName: SITE.legal.sas,
                   url: SITE.url,
                   logo: {
                     "@type": "ImageObject",
