@@ -1,0 +1,7 @@
+{
+  "image_url": "file:docs/5-sources/hero-video-concepts/01-fenetre-kling-input.png",
+  "duration": "10",
+  "prompt": "A photorealistic cinematic architectural shot with CLEARLY VISIBLE continuous camera movement from the first second. The camera slowly dollies forward toward the large window opening while smoothly tracking to the right, creating pronounced natural parallax: nearby plants and the thick white window jamb move noticeably relative to the distant volcanic mountains. By the end of the shot the camera is clearly closer to the window, with the window opening filling more of the image. Foreground leaves and ornamental grasses visibly sway in a gentle breeze. Wisps of morning mist slowly drift across the valleys. Strong depth, immersive spatial movement, fluid cinematic motion. The architecture stays rigid and retains its exact geometry and materials. The landscape remains consistent. One continuous shot, stable smooth camera, no cuts, no new objects, no people, no text.",
+  "negative_prompt": "static shot, frozen image, motionless scene, slideshow, handheld shake, rapid movement, cuts, transitions, warped architecture, bending walls, morphing mountains, flickering, new objects, people, text, logo, blur, distortion",
+  "cfg_scale": 0.5
+}

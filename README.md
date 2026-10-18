@@ -9,11 +9,7 @@ Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits,
 ```sh
 npm ci
 npm run dev
-npm run lint
-npm run type-check
-npm audit --omit=dev --audit-level=high   # failles des dépendances de prod, bloquant en CI
-VERCEL_ENV=preview npm run build
-PORT=3102 npm run test:smoke -- --workers=2
+npm run verify   # lint, types, audit production, build preview et 57 E2E (port 3119 par défaut)
 ```
 
 `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
@@ -70,3 +66,18 @@ GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/li
 - CTA : `BookingLink source="iavarone-group-cas-agence"` passe par la passerelle `jeromeiavarone.fr/rdv` (qui réécrit `page`) ; aucun lien vers l'ERP privé.
 - Les décomptes de marques n'affichent plus « sept » : le répertoire en montre huit, portées par deux structures juridiques.
 - Contrôle : `e2e/organisation.spec.ts`. Bilan : [docs/2-sprints/preuves-vitrines-20261007/README.md](docs/2-sprints/preuves-vitrines-20261007/README.md).
+
+## Proposition de bandeau animé — octobre 2026
+
+Trois images originales à choisir avant animation via fal.ai, avec direction artistique, contraintes d’intégration et tarifs vérifiés : [propositions de bandeau immersif](docs/5-sources/hero-video-concepts/README.md). Aucun changement du site à cette étape.
+
+
+## Bandeau immersif — octobre 2026
+
+L'accueil intègre désormais la vidéo « Fenêtre sur l’Auvergne », générée avec Kling 2.5 Turbo Pro et hébergée sur le site, sans appel fal.ai côté navigateur. Le titre et les CTA sont compactés pour rendre le bandeau visible dans le premier écran ; sur mobile, le texte de présentation reste complet après le bandeau.
+
+- `src/components/sections/ImmersivePanorama.tsx` : lecture muette inline, bouton pause, pause persistante, arrêt hors écran et onglet masqué ; image fixe avec réduction des animations jusqu'au démarrage volontaire.
+- `public/brand-v2/group-auvergne-immersive.mp4` : H.264, 1600 × 638, 20,08 s, 5,1 Mo, sans audio ; aller puis retour à partir du clip de 10 s pour éviter une coupe au raccord.
+- `public/brand-v2/group-auvergne-immersive.webp` : poster de 86 Ko pour l'affichage immédiat et sans JavaScript.
+- `e2e/immersive-hero.spec.ts` : visibilité initiale desktop/mobile et lecture réellement vérifiée par progression du temps.
+- [Compte rendu, captures et validations](docs/2-sprints/bandeau-immersif-20261018/README.md).
