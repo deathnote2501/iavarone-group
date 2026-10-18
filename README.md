@@ -70,3 +70,7 @@ GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/li
 - CTA : `BookingLink source="iavarone-group-cas-agence"` passe par la passerelle `jeromeiavarone.fr/rdv` (qui réécrit `page`) ; aucun lien vers l'ERP privé.
 - Les décomptes de marques n'affichent plus « sept » : le répertoire en montre huit, portées par deux structures juridiques.
 - Contrôle : `e2e/organisation.spec.ts`. Bilan : [docs/2-sprints/preuves-vitrines-20261007/README.md](docs/2-sprints/preuves-vitrines-20261007/README.md).
+
+## Proposition de bandeau animé — octobre 2026
+
+Trois images originales à choisir avant animation via fal.ai, avec direction artistique, contraintes d’intégration et tarifs vérifiés : [propositions de bandeau immersif](docs/5-sources/hero-video-concepts/README.md). Aucun changement du site à cette étape.
