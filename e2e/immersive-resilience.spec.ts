@@ -1,7 +1,8 @@
 import { test, expect, type Locator } from "@playwright/test";
 
 const videoSelector = ".group-immersive-video";
-const posterSelector = 'img[src="/brand-v2/group-auvergne-immersive.webp"]';
+const posterSource = "/brand-v2/group-auvergne-immersive.webp";
+const posterSelector = `img[src="${posterSource}"], video[poster="${posterSource}"]`;
 
 async function expectPlayback(video: Locator) {
   await expect(video).toHaveJSProperty("paused", false);
@@ -11,7 +12,21 @@ async function expectPlayback(video: Locator) {
 
 async function expectLoadedPoster(poster: Locator) {
   await expect(poster).toBeVisible();
-  await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect(poster).toBeInViewport();
+  await expect.poll(() => poster.evaluate(async (element: HTMLImageElement | HTMLVideoElement) => {
+    if (element instanceof HTMLImageElement) return element.complete && element.naturalWidth > 0;
+    // A native VIDEO poster is an image fallback too. Decode its real resource,
+    // and require the video to remain unplayed so that the poster is displayed.
+    if (!element.paused || element.currentTime !== 0 || !element.poster) return false;
+    const image = new Image();
+    image.src = element.poster;
+    try {
+      await image.decode();
+      return image.naturalWidth > 0 && image.naturalHeight > 0;
+    } catch {
+      return false;
+    }
+  })).toBe(true);
 }
 
 test.beforeEach(async ({ page }) => {
