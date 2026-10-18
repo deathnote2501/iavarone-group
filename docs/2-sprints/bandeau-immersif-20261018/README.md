@@ -60,3 +60,5 @@ Inspection locale du build à 1440×900 : vidéo x=0, y=399,5, largeur1440, haut
 ### Livraison L1 et passe
 
 La PR reste ouverte : aucune fusion dans L1. La passe renseignera la révision de production attendue, l'URL Vercel READY, le vrai clic pause avec chatbot chargé et le contrôle public30min. Les captures locales ne remplacent pas cette recette de production. Le dépôt principal est resté sur main et propre.
+
+PR L1 : [#30](https://github.com/deathnote2501/iavarone-group/pull/30), label `ci-dk`, ouverte et sans conflit. Révision fonctionnelle vérifiée localement : `cb25cba` (code et tests), digest/captures `21bace6`. Déploiement preview initial : [Vercel](https://vercel.com/deathnote2501s-projects/iavarone-group/HkWs8EoQd46LLLH6g5y4dF9rnaBK) ; aucune livraison production dans ce lot. Le verdict CI final est attaché au dernier commit de la PR, à contrôler dans ses checks avant la passe.
