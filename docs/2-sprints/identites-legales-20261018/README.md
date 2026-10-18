@@ -30,7 +30,7 @@ Sessions natives distinctes, sur le diff du worktree contre `origin/main` (produ
 
 ## Livraison et passe
 
-PR et verdict CI à rattacher après ouverture. Labels prévus `ci-dk` et `defaut-echappe` ; ce dépôt utilise déjà des runners GitHub, sans étape conditionnelle `verif-github`.
+PR ouverte : [#31](https://github.com/deathnote2501/iavarone-group/pull/31), sans fusion. Correctif produit `03624ec`, précédé des tests `d65caec`. Labels `ci-dk` et `defaut-echappe` posés à la création. CI tiers : workflow [CI de la PR](https://github.com/deathnote2501/iavarone-group/actions?query=branch%3Afix%2Fidentites-legales-20261018), à contrôler entièrement vert sur le dernier commit avant clôture du lot ; ce dépôt utilise déjà des runners GitHub, sans étape conditionnelle `verif-github`. Compatibilité avec main vérifiée à l’ouverture : MERGEABLE.
 
 Pas de fusion dans L1. La passe séparée effectuera la fusion après CI verte, le contrôle Vercel READY au SHA attendu, le contrôle public production (pages/liens/accueil/vidéo/CTA desktop/mobile) et la surveillance de 30 minutes. Aucun `/api/health` configuré dans ce projet. Aucun Sentry/Axiom configuré dans le code.
 
