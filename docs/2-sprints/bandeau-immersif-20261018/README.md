@@ -20,4 +20,13 @@ Revues indépendantes /code-review, /security-review, /simplify : aucun blocage.
 
 ## Livraison
 
-PR et révision déployée à compléter après verdict GitHub et contrôle public. Pas de migration. Les vitrines n'ont pas de /api/health ni d'intégration Sentry/Axiom ; contrôle via statut Vercel, page publique sur la révision attendue, média, pages clés et console navigateur (référence iac_routines/agents/OUTILS.md).
+PR #28 fusionnée après CI verte ; production Vercel READY sur a09852480a135c00d35f5f1f6f60e87ca0504358. CI de main verte également. Pas de migration. Les vitrines n'ont pas de /api/health ni d'intégration Sentry/Axiom ; contrôle via statut Vercel, page publique sur la révision attendue, média, pages clés et console navigateur (référence iac_routines/agents/OUTILS.md).
+
+
+### Contrôle public et commande pause
+
+Le contrôle réel a confirmé la lecture mais a révélé que le chatbot s'ouvre automatiquement sur ordinateur et recouvre la commande à droite (les tests initiaux neutralisaient ce service externe). Le panneau est un overlay fixe de 380 × 560 px en bas à droite. Sur téléphone, le widget ne s'ouvre pas automatiquement.
+
+Correctif : placer la commande à gauche, sans modifier ni masquer le chatbot. Test indépendant rouge 08bf564 : clic intercepté par le panneau simulé aux dimensions réelles. Le test conserve un vrai clic utilisateur sans force et vérifie que la vidéo est ensuite en pause. Ce correctif porte le label defaut-echappe.
+
+Vérification du correctif : `PORT=3119 npm run verify` vert, 58 E2E, audit production sans vulnérabilité. Revues indépendantes code, sécurité et simplify favorables. Capture du chevauchement initial : [diagnostic](chat-overlap-desktop.png).
