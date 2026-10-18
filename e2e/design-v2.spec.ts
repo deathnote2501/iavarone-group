@@ -36,25 +36,17 @@ for (const width of [360, 768, 1440]) {
   });
 }
 
-test("the approved panorama loads and the original video remains available on request", async ({
+test("the group introduction and original presentation remain available", async ({
   page,
 }) => {
   await page.goto("/");
   await expect(page.locator(".group-hero-copy > p")).toContainText("IAvarone Group est un groupe français");
-  const photo = page.locator(".group-panorama img");
-  await expect(photo).toBeVisible();
-  await expect
-    .poll(() =>
-      photo.evaluate(
-        (img: HTMLImageElement) => img.complete && img.naturalWidth > 0,
-      ),
-    )
-    .toBe(true);
-  await expect(page.locator("video")).not.toHaveAttribute("autoplay");
+  const presentation = page.locator(".group-video video");
+  await expect(presentation).not.toHaveAttribute("autoplay");
   await page.locator(".group-video summary").click();
-  await expect(page.locator("video")).toBeVisible();
-  await expect(page.locator("video")).toHaveAttribute("controls");
-  await expect(page.locator("video")).toHaveAttribute("src", "/hero-video.mp4");
+  await expect(presentation).toBeVisible();
+  await expect(presentation).toHaveAttribute("controls");
+  await expect(presentation).toHaveAttribute("src", "/hero-video.mp4");
 });
 
 test("all four orientation paths work without JavaScript", async ({
