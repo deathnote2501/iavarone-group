@@ -115,7 +115,7 @@
   line-height: 1.6;
 }
 .group-home-hero {
-  padding: 0 0 22px;
+  padding: 32px 0 22px;
   overflow: clip;
 }
 .group-hero-intro {
@@ -161,7 +161,7 @@
 }
 .group-panorama {
   width: 100vw;
-  margin: 0 calc(50% - 50vw) 32px;
+  margin: 0 calc(50% - 50vw);
 }
 .group-immersive-window {
   position: relative;
@@ -962,7 +962,7 @@
     font-size: 16px;
   }
   .group-home-hero {
-    padding-top: 0;
+    padding-top: 22px;
   }
   .group-home-hero > .container-page {
     display: flex;
@@ -979,8 +979,7 @@
     margin: 18px 0 20px;
   }
   .group-panorama {
-    order: -1;
-    margin-bottom: 24px;
+    order: 2;
   }
   .group-hero-copy > p {
     order: 3;

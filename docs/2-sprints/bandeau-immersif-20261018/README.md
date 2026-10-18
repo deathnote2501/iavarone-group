@@ -42,3 +42,8 @@ Test indépendant rouge d33255e : marges de 16 px à 390 et 320 px à 1920, masq
 ### Variante locale : vidéo avant le titre
 
 Sur demande, le bandeau plein écran est placé immédiatement sous le menu, avant le titre et sa présentation. Même serveur http://localhost:32571/. Ordre DOM et ordre mobile cohérents, espace supérieur supprimé. Contrôle visuel à 1440 × 900 et 390 × 844 : vidéo au-dessus du H1 et sur toute la largeur. Production inchangée.
+
+
+### Retour du bandeau sous le hero
+
+Retour à la position sous l'introduction, pleine largeur et sans fondus conservés. Paragraphe modifié selon le texte fourni : « Jérôme Iavarone, formateur et consultant IA ». Aperçu local uniquement, même port32571.

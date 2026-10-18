@@ -9,7 +9,6 @@ export function Hero() {
   return (
     <section className="group-home-hero border-b border-[var(--color-line)]">
       <div className="container-page">
-        <ImmersivePanorama />
         <div className="group-hero-intro">
           <div>
             <p className="group-eyebrow">
@@ -24,7 +23,7 @@ export function Hero() {
             <p>
               <strong>{SITE.name}</strong>{" "}est un groupe français
               d&apos;intelligence artificielle générative fondé en 2020 par
-              Jérôme Iavarone, formateur Qualiopi et consultant indépendant. Le
+              Jérôme Iavarone, formateur et consultant IA. Le
               groupe rassemble des marques B2B complémentaires&nbsp;:
               formation, conseil, développement d&apos;applications métier,
               agents IA autonomes, SaaS et e-commerce industriel.
@@ -49,6 +48,7 @@ export function Hero() {
             </div>
           </div>
         </div>
+        <ImmersivePanorama />
         <details className="group-video">
           <summary>
             <Play className="size-4" aria-hidden />
