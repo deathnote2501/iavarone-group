@@ -48,6 +48,7 @@ for (const path of ["/", "/a-propos", "/ressources/quest-ce-quun-agent-ia"]) {
 test("shared footer legal line has no em dash", async ({ page }) => {
   await page.goto("/");
   const footer = page.locator("footer");
-  await expect(footer).toContainText("IAvarone Group · IAvarone Conseil, SASU");
+  await expect(footer).toContainText(/IAvarone Group · IAvarone Conseil, SAS\b/);
+  await expect(footer).not.toContainText(/\bSASU\b/);
   await expect(footer).not.toContainText("—");
 });
