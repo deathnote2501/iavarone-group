@@ -30,3 +30,8 @@ Le contrôle réel a confirmé la lecture mais a révélé que le chatbot s'ouvr
 Correctif : placer la commande à gauche, sans modifier ni masquer le chatbot. Test indépendant rouge 08bf564 : clic intercepté par le panneau simulé aux dimensions réelles. Le test conserve un vrai clic utilisateur sans force et vérifie que la vidéo est ensuite en pause. Ce correctif porte le label defaut-echappe.
 
 Vérification du correctif : `PORT=3119 npm run verify` vert, 58 E2E, audit production sans vulnérabilité. Revues indépendantes code, sécurité et simplify favorables. Capture du chevauchement initial : [diagnostic](chat-overlap-desktop.png).
+
+
+## Chantier de publication autorisé
+
+Nom `bandeau-groupe-20261018`, dépôt `iac_iavarone-group.fr`, média `GROUP`. Port local/E2E 32605. Une PR pour ce site, tests et revues indépendants, passe de fusion séparée et surveillance publique30min. Consignes : [commun](commun.md), [lot](L1.md), [plan](chantier.json). Demande : animation des quatre images choisies et publication des cinq vitrines. Aucun migration ni changement de prix/SEO prévu.
