@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Phone, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { SITE } from "@/lib/site";
+import { ImmersivePanorama } from "./ImmersivePanorama";
 
 export function Hero() {
   return (
@@ -48,21 +48,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <figure className="group-panorama">
-          <Image
-            src="/brand-v2/group-auvergne.webp"
-            alt="Architecture contemporaine imaginaire ouverte sur des reliefs volcaniques"
-            width={1536}
-            height={1024}
-            sizes="(min-width: 1440px) 1280px, 100vw"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <figcaption>
-            <span>Ancré en Auvergne. Ouvert sur vos projets.</span>
-            <span>Illustration architecturale générée par IA</span>
-          </figcaption>
-        </figure>
+        <ImmersivePanorama />
         <details className="group-video">
           <summary>
             <Play className="size-4" aria-hidden />
