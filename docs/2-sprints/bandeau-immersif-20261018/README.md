@@ -30,3 +30,10 @@ Le contrôle réel a confirmé la lecture mais a révélé que le chatbot s'ouvr
 Correctif : placer la commande à gauche, sans modifier ni masquer le chatbot. Test indépendant rouge 08bf564 : clic intercepté par le panneau simulé aux dimensions réelles. Le test conserve un vrai clic utilisateur sans force et vérifie que la vidéo est ensuite en pause. Ce correctif porte le label defaut-echappe.
 
 Vérification du correctif : `PORT=3119 npm run verify` vert, 58 E2E, audit production sans vulnérabilité. Revues indépendantes code, sécurité et simplify favorables. Capture du chevauchement initial : [diagnostic](chat-overlap-desktop.png).
+
+
+## Variante locale pleine largeur
+
+À la demande du propriétaire, travail local uniquement sur `design/hero-full-width`. Bandeau étendu aux deux bords du viewport, hauteur augmentée, masque dégradé et arrondis supprimés. Légendes alignées au contenu ; commande pause et règles d'accessibilité conservées. Serveur de développement : http://localhost:32571/.
+
+Test indépendant rouge d33255e : marges de 16 px à 390 et 320 px à 1920, masque actif. Après changement CSS : huit tests dédiés verts (géométrie sans overflow, absence de filtre et masque, lecture/pause, chatbot, reduced-motion). Captures desktop/mobile contrôlées. Aucun déploiement de cette variante.
