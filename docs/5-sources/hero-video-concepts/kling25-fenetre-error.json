@@ -1,0 +1,16 @@
+{
+  "detail": [
+    {
+      "loc": [
+        "body"
+      ],
+      "msg": "The aspect ratio of the image should be between 0.4 and 2.5.",
+      "type": "image_aspect_ratio_error",
+      "url": "https://docs.fal.ai/errors#image_aspect_ratio_error",
+      "ctx": {
+        "min_aspect_ratio": 0.4,
+        "max_aspect_ratio": 2.5
+      }
+    }
+  ]
+}

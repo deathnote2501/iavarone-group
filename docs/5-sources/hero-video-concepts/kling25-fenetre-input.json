@@ -1,0 +1,7 @@
+{
+  "image_url": "file:docs/5-sources/hero-video-concepts/01-fenetre-kling-input.png",
+  "duration": "10",
+  "prompt": "A serene photorealistic architectural living panorama for an immersive website banner. One continuous locked-off shot. Preserve the exact white window frame, yellow inner wall, terrace geometry and volcanic landscape throughout. Camera stays perfectly still. A very gentle breeze slowly moves only the leaves and ornamental grasses in the foreground. Faint distant morning mist drifts almost imperceptibly between the hills. Soft sunlight remains stable. Calm, subtle, realistic movement with strong foreground to background depth. No new objects. No people. No cuts. Motion gently returns toward the starting state for a smooth loop.",
+  "negative_prompt": "camera movement, zoom, pan, tilt, handheld, cuts, transitions, architecture deformation, morphing mountains, moving walls, flicker, exposure changes, new objects, people, text, logo, fast motion, blur, distortion",
+  "cfg_scale": 0.5
+}

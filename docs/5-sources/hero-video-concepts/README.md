@@ -37,3 +37,16 @@ Sources :
 Bandeau sur toute la largeur utile, bords blancs raccordés au fond, ombres internes discrètes. Vidéo muette, lecture automatique inline, bouton pause, image fixe si réduction des animations demandée, pause hors écran. Une légère parallaxe du conteneur peut renforcer le relief ; elle relève du site, pas de fal.ai. Prévoir un recadrage mobile et une compression MP4/WebM avec poster immédiat. Le poids final dépendra du rendu et sera mesuré. Le texte et les CTA restent hors vidéo et lisibles.
 
 Les images sont à choisir avant toute génération vidéo ou livraison en production.
+
+
+## Premier essai Kling 2.5 Turbo Pro — 18 octobre 2026
+
+Essai demandé et autorisé sur « Fenêtre sur l’Auvergne », sans son. Vidéo générée : 10,04 s, H.264, 2276 × 908, 24 images/s, aucune piste audio. Original local de 36,3 Mo ; version de consultation `01-fenetre-kling25-preview.mp4` encodée en largeur 1600 px, sans audio et avec faststart. Aucun changement de production.
+
+Coût attendu d'une génération de 10 s : 0,70 USD, hors taxes/change ; montant de facture non encore rapproché. Première requête rejetée avant génération : l'image de 1983 × 793 dépasse de 0,00063 la limite de ratio 2,5. Une ligne blanche a été ajoutée en bas par ffmpeg pour obtenir 1983 × 794, sans modifier la scène, puis une nouvelle requête a produit la vidéo. Les identifiants de requête et la réponse sont archivés ; le rejet est conservé sans la donnée image base64.
+
+Contrôle : ffprobe confirme durée, codec, dimensions et absence d'audio. Inspection d'images à plusieurs instants : architecture et cadrage visuellement stables, animation discrète. Le raccord de boucle et l'effet immersif dans la page restent à évaluer avant intégration. Le fichier complet est conservé localement ; la version allégée est versionnée pour revue.
+
+- Paramètres : `kling25-fenetre-input.json`.
+- Réponse et URL du fichier fal : `kling25-fenetre-result.json`.
+- Source adaptée au format Kling : `01-fenetre-kling-input.png`.
