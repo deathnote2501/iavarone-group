@@ -50,3 +50,12 @@ Contrôle : ffprobe confirme durée, codec, dimensions et absence d'audio. Inspe
 - Paramètres : `kling25-fenetre-input.json`.
 - Réponse et URL du fichier fal : `kling25-fenetre-result.json`.
 - Source adaptée au format Kling : `01-fenetre-kling-input.png`.
+
+
+## Deuxième essai : mouvement visible — 18 octobre 2026
+
+Relancé sur demande après retour utilisateur : le premier essai paraissait fixe. Même source et même modèle, durée 10 s, sans audio. Nouveau prompt : travelling avant et latéral vers la droite, parallaxe visible dès le début, feuillage et brume en mouvement ; retrait des interdictions de mouvement caméra et de la contrainte de retour au cadrage initial.
+
+Fichiers : `kling25-fenetre-v2-input.json`, `kling25-fenetre-v2-job.json`, `kling25-fenetre-v2-result.json`, `01-fenetre-kling25-v2-preview.mp4`. Original local non versionné. ffprobe : 10,04 s, 2276 × 908, aucune piste audio. Coût attendu de ce nouvel essai : 0,70 USD, à rapprocher de la facture.
+
+Contrôle de quatre images successives : avancée et déplacement latéral nettement visibles ; le montant gauche sort du cadre et le paysage occupe progressivement davantage l'image. Le mouvement est beaucoup plus marqué que dans la première version. Cette progression ne constitue pas une boucle raccordée ; une lecture répétée brute aura un saut au retour au début. Aucun changement du site.
