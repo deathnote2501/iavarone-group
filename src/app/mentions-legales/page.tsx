@@ -12,12 +12,12 @@ export default function MentionsLegalesPage() {
   return (
     <section className="container-page py-16">
       <h1 className="text-4xl font-semibold tracking-tight">Mentions légales</h1>
+      <p className="mt-4 text-sm text-[var(--color-ink-muted)]">Dernière mise à jour : 18 octobre 2026.</p>
       <div className="prose prose-slate mt-8 max-w-3xl text-[var(--color-ink-muted)]">
         <h2 className="mt-8 text-xl font-semibold text-[var(--color-ink)]">Éditeur du site</h2>
         <p>
           Le site iavarone-group.fr est édité par&nbsp;:<br />
-          <strong>{SITE.legal.sas}</strong> (activités de conseil, développement et agents IA) et{" "}
-          <strong>{SITE.legal.ei}</strong> (activité de formation).<br />
+          <strong>{SITE.legal.sas}</strong>.<br />
           Directeur de la publication&nbsp;: {SITE.founder.name}.<br />
           {SITE.legal.sasStreet && (
             <>Siège social&nbsp;: {SITE.legal.sasStreet}, {SITE.legal.sasPostalCode} {SITE.legal.sasCity}.<br /></>
@@ -38,35 +38,6 @@ export default function MentionsLegalesPage() {
               <>
                 Informations légales&nbsp;:{" "}
                 <a href={SITE.legal.pappersUrl} target="_blank" rel="noopener">fiche Pappers</a>
-                <br />
-              </>
-            )}
-          </p>
-        )}
-        {(SITE.legal.eiSiren || SITE.legal.eiSiret || SITE.legal.ndaNumber || SITE.legal.qualiopiNumber) && (
-          <p>
-            <strong>{SITE.legal.ei}</strong> (profession libérale)&nbsp;:<br />
-            {SITE.legal.eiSiren && <>SIREN&nbsp;: {SITE.legal.eiSiren}<br /></>}
-            {SITE.legal.eiSiret && <>SIRET (siège)&nbsp;: {SITE.legal.eiSiret}<br /></>}
-            {SITE.legal.eiApe && <>Code APE&nbsp;: {SITE.legal.eiApe}<br /></>}
-            {SITE.legal.eiVat && <>N° TVA intracommunautaire&nbsp;: {SITE.legal.eiVat}<br /></>}
-            {SITE.legal.ndaNumber && (
-              <>N° de déclaration d&apos;activité de formation&nbsp;: {SITE.legal.ndaNumber}<br /></>
-            )}
-            {SITE.legal.qualiopiNumber && (
-              <>
-                Certification Qualiopi&nbsp;: {SITE.legal.qualiopiNumber}
-                {SITE.legal.qualiopiBody && <> (délivrée par {SITE.legal.qualiopiBody})</>}
-                <br />
-              </>
-            )}
-            {SITE.legal.eiInsurance && (
-              <>Assurance responsabilité civile professionnelle&nbsp;: {SITE.legal.eiInsurance}<br /></>
-            )}
-            {SITE.legal.eiPappersUrl && (
-              <>
-                Informations légales&nbsp;:{" "}
-                <a href={SITE.legal.eiPappersUrl} target="_blank" rel="noopener">fiche Pappers</a>
                 <br />
               </>
             )}

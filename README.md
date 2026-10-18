@@ -9,7 +9,7 @@ Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits,
 ```sh
 npm ci
 npm run dev
-npm run verify   # lint, types, audit production, build preview et 65 E2E (port 32605 par défaut)
+npm run verify   # lint, types, audit production, build preview et 76 E2E (port 32605 par défaut)
 ```
 
 `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
@@ -81,3 +81,9 @@ L'accueil intègre désormais la vidéo « Fenêtre sur l’Auvergne », génér
 - `public/brand-v2/group-auvergne-immersive.webp` : poster de 86 Ko pour l'affichage immédiat et sans JavaScript.
 - `e2e/immersive-hero.spec.ts` : visibilité initiale desktop/mobile et lecture réellement vérifiée par progression du temps.
 - [Compte rendu, captures et validations](docs/2-sprints/bandeau-immersif-20261018/README.md).
+
+## Identités légales — 18 octobre 2026
+
+La SAS IAvarone Conseil est seule éditrice de ce site : mentions légales, footer, responsable du traitement et `legalName` JSON-LD. `src/lib/site.ts` reste la référence (forme SAS, siège 8 T boulevard Léon Malfreyt, capital 150 €, SIRET 932 210 339 00010). L’EI reste présentée dans sa biographie et la marque de formation ; les huit relations de marques sont conservées.
+
+Tests publics indépendants `e2e/legal-identities.spec.ts`, intégrés à `verify` : rouge avant correction, puis 76 E2E verts avec `PORT=32703 npm run verify`. Trois revues indépendantes favorables, dont sécurité bloquante. [Bilan et preuves du lot L1](docs/2-sprints/identites-legales-20261018/README.md). Livraison par PR ouverte, sans fusion ; contrôle de production et surveillance de 30 minutes réservés à la passe.

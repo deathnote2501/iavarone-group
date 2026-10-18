@@ -36,7 +36,7 @@ export const SITE = {
     github: "https://github.com/deathnote2501",
   },
   legal: {
-    sas: "IAvarone Conseil, SASU",
+    sas: "IAvarone Conseil, SAS",
     ei: "Jérôme Iavarone, entreprise individuelle",
     // Identité légale (rendue uniquement si non vide — rien de faux n'est publié
     // tant qu'un champ reste ""). Renforce le signal Trust E-E-A-T et la conformité.
@@ -48,7 +48,7 @@ export const SITE = {
     sasNaf: "70.22Z (Conseil pour les affaires et autres conseils de gestion)",
     sasFoundingDate: "2024-08-26",
     sasInsurance: "Hiscox Assurances, contrat n° HSXIN320063949",
-    sasStreet: "8 ter boulevard Léon Malfreyt",
+    sasStreet: "8 T boulevard Léon Malfreyt",
     sasPostalCode: "63000",
     sasCity: "Clermont-Ferrand",
     pappersUrl: "https://www.pappers.fr/entreprise/iac-iavarone-conseil-932210339",
