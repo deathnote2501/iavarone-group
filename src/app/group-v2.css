@@ -181,7 +181,7 @@
 .group-immersive-control {
   position: absolute;
   bottom: 16px;
-  right: 16px;
+  left: 16px;
   display: inline-flex;
   align-items: center;
   gap: 7px;
