@@ -1,6 +1,6 @@
 import { defineConfig } from '@playwright/test'
 
-const PORT = Number(process.env.PORT || 3119)
+const PORT = Number(process.env.PORT || 32605)
 
 export default defineConfig({
   testDir: './e2e',
@@ -12,6 +12,6 @@ export default defineConfig({
     command: `npm run start -- --port ${PORT}`,
     url: `http://localhost:${PORT}`,
     timeout: 120_000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 })

@@ -23,7 +23,7 @@ export function Hero() {
             <p>
               <strong>{SITE.name}</strong>{" "}est un groupe français
               d&apos;intelligence artificielle générative fondé en 2020 par
-              Jérôme Iavarone, formateur Qualiopi et consultant indépendant. Le
+              Jérôme Iavarone, formateur et consultant IA. Le
               groupe rassemble des marques B2B complémentaires&nbsp;:
               formation, conseil, développement d&apos;applications métier,
               agents IA autonomes, SaaS et e-commerce industriel.

@@ -116,6 +116,7 @@
 }
 .group-home-hero {
   padding: 32px 0 22px;
+  overflow: clip;
 }
 .group-hero-intro {
   display: grid;
@@ -159,14 +160,15 @@
   text-underline-offset: 4px;
 }
 .group-panorama {
-  margin: 0;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
 }
 .group-immersive-window {
   position: relative;
-  height: clamp(240px, 34svh, 380px);
+  height: clamp(280px, 44svh, 560px);
   overflow: hidden;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .group-immersive-poster,
 .group-immersive-video {
@@ -176,7 +178,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  mask-image: linear-gradient(to bottom, transparent, #000 3%, #000 96%, transparent);
 }
 .group-immersive-control {
   position: absolute;
@@ -199,6 +200,7 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 12px;
+  padding-inline: max(16px, calc((100vw - 1280px) / 2));
   font-size: 11px;
   color: #545454;
 }
@@ -1002,7 +1004,7 @@
     padding-inline: 12px;
   }
   .group-immersive-window {
-    height: clamp(200px, 30svh, 270px);
+    height: clamp(240px, 34svh, 340px);
   }
   .group-panorama figcaption {
     font-size: 10px;

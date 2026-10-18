@@ -93,7 +93,7 @@ export function ImmersivePanorama() {
       </div>
       <figcaption>
         <span>Ancré en Auvergne. Ouvert sur vos projets.</span>
-        <span>Architecture imaginaire · Vidéo générée par IA</span>
+        <span>Illustration générée par IA</span>
       </figcaption>
     </figure>
   );

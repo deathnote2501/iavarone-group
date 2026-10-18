@@ -9,7 +9,7 @@ Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits,
 ```sh
 npm ci
 npm run dev
-npm run verify   # lint, types, audit production, build preview et 57 E2E (port 3119 par défaut)
+npm run verify   # lint, types, audit production, build preview et 65 E2E (port 32605 par défaut)
 ```
 
 `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
