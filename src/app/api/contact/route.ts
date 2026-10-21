@@ -56,7 +56,8 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      from: "IAvarone Group <noreply@iavarone-group.fr>",
+      // Domaine iavarone-group.fr retiré de Resend le 21/10/2026 (aucun envoi réel) : expéditeur sur jeromeiavarone.fr, vérifié.
+      from: "IAvarone Group <noreply@jeromeiavarone.fr>",
       to,
       replyTo: email,
       subject,
