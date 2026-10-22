@@ -1,5 +1,7 @@
 # Bandeau immersif — 18 octobre 2026
 
+> **Mise à jour du 2026-10-22 (branche `feat/video-autoplay`)** : la vidéo démarre désormais seule à l'arrivée, y compris en `prefers-reduced-motion: reduce` ; le bouton pause et la pause volontaire persistante sont conservés. Les mentions « poster jusqu'au démarrage volontaire » ci-dessous décrivent l'ancien comportement.
+
 Demande : intégrer le deuxième essai validé, visible dans la ligne de flottaison, et déployer en production. Le clip Kling de 10 s, sans son, est transformé en aller-retour de 20,08 s pour éviter la coupe brutale au retour. Aucune nouvelle génération facturée. L'animation reste une illustration architecturale imaginaire, explicitement légendée.
 
 ## Résultat

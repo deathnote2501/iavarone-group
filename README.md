@@ -76,7 +76,7 @@ Trois images originales à choisir avant animation via fal.ai, avec direction ar
 
 L'accueil intègre désormais la vidéo « Fenêtre sur l’Auvergne », générée avec Kling 2.5 Turbo Pro et hébergée sur le site, sans appel fal.ai côté navigateur. Le titre et les CTA sont compactés pour rendre le bandeau visible dans le premier écran ; sur mobile, le texte de présentation reste complet après le bandeau.
 
-- `src/components/sections/ImmersivePanorama.tsx` : lecture muette inline, bouton pause, pause persistante, arrêt hors écran et onglet masqué ; image fixe avec réduction des animations jusqu'au démarrage volontaire.
+- `src/components/sections/ImmersivePanorama.tsx` : lecture muette inline, bouton pause, pause persistante, arrêt hors écran et onglet masqué ; démarre seule à l'arrivée, même avec réduction des animations. La présentation animée du groupe (`Hero.tsx`) est dépliée et démarre seule, muette et en boucle.
 - `public/brand-v2/group-auvergne-immersive.mp4` : H.264, 1600 × 638, 20,08 s, 5,1 Mo, sans audio ; aller puis retour à partir du clip de 10 s pour éviter une coupe au raccord.
 - `public/brand-v2/group-auvergne-immersive.webp` : poster de 86 Ko pour l'affichage immédiat et sans JavaScript.
 - `e2e/immersive-hero.spec.ts` : visibilité initiale desktop/mobile et lecture réellement vérifiée par progression du temps.

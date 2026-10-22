@@ -49,7 +49,7 @@ export function Hero() {
           </div>
         </div>
         <ImmersivePanorama />
-        <details className="group-video">
+        <details className="group-video" open>
           <summary>
             <Play className="size-4" aria-hidden />
             Voir la présentation animée du groupe
@@ -59,8 +59,10 @@ export function Hero() {
             src="/hero-video.mp4"
             poster="/hero-poster.jpg"
             controls
+            autoPlay
+            muted
+            loop
             playsInline
-            preload="none"
             aria-label="Présentation animée du Groupe IAvarone et de ses marques"
           />
         </details>
