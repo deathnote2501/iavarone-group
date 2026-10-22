@@ -7,17 +7,14 @@ import { Pause, Play } from "lucide-react";
 export function ImmersivePanorama() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const userPaused = useRef(false);
-  const explicitlyStarted = useRef(false);
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let visible = false;
     const updatePlayback = () => {
-      if (visible && !document.hidden && !userPaused.current &&
-          (!reducedMotion.matches || explicitlyStarted.current)) {
+      if (visible && !document.hidden && !userPaused.current) {
         void video.play().catch(() => setPlaying(false));
       } else {
         video.pause();
@@ -28,15 +25,9 @@ export function ImmersivePanorama() {
       updatePlayback();
     });
     observer.observe(video);
-    const onPreferenceChange = () => {
-      explicitlyStarted.current = false;
-      updatePlayback();
-    };
-    reducedMotion.addEventListener("change", onPreferenceChange);
     document.addEventListener("visibilitychange", updatePlayback);
     return () => {
       observer.disconnect();
-      reducedMotion.removeEventListener("change", onPreferenceChange);
       document.removeEventListener("visibilitychange", updatePlayback);
       video.pause();
     };
@@ -50,7 +41,6 @@ export function ImmersivePanorama() {
       video.pause();
     } else {
       userPaused.current = false;
-      explicitlyStarted.current = true;
       void video.play().catch(() => setPlaying(false));
     }
   }
