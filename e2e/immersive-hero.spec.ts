@@ -93,20 +93,28 @@ test("the pause control remains usable beside the open desktop chatbot", async (
   await expect(page.getByRole("button", { name: /reprendre|lancer/i })).toBeVisible();
 });
 
-test("reduced motion shows the loaded poster until explicit playback", async ({ page }) => {
+test("reduced motion still starts the panorama on arrival and keeps a persistent pause control", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
+  expect(await page.evaluate(() => matchMedia("(prefers-reduced-motion: reduce)").matches)).toBe(true);
   const video = page.locator(videoSelector);
   await expect(video).toBeVisible();
   await expect(video).toHaveAttribute("poster", "/brand-v2/group-auvergne-immersive.webp");
   const poster = await page.request.get("/brand-v2/group-auvergne-immersive.webp");
   expect(poster.status()).toBe(200);
   expect(poster.headers()["content-type"]).toContain("image/webp");
-  await expect(video).toHaveJSProperty("paused", true);
-  await expect(video).toHaveJSProperty("currentTime", 0);
+  // No click, no key press: the panorama must start on its own.
+  await expectPlayback(video);
+  const pause = page.getByRole("button", { name: /mettre en pause/i });
+  await expect(pause).toBeVisible();
+  await pause.click();
+  await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.paused)).toBe(true);
+  const pausedTime = await video.evaluate((element: HTMLVideoElement) => element.currentTime);
   await leaveAndReturn(page, video);
+  await expect(page.getByRole("button", { name: /reprendre|lancer/i })).toBeVisible();
   await expect(video).toHaveJSProperty("paused", true);
+  expect(await video.evaluate((element: HTMLVideoElement) => element.currentTime)).toBeCloseTo(pausedTime, 1);
   await page.getByRole("button", { name: /reprendre|lancer/i }).click();
   await expectPlayback(video);
 });

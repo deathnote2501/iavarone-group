@@ -36,18 +36,46 @@ for (const width of [360, 768, 1440]) {
   });
 }
 
-test("the group introduction and original presentation remain available", async ({
-  page,
-}) => {
-  await page.goto("/");
-  await expect(page.locator(".group-hero-copy > p")).toContainText("IAvarone Group est un groupe français");
-  const presentation = page.locator(".group-video video");
-  await expect(presentation).not.toHaveAttribute("autoplay");
-  await page.locator(".group-video summary").click();
-  await expect(presentation).toBeVisible();
-  await expect(presentation).toHaveAttribute("controls");
-  await expect(presentation).toHaveAttribute("src", "/hero-video.mp4");
-});
+const presentationCases = [
+  { label: "1440px", viewport: { width: 1440, height: 900 }, reducedMotion: "no-preference" as const },
+  { label: "390px", viewport: { width: 390, height: 844 }, reducedMotion: "no-preference" as const },
+  { label: "1440px with reduced motion", viewport: { width: 1440, height: 900 }, reducedMotion: "reduce" as const },
+];
+
+for (const { label, viewport, reducedMotion } of presentationCases) {
+  test(`the group introduction and original presentation start on arrival, muted and looping (${label})`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion });
+    await page.setViewportSize(viewport);
+    await page.goto("/");
+    await expect(page.locator(".group-hero-copy > p")).toContainText("IAvarone Group est un groupe français");
+    const block = page.locator(".group-video");
+    const presentation = block.locator("video");
+    await expect(presentation).toHaveAttribute("src", "/hero-video.mp4");
+    // No click on the summary, no key press: the block is unfolded on arrival.
+    await expect(block).toHaveJSProperty("open", true);
+    await expect(presentation).toBeVisible();
+    // Scrolling is not an interaction that unlocks playback; it only brings
+    // the presentation into view if it sits below the fold.
+    await presentation.scrollIntoViewIfNeeded();
+    await expect(presentation).toBeInViewport();
+    await expect(presentation).toHaveJSProperty("muted", true);
+    await expect(presentation).toHaveJSProperty("loop", true);
+    await expect(presentation).toHaveAttribute("controls");
+    await expect
+      .poll(() => presentation.evaluate((element: HTMLVideoElement) => element.paused))
+      .toBe(false);
+    const start = await presentation.evaluate((element: HTMLVideoElement) => element.currentTime);
+    await expect
+      .poll(() => presentation.evaluate((element: HTMLVideoElement) => element.currentTime))
+      .toBeGreaterThan(start);
+    // The visitor can still fold the block away.
+    await block.locator("summary").click();
+    await expect(block).toHaveJSProperty("open", false);
+    await expect(presentation).toBeHidden();
+  });
+}
 
 test("all four orientation paths work without JavaScript", async ({
   browser,
