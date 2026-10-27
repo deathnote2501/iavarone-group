@@ -1,5 +1,5 @@
 # Projet iavarone-group.fr
-On va crééer un site internet vitrine sur le nom de domaine iavarone-group.fr pour présenter le Groupe IAvarone qui est composé des activités décrites dans les sites web ci-dessous : 
+Vitrine du Groupe IAvarone, qui présente les activités des sites ci-dessous :
 - https://jeromeiavarone.fr/
 - https://iavarone-conseil.fr/
 - https://employe-ia.fr/
@@ -15,7 +15,7 @@ On va crééer un site internet vitrine sur le nom de domaine iavarone-group.fr 
 - La charte V2 reprend la direction jaune de `../iac_brand-studio/v2/group.html` et le parcours de `ecosysteme.html`.
 
 # Pièges
-- 43 URL dans le sitemap et 81 pages publiques, dont 38 pages locales volontairement `noindex`. Ces exclusions évitent la cannibalisation entre les sites et ne doivent pas être levées globalement.
-- `VERCEL_ENV=preview` empêche la notification - IndexNow ne part qu'avec `npm run indexnow` (et le workflow après chaque prod) ; `VERCEL_ENV` autre que `production` l'ignore.
+- 38 pages locales volontairement `noindex` (décompte à jour : `README.md`) : elles évitent la cannibalisation entre les sites, ne pas lever ces exclusions globalement.
+- Pas de workflow IndexNow : après une mise en production, lancer `npm run indexnow` ; le script ne notifie rien si `VERCEL_ENV` n'est pas `production` (`verify` construit en `preview`).
 
 Commandes, repères du code, contrôle SEO de non-régression, cookies : `README.md`.
