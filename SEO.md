@@ -3,7 +3,7 @@
 Document de passation pour reprendre le travail SEO de iavarone-group.fr.
 Objectif du site (cf. `CLAUDE.md`) : capter du trafic organique régional **et**
 national sur des thématiques non couvertes par les autres sites du groupe, pour
-être contacté (Koalendar / email / téléphone).
+être contacté (RDV sur rdv.jeromeiavarone.fr / email / téléphone).
 
 ## ⚠️ Contraintes business à NE JAMAIS oublier
 

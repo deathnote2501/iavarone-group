@@ -55,7 +55,7 @@ La page Marques possède une nouvelle illustration de cadrage de projet, à la p
 
 ## Bandeau cookies (CNIL) — septembre 2026
 
-GA4 (`G-MPZM0EYFQE`) ne se charge qu'après « Accepter ». Le script de `src/lib/cookie-consent.ts`, en tête du `<head>`, pose `dataLayer`, un `gtag` en file d'attente et le Consent Mode v2 refusé par défaut ; `ad_*` restent refusés même après acceptation. Vercel Analytics, sans cookie, reste hors consentement. Bandeau `src/components/cookie-consent/`, bouton « Gérer les cookies » dans le pied de page, choix mémorisé 6 mois (cookie `cookie_consent` + localStorage). Contrôle : `e2e/cookie-consent.spec.ts`.
+Règle commune des vitrines (section « Vitrines et sites » de `0_dev/CLAUDE.md`), code dans `src/lib/cookie-consent.ts`. Ici : GA4 `G-MPZM0EYFQE` ; Vercel Analytics, sans cookie, reste hors consentement.
 
 ## Notre organisation (preuves agence IA et ERP) — octobre 2026
 
