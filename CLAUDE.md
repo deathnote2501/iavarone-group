@@ -12,7 +12,7 @@ Vitrine du Groupe IAvarone, qui présente les activités des sites ci-dessous :
 
 # Référentiel de marque
 - Logo : building-2
-- La charte V2 reprend la direction jaune de `../iac_brand-studio/v2/group.html` et le parcours de `ecosysteme.html`.
+- La charte V2 reprend la direction jaune de `../_backups/iac_brand-studio/v2/group.html` et le parcours de `../_backups/iac_brand-studio/v2/ecosysteme.html`.
 
 # Pièges
 - 38 pages locales volontairement `noindex` (décompte à jour : `README.md`) : elles évitent la cannibalisation entre les sites, ne pas lever ces exclusions globalement.
