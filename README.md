@@ -2,7 +2,7 @@
 
 Site public : https://iavarone-group.fr · Dépôt : https://github.com/deathnote2501/iavarone-group
 
-Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits, références clients et ressources. La charte V2 reprend la direction jaune de `../iac_brand-studio/v2/group.html` et le parcours de `ecosysteme.html`.
+Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits, références clients et ressources. La charte V2 reprend la direction jaune de `../_backups/iac_brand-studio/v2/group.html` et le parcours de `../_backups/iac_brand-studio/v2/ecosysteme.html`.
 
 ## Développer et vérifier
 
