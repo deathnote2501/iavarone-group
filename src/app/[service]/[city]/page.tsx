@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Phone, MapPin, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
+import { deVille } from "@/lib/utils";
 import { SITE, CITIES } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
@@ -148,7 +149,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </p>
           </div>
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-            {service.longTitle(city.name)}
+            {override?.h1 ?? service.longTitle(city.name)}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.intro(city.name)}</p>
           {override?.trainerLink && (
@@ -194,6 +195,31 @@ export default async function ServiceCityPage({ params }: PageProps) {
         </section>
       )}
 
+      {override?.servedArea && (
+        <section className="container-page py-16" aria-labelledby="zone-intervention">
+          <div className="max-w-3xl">
+            <h2 id="zone-intervention" className="text-3xl font-semibold tracking-tight">{override.servedArea.h2}</h2>
+            <p className="mt-6 text-[var(--color-ink-muted)]">{override.servedArea.intro}</p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {override.servedArea.communes.map((commune) => (
+                <li
+                  key={commune}
+                  className="inline-flex items-center gap-1 rounded-full border border-[var(--color-line)] bg-white px-3 py-1.5 text-sm"
+                >
+                  <MapPin className="h-3.5 w-3.5 text-[var(--color-brand-blue-ink)]" aria-hidden />
+                  {commune}
+                </li>
+              ))}
+            </ul>
+            <ul className="mt-6 list-disc space-y-2 pl-5 text-[var(--color-ink-muted)]">
+              {override.servedArea.notes.map((note) => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section className="container-page py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Trois engagements concrets</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -212,7 +238,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
       <section className="bg-[var(--color-surface-alt)] py-16">
         <div className="container-page">
           <h2 className="text-3xl font-semibold tracking-tight">
-            Cas d&apos;usage {service.title.toLowerCase()} pour les entreprises de {city.name}
+            Cas d&apos;usage {service.title.toLowerCase()} pour les entreprises {deVille(city.name)}
           </h2>
           <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">{service.localAngle(city)}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">

@@ -12,6 +12,12 @@ import type { ServiceSlug } from "./services";
 export interface CityServiceOverride {
   /** Remplace service.longTitle(city) pour couvrir les variantes réellement recherchées. */
   metaTitle?: string;
+  /** Remplace le H1 (par défaut service.longTitle(city)). */
+  h1?: string;
+  /** Section « zone d'intervention » nommant les communes desservies autour de la ville (faits vrais uniquement). */
+  servedArea?: { h2: string; intro: string; communes: string[]; notes: string[] };
+  /** Date du dernier changement réel de la page (ISO), reprise comme lastmod du sitemap. */
+  lastModified?: string;
   /** Remplace service.metaDescription(city). */
   metaDescription?: string;
   /**
@@ -30,6 +36,31 @@ export interface CityServiceOverride {
 type ComboKey = `${ServiceSlug}/${string}`;
 
 export const CITY_SERVICE_OVERRIDES: Partial<Record<ComboKey, CityServiceOverride>> = {
+  // Expérience SEO iac_seo 2026-11-04-a97bdb : les requêtes GSC sont « formateur ia <commune du Grand Annecy> ».
+  "formation-ia/annecy": {
+    metaTitle: "Formation IA générative à Annecy et Grand Annecy",
+    h1: "Formation IA générative à Annecy et Grand Annecy",
+    lastModified: "2026-11-04",
+    servedArea: {
+      h2: "Zone d'intervention : Annecy et Grand Annecy",
+      intro:
+        "Les formations IA se déroulent dans vos locaux à Annecy et dans les communes de l'agglomération, ou à distance.",
+      communes: [
+        "Annecy-le-Vieux",
+        "Seynod",
+        "Cran-Gevrier",
+        "Meythet",
+        "Pringy",
+        "Argonay",
+        "Épagny Metz-Tessy",
+        "Sévrier",
+      ],
+      notes: [
+        "Intervention en présentiel dans l'entreprise, ou à distance en visio.",
+        "Le formateur se déplace depuis Clermont-Ferrand : les séances sont regroupées sur une ou plusieurs journées consécutives.",
+      ],
+    },
+  },
   // Action B-05 (iac_seo) : renvoie la page vers le site du formateur, qui porte la requête formation à Clermont-Ferrand.
   "formation-ia/clermont-ferrand": {
     trainerLink: {
