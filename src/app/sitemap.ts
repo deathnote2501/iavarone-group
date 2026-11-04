@@ -3,6 +3,7 @@ import { SITE, CITIES, BRANDS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { ARTICLES } from "@/lib/articles";
 import { ORG_PATH } from "@/lib/organisation";
+import { overrideFor } from "@/lib/city-service-overrides";
 import { shouldIndexCity, sitemapPriorityCity } from "@/lib/seo-index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -27,6 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceCities: MetadataRoute.Sitemap = Object.keys(SERVICES).flatMap((slug) =>
     CITIES.filter((c) => shouldIndexCity(slug, c.slug)).map((c) => ({
       url: `${SITE.url}/${slug}/${c.slug}`,
+      // lastmod seulement quand un changement réel est daté (override éditorial).
+      ...(overrideFor(slug, c.slug)?.lastModified
+        ? { lastModified: new Date(overrideFor(slug, c.slug)!.lastModified!) }
+        : {}),
       changeFrequency: "monthly" as const,
       priority: sitemapPriorityCity(slug, c.slug),
     })),
