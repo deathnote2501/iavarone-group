@@ -527,3 +527,15 @@ export const CITIES: readonly City[] = [
       "Sièges sociaux CAC 40, ETI tertiaires, scale-ups SaaS et IA, agences communication, cabinets de conseil, secteur média et culture.",
   },
 ];
+
+/** Approved home hero copy, kept separate from legal/booking configuration. */
+export const HOME_VIDEO_HERO = {
+  updated: "2026-11-08",
+  "title": [
+    "Un groupe,",
+    "plusieurs expertises."
+  ],
+  "summary": "Formation, logiciels et agents IA pour accompagner votre entreprise.",
+  "cta": "Parlons de votre projet",
+  "proof": "Formation · Développement · Solutions métier"
+} as const;

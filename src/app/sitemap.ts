@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE, CITIES, BRANDS } from "@/lib/site";
+import { SITE, CITIES, BRANDS, HOME_VIDEO_HERO } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { ARTICLES } from "@/lib/articles";
 import { ORG_PATH } from "@/lib/organisation";
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${SITE.url}${path}`,
+    ...(path === "" ? { lastModified: HOME_VIDEO_HERO.updated } : {}),
     changeFrequency: "monthly",
     priority: path === "" ? 1 : path === "/marques" || path === "/references" ? 0.8 : 0.7,
   }));

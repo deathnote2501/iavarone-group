@@ -24,10 +24,12 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
   test(`immersive banner, original title and primary CTA share the initial ${viewport.width}px viewport`, async ({ page }) => {
     await page.setViewportSize(viewport);
     await page.goto("/");
+    await expect(page.locator('.video-hero-copy img')).toHaveCount(0);
+    await expect(page.locator('.video-hero-copy')).not.toContainText('Jérôme Iavarone');
     await page.evaluate(() => document.fonts.ready);
-    await expect(page.locator("main h1")).toHaveText("L'IA générative au service des entreprises, organisations et indépendants.");
+    await expect(page.locator("main h1")).toHaveText("Un groupe, plusieurs expertises.");
     await expect(page.locator("main h1")).toBeInViewport({ ratio: 1 });
-    const cta = page.getByRole("link", { name: "Trouver le bon point de départ" });
+    const cta = page.getByRole("link", { name: "Parlons de votre projet" });
     await expect(cta).toBeInViewport({ ratio: 1 });
     const video = page.locator(videoSelector);
     await expect(video).toBeVisible();

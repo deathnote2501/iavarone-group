@@ -87,3 +87,18 @@ L'accueil intègre désormais la vidéo « Fenêtre sur l’Auvergne », génér
 La SAS IAvarone Conseil est seule éditrice de ce site : mentions légales, footer, responsable du traitement et `legalName` JSON-LD. `src/lib/site.ts` reste la référence (forme SAS, siège 8 T boulevard Léon Malfreyt, capital 150 €, SIRET 932 210 339 00010). L’EI reste présentée dans sa biographie et la marque de formation ; les huit relations de marques sont conservées.
 
 Tests publics indépendants `e2e/legal-identities.spec.ts`, intégrés à `verify` : rouge avant correction, puis 76 E2E verts avec `PORT=32703 npm run verify`. Trois revues indépendantes favorables, dont sécurité bloquante. [Bilan et preuves du lot L1](docs/2-sprints/identites-legales-20261018/README.md). Livraison par PR ouverte, sans fusion ; contrôle de production et surveillance de 30 minutes réservés à la passe.
+
+## Accueil vidéo validé : novembre 2026
+
+La vidéo commence directement sous le menu. Le titre, la phrase courte, le bouton principal
+et la preuve sont superposés en bas à gauche, sans portrait ni ligne « Jérôme Iavarone ».
+La couleur et le décor existants sont conservés ; les autres contenus restent sous l’accueil.
+Le texte reste rendu par le serveur et disponible sans JavaScript.
+
+La boucle ne lit que les 10 premières secondes du MP4 existant : fondu d’une seconde vers
+le poster initial, retour masqué à zéro, puis réapparition progressive. La partie inversée
+n’est plus lue ; aucun fichier vidéo n’est régénéré. Pause en haut, adaptée aux fenêtres courtes et persistante
+après défilement ; arrêt hors écran/onglet et repli image après erreur.
+
+Copie : `src/lib/site.ts` (`HOME_VIDEO_HERO`).
+Les présentations d’anciens heroes ci-dessus constituent l’historique des livraisons.
