@@ -37,7 +37,9 @@ test.beforeEach(async ({ page }) => {
 test("a failed local media request leaves a visible loaded illustration", async ({ page }) => {
   await page.route("**/brand-v2/group-auvergne-immersive.mp4", (route) => route.abort("failed"));
   await page.goto("/");
-  await expectLoadedPoster(page.locator(posterSelector));
+  await expectLoadedPoster(page.locator(posterSelector).first());
+  await expect(page.locator(videoSelector)).toHaveCSS("visibility", "hidden");
+  await expect(page.getByRole("button", { name: /mettre en pause|reprendre l’animation/i })).toHaveCount(0);
   await expect(page.getByText("Illustration générée par IA", { exact: true })).toBeVisible();
 });
 
@@ -45,7 +47,7 @@ test("the illustration remains available without JavaScript", async ({ browser, 
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
   const page = await context.newPage();
   await page.goto(baseURL!);
-  await expectLoadedPoster(page.locator(posterSelector));
+  await expectLoadedPoster(page.locator(posterSelector).first());
   await context.close();
 });
 
