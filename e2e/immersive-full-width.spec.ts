@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 for (const width of [390, 1920]) {
-  test(`the immersive video reaches both viewport edges without fades at ${width}px`, async ({ page }) => {
+  test(`the immersive video reaches both viewport edges without cropped or blurred edges at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.route("https://chat.iavarone-group.fr/**", (route) => route.fulfill({ status: 200, body: "" }));
     await page.goto("/");
@@ -30,7 +30,7 @@ for (const width of [390, 1920]) {
 
 const introduction = "IAvarone Group est un groupe français d'intelligence artificielle générative fondé en 2020 par Jérôme Iavarone, formateur et consultant IA. Le groupe rassemble des marques B2B complémentaires : formation, conseil, développement d'applications métier, agents IA autonomes, SaaS et e-commerce industriel.";
 
-test("the approved introduction precedes the panorama and identifies its imaginary illustration", async ({ page }) => {
+test("the original introduction follows the panorama and identifies its imaginary illustration", async ({ page }) => {
   await page.route("https://chat.iavarone-group.fr/**", (route) => route.fulfill({ status: 200, body: "" }));
   await page.goto("/");
   const paragraph = page.locator(".group-hero-copy > p");
@@ -42,6 +42,6 @@ test("the approved introduction precedes the panorama and identifies its imagina
   const videoBounds = await video.boundingBox();
   expect(heroBounds).not.toBeNull();
   expect(videoBounds).not.toBeNull();
-  expect(videoBounds!.y).toBeGreaterThanOrEqual(heroBounds!.y + heroBounds!.height);
+  expect(heroBounds!.y).toBeGreaterThanOrEqual(videoBounds!.y + videoBounds!.height);
   await expect(page.getByText("Illustration générée par IA", { exact: true })).toBeVisible();
 });
