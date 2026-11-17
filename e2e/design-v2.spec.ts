@@ -110,7 +110,8 @@ test("keyboard skip link and complete mobile navigation", async ({ page }) => {
   await page.locator(".group-mobile-menu summary").click();
   const nav = page.getByRole("navigation", { name: "Navigation mobile" });
   await expect(nav).toBeVisible();
-  await expect(nav.getByRole("link")).toHaveCount(10);
+  // Les 9 entrées de navigation ; le bouton de RDV est dans l'en-tête, hors du menu (plan CRO 2026-11-17).
+  await expect(nav.getByRole("link")).toHaveCount(9);
   await nav.getByRole("link", { name: "Marques", exact: true }).click();
   await expect(page).toHaveURL(/\/marques$/);
   await expect(nav).not.toBeVisible();

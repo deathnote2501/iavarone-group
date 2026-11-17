@@ -9,7 +9,7 @@ import { BookingLink } from "@/components/ui/BookingLink";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 import { OrgProofLink } from "@/components/sections/OrgChart";
 import { ORG_PROOFS } from "@/lib/organisation";
-import { SITE, BRANDS, type Brand } from "@/lib/site";
+import { SITE, BRANDS, type Brand, BOOKING_CTA } from "@/lib/site";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -146,9 +146,9 @@ export default async function BrandPage({ params }: PageProps) {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <BookingLink location="marque-hero">
+              <BookingLink location="hero">
                 <Calendar className="h-4 w-4" aria-hidden />
-                Prendre RDV
+                {BOOKING_CTA.short}
               </BookingLink>
             </Button>
           </div>
@@ -217,9 +217,9 @@ export default async function BrandPage({ params }: PageProps) {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <BookingLink location="marque-bottom">
+              <BookingLink location="fin">
                 <Calendar className="h-4 w-4" aria-hidden />
-                Prendre RDV avec Jérôme
+                {BOOKING_CTA.label}
               </BookingLink>
             </Button>
             <Button asChild size="lg" variant="ghost">

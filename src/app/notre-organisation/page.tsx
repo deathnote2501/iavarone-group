@@ -276,7 +276,7 @@ export default function NotreOrganisationPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <BookingLink location="organisation-cta" source={ORG_BOOKING_SOURCE}>
+              <BookingLink location="fin" source={ORG_BOOKING_SOURCE}>
                 <Calendar className="size-4" aria-hidden />
                 Étudier mon organisation avec Jérôme
               </BookingLink>

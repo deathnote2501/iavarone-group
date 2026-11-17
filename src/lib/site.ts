@@ -74,6 +74,29 @@ export const SITE = {
   ],
 } as const;
 
+/**
+ * Emplacements d'un lien de RDV dans la page, envoyés à GA4 dans `cta_location` (événement
+ * `booking_click`) et posés en `data-cta` sur l'ancre. Liste commune aux cinq vitrines
+ * (plan CRO du 2026-11-17) : un seul bouton de RDV par zone.
+ */
+export const CTA_LOCATIONS = [
+  "header",
+  "hero",
+  "milieu",
+  "fin",
+  "footer",
+  "barre-mobile",
+  "contact",
+] as const;
+export type CtaLocation = (typeof CTA_LOCATIONS)[number];
+
+/** Libellés des boutons de RDV : `short` pour l'en-tête et les cartes, `compact` sous 640 px. */
+export const BOOKING_CTA = {
+  label: "Prendre RDV avec Jérôme",
+  short: "Prendre RDV",
+  compact: "RDV",
+} as const;
+
 export const BRANDS = [
   {
     slug: "jeromeiavarone",

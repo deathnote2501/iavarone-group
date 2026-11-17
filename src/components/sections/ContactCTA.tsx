@@ -19,7 +19,7 @@ export function ContactCTA() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
-                <BookingLink location="contact-cta">
+                <BookingLink location="fin">
                   <Calendar className="h-4 w-4" aria-hidden />
                   Prendre RDV en ligne
                   <ArrowRight className="h-4 w-4" aria-hidden />
@@ -39,7 +39,7 @@ export function ContactCTA() {
               <Calendar className="mt-0.5 h-5 w-5 text-[var(--color-brand-blue-ink)]" aria-hidden />
               <div>
                 <p className="font-medium">Rendez-vous en ligne</p>
-                <BookingLink location="contact-cta-list" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
+                <BookingLink location="fin" className="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
                   Réserver un créneau en ligne
                 </BookingLink>
               </div>

@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { BookingLink } from "@/components/ui/BookingLink";
 
 type NavItem = { href: string; label: string };
 
@@ -41,9 +39,6 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
             {item.label}
           </Link>
         ))}
-        <Button asChild className="mt-3 w-full">
-          <BookingLink location="header-mobile">Prendre RDV</BookingLink>
-        </Button>
       </nav>
     </details>
   );
