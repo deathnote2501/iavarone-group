@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
-import { SITE } from "@/lib/site";
+import { SITE, BOOKING_CTA } from "@/lib/site";
 import { ARTICLES, type Block } from "@/lib/articles";
 import { AuthorBio } from "@/components/sections/AuthorBio";
 
@@ -189,9 +189,9 @@ export default async function ArticlePage({ params }: PageProps) {
             </p>
             <div className="mt-6">
               <Button asChild size="lg">
-                <BookingLink location="ressource-article">
+                <BookingLink location="fin">
                   <Calendar className="h-4 w-4" aria-hidden />
-                  Prendre RDV avec Jérôme
+                  {BOOKING_CTA.label}
                 </BookingLink>
               </Button>
             </div>

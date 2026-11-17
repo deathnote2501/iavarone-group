@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
-import { SITE, CITIES } from "@/lib/site";
+import { SITE, CITIES, BOOKING_CTA } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
 import { TrustBar } from "@/components/sections/TrustBar";
@@ -125,22 +125,23 @@ export default async function ServicePage({ params }: PageProps) {
             {service.hubH1}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.hubLede}</p>
-          <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
+          {/* Le RDV d'abord, le lien sortant vers la marque ensuite (plan CRO 2026-11-17). */}
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <BookingLink location="hero">
+                <Calendar className="h-4 w-4" aria-hidden />
+                {BOOKING_CTA.label}
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </BookingLink>
+            </Button>
+          </div>
+          <p className="mt-6 max-w-2xl text-[var(--color-ink-muted)]">
             Cette activité est portée par{" "}
             <a href={service.brand.url} target="_blank" rel="noopener" className={`font-medium ${COLOR_TEXT[service.color]}`}>
               {service.brand.name}
             </a>
             , entité d&apos;IAvarone Group dédiée à {service.brand.tagline.toLowerCase()}.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <BookingLink location="service-hub">
-                <Calendar className="h-4 w-4" aria-hidden />
-                Prendre RDV avec Jérôme
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </BookingLink>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -238,6 +239,23 @@ export default async function ServicePage({ params }: PageProps) {
       {ORG_PROOFS[service.slug] && <OrgProofLink {...ORG_PROOFS[service.slug]} />}
 
       <AuthorBio context="Votre interlocuteur unique" />
+
+      <section className="container-page pt-16">
+        <div className="rounded-3xl border border-[var(--color-line)] bg-white p-10 sm:p-14">
+          <h2 className="text-3xl font-semibold tracking-tight">{service.cta}</h2>
+          <p className="mt-4 max-w-xl text-[var(--color-ink-muted)]">
+            Premier échange gratuit de 30 minutes pour cadrer votre besoin et estimer la mission.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <BookingLink location="fin">
+                <Calendar className="h-4 w-4" aria-hidden />
+                {BOOKING_CTA.label}
+              </BookingLink>
+            </Button>
+          </div>
+        </div>
+      </section>
 
       <section className="container-page py-16">
         <h2 className="text-xl font-semibold">Les autres expertises d&apos;IAvarone Group</h2>

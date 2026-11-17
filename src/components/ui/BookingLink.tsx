@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { usePathname } from "next/navigation";
-import { SITE } from "@/lib/site";
+import { SITE, type CtaLocation } from "@/lib/site";
 
 declare global {
   interface Window {
@@ -12,8 +12,8 @@ declare global {
 
 export interface BookingLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
-  /** Emplacement du CTA dans la page (hero, header, contact, etc.) — envoyé à GA4. */
-  location?: string;
+  /** Emplacement du CTA dans la page (`CTA_LOCATIONS`) : envoyé à GA4 et posé en `data-cta`. */
+  location: CtaLocation;
   /** Origine dédiée (`src`) : passe par la passerelle tracée au lieu du lien générique. */
   source?: string;
 }
@@ -38,7 +38,7 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
 
     function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
       window.gtag?.("event", "booking_click", {
-        cta_location: location ?? "unknown",
+        cta_location: location,
         // cta_page (et non page_path : gtag.js consomme ce nom, herite d Universal
         // Analytics, et ne le transmet jamais comme parametre custom : verifie en prod
         // le 2026-07-27, il etait absent du beacon). Sans lui on sait qu'il y a eu un clic, pas depuis quelle page.
@@ -56,8 +56,9 @@ export const BookingLink = React.forwardRef<HTMLAnchorElement, BookingLinkProps>
         href={href}
         target="_blank"
         rel="noopener"
-        onClick={handleClick}
         {...props}
+        data-cta={location}
+        onClick={handleClick}
       >
         {children}
       </a>

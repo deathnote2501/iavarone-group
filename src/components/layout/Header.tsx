@@ -3,7 +3,7 @@ import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { MobileMenu } from "./MobileMenu";
-import { SITE } from "@/lib/site";
+import { SITE, BOOKING_CTA } from "@/lib/site";
 import { ORG_PATH } from "@/lib/organisation";
 
 const NAV = [
@@ -59,8 +59,12 @@ export function Header() {
           >
             <a href={SITE.contact.phoneHref}>{SITE.contact.phone}</a>
           </Button>
-          <Button asChild size="sm" className="hidden sm:inline-flex">
-            <BookingLink location="header">Prendre RDV</BookingLink>
+          {/* Visible à toutes les largeurs, sans ouvrir le menu : libellé compact sous 640 px. */}
+          <Button asChild size="sm">
+            <BookingLink location="header" aria-label={BOOKING_CTA.short}>
+              <span className="sm:hidden">{BOOKING_CTA.compact}</span>
+              <span className="hidden sm:inline">{BOOKING_CTA.short}</span>
+            </BookingLink>
           </Button>
           <MobileMenu items={NAV} />
         </div>

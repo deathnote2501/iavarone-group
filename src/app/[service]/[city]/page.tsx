@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, Phone, MapPin, Check, Sparkles } from "lucide-rea
 import { Button } from "@/components/ui/Button";
 import { BookingLink } from "@/components/ui/BookingLink";
 import { deVille } from "@/lib/utils";
-import { SITE, CITIES } from "@/lib/site";
+import { SITE, CITIES, BOOKING_CTA } from "@/lib/site";
 import { SERVICES, SERVICES_LIST, type ServiceSlug } from "@/lib/services";
 import { shouldIndexCity } from "@/lib/seo-index";
 import { overrideFor } from "@/lib/city-service-overrides";
@@ -152,21 +152,12 @@ export default async function ServiceCityPage({ params }: PageProps) {
             {override?.h1 ?? service.longTitle(city.name)}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">{service.intro(city.name)}</p>
-          {override?.trainerLink && (
-            <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
-              {override.trainerLink.before}
-              <a href={override.trainerLink.href} className="font-medium text-[var(--color-brand-blue-ink)] underline">
-                {override.trainerLink.anchor}
-              </a>
-              {override.trainerLink.after}
-            </p>
-          )}
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <BookingLink location="service-city-hero">
+              <BookingLink location="hero">
                 <Calendar className="h-4 w-4" aria-hidden />
-                Prendre RDV
+                {BOOKING_CTA.short}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </BookingLink>
             </Button>
@@ -177,6 +168,16 @@ export default async function ServiceCityPage({ params }: PageProps) {
               </a>
             </Button>
           </div>
+          {/* Lien sortant après le bouton de RDV, dans un nouvel onglet (plan CRO 2026-11-17). */}
+          {override?.trainerLink && (
+            <p className="mt-6 max-w-2xl text-[var(--color-ink-muted)]">
+              {override.trainerLink.before}
+              <a href={override.trainerLink.href} target="_blank" className="font-medium text-[var(--color-brand-blue-ink)] underline">
+                {override.trainerLink.anchor}
+              </a>
+              {override.trainerLink.after}
+            </p>
+          )}
         </div>
       </section>
 
@@ -352,9 +353,9 @@ export default async function ServiceCityPage({ params }: PageProps) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <BookingLink location="service-city-bottom">
+              <BookingLink location="fin">
                 <Calendar className="h-4 w-4" aria-hidden />
-                Prendre RDV avec Jérôme
+                {BOOKING_CTA.label}
               </BookingLink>
             </Button>
             <Button asChild size="lg" variant="secondary">

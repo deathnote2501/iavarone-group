@@ -9,7 +9,7 @@ Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits,
 ```sh
 npm ci
 npm run dev
-npm run verify   # lint, types, audit production, build preview et 76 E2E (port 32605 par défaut)
+npm run verify   # lint, types, audit production, build preview et 106 E2E (port 32605 par défaut)
 ```
 
 `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
@@ -102,3 +102,13 @@ après défilement ; arrêt hors écran/onglet et repli image après erreur.
 
 Copie : `src/lib/site.ts` (`HOME_VIDEO_HERO`).
 Les présentations d’anciens heroes ci-dessus constituent l’historique des livraisons.
+
+## Mesure des clics de RDV : novembre 2026
+
+Plan CRO des vitrines du 17 novembre 2026 (`iac_seo/reports/2026-11-17-cro-vitrines/plan.md`).
+
+- Événements GA4 (après « Accepter » seulement) : `booking_click` au clic sur un lien de RDV (`BookingLink`), avec `cta_location`, `cta_page` et `link_url` ; `contact_form_submit` à l'envoi du formulaire. Le seul `page_view` est celui du `config` GA4.
+- `cta_location` est obligatoire et typé : `CTA_LOCATIONS` dans `src/lib/site.ts` (`header`, `hero`, `milieu`, `fin`, `footer`, `barre-mobile`, `contact`), repris en `data-cta` sur l'ancre. Libellés des boutons : `BOOKING_CTA`.
+- En-tête : bouton de RDV visible à toutes les largeurs (« RDV » sous 640 px), le menu mobile ne le répète plus.
+- Pages de service : RDV avant le lien sortant vers la marque, second bouton en fin de page. Pages de ville : lien vers le site du formateur après le bouton de RDV, dans un nouvel onglet.
+- Contrôle : `e2e/cro-conversion.spec.ts`.
