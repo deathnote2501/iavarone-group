@@ -12,7 +12,7 @@ npm run dev
 npm run verify   # lint, types, audit différentiel (site et vidéo), lint/bundle vidéo, build preview et 106 E2E (port 32605 par défaut)
 ```
 
-`VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
+Le build n'appelle pas IndexNow ; `VERCEL_ENV=preview` fait aussi ignorer une invocation explicite du script. Après vérification du déploiement de production, lancer `npm run indexnow`. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
 
 ## Repères
 
@@ -118,4 +118,4 @@ Les paquets `remotion` et `@remotion/*` sont alignés sur 4.0.544, ESLint reste 
 
 Restants de l’audit du 18/11/2026 : picomatch GHSA-fc5q-39xc-vjpf n’a aucune version corrigée publiée ; minimatch GHSA-g3hv-75wg-m249 demande la majeure 11 (hors périmètre autorisé). Aucun override majeur ni exclusion d’avis ajouté. Ces points sont à réexaminer avant le 18/12/2026.
 
-IndexNow, état à recontrôler avant le 18/12/2026 : le service refuse les soumissions avec HTTP 403 `UserForbiddedToAccessSite`. La clé du script, le contenu du fichier public servi en 200 et l’hôte déclaré correspondent. Aucune incohérence du dépôt identifiée et aucun autre endpoint tenté après ce refus. Le script garde son comportement ; le refus est consigné dans le rapport CRO du 18/11 du dépôt `iac_seo`.
+IndexNow : clé renouvelée le 2026-11-18 après les refus HTTP 403 de Bing avec l'ancienne clé. Le script vérifie que la clé servie en production correspond exactement, puis envoie le même lot aux points d'entrée `https://api.indexnow.org/IndexNow` et `https://yandex.com/indexnow`, indépendamment. Le code de sortie vaut 0 si au moins un point d'entrée accepte (HTTP 200 ou 202), et 1 si tous refusent ou échouent, si la clé est invalide ou si son contrôle ou la lecture du sitemap échoue ; attendre la fin du déploiement avant l'envoi.
