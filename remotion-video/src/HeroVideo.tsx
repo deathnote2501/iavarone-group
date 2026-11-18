@@ -36,7 +36,7 @@ export const HeroVideo: React.FC = () => {
     <AbsoluteFill style={{ background: BRAND.bg, fontFamily, color: BRAND.ink }}>
       <BackgroundBlobs />
 
-      <Sequence from={0} durationInFrames={2.4 * HERO_FPS} premountFor={HERO_FPS}>
+      <Sequence durationInFrames={2.4 * HERO_FPS} premountFor={HERO_FPS}>
         <SceneLogo />
       </Sequence>
 

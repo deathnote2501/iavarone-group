@@ -1,0 +1,11 @@
+{
+  "zones": [
+    "src/app/api/**"
+  ],
+  "audit": {
+    "repertoires": [
+      "",
+      "remotion-video/"
+    ]
+  }
+}

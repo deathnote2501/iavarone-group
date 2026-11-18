@@ -76,6 +76,7 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -83,3 +84,5 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run verify
+        env:
+          CI_AUDIT_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
