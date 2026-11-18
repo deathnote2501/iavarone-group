@@ -9,7 +9,7 @@ Vitrine du groupe IAvarone : formation, conseil, agents IA, marques et produits,
 ```sh
 npm ci
 npm run dev
-npm run verify   # lint, types, audit production, build preview et 106 E2E (port 32605 par défaut)
+npm run verify   # lint, types, audit différentiel (site et vidéo), lint/bundle vidéo, build preview et 106 E2E (port 32605 par défaut)
 ```
 
 `VERCEL_ENV=preview` empêche la notification IndexNow pendant une construction locale. Le script de production conserve son fonctionnement existant. Le déploiement de la branche `main` sur GitHub est géré par Vercel.
@@ -86,7 +86,7 @@ L'accueil intègre désormais la vidéo « Fenêtre sur l’Auvergne », génér
 
 La SAS IAvarone Conseil est seule éditrice de ce site : mentions légales, footer, responsable du traitement et `legalName` JSON-LD. `src/lib/site.ts` reste la référence (forme SAS, siège 8 T boulevard Léon Malfreyt, capital 150 €, SIRET 932 210 339 00010). L’EI reste présentée dans sa biographie et la marque de formation ; les huit relations de marques sont conservées.
 
-Tests publics indépendants `e2e/legal-identities.spec.ts`, intégrés à `verify` : rouge avant correction, puis 76 E2E verts avec `PORT=32703 npm run verify`. Trois revues indépendantes favorables, dont sécurité bloquante. [Bilan et preuves du lot L1](docs/2-sprints/identites-legales-20261018/README.md). Livraison par PR ouverte, sans fusion ; contrôle de production et surveillance de 30 minutes réservés à la passe.
+Tests publics indépendants `e2e/legal-identities.spec.ts`, intégrés à `verify` : rouge avant correction, puis 76 E2E verts avec `PORT=32703 npm run verify`. Trois revues indépendantes favorables, dont sécurité bloquante. [Bilan et preuves du lot L1](docs/2-sprints/identites-legales-20261018/README.md). Le lot est intégré à `main` ; les identités légales sont couvertes par la suite `verify` actuelle.
 
 ## Accueil vidéo validé : novembre 2026
 
@@ -112,3 +112,10 @@ Plan CRO des vitrines du 17 novembre 2026 (`iac_seo/reports/2026-11-17-cro-vitri
 - En-tête : bouton de RDV visible à toutes les largeurs (« RDV » sous 640 px), le menu mobile ne le répète plus.
 - Pages de service : RDV avant le lien sortant vers la marque, second bouton en fin de page. Pages de ville : lien vers le site du formateur après le bouton de RDV, dans un nouvel onglet.
 - Contrôle : `e2e/cro-conversion.spec.ts`.
+
+## Dépendances et outil vidéo
+Les paquets `remotion` et `@remotion/*` sont alignés sur 4.0.544, ESLint reste en 9.x (9.39.5). `npm run verify:video-tools` réinstalle le lockfile vidéo puis vérifie lint, TypeScript et bundle ; il est inclus dans `verify` et dans la CI. Le contrôle de sécurité utilise les copies identiques du ci-kit : audit des deux lockfiles, dépendances de développement incluses, blocage seulement des nouvelles failles high/critical par rapport au SHA de base explicite.
+
+Restants de l’audit du 18/11/2026 : picomatch GHSA-fc5q-39xc-vjpf n’a aucune version corrigée publiée ; minimatch GHSA-g3hv-75wg-m249 demande la majeure 11 (hors périmètre autorisé). Aucun override majeur ni exclusion d’avis ajouté. Ces points sont à réexaminer avant le 18/12/2026.
+
+IndexNow, état à recontrôler avant le 18/12/2026 : le service refuse les soumissions avec HTTP 403 `UserForbiddedToAccessSite`. La clé du script, le contenu du fichier public servi en 200 et l’hôte déclaré correspondent. Aucune incohérence du dépôt identifiée et aucun autre endpoint tenté après ce refus. Le script garde son comportement ; le refus est consigné dans le rapport CRO du 18/11 du dépôt `iac_seo`.
